@@ -18,8 +18,6 @@ for other applications.
 
 The main documentation is organized into a couple section:
 
-.. the :doc:`docs/model` is a command
-
 
 * :ref:`fsi-docs`
 
@@ -29,7 +27,8 @@ The main documentation is organized into a couple section:
    :maxdepth: 2
    :caption: Fluid-Structure Interaction Documentation
 
-   docs/meshing
+   docs/mmesh
+   docs/bgmesh
 
 Indices and tables
 ==================
