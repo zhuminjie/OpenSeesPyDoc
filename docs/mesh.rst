@@ -5,7 +5,7 @@ mesh
 
    mesh a geometry to FE :doc:`node` s and :doc:`element` s
 
-   :param str type: 'line' for line mesh; 'poly' for trangular mesh
+   :param str type: ``'line'`` for line mesh; ``'poly'`` for trangular mesh
    :param int regTag: tag of :doc:`region` to be created to store new nodes and elements
    :param int ndf: number of degrees of freedoms for new nodes
    :param float h: mesh size

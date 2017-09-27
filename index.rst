@@ -29,6 +29,7 @@ The main documentation is organized into a couple section:
 
    docs/mmesh
    docs/bgmesh
+   docs/fsiother
 
 Indices and tables
 ==================
