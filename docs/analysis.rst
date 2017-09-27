@@ -1,20 +1,75 @@
 analysis
 ========
 
-.. py:function:: analysis(type[, dtmax, dtmin, gravity[,ratio]])
+.. py:currentmodule:: opensees
+
+.. py:function:: analysis(type[,*opt])
 
    create an analysis
 
-   :param string type: analysis type, see beow
-   :param float dtmax: maximum time step (only for ``'PFEM'`` analysis)
-   :param float dtmin: minimum time step (only for ``'PFEM'`` analysis)
-   :param float gravity: the gravity acceleration for fly-out nodes, up is positive.  (only for ``'PFEM'`` analysis)
-   :param float ratio: the ratio for automatic reducing time step size (only for ``'PFEM'`` analysis);
+   :param str type: analysis type, see :ref:`available types <analysis-types>`
+   :param opt: type specific options
+   :type opt: list
 
-   Available analysis types:
+.. _analysis-types:
 
-   * ``'Static'`` -- static analysis
-   * ``'Transient'`` -- dynamic analysis with constant time step
-   * ``'VariableTransient'`` -- dynamic analysis with variable time step
-   * ``'PFEM'`` -- dynamic FSI analysis using Particle Finite Element Method.
+Available analysis types
+
+#. :ref:`Static-Analysis`
+#. :ref:`Transient-Analysis`
+#. :ref:`VariableTransient-Analysis`
+#. :ref:`PFEM-Analysis`
+
+      
+.. _Static-Analysis:
+
+Static Analysis
+---------------
+
+.. py:function:: analysis( 'Static' )
+
+   create a static analysis
+
+
+
+.. _Transient-Analysis:
+
+
+Transient Analysis
+------------------
+		 
+
+.. py:function:: analysis( 'Transient' )
+
+   create a dynamic analysis with constant time step
+
+
+
+
+.. _VariableTransient-Analysis:
+
+VariableTransient Analysis
+--------------------------
+
+.. py:function:: analysis( 'VariableTransient' )
+
+   create a dynamic analysis with variable time step
+
+   
+
+
+.. _PFEM-Analysis:
+
+PFEM Analysis
+-------------
+
+
+.. py:function:: analysis('PFEM', dtmax, dtmin, gravity[, ratio])
+
+   create a dynamic FSI analysis using Particle Finite Element Method (PFEM).
+
+   :param float dtmax: maximum time step
+   :param float dtmin: minimum time step
+   :param float gravity: the gravity acceleration for fly-out nodes, up is positive.
+   :param float ratio: the ratio for automatic reducing time step size (optional)
 

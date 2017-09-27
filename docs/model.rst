@@ -1,6 +1,8 @@
 model
 ===================
 
+.. py:currentmodule:: opensees
+
 .. py:function:: model(type, opt1, ndm[, opt2, ndf])
 
    :param str type: Currently there is only one 'basic'

@@ -7,8 +7,16 @@ Welcome to OpenSeesPy Documentation
 ======================================
 
 `OpenSeesPy`_ is a `Python 3`_ application of `OpenSees`_
-for `Finite Element Analysis`_ as shown in `OpenSees Wiki`_
-for other applications.
+for `Finite Element Analysis`_ together with
+other applications in `OpenSees Wiki`_.
+
+
+.. toctree::
+   :hidden:
+
+   docs/opensees
+
+All functions below are defined in the :doc:`docs/opensees`.
 
 .. _OpenSeesPy: https://github.com/zhuminjie/OpenSeesPyDoc
 .. _OpenSees: http://opensees.berkeley.edu/
@@ -16,10 +24,22 @@ for other applications.
 .. _Finite Element Analysis: https://en.wikipedia.org/wiki/Finite_element_method
 .. _Python 3: https://docs.python.org/3/
 
-The main documentation is organized into a couple section:
+The main documentation is organized into a couple sections:
 
 
+* :ref:`core-docs`
 * :ref:`fsi-docs`
+
+.. _core-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Core Functions Documentation
+
+   docs/coremodel
+   docs/coreanalysis
+   docs/coreoutput
+
 
 .. _fsi-docs:
 

@@ -1,2 +1,4 @@
 node
 ====
+
+.. py:currentmodule:: opensees

@@ -1,41 +1,48 @@
 region
 ======
 
+.. py:currentmodule:: opensees
+
 .. py:function:: region(regTag, *opts)
 
    create a region with optional arguments
 
    :param int regTag: tag of the new region
-   :param opts: optional list of optional arguments, see below
+   :param opts: optional list of optional arguments, see :ref:`region-multi-args` and :ref:`region-single-args`
    :type opts: list
 
-   Optional argument list can have any combinations of following arguments:
+.. _region-multi-args:
+
+Multiple arguments
+------------------
+
+Optional argument list can have any combinations of following arguments:
 	       
-   * with a list of element tags::
+   * with a list of :doc:`element` tags::
 
        opts = ['-ele', *eles]
 
-     where ``eles`` is a list of element tags.
+     where ``eles`` is a list of :doc:`element` tags.
 
-   * with a range of element tags::
+   * with a range of :doc:`element` tags::
 
        opts = ['-eleRange', start, end]
 
-     where  a list of element tags
+     where  a list of :doc:`element` tags
      is defined by ``range(start,end+1)``.
 
-   * with a list of node tags::
+   * with a list of :doc:`node` tags::
 
        opts = ['-node', *nds]
 
-     where ``nds`` is a list of node tags.
+     where ``nds`` is a list of :doc:`node` tags.
 
 
-   * with a range of node tags::
+   * with a range of :doc:`node` tags::
 
        opts = ['-nodeRange', start, end]
 
-     where  a list of node tags
+     where  a list of :doc:`node` tags
      is defined by ``range(start,end+1)``.
 
 
@@ -43,25 +50,29 @@ region
 
        opts = ['-rayleigh', alphaM, betaK, betaK0, betaKc]
 
-     
-   Following are arguments for output, which can not be used
-   with above arguments:
+.. _region-single-args:
 
-   * get nodes::
+Singular arguments
+------------------
+
+Following are arguments for output, which can not be used
+with above arguments:
+
+   * get :doc:`node` s::
 
        opts = ['getNodeTags']
 
-   return a list of node tags (``list[int]``) in the region.
+   return a list of :doc:`node` tags (``list[int]``) in the region.
 
-   * get elements::
+   * get :doc:`element` s::
 
        opts = ['getEleTags']
 
-   return a list of element tags (``list[int]``) in the region.
+   return a list of :doc:`element` tags (``list[int]``) in the region.
 
-   * get connected elements::
+   * get connected :doc:`element` s::
 
        opts = ['getConnectedEleTags']
 
-   return a list of element tags (``list[int]``), any of which nodes
+   return a list of :doc:`element` tags (``list[int]``), any of which :doc:`node` s
    are in the region.

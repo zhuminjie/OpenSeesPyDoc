@@ -1,49 +1,39 @@
 remesh
 ======
 
-.. py:function:: remesh(alpha, numf, *frtags, numfi, *firtags)
+.. py:currentmodule:: opensees
 
-   remesh nodes in :doc:`region` s to create new :doc:`element` s
+.. py:function:: remesh(type, alpha, numf, *frtags, numfi, *firtags[, *eleargs])
 
+   remesh :doc:`node` s in :doc:`region` s to create new :doc:`element` s
+
+   :param str type: remesh type, see :ref:`available types <remesh-types>`
    :param float alpha: the alpha parameter for `Alpha shape`_
    :param int numf: number of :doc:`region` s which contain freely moving nodes
-   :param frtags: tags of above free regions
+   :param frtags: tags of above free :doc:`region` s
    :type frtags: list[int]
    :param int numfi: number of :doc:`region` s which contain fixed nodes
    :param firtags: tags of above fixed regions
    :type firtags: list[int]
+   :param eleargs: element arguments, see :ref:`available triangular elements <tri-eleargs>`
+   :type eleargs: list
 
-   Element arguments:
+.. _remesh-types:
 
-   * PFEMElement2DBubble with ``'poly'`` mesh::
+Available remesh types
 
-       eleargs = ['PFEMElement2DBubble',rho,mu,b1,b2,thk,kappa]
+#. :ref:`Tri-ReMesh`
 
-     where ``rho`` is fluid density, ``mu`` is fluid viscosity,
-     ``b1`` and ``b2`` are
-     body forces in x and y directions, ``thk`` is element thickness,
-     and ``kappa`` is fluid bulk modulus.
+.. _Tri-ReMesh:
 
+Triangular Remesh
+-----------------
 
-   * PFEMElement2DQausi with ``'poly'`` mesh::
+.. py:function:: remesh('tri', alpha, numf, *frtags, numfi, *firtags[, *eleargs])
 
-       eleargs = ['PFEMElement2DQausi',rho,mu,b1,b2,thk,kappa]
+   remesh :doc:`node` s in :doc:`region` s to create new :doc:`element` s
 
-     where ``rho`` is fluid density, ``mu`` is fluid viscosity,
-     ``b1`` and ``b2`` are
-     body forces in x and y directions, ``thk`` is element thickness,
-     and ``kappa`` is fluid bulk modulus.
-
-   * Tri31 with ``'poly'`` mesh::
-
-       eleargs = ['Tri31',thk,eletype,matTag,pressure, rho, b1, b2]
-
-     where ``thk`` is element thickness, ``eletype`` is ``'PlaneStrain'``
-     or ``'PlaneStress'``, ``matTag`` is a tag of :doc:`nDMaterial`,
-     ``pressure`` is optional the uniform force on edge, ``rho`` is optional
-     the solid density, and ``b1`` and ``b2`` are optional
-     body forces in x and y directions.
-
-
+   :param eleargs: element arguments, see :ref:`available triangular elements <tri-eleargs>`
+   :type eleargs: list
 
 .. _Alpha shape: https://en.wikipedia.org/wiki/Alpha_shape
