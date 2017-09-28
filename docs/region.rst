@@ -8,13 +8,12 @@ region
    create a region with optional arguments
 
    :param int regTag: tag of the new region
-   :param opts: optional list of optional arguments, see :ref:`region-multi-args` and :ref:`region-single-args`
+   :param opts: optional list of optional arguments, see :ref:`multiple arguments <region-multi-args>` and :ref:`single arguments <region-single-args>`
    :type opts: list
 
 .. _region-multi-args:
 
-Multiple arguments
-------------------
+Multiple arguments:
 
 Optional argument list can have any combinations of following arguments:
 	       
@@ -52,8 +51,7 @@ Optional argument list can have any combinations of following arguments:
 
 .. _region-single-args:
 
-Singular arguments
-------------------
+Singular arguments:
 
 Following are arguments for output, which can not be used
 with above arguments:

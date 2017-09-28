@@ -1,7 +1,8 @@
 Background Mesh Method
 ======================
 
-.. toctree::
-   :maxdepth: 2
 
-   background
+Background Mesh
+---------------
+
+* :doc:`background`

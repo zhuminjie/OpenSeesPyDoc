@@ -15,12 +15,17 @@ to form the moving mesh.
 The moving mesh can be created for both structure and fluid.
 There are several functions related to the moving mesh:
 
+Discretization of geometry
+--------------------------
 
-.. toctree::
-   :maxdepth: 2
+* :doc:`mesh`
 
-   mesh
-   remesh
+
+Update mesh
+--------------------
+
+* :doc:`remesh`
+
 
 
 

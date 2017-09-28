@@ -1,18 +1,7 @@
-Core Model Functions
+Model Objects
 =======================
 
-A model or domain is a collection of model components.
+Model objects 
 
-.. toctree::
-   :maxdepth: 2
+Model functions are divided in following sections:
 
-   model
-   element
-   node
-   geomTransf
-   region
-   rayleigh
-   nDMaterial
-   beamIntegration
-
-   

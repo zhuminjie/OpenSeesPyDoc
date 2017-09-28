@@ -1,0 +1,2 @@
+equalDOF_Mixed
+==============
