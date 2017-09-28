@@ -6,12 +6,6 @@
 Welcome to OpenSeesPy Documentation
 ======================================
 
-`OpenSeesPy`_ is a `Python 3`_ application of `OpenSees`_
-for `Finite Element Analysis`_ together with
-other applications in `OpenSees Wiki`_.
-
-
-
 OpenSees, the Open System for `Earthquake Engineering`_ Simulation, is
 an `object-oriented`_, `open source`_ software framework.
 It allows users to create both serial
@@ -22,6 +16,10 @@ OpenSees is primarily written in `C++`_ and uses
 several `Fortran`_ and `C`_ numerical libraries for linear
 equation solving, and material and element routines. 
 
+
+`OpenSeesPy`_ is a `Python 3`_ application of `OpenSees`_
+along with
+other applications introduced in `OpenSees Wiki`_.
 
 In `OpenSeesPy`_, all OpenSees objects are created
 and modified through functions defined in the :doc:`docs/opensees`,
@@ -48,7 +46,7 @@ which can be imported as::
 .. _open source: http://en.wikipedia.org/wiki/Open_source
 
 
-The main documentation is organized into a couple sections:
+The main documentation is organized into following sections:
 
 
 * :ref:`core-docs`
@@ -58,7 +56,7 @@ The main documentation is organized into a couple sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Core Objects Documentation
+   :caption: User Documentation
 
    docs/coremodel
    docs/coreanalysis
