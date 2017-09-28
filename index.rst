@@ -12,9 +12,6 @@ other applications in `OpenSees Wiki`_.
 
 
 
-OpenSees
---------
-
 OpenSees, the Open System for `Earthquake Engineering`_ Simulation, is
 an `object-oriented`_, `open source`_ software framework.
 It allows users to create both serial
@@ -24,11 +21,6 @@ subjected to `earthquakes`_ and other hazards.
 OpenSees is primarily written in `C++`_ and uses
 several `Fortran`_ and `C`_ numerical libraries for linear
 equation solving, and material and element routines. 
-
-
-OpenSeesPy
-----------
-
 
 
 In `OpenSeesPy`_, all OpenSees objects are created
@@ -54,6 +46,7 @@ which can be imported as::
 .. _Fortran: http://en.wikipedia.org/wiki/Fortran
 .. _C: http://en.wikipedia.org/wiki/C_programming_language
 .. _open source: http://en.wikipedia.org/wiki/Open_source
+
 
 The main documentation is organized into a couple sections:
 
