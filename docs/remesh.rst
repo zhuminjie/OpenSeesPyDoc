@@ -30,6 +30,7 @@ Triangular Remesh
 -----------------
 
 .. py:function:: remesh('tri', alpha, numf, *frtags, numfi, *firtags[, *eleargs])
+   :noindex:
 
    remesh :doc:`node` s in :doc:`region` s to create new :doc:`element` s
 

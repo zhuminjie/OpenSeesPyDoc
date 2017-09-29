@@ -6,7 +6,7 @@
 Welcome to OpenSeesPy Documentation
 ======================================
 
-OpenSees, the Open System for `Earthquake Engineering`_ Simulation, is
+`OpenSees`_, the Open System for `Earthquake Engineering`_ Simulation, is
 an `object-oriented`_, `open source`_ software framework.
 It allows users to create both serial
 and `parallel`_  `Finite Element Analysis`_ computer applications
@@ -44,7 +44,6 @@ which can be imported as::
 .. _Fortran: http://en.wikipedia.org/wiki/Fortran
 .. _C: http://en.wikipedia.org/wiki/C_programming_language
 .. _open source: http://en.wikipedia.org/wiki/Open_source
-
 
 The main documentation is organized into following sections:
 

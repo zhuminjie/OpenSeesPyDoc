@@ -42,6 +42,7 @@ PFEM Integrator
 ^^^^^^^^^^^^^^^
 
 .. py:function:: integrator('PFEM')
+   :noindex:
 
    create a PFEM integrator
    

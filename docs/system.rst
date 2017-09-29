@@ -26,6 +26,7 @@ PFEM System
 
 
 .. py:function:: system('PFEM'[,opt])
+   :noindex:
 
    create a PFEM SOE and Solver
 

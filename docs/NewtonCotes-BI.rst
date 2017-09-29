@@ -1,0 +1,2 @@
+NewtonCotes Beam Integration
+============================

@@ -26,6 +26,7 @@ PFEM Test
 
 
 .. py:function:: test('PFEM', tolv, tolp, tolrv, tolrp, tolvrel, tolprel, maxIter[, maxIncr[, printFlag[, normType]]])
+   :noindex:
 
    create a PFEM convergence test object
 

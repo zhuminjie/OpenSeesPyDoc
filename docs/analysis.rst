@@ -27,6 +27,8 @@ Static Analysis
 ---------------
 
 .. py:function:: analysis( 'Static' )
+   :noindex:
+
 
    create a static analysis
 
@@ -40,6 +42,7 @@ Transient Analysis
 		 
 
 .. py:function:: analysis( 'Transient' )
+   :noindex:
 
    create a dynamic analysis with constant time step
 
@@ -52,6 +55,7 @@ VariableTransient Analysis
 --------------------------
 
 .. py:function:: analysis( 'VariableTransient' )
+   :noindex:
 
    create a dynamic analysis with variable time step
 
@@ -65,6 +69,7 @@ PFEM Analysis
 
 
 .. py:function:: analysis('PFEM', dtmax, dtmin, gravity[, ratio])
+   :noindex:
 
    create a dynamic FSI analysis using Particle Finite Element Method (PFEM).
 

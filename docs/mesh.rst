@@ -33,6 +33,7 @@ Line Mesh
 ---------
 
 .. py:function:: mesh('line', regTag, ndf, h, num, *nds, *bounds[, *eleargs])
+   :noindex:
 
    mesh a geometric line to :doc:`node` s and :doc:`element` s
 
@@ -103,6 +104,7 @@ Triangular Mesh
 ---------------
 
 .. py:function:: mesh('tri', regTag, ndf, h, num, *nds, *bounds[, *eleargs])
+   :noindex:
 
    mesh a geometric polygon to :doc:`node` s and :doc:`element` s
 

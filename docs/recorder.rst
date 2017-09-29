@@ -27,6 +27,7 @@ Node Recoder
 ------------
 
 .. py:function:: recorder('Node'[, *opts], respType)
+   :noindex:
 
    create a recorder to record nodal information
 
@@ -78,6 +79,7 @@ PVD Recoder
 ------------
 
 .. py:function:: recorder('PVD', filename, respType)
+   :noindex:
 
    create a recorder to record nodal information
 
