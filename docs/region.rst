@@ -70,7 +70,6 @@ with above arguments:
 
    * get connected :doc:`element` s::
 
-       opts = ['getConnectedEleTags']
+       opts = ['getExtraEleTags']
 
-   return a list of :doc:`element` tags (``list[int]``), any of which :doc:`node` s
-   are in the region.
+   return a list of extra :doc:`element` tags (``list[int]``) in the region.

@@ -7,18 +7,18 @@ These are the subcommnds to add or get particles.
 
 #. :ref:`bg-particle`
 #. :ref:`bg-auto`
-#. :ref:`bg-addParticles`
-#. :ref:`bg-getParticles`
 
 .. _bg-particle:
 
 particle
 --------
 
-.. py:function:: background('particle', areatype, *range, [*initial], *eleargs)
+.. py:function:: background('particle', gid, areatype, *range, [*initial[, *eleargs]])
    :noindex:
    
    add particles to the background mesh in an area, evey time this command called will create a new particle group
+
+   :param int gid: an id for the particle group to  be created
 
    :param str areatype: the type of the area where particles are created
       
@@ -49,11 +49,12 @@ particle
 auto
 ----
 
-.. py:function:: background('auto', *lower, *upper, *vel, *num, *eleargs)
+.. py:function:: background('auto', gid, *lower, *upper, *vel, *num, *eleargs)
    :noindex:
    
    set up the automatic particles generator, which will fill the area with particles in empty cells. The particle will be added to the last particle group before calling the command. If no particle group, then create a new one.
 
+   :param int gid: an id for an existing particle group
    :param lower: coordinates of lower point of the background mesh domain
    :type lower: list[float]
    :param upper: coordinates of  upper point of the background mesh domain
@@ -64,33 +65,3 @@ auto
    :type num: list[float]
    :param eleargs: element arguments, see :ref:`available elements <tri-eleargs>`
    :type eleargs: list
-
-
-.. _bg-addParticles:
-
-addParticles
-------------
-
-.. py:function:: background('addParticles', *coords)
-   :noindex:
-   
-   add multiple particles by their coordinates to the last particle group in the system, if no group, quit.
-
-   :param coords: coordinates of particles to be added
-   :type coords: list[float]
-
-
-.. _bg-getParticles:
-
-getParticles
-------------
-
-.. py:function:: background('getParticles', groupno)
-   :noindex:
-   
-   read coordinates of particles in a group and return
-
-   :param int groupno: a group number, from ``0`` to ``numgroup-1``
-   :return: coordinates of particles
-   :rtype: list[float]
-
