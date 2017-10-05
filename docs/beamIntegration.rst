@@ -3,7 +3,7 @@ beamIntegration
 
 .. py:currentmodule:: opensees
 
-.. py:function:: beamInegration(type[,*opt])
+.. py:function:: beamIntegration(type[,*opt])
 
    create an beam integration object for force-based and displacement-based Beam-Column elements
 
