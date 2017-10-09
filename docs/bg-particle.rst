@@ -13,7 +13,7 @@ These are the subcommnds to add or get particles.
 particle
 --------
 
-.. py:function:: background('particle', gid, areatype, *range, [*initial[, *eleargs]])
+.. py:function:: background('particle', gid, areatype, *range, *nump, [*initial[, *eleargs]])
    :noindex:
    
    add particles to the background mesh in an area, evey time this command called will create a new particle group
@@ -34,6 +34,10 @@ particle
       * ``'line'`` -- ``range = [*p1, *p2]``, coordinates of two end points of the line
       * ``'point'`` -- ``range = [*p1]``, coordinates of the point
    :type range: list[float]
+
+   :param nump: number of particles in x, y and z directions
+
+   :type nump: list[int]
       
    :param initial: optional initial velocity or pressure
 
@@ -49,7 +53,7 @@ particle
 auto
 ----
 
-.. py:function:: background('auto', gid, *lower, *upper, *vel, *num, *eleargs)
+.. py:function:: background('auto', gid, *lower, *upper, *vel, *num)
    :noindex:
    
    set up the automatic particles generator, which will fill the area with particles in empty cells. The particle will be added to the last particle group before calling the command. If no particle group, then create a new one.
@@ -63,5 +67,4 @@ auto
    :type vel: list[float]
    :param num: number of particles in a cell, e.g. [2,2] means 2 by 2 particles in each cell
    :type num: list[float]
-   :param eleargs: element arguments, see :ref:`available elements <tri-eleargs>`
-   :type eleargs: list
+
