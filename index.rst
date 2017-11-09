@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OpenSeesPy Documentation
+The OpenSeesPy Library
 ======================================
 
 `OpenSees`_, the Open System for `Earthquake Engineering`_ Simulation, is
@@ -17,25 +17,37 @@ several `Fortran`_ and `C`_ numerical libraries for linear
 equation solving, and material and element routines. 
 
 
-`OpenSeesPy`_ is a `Python 3`_ application of `OpenSees`_
-along with
-other applications introduced in `OpenSees Wiki`_.
+`OpenSeesPy`_ is a `Python`_ interpreter of `OpenSees`_.
+In `OpenSeesPy`_, OpenSees objects are wrapped
+in `Python`_ objects
+and manipulated through `Python`_
+object interface. Therefore, users of `OpenSees`_ could
+use `object-oriented`_ to write the scripts, which
+is very different to the traditional `OpenSees`_
+scripts, which are functional.
+Global built-in functions
+are also provided to
+get and set information about
+the program.
 
-In `OpenSeesPy`_, all OpenSees objects are created
-and modified through functions defined in the :doc:`docs/opensees`,
-which can be imported as::
+All functions and objects in `OpenSeesPy`_
+accept keywords arguments, which means
+the order of keywords arguments can be
+arbitrary. But if positional arguments are
+given, they should in the order given
+in definition. The `OpenSeesPy`_ library
+can be imported as::
 
-  import opensees
+  import sys
+  sys.path.append('/path/to/OpenSeesPy')
 
-  import opensees as ops
-
-  from opensees import*
+  from OpenSees import*
 
 .. _OpenSeesPy: https://github.com/zhuminjie/OpenSeesPyDoc
 .. _OpenSees: http://opensees.berkeley.edu/
 .. _OpenSees Wiki: http://opensees.berkeley.edu/wiki/index.php/Main_Page
 .. _Finite Element Analysis: https://en.wikipedia.org/wiki/Finite_element_method
-.. _Python 3: https://docs.python.org/3/
+.. _Python: https://docs.python.org/3/
 .. _Earthquake Engineering: http://en.wikipedia.org/wiki/Earthquake_engineering
 .. _object-oriented: http://en.wikipedia.org/wiki/Object-oriented
 .. _parallel: http://en.wikipedia.org/wiki/Parallel_computing
@@ -45,39 +57,13 @@ which can be imported as::
 .. _C: http://en.wikipedia.org/wiki/C_programming_language
 .. _open source: http://en.wikipedia.org/wiki/Open_source
 
-The main documentation is organized into following sections:
-
-
-* :ref:`core-docs`
-* :ref:`fsi-docs`
-
-.. _core-docs:
-
 .. toctree::
    :maxdepth: 2
-   :caption: User Documentation
+   :numbered: 
 
-   docs/coremodel
-   docs/coreanalysis
-
-
-.. _fsi-docs:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Fluid-Structure Interaction Documentation
-
-   docs/mmesh
-   docs/bgmesh
-   docs/fsiother
-
-
-.. toctree::
-   :hidden:
-   :caption: Modules
-
-   docs/opensees
-
+   docs/intro
+   docs/functions
+   docs/nodeobj
 
 Indices and tables
 ==================
