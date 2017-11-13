@@ -64,6 +64,7 @@ can be imported as::
    docs/intro
    docs/functions
    docs/nodeobj
+   docs/spobj
 
 Indices and tables
 ==================

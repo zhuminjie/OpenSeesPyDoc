@@ -10,9 +10,22 @@ are always available.  They are listed here in alphabetical order.
 ===================  =================  ==================  ================  ====================
 ..                   ..                 Built-in Functions  ..                ..
 ===================  =================  ==================  ================  ====================
-:func:`model`         :func:`wipe`
+   :func:`fix`         :func:`model`      :func:`wipe`
 ===================  =================  ==================  ================  ====================
 
+
+.. function:: fix(nd, fix=[])
+
+   Fix a :class:`node`. The list ``fix``
+   contains ``1`` and ``0`` to indicate
+   corresponding dofs fixed or not.
+   Return a list of :class:`sp` objects.
+   For example::
+
+     fix(nd, fix=[1,1])
+
+     for nd in nds:
+       fix(nd.tag, [1,1,1])
 
 .. function:: model(type='basic', ndm=0, ndf=0)
 

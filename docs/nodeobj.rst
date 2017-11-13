@@ -26,44 +26,56 @@ Node Object
 
 
    .. attribute:: tag
-		  
+      
+      A class attribute.
       The unique tag of the node object, which is
       same in python and in OpenSees.
+      You **can't** set a tag of node.
 
+   .. attribute:: crds
 
-   .. method:: crds()
+      A class attribute.
+      A list of nodal coordinates.
+      You **can** both set and get it.
 
-      Return a list of nodal coordinates
+   .. attribute:: disp
 
+      A class attribute.
+      A list of nodal displacements
+      You **can** both set and get it.
 
-   .. method:: disp()
-	       
-      Return a list of nodal displacements
+   .. attribute:: vel
 
-   .. method:: vel()
-	       
-      Return a list of nodal velocities
+      A class attribute.
+      A list of nodal velocities
+      You **can** both set and get it.
 
-   .. method:: accel()
-	       
-      Return a list of nodal accelerations
+   .. attribute:: accel
 
-   .. method:: mass()
-	       
-      Return a list of nodal mass
+      A class attribute.
+      A list of nodal accelerations
+      You **can** both set and get it.
 
-   .. method:: ndf()
-	       
-      Return the number of degrees of freedoms of the node
+   .. attribute:: mass
+
+      A class attribute.
+      A list of nodal mass.
+      You **can** both set and get it.
+
+   .. attribute:: ndf
+
+      A class attribute.
+      The number of degrees of freedoms of the node.
+      You **can't** set the ndf of a node.
 
    .. method:: remove()
 
-      Remove the corresponding OpenSees node object.
+      A class method. Remove the corresponding OpenSees node object.
 	       
       .. note::
       
-	 The python node object is not removed, but
-	 any operation on the python node object will fail.
+	 The python :class:`node` object is not removed, but
+	 any operation on the python :class:`node` object will fail.
 
    .. method:: __str__()
 
@@ -80,7 +92,12 @@ Node Object
             node(4, [48.0, 144.0], ndf = 2)]
 
      for nd in nds:
-         print(nd,nd.tag, nd.crds(), nd.disp(), nd.vel(), nd.accel(), nd.mass(), nd.ndf())
+         nd.disp = [-1.0, -2.0]
+	 nd.vel = [50.0, -20.0]
+	 nd.accel = [1.9, 2.8]
+	 nd.mass = [3.19, 0.12]
+	 print(nd.ndf, nd.tag, nd.mass, nd.crds, nd.disp, nd.vel, nd.accel)
+	 print(nd)
          nd.remove()
 
 
