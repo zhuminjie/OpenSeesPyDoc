@@ -27,55 +27,51 @@ Node Object
 
    .. attribute:: tag
       
-      A class attribute.
+      An object attribute (get).
       The unique tag of the node object, which is
       same in python and in OpenSees.
-      You **can't** set a tag of node.
 
    .. attribute:: crds
 
-      A class attribute.
+      An object attribute (get/set).
       A list of nodal coordinates.
-      You **can** both set and get it.
 
    .. attribute:: disp
 
-      A class attribute.
+      An object attribute (get/set).
       A list of nodal displacements
-      You **can** both set and get it.
 
    .. attribute:: vel
 
-      A class attribute.
+      An object attribute (get/set).
       A list of nodal velocities
-      You **can** both set and get it.
 
    .. attribute:: accel
 
-      A class attribute.
+      An object attribute (get/set).
       A list of nodal accelerations
-      You **can** both set and get it.
 
    .. attribute:: mass
 
-      A class attribute.
+      An object attribute (get/set).
       A list of nodal mass.
-      You **can** both set and get it.
 
    .. attribute:: ndf
 
-      A class attribute.
+      An object attribute (get).
       The number of degrees of freedoms of the node.
-      You **can't** set the ndf of a node.
 
    .. method:: remove()
 
-      A class method. Remove the corresponding OpenSees node object.
+      Remove the corresponding OpenSees Node object.
 	       
       .. note::
       
 	 The python :class:`node` object is not removed, but
 	 any operation on the python :class:`node` object will fail.
+	 When you ``del`` a :class:`node` or set it to ``None``,
+	 the python :class:`node` object is removed, but
+	 the OpenSees Node is not.
 
    .. method:: __str__()
 
@@ -100,6 +96,15 @@ Node Object
 	 print(nd)
          nd.remove()
 
+     del nds
+   
+     nds = {}
+     nds[1] = node(1)
+     nds[2] = node(2)
+     nds[3] = node(3)
+     nds[4] = node(4)
 
+     for tag, nd in nds.items():
+         print(nd)
 
 .. _print: https://docs.python.org/3/library/functions.html#print

@@ -62,9 +62,11 @@ can be imported as::
    :numbered: 
 
    docs/intro
-   docs/functions
+   docs/modelobj
    docs/nodeobj
    docs/spobj
+   docs/unimatobj
+   docs/elementobj
 
 Indices and tables
 ==================

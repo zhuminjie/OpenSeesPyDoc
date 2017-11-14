@@ -1,4 +1,0 @@
-element
-=======
-
-.. py:currentmodule:: opensees
