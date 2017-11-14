@@ -63,7 +63,7 @@ Node Object
 
    .. method:: remove()
 
-      Remove the corresponding OpenSees Node object.
+      Remove the corresponding OpenSees ``Node`` object.
 	       
       .. note::
       
@@ -71,7 +71,7 @@ Node Object
 	 any operation on the python :class:`node` object will fail.
 	 When you ``del`` a :class:`node` or set it to ``None``,
 	 the python :class:`node` object is removed, but
-	 the OpenSees Node is not.
+	 the OpenSees ``Node`` is not.
 
    .. method:: __str__()
 

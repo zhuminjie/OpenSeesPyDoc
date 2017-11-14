@@ -11,7 +11,8 @@ Element Object
    is a wrapper to the OpenSees ``Element`` object.
 
    One cannot create an element object
-   directly, but only through the class methods below.
+   directly, but only through
+   the :ref:`class methods <element_class_methods>` below.
 
    .. attribute:: tag
       
@@ -45,7 +46,7 @@ Element Object
 
    .. method:: __str__()
 
-      The string reprsentation of the node. Usually
+      The string reprsentation of the element. Usually
       used in the `print`_ function.
 
    .. method:: remove()
@@ -59,7 +60,14 @@ Element Object
 	 When you ``del`` a :class:`element` or set it to ``None``,
 	 the python :class:`element` object is removed, but
 	 the OpenSees ``Element`` is not.
-	       
+
+
+.. _element_class_methods:
+
+   Class methods:
+
+   #. :meth:`Truss`
+
    .. classmethod:: Truss(tag, nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
       Create a Truss element, where

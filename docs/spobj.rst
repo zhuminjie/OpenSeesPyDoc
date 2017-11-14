@@ -48,6 +48,8 @@ SP Object
    .. method:: remove()
 
       Remove the corresponding OpenSees ``SP_Constraint`` object.
+      The :class:`sp` object knows if it is in the domain or
+      in a :class:`pattern`.
 	       
       .. note::
       
@@ -55,11 +57,11 @@ SP Object
 	 any operation on the python :class:`sp` object will fail.
 	 When you ``del`` a :class:`sp` or set it to ``None``,
 	 the python :class:`ps` object is removed, but
-	 the OpenSees SP_Constraint is not.
+	 the OpenSees ``SP_Constraint`` is not.
 
    .. method:: __str__()
 
-      The string reprsentation of the node. Usually
+      The string reprsentation of the sp. Usually
       used in the `print`_ function.
 
    Examples::

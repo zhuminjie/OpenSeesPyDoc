@@ -1,6 +1,6 @@
 .. _unimat-obj:
 
-UniaxialMateria Object
+UniaxialMaterial Object
 =======================
 
 .. index:: object: unimat
@@ -11,7 +11,8 @@ UniaxialMateria Object
    is a wrapper to the OpenSees ``UniaxialMaterial`` object.
 
    One cannot create an uniaxialMaterial object
-   directly, but only through the class methods below.
+   directly, but only through
+   the :ref:`class methods <unimat_class_methods>` below.
 
    .. attribute:: strain
       
@@ -35,7 +36,7 @@ UniaxialMateria Object
 
    .. method:: __str__()
 
-      The string reprsentation of the node. Usually
+      The string reprsentation of the uniaxialMaterial. Usually
       used in the `print`_ function.
 
    .. method:: remove()
@@ -49,6 +50,12 @@ UniaxialMateria Object
 	 When you ``del`` a :class:`uniaxialMaterial` or set it to ``None``,
 	 the python :class:`uniaxialMaterial` object is removed, but
 	 the OpenSees ``UniaxialMaterial`` is not.
+
+.. _unimat_class_methods:
+
+   Class methods:
+
+   #. :meth:`Hardening`
 	       
    .. classmethod:: Hardening(tag, E, sigmaY, Hiso, Hkin, eta=0.0)
 

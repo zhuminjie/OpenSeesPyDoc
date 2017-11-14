@@ -67,10 +67,13 @@ can be imported as::
    docs/spobj
    docs/unimatobj
    docs/elementobj
+   docs/timeSeriesobj
+   docs/patternobj
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
+..   * :ref:`modindex`
+..   * :ref:`search`
