@@ -46,3 +46,4 @@
 .. _Fortran: http://en.wikipedia.org/wiki/Fortran
 .. _C: http://en.wikipedia.org/wiki/C_programming_language
 .. _open source: http://en.wikipedia.org/wiki/Open_source
+.. _Frank McKenna: http://ascelibrary.org/doi/10.1061/%28ASCE%29CP.1943-5487.0000002

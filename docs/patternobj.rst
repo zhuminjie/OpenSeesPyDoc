@@ -24,12 +24,17 @@ Object attributes
 .. attribute:: pattern.sps
       
    An object attribute (get) |list|.
-   All python :class:`sp` objects in the pattern.
+   All python :class:`sp` objects in the :class:`pattern`.
 
 .. attribute:: pattern.loads
       
    An object attribute (get) |list|.
-   All python :class:`load` objects in the pattern.
+   All python :class:`load` objects in the :class:`pattern`.
+
+.. attribute:: pattern.loadFactor
+      
+   An object attribute (get) |float|.
+   Get current load factor in the :class:`pattern`.
 
 Object methods
 ---------------

@@ -5,7 +5,8 @@ Model Object
 
 .. class:: model(type='basic', ndm=0, ndf=0)
 
-   Create a python :class:`model` object.
+   Create a python :class:`model` object which is
+   a wrapper to the OpenSees ``Domain`` object.
 
    ========================   ===============================================================
    ``ndm`` |int|              Number of dimentions. (optional)
