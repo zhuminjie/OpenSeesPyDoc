@@ -1,11 +1,7 @@
-.. _node-obj:
-
 .. include:: sub.txt
 
 Node Object
 ===========
-
-.. index:: object: node
 
 .. class:: node(tag,crds=[],disp=[],vel=[],accel=[],mass=[],ndf=0)
 

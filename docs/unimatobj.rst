@@ -1,11 +1,7 @@
-.. _unimat-obj:
-
 .. include:: sub.txt
 
 UniaxialMaterial Object
 =======================
-
-.. index:: object: unimat
 
 .. class:: uniaxialMaterial()
 

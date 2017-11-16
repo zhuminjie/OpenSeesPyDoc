@@ -1,11 +1,7 @@
-.. _load-obj:
-
 .. include:: sub.txt
 
 Load Object
 =====================
-
-.. index:: object: load
 
 .. class:: load()
 

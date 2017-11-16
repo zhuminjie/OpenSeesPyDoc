@@ -32,3 +32,17 @@
 .. _float: https://docs.python.org/3/library/functions.html#float
 .. _str: https://docs.python.org/3/library/stdtypes.html#str
 .. _bool: https://docs.python.org/3/library/functions.html#bool
+
+.. _OpenSeesPy: https://github.com/zhuminjie/OpenSeesPyDoc
+.. _OpenSees: http://opensees.berkeley.edu/
+.. _OpenSees Wiki: http://opensees.berkeley.edu/wiki/index.php/Main_Page
+.. _Finite Element Analysis: https://en.wikipedia.org/wiki/Finite_element_method
+.. _Python: https://docs.python.org/3/
+.. _Earthquake Engineering: http://en.wikipedia.org/wiki/Earthquake_engineering
+.. _object-oriented: http://en.wikipedia.org/wiki/Object-oriented
+.. _parallel: http://en.wikipedia.org/wiki/Parallel_computing
+.. _earthquakes: http://en.wikipedia.org/wiki/Earthquakes
+.. _C++: http://en.wikipedia.org/wiki/C%2B%2B
+.. _Fortran: http://en.wikipedia.org/wiki/Fortran
+.. _C: http://en.wikipedia.org/wiki/C_programming_language
+.. _open source: http://en.wikipedia.org/wiki/Open_source

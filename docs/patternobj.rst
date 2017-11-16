@@ -3,8 +3,6 @@
 Pattern Object
 =======================
 
-.. index:: object: pattern
-
 .. class:: pattern()
 
    A python :class:`pattern` object

@@ -1,11 +1,7 @@
-.. _timeSeries-obj:
-
 .. include:: sub.txt
 
 TimeSeries Object
 =======================
-
-.. index:: object: timeSeries
 
 .. class:: timeSeries()
 

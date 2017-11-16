@@ -1,11 +1,7 @@
-.. _element-obj:
-
 .. include:: sub.txt
 
 Element Object
 =======================
-
-.. index:: object: element
 
 .. class:: element()
 

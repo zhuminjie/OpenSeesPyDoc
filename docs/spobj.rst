@@ -1,11 +1,7 @@
-.. _sp-obj:
-
 .. include:: sub.txt
 
 SP Object
 =====================
-
-.. index:: object: sp
 
 .. class:: sp(nd,dof,value,const=False)
 

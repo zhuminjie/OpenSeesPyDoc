@@ -1,11 +1,7 @@
-.. _model-obj:
-
 .. include:: sub.txt
 
 Model Object
 ==============
-
-.. index:: object: model
 
 .. class:: model(type='basic', ndm=0, ndf=0)
 
