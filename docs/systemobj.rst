@@ -25,6 +25,7 @@ Class methods
 
 #. :meth:`system.ProfileSPD`
 #. :meth:`system.BandGen`
+#. :meth:`system.BandSPD`
 	       
 .. classmethod:: system.ProfileSPD()
 
@@ -33,6 +34,11 @@ Class methods
 .. classmethod:: system.BandGen()
 
    Create a BandGen :class:`system` for matrix which have a banded profile.
+
+.. classmethod:: system.BandSPD()
+
+   Create a BandSPD :class:`system` for symmetric positive definite matrix
+   which have a banded profile.
 
 
    

@@ -19,7 +19,7 @@ several `Fortran`_ and `C`_ numerical libraries for linear
 equation solving, and material and element routines. 
 
 
-`OpenSeesPy`_ is a `Python`_ interpreter of `OpenSees`_.
+`OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_.
 In `OpenSeesPy`_, OpenSees objects are wrapped
 in `Python`_ objects
 and manipulated through `Python`_

@@ -5,7 +5,7 @@ Introduction
 
 `OpenSees`_ is an `object-oriented`_ software framework.
 It widely uses the class inheritance and object
-composition in its design (`Frank McKenna`_).
+composition in its design (`McKenna, Scott and Fenves`_).
 
 `OpenSeesPy`_ makes an effort to represent
 the OO design at the script level.

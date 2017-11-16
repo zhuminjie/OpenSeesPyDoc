@@ -64,11 +64,24 @@ Object methods
 Class methods
 --------------
 
+#. :meth:`uniaxialMaterial.Elastic`
 #. :meth:`uniaxialMaterial.Hardening`
-	       
+
+.. classmethod:: uniaxialMaterial.Elastic(tag, E, eta=0.0, Eneg=E)
+
+   Create a Elastic :class:`uniaxialMaterial` object
+
+   ========================   =============================================================
+   ``tag`` |int|              :class:`uniaxialMaterial` tag.
+   ``E`` |float|              Tangent stiffness.
+   ``eta`` |float|            Damping tangent.
+   ``Eneg`` |float|           Tangent in compression.
+   ========================   =============================================================
+
 .. classmethod:: uniaxialMaterial.Hardening(tag, E, sigmaY, Hiso, Hkin, eta=0.0)
 
    Create a Hardening :class:`uniaxialMaterial` object
+   with combined linear kinematic and isotropic hardening. The model includes optional visco-plasticity using a Perzyna formulation.
 
    ========================   =============================================================
    ``tag`` |int|              :class:`uniaxialMaterial` tag.
@@ -78,6 +91,7 @@ Class methods
    ``Hkin`` |float|           Kinematic hardening modulus.
    ``eta`` |float|            Visco-plastic coefficient. (optional)
    ========================   =============================================================
+
 
 Examples
 ----------

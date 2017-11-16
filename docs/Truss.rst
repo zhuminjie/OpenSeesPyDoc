@@ -1,7 +1,7 @@
 .. _truss-example:
 
-Truss Example
-==============
+Static Nonlinear Truss Example
+===============================
 
 ::
 
