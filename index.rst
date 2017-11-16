@@ -68,6 +68,7 @@ can be imported as::
    docs/unimatobj
    docs/elementobj
    docs/timeSeriesobj
+   docs/loadobj
    docs/patternobj
 
 Indices and tables

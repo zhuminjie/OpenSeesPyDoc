@@ -1,5 +1,7 @@
 .. _node-obj:
 
+.. include:: sub.txt
+
 Node Object
 ===========
 
@@ -7,78 +9,93 @@ Node Object
 
 .. class:: node(tag,crds=[],disp=[],vel=[],accel=[],mass=[],ndf=0)
 
-   Create a python node object, which
-   is a wrapper to the OpenSees node object.
-	   
-   When only ``tag`` is given, it creates a wrapper to
-   the existing Opensees node with ``tag``.
+   Create a python :class:`node` object, which
+   is a wrapper to the OpenSees ``Node`` object.
 
-   If ``ndf`` is given,
-   it will override the system ndf set by :func:`model`.
-	   
-   When ``crds`` is given, number of items in which 
-   should be equal to ``ndm`` set by :func:`model`,
-   it creates a new OpenSees node object.
-	   
-   The number of items of ``disp``, ``vel``, ``accel``, ``mass``
-   should be equal to ``ndf``.
+   ========================   ===========================================================
+   ``tag`` |int|              Tag of :class:`node`, when only ``tag`` is given,
+	                      it creates a wrapper to the existing Opensees ``Node``.
+   ``crds`` |listf|           Coordinates of :class:`node`, its length must
+                              be :attr:`model.ndm`. (optional)
+   ``disp`` |listf|           Displacements of :class:`node`, its length
+	                      must be :attr:`node.ndf`. (optional)
+   ``vel`` |listf|            Velocities of :class:`node`, its length
+	                      must be :attr:`node.ndf`. (optional)
+   ``accel`` |listf|          Accelerations of :class:`node`, its length
+	                      must be :attr:`node.ndf`. (optional)
+   ``mass`` |listf|           Mass of :class:`node`, its length
+	                      must be :attr:`node.ndf`. (optional)
+   ``ndf`` |int|              Ndf of :class:`node`, it can be different
+                              to :attr:`model.ndf`. (optional)
+   ========================   ===========================================================
+
    
+Object attributes
+-----------------
 
-
-   .. attribute:: tag
+.. attribute:: node.tag
       
-      An object attribute (get).
-      The unique tag of the node object, which is
-      same in python and in OpenSees.
+   An object attribute (get) |int|.
+   A unique tag of the :class:`node` object.
 
-   .. attribute:: crds
+.. attribute:: node.crds
 
-      An object attribute (get/set).
-      A list of nodal coordinates.
+   An object attribute (get/set) |listf|.
+   Nodal coordinates.
 
-   .. attribute:: disp
+.. attribute:: node.disp
 
-      An object attribute (get/set).
-      A list of nodal displacements
+   An object attribute (get/set) |listf|.
+   Nodal displacements.
 
-   .. attribute:: vel
+.. attribute:: node.vel
 
-      An object attribute (get/set).
-      A list of nodal velocities
+   An object attribute (get/set) |listf|.
+   Nodal velocities.
 
-   .. attribute:: accel
+.. attribute:: node.accel
 
-      An object attribute (get/set).
-      A list of nodal accelerations
+   An object attribute (get/set) |listf|.
+   Nodal accelerations.
 
-   .. attribute:: mass
+.. attribute:: node.mass
 
-      An object attribute (get/set).
-      A list of nodal mass.
+   An object attribute (get/set) |listf|.
+   Nodal mass.
 
-   .. attribute:: ndf
+.. attribute:: node.ndf
 
-      An object attribute (get).
-      The number of degrees of freedoms of the node.
+   An object attribute (get) |int|.
+   The number of degrees of freedoms of the :class:`node`.
 
-   .. method:: remove()
 
-      Remove the corresponding OpenSees ``Node`` object.
+Object methods
+---------------
+
+#. :meth:`node.__str__`
+#. :meth:`node.remove`
+
+.. method:: node.__str__()
+
+   The string reprsentation of the :class:`node` object. Usually
+   used in the |print| function.
+
+.. method:: node.remove()
+
+   Remove the corresponding OpenSees ``Node`` object.
 	       
-      .. note::
+   .. note::
       
-	 The python :class:`node` object is not removed, but
-	 any operation on the python :class:`node` object will fail.
-	 When you ``del`` a :class:`node` or set it to ``None``,
-	 the python :class:`node` object is removed, but
-	 the OpenSees ``Node`` is not.
+      By calling :meth:`node.remove`, 
+      the python :class:`node` object is not removed, but
+      any operation on the python :class:`node` object will fail.
+      However, when you |del| a :class:`node` or set it to |None|,
+      the python :class:`node` object is removed, but
+      the OpenSees ``Node`` is not.
 
-   .. method:: __str__()
-
-      The string reprsentation of the node. Usually
-      used in the `print`_ function.
-
-   Examples::
+Examples
+--------
+::
 
      node(1, crds=[0.0, 0.0], disp=[1.0, 0.0])
 
@@ -107,4 +124,3 @@ Node Object
      for tag, nd in nds.items():
          print(nd)
 
-.. _print: https://docs.python.org/3/library/functions.html#print

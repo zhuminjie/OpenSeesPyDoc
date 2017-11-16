@@ -1,5 +1,7 @@
 .. _timeSeries-obj:
 
+.. include:: sub.txt
+
 TimeSeries Object
 =======================
 
@@ -7,52 +9,66 @@ TimeSeries Object
 
 .. class:: timeSeries()
 
-   A python timeSeries object
+   A python :class:`timeSeries` object
    is a wrapper to the OpenSees ``TimeSeries`` object.
 
-   One cannot create an timeSeries object
-   directly, but only through
-   the :ref:`class methods <timeSeries_class_methods>` below.
+   .. note::
+   
+      One cannot create an :class:`timeSeries` object
+      directly, but only through :ref:`timeSeries-class-methods`.
 
-   .. attribute:: tag
+
+Object attributes
+------------------
+
+.. attribute:: timeSeries.tag
       
-      An object attribute (get).
-      The timeSeries tag.
+   An object attribute (get) |int|.
+   The :class:`timeSeries` tag.
 
-   .. method:: __str__()
+Object methods
+---------------
 
-      The string reprsentation of the timeSeries. Usually
-      used in the `print`_ function.
+#. :meth:`timeSeries.__str__`
+#. :meth:`timeSeries.remove`
 
-   .. method:: remove()
+.. method:: timeSeries.__str__()
 
-      Remove the corresponding OpenSees ``TimeSeries`` object.
+   The string reprsentation of the :class:timeSeries`. Usually
+   used in the `print`_ function.
+
+.. method:: timeSeries.remove()
+
+   Remove the corresponding OpenSees ``TimeSeries`` object.
 	       
-      .. note::
-      
-	 The python :class:`timeSeries` object is not removed, but
-	 any operation on the python :class:`timeSeries` object will fail.
-	 When you ``del`` a :class:`timeSeries` or set it to ``None``,
-	 the python :class:`timeSeries` object is removed, but
-	 the OpenSees ``TimeSeries`` is not.
+   .. seealso::
+
+      :meth:`node.remove`
 
 
-.. _timeSeries_class_methods:
+.. _timeSeries-class-methods:
 
-   Class methods:
+Class methods
+--------------
 
    #. :meth:`Linear`
 
-   .. classmethod:: Linear(tag, factor=1.0)
+   .. classmethod:: timeSeries.Linear(tag, factor=1.0)
 
-      Create a Truss timeSeries, where
-      ``tag`` is the timeSeries tag and
-      ``factor`` is the linear factor.
+      Create a Linear :class:`timeSeries` object.
+
+      ========================   =============================================================
+      ``tag`` |int|              :class:`timeSeries` tag.
+      ``factor`` |float|         Linear factor. (optional)
+      ========================   =============================================================
+	
 
 
-   Examples::
+Examples
+---------
+
+::
 
      ts = timeSeries.Linear(1)
      print(ts)
 
-.. _print: https://docs.python.org/3/library/functions.html#print

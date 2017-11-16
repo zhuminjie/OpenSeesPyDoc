@@ -1,0 +1,34 @@
+.. |print| replace:: `print`_
+   
+.. |list| replace:: (`list`_)
+
+.. |listf| replace:: (`list`_ (`float`_))
+
+.. |listi| replace:: (`list`_ (`int`_))
+
+.. |listl| replace:: (`list`_ (`list`_))
+
+.. |int| replace:: (`int`_)
+   
+.. |del| replace:: `del`_
+   
+.. |None| replace:: `None`_
+   
+.. |float| replace:: (`float`_)
+   
+.. |str| replace:: (`str`_)
+
+.. |bool| replace:: (`bool`_)
+
+.. |node| replace:: (:class:`node`)
+
+.. |timeSeries| replace:: (:class:`timeSeries`)
+
+.. _print: https://docs.python.org/3/library/functions.html#print
+.. _list: https://docs.python.org/3/library/stdtypes.html#list
+.. _int: https://docs.python.org/3/library/functions.html#int
+.. _del: https://docs.python.org/3/reference/simple_stmts.html#the-del-statement
+.. _None: https://docs.python.org/3/library/constants.html#None
+.. _float: https://docs.python.org/3/library/functions.html#float
+.. _str: https://docs.python.org/3/library/stdtypes.html#str
+.. _bool: https://docs.python.org/3/library/functions.html#bool

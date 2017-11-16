@@ -1,5 +1,7 @@
 .. _sp-obj:
 
+.. include:: sub.txt
+
 SP Object
 =====================
 
@@ -7,64 +9,74 @@ SP Object
 
 .. class:: sp(nd,dof,value,const=False)
 
-   Create a python sp object, which
+   Create a python :class:`sp` object, which
    is a wrapper to the OpenSees ``SP_Constraint`` object.
 
-   The ``nd`` is a python :class:`node` object.
-
-   The ``dof`` is an integer for which dof is to be constrained.
-
-   The ``value`` is a double of constrained value.
-
-   The optional ``const`` indicates if the constraint
-   is constant.
-
-   The :meth:`model.fix` method may return
-   a list of the :class:`sp` objects.
+   ========================   =============================================================
+   ``nd`` |node|              A python :class:`node` object to be constrained.
+   ``dof`` |int|              The dof of the :class:`node` to be constrained.
+   ``value`` |float|          The constrained value.
+   ``const`` |bool|           If the constraint is constant. (optional)
+   ========================   =============================================================
 	   
-   .. attribute:: tag
+   .. note::
+   
+      The :meth:`model.fix` method may return
+      :class:`sp` objects |list|.
+
+
+Object attributes
+------------------
+
+.. attribute:: sp.tag
       
-      An object attribute (get).
-      The unique tag of the sp object, which is
-      same in python and in OpenSees.
+   An object attribute (get) |int|.
+   The unique tag of the :class:`sp` object.
+      
+.. attribute:: sp.nd
 
-   .. attribute:: ndtag
+   An object attribute (get) |node|.
+   The constrained :class:`node`.
 
-      An object attribute (get).
-      The tag of the constrained node.
+.. attribute:: sp.dof
 
-   .. attribute:: dof
+   An object attribute (get) |int|.
+   The constrained dof of the :class:`node`.
+   The value starts from 1 through :attr:`node.ndf` of the :class:`node`.
 
-      An object attribute (get).
-      The constrained dof of the node .
-      The value
-      of ``dof`` starts from 1 through ``ndf`` of the :class:`node`.
+.. attribute:: sp.value
 
-   .. attribute:: value
+   An object attribute (get) |float|.
+   The constrained value.
 
-      An object attribute (get).
-      The constrained value.
+Object methods
+-----------------
 
-   .. method:: remove()
-
-      Remove the corresponding OpenSees ``SP_Constraint`` object.
-      The :class:`sp` object knows if it is in the domain or
-      in a :class:`pattern`.
+#. :meth:`sp.__str__`
+#. :meth:`sp.remove`
 	       
-      .. note::
-      
-	 The python :class:`sp` object is not removed, but
-	 any operation on the python :class:`sp` object will fail.
-	 When you ``del`` a :class:`sp` or set it to ``None``,
-	 the python :class:`ps` object is removed, but
-	 the OpenSees ``SP_Constraint`` is not.
+.. method:: sp.__str__()
 
-   .. method:: __str__()
+      The string reprsentation of the :class:`sp` object. Usually
+      used in the |print| function.
 
-      The string reprsentation of the sp. Usually
-      used in the `print`_ function.
 
-   Examples::
+.. method:: sp.remove()
+
+   Remove the corresponding OpenSees ``SP_Constraint`` object.
+   The :class:`sp` object knows if it is in the OpenSees
+   ``Domain`` or
+   in a :class:`pattern`.
+	       
+   .. seealso::
+
+      :meth:`node.remove`
+
+
+Examples
+--------
+
+::
 
      s = sp(nd, dof=1, value=1.0, const=True)
      print(s)
@@ -75,4 +87,3 @@ SP Object
              print(spi.tag, spi.ndtag,spi.dof,spi.value)
              print(spi)
 
-.. _print: https://docs.python.org/3/library/functions.html#print

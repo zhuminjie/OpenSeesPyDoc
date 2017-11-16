@@ -1,5 +1,7 @@
 .. _unimat-obj:
 
+.. include:: sub.txt
+
 UniaxialMaterial Object
 =======================
 
@@ -7,68 +9,84 @@ UniaxialMaterial Object
 
 .. class:: uniaxialMaterial()
 
-   A python uniaxialMaterial object
+   A python :class:`uniaxialMaterial` object
    is a wrapper to the OpenSees ``UniaxialMaterial`` object.
 
-   One cannot create an uniaxialMaterial object
-   directly, but only through
-   the :ref:`class methods <unimat_class_methods>` below.
+   .. note::
+   
+      One cannot create an :class:`uniaxialMaterial` object
+      directly, but only through :ref:`unimat-class-methods`.
 
-   .. attribute:: strain
+
+Object attributes
+-------------------
+
+.. attribute:: uniaxialMaterial.strain
       
-      An object attribute (get/set).
-      The material strains.
+   An object attribute (get/set) |float|.
+   The material strains.
 
-   .. attribute:: stress
+.. attribute:: uniaxialMaterial.stress
 
-      An object attribute (get).
-      The material stress.
+   An object attribute (get) |float|.
+   The material stress.
 
-   .. attribute:: tangent
+.. attribute:: uniaxialMaterial.tangent
 
-      An object attribute (get).
-      The material tangent at current strain.
+   An object attribute (get) |float|.
+   The material tangent at current strain.
 
-   .. attribute:: dampTangent
+.. attribute:: uniaxialMaterial.dampTangent
 
-      An object attribute (get).
-      The material damp tangent at current strain.
+   An object attribute (get) |float|.
+   The material damp tangent at current strain.
 
-   .. method:: __str__()
 
-      The string reprsentation of the uniaxialMaterial. Usually
-      used in the `print`_ function.
+Object methods
+-------------------
 
-   .. method:: remove()
+#. :meth:`uniaxialMaterial.__str__`
+#. :meth:`uniaxialMaterial.remove`
+		  
+.. method:: uniaxialMaterial.__str__()
 
-      Remove the corresponding OpenSees ``UniaxialMaterial`` object.
+   The string reprsentation of the :class:`uniaxialMaterial`. Usually
+   used in the |print| function.
+
+.. method:: uniaxialMaterial.remove()
+
+   Remove the corresponding OpenSees ``UniaxialMaterial`` object.
+   It will not remove the materials in :class:`element`.
 	       
-      .. note::
-      
-	 The python :class:`uniaxialMaterial` object is not removed, but
-	 any operation on the python :class:`uniaxialMaterial` object will fail.
-	 When you ``del`` a :class:`uniaxialMaterial` or set it to ``None``,
-	 the python :class:`uniaxialMaterial` object is removed, but
-	 the OpenSees ``UniaxialMaterial`` is not.
+   .. seealso::
 
-.. _unimat_class_methods:
+      :meth:`node.remove`
 
-   Class methods:
 
-   #. :meth:`Hardening`
+.. _unimat-class-methods:
+
+Class methods
+--------------
+
+#. :meth:`uniaxialMaterial.Hardening`
 	       
-   .. classmethod:: Hardening(tag, E, sigmaY, Hiso, Hkin, eta=0.0)
+.. classmethod:: uniaxialMaterial.Hardening(tag, E, sigmaY, Hiso, Hkin, eta=0.0)
 
-      Create a Hardening material, where
-      ``tag`` is the material tag,
-      ``E`` is tangent stiffness,
-      ``sigmaY`` is the yield stress or force,
-      ``Hiso`` is the isotropic hardening modulus,
-      ``Hkin`` is the kinematic hardening modulus,
-      and ``eta`` is visco-plastic coefficient.
+   Create a Hardening :class:`uniaxialMaterial` object
 
+   ========================   =============================================================
+   ``tag`` |int|              :class:`uniaxialMaterial` tag.
+   ``E`` |float|              Tangent stiffness.
+   ``sigmaY`` |float|         Yield stress or force.
+   ``Hiso`` |float|           Isotropic hardening modulus.
+   ``Hkin`` |float|           Kinematic hardening modulus.
+   ``eta`` |float|            Visco-plastic coefficient. (optional)
+   ========================   =============================================================
 
-   Examples::
+Examples
+----------
+
+::
 
      mat = uniaxialMaterial.Hardening(1, E=1e6, sigmaY=36.0,
                                       Hiso=0.0, Hkin=alpha/(1-alpha)*E)
@@ -76,4 +94,3 @@ UniaxialMaterial Object
      print(mat.strain, mat.stress, mat.tangent, mat.dampTangent)
      print(mat)
 
-.. _print: https://docs.python.org/3/library/functions.html#print

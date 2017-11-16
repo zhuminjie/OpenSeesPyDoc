@@ -1,4 +1,4 @@
-.. _pattern-obj:
+.. include:: sub.txt
 
 Pattern Object
 =======================
@@ -7,64 +7,105 @@ Pattern Object
 
 .. class:: pattern()
 
-   A python pattern object
+   A python :class:`pattern` object
    is a wrapper to the OpenSees ``LoadPattern`` object.
 
-   One cannot create an pattern object
-   directly, but only through
-   the :ref:`class methods <pattern_class_methods>` below.
+   .. note::
+   
+      One cannot create an :class:`pattern` object
+      directly, but only through the :ref:`pattern-class-methods`.
 
-   .. attribute:: tag
+Object attributes
+------------------
+
+.. attribute:: pattern.tag
       
-      An object attribute (get).
-      The pattern tag.
+   An object attribute (get) |int|.
+   The :class:`pattern` tag.
 
-   .. method:: __str__()
-
-      The string reprsentation of the pattern. Usually
-      used in the `print`_ function.
-
-   .. method:: sp(nd,dof,value,const=False)
-
-      Create and add a OpenSees ``SP_Constraint`` object to the pattern.
-      The arguments are same as :class:`sp`.
-      Return a python :class:`sp` object.
-
-   .. method:: remove()
-
-      Remove the corresponding OpenSees ``LoadPattern`` object.
-	       
-      .. note::
+.. attribute:: pattern.sps
       
-	 The python :class:`pattern` object is not removed, but
-	 any operation on the python :class:`pattern` object will fail.
-	 When you ``del`` a :class:`pattern` or set it to ``None``,
-	 the python :class:`pattern` object is removed, but
-	 the OpenSees ``LoadPattern`` is not.
+   An object attribute (get) |list|.
+   All python :class:`sp` objects in the pattern.
 
-   .. method:: wipe()
+.. attribute:: pattern.loads
+      
+   An object attribute (get) |list|.
+   All python :class:`load` objects in the pattern.
 
-      Wipe all OpenSees ``SP_Constraint``, ``NodalLoad``,
-      and ``ElementalLoad`` objects
-      from the pattern.
+Object methods
+---------------
 
-.. _pattern_class_methods:
+#. :meth:`pattern.__str__`
+#. :meth:`pattern.sp`
+#. :meth:`pattern.load`
+#. :meth:`pattern.wipe`
+#. :meth:`pattern.remove`
 
-   Class methods:
+.. method:: pattern.__str__()
 
-   #. :meth:`Plain`
+   The string reprsentation of the pattern. Usually
+   used in the `print`_ function.
+
+.. method:: pattern.sp(nd,dof,value,const=False)
+
+   Create and add a python :class:`sp` object to the :class:`pattern`.
+   The arguments are same as :class:`sp`.
+   Return the python :class:`sp` object.
+
+.. method:: pattern.load(nd,load,const=False)
+
+   Create and add a python :class:`load` object to the :class:`pattern`.
+   Return the python :class:`load` object.
+
+   ========================   =============================================================
+   ``nd`` |node|              :class:`node` object.
+   ``load`` |listf|           Load values.
+   ``const`` |bool|           Whether the load is constant. (optional)
+   ========================   =============================================================
+	    
+.. method:: pattern.wipe()
+
+   Wipe all :class:`sp`, :class:`load`, and :class:`eleLoad` objects
+   from the :class:`pattern`.
+
+.. method:: pattern.remove()
+
+   Remove the corresponding OpenSees ``LoadPattern`` object
+   and every thing in it.
+
+   .. seealso::
+
+      :meth:`node.remove`
+
+.. _pattern-class-methods:
+
+Class methods
+--------------
+
+#. :meth:`pattern.Plain`
 	       
-   .. classmethod:: Plain(tag, ts, factor=1.0)
+.. classmethod:: pattern.Plain(tag, ts, factor=1.0)
 
-      Create a plain load pattern, where
-      ``tag`` is the pattern tag,
-      ``ts`` is a :class:`timeSeries` object, and
-      ``factor`` is the load factor.
+   Create a plain load :class:`pattern`.
+
+   ========================   =============================================================
+   ``tag`` |int|              :class:`pattern` tag.
+   ``ts`` |timeSeries|        A :class:`timeSeries` object.
+   ``factor`` |float|         Load factor. (optional)
+   ========================   =============================================================
+
+   
+Examples
+----------
+
+::
+
+   ptn = pattern.Plain(1, ts)
+
+   ptn.sp(nd, dof=1, value=0.0)
+   ptn.load(nd, load=[0,1.0])
+
+   print(ptn)
 
 
-   Examples::
-
-     patt = pattern.Plain(1, ts)
-     print(patt)
-
-.. _print: https://docs.python.org/3/library/functions.html#print

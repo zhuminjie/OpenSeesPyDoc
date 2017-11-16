@@ -1,5 +1,7 @@
 .. _element-obj:
 
+.. include:: sub.txt
+
 Element Object
 =======================
 
@@ -7,83 +9,94 @@ Element Object
 
 .. class:: element()
 
-   A python element object
+   A python :class:`element` object
    is a wrapper to the OpenSees ``Element`` object.
 
-   One cannot create an element object
-   directly, but only through
-   the :ref:`class methods <element_class_methods>` below.
+   .. note::
+   
+      One cannot create an :class:`element` object
+      directly, but only through :ref:`element-class-methods`.
 
-   .. attribute:: tag
+
+Object attributes
+-------------------
+
+.. attribute:: element.tag
       
-      An object attribute (get).
-      The element tag.
+   An object attribute (get) |int|.
+   The :class:`element` tag.
 
-   .. attribute:: nds
+.. attribute:: element.nds
 
-      An object attribute (get).
-      The element nodes.
+   An object attribute (get) |list|.
+   The element :class:`node` objects.
 
-   .. attribute:: ndf
+.. attribute:: element.ndf
 
-      An object attribute (get).
-      The element number of dofs.
+   An object attribute (get) |int|.
+   The element number of dofs.
 
-   .. attribute:: stiff
+.. attribute:: element.stiff
 
-      An object attribute (get).
-      The element stiffness matrix.
+   An object attribute (get) |listl|.
+   The element stiffness matrix.
 
-   .. attribute:: damp
+.. attribute:: element.damp
 
-      An object attribute (get).
-      The element damping matrix.
+   An object attribute (get) |listl|.
+   The element damping matrix.
 
-   .. attribute:: mass
+.. attribute:: element.mass
 
-      An object attribute (get).
-      The element mass matrix.
+   An object attribute (get) |listl|.
+   The element mass matrix.
 
-   .. method:: __str__()
+Object methods
+---------------
 
-      The string reprsentation of the element. Usually
-      used in the `print`_ function.
+#. :meth:`element.__str__`
+#. :meth:`element.remove`
 
-   .. method:: remove()
+.. method:: element.__str__()
 
-      Remove the corresponding OpenSees ``Element`` object.
+   The string reprsentation of the :class:`element`. Usually
+   used in the |print| function.
+
+.. method:: element.remove()
+
+   Remove the corresponding OpenSees ``Element`` object.
 	       
-      .. note::
-      
-	 The python :class:`element` object is not removed, but
-	 any operation on the python :class:`element` object will fail.
-	 When you ``del`` a :class:`element` or set it to ``None``,
-	 the python :class:`element` object is removed, but
-	 the OpenSees ``Element`` is not.
+   .. seealso::
 
+      :meth:`node.remove`
 
-.. _element_class_methods:
+.. _element-class-methods:
 
-   Class methods:
+Class methods
+---------------
 
-   #. :meth:`Truss`
+#. :meth:`element.Truss`
 
-   .. classmethod:: Truss(tag, nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
+.. classmethod:: element.Truss(tag, nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
-      Create a Truss element, where
-      ``tag`` is the element tag,
-      ``nds`` is list of Truss :class:`node` objects,
-      ``A`` the cross-sectional area of element,
-      ``mat`` is a :class:`uniaxialMaterial` object,
-      ``rho`` is the mass per unit length,
-      ``cMass`` is the consistent mass flag, 
-      (0 lumped mass, 1 consistent mass),
-      and ``doRayleigh`` is the
-      Rayleigh damping flag, (0 no rayleigh damping,
-      1 include rayleigh damping)
+   Create a Truss :class:`element` object.
 
+   ========================   =============================================================
+   ``tag`` |int|              :class:`element` tag.
+   ``nds`` |list|             Truss end :class:`node` objects.
+   ``A`` |float|              Cross-sectional area of element.
+   ``rho`` |float|            Mass per unit length. (optional)
+   ``cMass`` |int|            Consistent mass flag (0 lumped mass, 1 consistent mass).
+		              (optional)
+   ``doRayleigh`` |int|       Rayleigh damping flag (0 no rayleigh damping,
+		              1 include rayleigh damping). (optional)
+   ========================   =============================================================
+		 
 
-   Examples::
+Examples
+-----------
+
+::
 
      mat = uniaxialMaterial.Hardening(1, E=E, sigmaY=sY, Hiso=0.0, Hkin=alpha/(1-alpha)*E)
 
@@ -99,4 +112,4 @@ Element Object
 	 print(np.array(ele.mass))
 	 print(ele)
 
-.. _print: https://docs.python.org/3/library/functions.html#print
+
