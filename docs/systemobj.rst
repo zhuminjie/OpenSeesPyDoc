@@ -74,7 +74,7 @@ Class methods
    matrix which uses a row-oriented solution method in the solution phase.
 
    =====================   ======================
-   ``lSparse`` (int)       Ordering scheme:
+   ``lSparse`` |int|       Ordering scheme:
 
                            #. -- MMD
 			   #. -- ND

@@ -24,15 +24,23 @@ Class methods
 
 #. :meth:`test.NormUnbalance`
 #. :meth:`test.NormDispIncr`
+#. :meth:`test.EnergyIncr`
+#. :meth:`test.RelativeNormUnbalance`
+#. :meth:`test.RelativeNormDispIncr`
+#. :meth:`test.RelativeTotalNormDispIncr`
+#. :meth:`test.RelativeEnergyIncr`
+#. :meth:`test.FixedNumIter`
+#. :meth:`test.NormDispAndUnbalance`
+#. :meth:`test.NormDispOrUnbalance`
+#. :meth:`test.PFEM`
 	       
 .. classmethod:: test.NormUnbalance(tol,iter,pFlag=0,nType=2,maxincr=-1)
 
-   Create a NormUnbalance :class:`test`, which uses the norm of the right hand side of the matrix equation to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on :class:`integrator` and :class:`constraints` handler chosen. Usually, though not always, it is equal to the unbalanced forces in the system. 
+   Create a NormUnbalance :class:`test`, which uses the norm of the right hand side of the matrix equation to determine if convergence has been reached. 
 
    ======================   =============================================================
    ``tol`` |float|          Tolerance criteria used to check for convergence.
-   ``iter`` |int|           Max number of iterations to check before returning
-		            failure condition.
+   ``iter`` |int|           Max number of iterations to check
    ``pFlag`` |int|          Print flag (optional):
 		 
                             * 0 print nothing.
@@ -49,24 +57,100 @@ Class methods
    
 .. classmethod:: test.NormDispIncr(tol,iter,pFlag=0,nType=2)
 
-   Create a NormUnbalance :class:`test`, which uses the norm of the left hand side solution vector of the matrix equation to determine if convergence has been reached. What the solution vector of the matrix equation is depends on :class:`integrator` and :class:`constraints` handler chosen. Usually, though not always, it is equal to the displacement increments that are to be applied to the model.
+   Create a NormUnbalance :class:`test`, which uses the norm of the left hand side solution vector of the matrix equation to determine if convergence has been reached.
 
-   ======================   =============================================================
-   ``tol`` |float|          Tolerance criteria used to check for convergence.
-   ``iter`` |int|           Max number of iterations to check before returning
-		            failure condition.
-   ``pFlag`` |int|          Print flag (optional) (see :meth:`test.NormUnbalance`)
-   ``nType`` |int|          Type of norm (optional) (see :meth:`test.NormUnbalance`)
-   ======================   =============================================================
+   See :meth:`test.NormUnbalance` for parameters.
 
    When using the Lagrange method to enforce the constraints, the Lagrange multipliers appear in the solution vector.
 
+.. classmethod:: test.EnergyIncr(tol,iter,pFlag=0,nType=2)
 
+   Create a EnergyIncr :class:`test`, which uses the dot product of the solution vector and norm of the right hand side of the matrix equation to determine if convergence has been reached.
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+   * When using the Penalty method additional large forces to enforce the penalty functions exist on the right hand side, making convergence using this test usually impossible (even though solution might have converged).
+   * When using the Lagrange method to enforce the constraints, the Lagrange multipliers appear in the solution vector.
+
+.. classmethod:: test.RelativeNormUnbalance(tol,iter,pFlag=0,nType=2)
+
+   Create a RelativeNormUnbalance :class:`test`, which uses the relative norm of the right hand side of the matrix equation to determine if convergence has been reached.
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+   * When using the Penalty method additional large forces to enforce the penalty functions exist on the right hand side, making convergence using this test usually impossible (even though solution might have converged).
+
+.. classmethod:: test.RelativeNormDispIncr(tol,iter,pFlag=0,nType=2)
+
+   Create a RelativeNormDispIncr :class:`test`, which uses the relative of the solution vector of the matrix equation to determine if convergence has been reached. 
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+
+.. classmethod:: test.RelativeTotalNormDispIncr(tol,iter,pFlag=0,nType=2)
+
+   Create a RelativeTotalNormDispIncr :class:`test`, which uses the ratio of the current norm to the total norm (the sum of all the norms since last convergence) of the solution vector.
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+.. classmethod:: test.RelativeEnergyIncr(tol,iter,pFlag=0,nType=2)
+
+   Create a RelativeEnergyIncr :class:`test`, which uses the relative dot product of the solution vector and norm of the right hand side of the matrix equation to determine if convergence has been reached.
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+.. classmethod:: test.FixedNumIter(iter,pFlag=0,nType=2)
+
+   Create a FixedNumIter :class:`test`, that performs a fixed number of iterations without testing for convergence
+
+   See :meth:`test.NormUnbalance` for parameters.
+
+.. classmethod:: test.NormDispAndUnbalance(tolIncr,tolR,iter,pFlag=0,nType=2,maxincr=-1)
+
+   Create a NormDispAndUnbalance :class:`test`, which check if both
+   :meth:`test.NorUnbalance` and :meth:`test.NormDispIncr` are converged.
+
+   ======================   =============================================================
+   ``tolIncr`` |float|      Tolerance for left hand solution increments
+   ``tolIncr`` |float|      Tolerance for right hand residual
+   ``iter`` |int|           Max number of iterations to check
+   ``pFlag`` |int|          See :meth:`test.NormUnbalance` (optional)		    
+   ``nType`` |int|          See :meth:`test.NormUnbalance` (optional)
+   ``maxincr`` |int|        See :meth:`test.NormUnbalance` (optional)
+   ======================   =============================================================
+
+.. classmethod:: test.NormDispOrUnbalance(tolIncr,tolR,iter,pFlag=0,nType=2,maxincr=-1)
+
+   Create a NormDispOrUnbalance :class:`test`, which check if either
+   :meth:`test.NorUnbalance` or :meth:`test.NormDispIncr` are converged.
+
+   See :meth:`test.NormDispAndUnbalance` for parameters.
+
+
+.. classmethod:: test.PFEM(tolv,tolp,tolrv,tolrp,iter,maxincr,tolrelv=1e-15,tolrelp=1e-15,pFlag=0,nType=2)
+
+   Create a PFEM :class:`test`, which check both increments and residual for
+   velocities and pressures.
+
+   ======================   =========================================================================
+   ``tolv`` |float|         Tolerance for velocity increments
+   ``tolp`` |float|         Tolerance for pressure increments
+   ``tolrv`` |float|        Tolerance for velocity residual
+   ``tolrp`` |float|        Tolerance for pressure residual
+   ``maxincr`` |int|        Max times for error increasing
+   ``iter`` |int|           Max number of iterations to check
+   ``tolrv`` |float|        Tolerance for relative velocity increments (optional)
+   ``tolrp`` |float|        Tolerance for relative pressure increments (optional)
+   ``pFlag`` |int|          See :meth:`test.NormUnbalance` (optional)		    
+   ``nType`` |int|          See :meth:`test.NormUnbalance` (optional)
+   ======================   =========================================================================
+	 
 Examples
 ----------
 
 ::
 
    test.NormUnbalance(tol=1.0e-8, iter=10, pFlag=4)
+   test.PFEM(tolv=1e-6, tolp=1e-6, tolrv=1e-6, tolrp=1e-6, iter=20, maxincr=3, pFlag=1)
 
 
