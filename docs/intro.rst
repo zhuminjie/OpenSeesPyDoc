@@ -35,6 +35,7 @@ The `OpenSeesPy`_ objects:
 #. :class:`model`
 #. :class:`node`
 #. :class:`sp`
+#. :class:`mp`
 #. :class:`uniaxialMaterial`
 #. :class:`element`
 #. :class:`timeSeries`

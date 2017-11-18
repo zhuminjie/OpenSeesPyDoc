@@ -53,8 +53,14 @@ Object methods
 .. method:: pattern.sp(nd,dof,value,const=False)
 
    Create and add a python :class:`sp` object to the :class:`pattern`.
-   The arguments are same as :class:`sp`.
    Return the python :class:`sp` object.
+
+   ========================   =============================================================
+   ``nd`` |node|              A python :class:`node` object to be constrained.
+   ``dof`` |int|              The dof of the :class:`node` to be constrained.
+   ``value`` |float|          The constrained value.
+   ``const`` |bool|           If the constraint is constant. (optional)
+   ========================   =============================================================
 
 .. method:: pattern.load(nd,load,const=False)
 

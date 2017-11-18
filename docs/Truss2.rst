@@ -20,8 +20,8 @@ Static Elastic Truss Example
    nds[4] = node(4, [72.0, 96.0])
 
    # set boundary condition
-   for i in range(3):
-       m.fix(nds[i+1], fix=[1,1])
+   for i in [1,2,3]:
+       nds[i].fix([1,1])
 
    # define materials
    mat = uniaxialMaterial.Elastic(1, E=3000.0)

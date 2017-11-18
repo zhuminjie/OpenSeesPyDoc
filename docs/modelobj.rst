@@ -43,7 +43,6 @@ Object methods
 ---------------------
 
 #. :meth:`model.__str__`
-#. :meth:`model.fix`
 #. :meth:`model.wipe`
 
 .. method:: model.__str__()
@@ -51,16 +50,9 @@ Object methods
    The string reprsentation of the :class:`model`. Usually
    used in the |print| function.
 
-.. method:: model.fix(nd, fix=[])
-
-   Fix a :class:`node`. The  ``fix`` |listi|
-   contains ``1`` and ``0`` to indicate
-   corresponding dofs fixed or not.
-   Return :class:`sp` objects  |list|.
-
 .. method:: model.wipe()
 
-   Wipe all data in this model. 
+   Wipe all objects in this model including analysis objects. 
 
 
 .. _modelobj-example:

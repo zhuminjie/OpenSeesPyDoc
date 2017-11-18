@@ -51,6 +51,7 @@ can be imported as::
    docs/modelobj
    docs/nodeobj
    docs/spobj
+   docs/mpobj
    docs/unimatobj
    docs/elementobj
    docs/timeSeriesobj

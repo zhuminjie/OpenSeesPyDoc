@@ -28,7 +28,7 @@ Static Nonlinear Truss Example
    nds[3] = node(3, crds=[168.0, 0.0])
 
    for tag, nd in nds.items():
-       m.fix(nd, fix=[1,1])
+       nd.fix([1,1])
 
    nds[4] = node(4, crds=[48.0, 144.0])
 

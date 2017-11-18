@@ -29,6 +29,7 @@ Object methods
 
 #. :meth:`analysis.analyze`
 #. :meth:`analysis.eigen`
+#. :meth:`analysis.wipe`
 
 .. method:: analysis.analyze(numIncr=1, dt=0.0, dtMin=0.0, dtMax=0.0, Jd=0)
 
@@ -57,6 +58,10 @@ Object methods
 
    #. The eigenvectors are stored at the nodes and can be printed out using a Node Recorder, the nodeEigenvector command, or the Print command.
    #. The default eigensolver is able to solve only for N-1 eigenvalues, where N is the number of inertial DOFs. When running into this limitation the -fullGenLapack solver can be used instead of the default Arpack solver.
+
+.. method:: analysis.wipe()
+
+   Wipe all analysis objects.
 
 
 .. _analysis-class-methods:

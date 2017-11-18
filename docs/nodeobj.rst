@@ -70,6 +70,13 @@ Object methods
 
 #. :meth:`node.__str__`
 #. :meth:`node.remove`
+#. :meth:`node.fix`
+#. :meth:`node.sp`
+#. :meth:`node.mp`
+#. :meth:`node.equalDOF`
+#. :meth:`node.rigidDiaphragm`
+#. :meth:`node.rigidLink`
+#. :meth:`node.rigidBeam`
 
 .. method:: node.__str__()
 
@@ -79,7 +86,7 @@ Object methods
 .. method:: node.remove()
 
    Remove the corresponding OpenSees ``Node`` object.
-	       
+
    .. note::
       
       By calling :meth:`node.remove`, 
@@ -89,6 +96,83 @@ Object methods
       the python :class:`node` object is removed, but
       the OpenSees ``Node`` is not.
 
+
+.. method:: node.fix(fix)
+
+   Fix the :class:`node` in multiple dofs. Return :class:`sp` objects  |list|.
+	    
+   ========================   ===========================================================
+   ``fix`` |listi|            A list of ``1`` and ``0`` to indicate corresponding dofs fixed or not. Its lenght must be :attr:`node.ndf`.
+   ========================   ===========================================================
+
+
+.. method:: node.sp(dof,value,const=False)
+
+   Constrain the :class:`node` in one dof. Return a :class:`sp` object.
+
+   ========================   =============================================================
+   ``dof`` |int|              The dof of the :class:`node` to be constrained.
+   ``value`` |float|          The constrained value.
+   ``const`` |bool|           If the constraint is constant. (optional)
+   ========================   =============================================================
+	    
+.. method:: node.mp(cnd,rdofs,cdofs,cMat)
+
+   Constrain another :class:`node` (:attr:`mp.cnd`)
+   to the calling :class:`node` (:attr:`mp.rnd`)
+   with the constraint matrix. Return a :class:`mp` object.
+
+   ========================   =============================================================
+   ``cnd`` |node|             The :class:`node` to be constrained.
+   ``rdofs`` |listi|          The constrained dofs of :attr:`mp.rnd`.
+   ``cdofs`` |listi|          The constrained dofs of :attr:`mp.cnd`.
+   ``cMat`` |listl|           The constraint matrix. 
+   ========================   =============================================================
+
+	    
+.. method:: node.equalDOF(cnd,dofs)
+
+   Constrain another :class:`node` (:attr:`mp.cnd`)
+   to the calling :class:`node` (:attr:`mp.rnd`)
+   with :class:`mp` constraints. Return a :class:`mp` object.
+
+   ========================   =============================================================
+   ``cnd`` |node|             The :class:`node` to be constrained.
+   ``dofs`` |listi|           The constrained dofs.
+   ========================   =============================================================
+
+.. method:: node.rigidDiaphragm(perpDirn,cnds)
+
+   Constrain ``cnds`` objects
+   to the calling :class:`node` (:attr:`mp.rnd`)
+   for them to move as if in a rigid plane with the calling :class:`node`.
+   Return  :class:`mp` objects |list|.
+
+
+   ========================   =============================================================
+   ``perpDirn`` |int|         Direction perpendicular to the rigid plane.
+   ``cnds`` |list|            A list of :class:`node` objects to be constrained.
+   ========================   =============================================================
+
+.. method:: node.rigidLink(cnd)
+
+   Constrain the translational dof of constrained :class:`node`
+   to the calling :class:`node` (:attr:`mp.rnd`). Return a :class:`mp` object.
+
+   ========================   =============================================================
+   ``cnd`` |node|             The node to be constrained
+   ========================   =============================================================
+
+.. method:: node.rigidBeam(cnd)
+
+   Constrain both the translational and rotational dofs of constrained :class:`node`
+   to the calling :class:`node` (:attr:`mp.rnd`). Return a :class:`mp` object.
+
+   ========================   =============================================================
+   ``cnd`` |node|             The node to be constrained
+   ========================   =============================================================
+
+	    
 Examples
 --------
 ::

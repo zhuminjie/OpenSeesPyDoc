@@ -3,22 +3,14 @@
 SP Object
 =====================
 
-.. class:: sp(nd,dof,value,const=False)
+.. class:: sp()
 
-   Create a python :class:`sp` object, which
-   is a wrapper to the OpenSees ``SP_Constraint`` object.
+   A python :class:`sp` object is a wrapper to the OpenSees ``SP_Constraint`` object.
 
-   ========================   =============================================================
-   ``nd`` |node|              A python :class:`node` object to be constrained.
-   ``dof`` |int|              The dof of the :class:`node` to be constrained.
-   ``value`` |float|          The constrained value.
-   ``const`` |bool|           If the constraint is constant. (optional)
-   ========================   =============================================================
-	   
    .. note::
-   
-      The :meth:`model.fix` method may return
-      :class:`sp` objects |list|.
+
+      To create a python :class:`sp` object, use :meth:`node.sp`,
+      :meth:`node.fix` or :meth:`pattern.sp`.
 
 
 Object attributes
@@ -74,11 +66,11 @@ Examples
 
 ::
 
-     s = sp(nd, dof=1, value=1.0, const=True)
+     s = nd.sp(dof=1, value=1.0, const=True)
      print(s)
 
      for nd in nds:
-         sps = m.fix(nd, fix=[1,1])
+         sps = nd.fix([1,1])
 	 for spi in sps:
              print(spi.tag, spi.ndtag,spi.dof,spi.value)
              print(spi)
