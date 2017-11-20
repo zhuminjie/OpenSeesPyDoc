@@ -17,6 +17,11 @@ UniaxialMaterial Object
 Object attributes
 -------------------
 
+.. attribute:: uniaxialMaterial.tag
+      
+   An object attribute (get) |int|.
+   The tag of the :class:`uniaxialMaterial` object.
+
 .. attribute:: uniaxialMaterial.strain
       
    An object attribute (get/set) |float|.

@@ -8,6 +8,10 @@
 
 .. |listl| replace:: (`list`_ (`list`_))
 
+.. |listn| replace:: (`list`_ (:class:`node`))
+
+.. |liste| replace:: (`list`_ (:class:`element`))
+
 .. |int| replace:: (`int`_)
    
 .. |del| replace:: `del`_
@@ -21,6 +25,8 @@
 .. |bool| replace:: (`bool`_)
 
 .. |node| replace:: (:class:`node`)
+
+.. |element| replace:: (:class:`element`)
 
 .. |timeSeries| replace:: (:class:`timeSeries`)
 

@@ -36,6 +36,18 @@ Object attributes
    An object attribute (get/set) |int|.
    The default number of degrees of freedoms per :class:`node`.
 
+.. attribute:: model.rayleigh
+
+   An object attribute (set) |listf|.
+   Assign damping to all existing :class:`element` and :class:`node` objects.
+   The Rayleigh damping factors are ``[alphaM,betaK,betaKinit,betaKcomm]``, where
+
+   ========================   ====================================================================
+   ``alphaM`` |float|         Factor applied to elements or nodes mass matrix.
+   ``betaK`` |float|          Factor applied to elements current stiffness matrix.
+   ``betaKinit`` |float|      Factor applied to elements initial stiffness matrix.
+   ``betaKcomm`` |float|      Factor applied to elements committed stiffness matrix.
+   ========================   ====================================================================
 
 
 
@@ -64,14 +76,9 @@ Examples
 
   m = model(ndm=2, ndf=2)
 
-  m.fix(nd, fix=[1,1])
-
-  m.ndf = 3
-  for nd in nds:
-      fix(nd, [1,1,1])
-
-
   print(m)
+
+  m.wipe()
 
 
 

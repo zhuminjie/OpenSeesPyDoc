@@ -3,10 +3,15 @@
 Element Object
 =======================
 
-.. class:: element()
+.. class:: element(tag)
 
    A python :class:`element` object
    is a wrapper to the OpenSees ``Element`` object.
+
+   ========================   ===========================================================
+   ``tag`` |int|              Tag of :class:`element`, when only ``tag`` is given,
+	                      it creates a wrapper to an existing OpenSees ``Element``.
+   ========================   ===========================================================
 
    .. note::
    

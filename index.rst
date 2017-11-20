@@ -52,7 +52,9 @@ can be imported as::
    docs/nodeobj
    docs/spobj
    docs/mpobj
+   docs/regionobj
    docs/unimatobj
+   docs/ndmatobj
    docs/elementobj
    docs/timeSeriesobj
    docs/loadobj
