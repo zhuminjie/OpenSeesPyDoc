@@ -55,6 +55,7 @@ can be imported as::
    docs/regionobj
    docs/unimatobj
    docs/ndmatobj
+   docs/sectionobj
    docs/elementobj
    docs/timeSeriesobj
    docs/loadobj
