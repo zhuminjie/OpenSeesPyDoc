@@ -61,17 +61,4 @@ Object methods
       :meth:`node.remove`
 
 
-Examples
---------
-
-::
-
-     s = nd.sp(dof=1, value=1.0, const=True)
-     print(s)
-
-     for nd in nds:
-         sps = nd.fix([1,1])
-	 for spi in sps:
-             print(spi.tag, spi.ndtag,spi.dof,spi.value)
-             print(spi)
 

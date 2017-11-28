@@ -139,7 +139,9 @@ Object methods
 
    ::
 
-      nd.fix([1,1,0])
+      ss = nd.fix([1,1,0])
+      for s in ss:
+          print(s)
 
 .. method:: node.sp(dof,value,const=False)
 
@@ -153,7 +155,7 @@ Object methods
 
    ::
 
-      nd.sp(dof=1, value=0.0, const=True)
+      s = nd.sp(dof=1, value=0.0, const=True)
 	    
 .. method:: node.mp(cnd,rdofs,cdofs,cMat)
 
@@ -170,7 +172,7 @@ Object methods
 
    ::
 
-      nd2.mp(cnd=nd1, rdofs=[1,2], cdofs=[1,2], cMat=[[1.0,0.1],[0.1,0.2]])
+      mpobj = nd2.mp(cnd=nd1, rdofs=[1,2], cdofs=[1,2], cMat=[[1.0,0.1],[0.1,0.2]])
 	    
 .. method:: node.equalDOF(cnd,dofs)
 
@@ -185,7 +187,7 @@ Object methods
 
    ::
 
-      nd2.equalDOF(cnd=nd1, dofs=[1,2,3])
+      mpobj = nd2.equalDOF(cnd=nd1, dofs=[1,2,3])
 
 .. method:: node.rigidDiaphragm(perpDirn,cnds)
 
@@ -203,7 +205,7 @@ Object methods
 
    ::
 
-      nd3.rigidDiaphragm(perpDirn=2, cnds=[nd1,nd2])
+      mpobj = nd3.rigidDiaphragm(perpDirn=2, cnds=[nd1,nd2])
 
 .. method:: node.rigidLink(cnd)
 
@@ -216,7 +218,7 @@ Object methods
 
    ::
 
-      nd2.rigidLink(cnd=nd1)
+      mpobj = nd2.rigidLink(cnd=nd1)
    
 .. method:: node.rigidBeam(cnd)
 
@@ -229,5 +231,5 @@ Object methods
 
    ::
 
-      nd2.rigidBeam(cnd=nd1)
+      mpobj = nd2.rigidBeam(cnd=nd1)
 	    

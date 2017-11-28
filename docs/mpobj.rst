@@ -70,11 +70,3 @@ Object methods
       :meth:`node.remove`
 
 
-Examples
---------
-
-::
-
-     print()
-
-
