@@ -3,16 +3,14 @@
 Node Object
 ===========
 
-.. class:: node(tag,crds=[],disp=[],vel=[],accel=[],mass=[],ndf=0)
+.. class:: node(crds,disp=[],vel=[],accel=[],mass=[],ndf=0)
 
    Create a python :class:`node` object, which
    is a wrapper to the OpenSees ``Node`` object.
 
-   ========================   ===========================================================
-   ``tag`` |int|              Tag of :class:`node`, when only ``tag`` is given,
-	                      it creates a wrapper to the existing Opensees ``Node``.
+   ========================   =====================================================================
    ``crds`` |listf|           Coordinates of :class:`node`, its length must
-                              be :attr:`model.ndm`. (optional)
+                              be :attr:`model.ndm`.
    ``disp`` |listf|           Displacements of :class:`node`, its length
 	                      must be :attr:`node.ndf`. (optional)
    ``vel`` |listf|            Velocities of :class:`node`, its length
@@ -23,8 +21,15 @@ Node Object
 	                      must be :attr:`node.ndf`. (optional)
    ``ndf`` |int|              Ndf of :class:`node`, it can be different
                               to :attr:`model.ndf`. (optional)
-   ========================   ===========================================================
+   ========================   =====================================================================
 
+
+   ::
+
+      nd = node([0.0, 0.0], disp=[1.0,0.0]) # create a node with initial disp
+      nd = node(crds=[72.0, 0.0], vel=[1.0,0.0]) # create a node with initial vel
+      nds = [node([168.0,0.0]), node([48.0, 144.0])] # create a list of 2 nodes
+      nds = [node([i*0.1,0.0]) for i in range(100)] # create a list of 100 nodes
    
 Object attributes
 -----------------
@@ -34,36 +39,63 @@ Object attributes
    An object attribute (get) |int|.
    A unique tag of the :class:`node` object.
 
+   ::
+
+      print(nd.tag)
+
 .. attribute:: node.crds
 
    An object attribute (get/set) |listf|.
    Nodal coordinates.
+
+   ::
+
+      nd.crds = [1.0, 0.0]
 
 .. attribute:: node.disp
 
    An object attribute (get/set) |listf|.
    Nodal displacements.
 
+   ::
+
+      nd.disp = [1.0, 0.0]
+   
 .. attribute:: node.vel
 
    An object attribute (get/set) |listf|.
    Nodal velocities.
 
+   ::
+
+      nd.vel = [1.0, 0.0]
+   
 .. attribute:: node.accel
 
    An object attribute (get/set) |listf|.
    Nodal accelerations.
 
+   ::
+
+      nd.accel = [1.0, 0.0]
+   
 .. attribute:: node.mass
 
    An object attribute (get/set) |listf|.
    Nodal mass.
 
+   ::
+
+      nd.mass = [1.0, 1.0]
+   
 .. attribute:: node.ndf
 
    An object attribute (get) |int|.
    The number of degrees of freedoms of the :class:`node`.
 
+   ::
+
+      print(nd.ndf)
 
 Object methods
 ---------------
@@ -105,6 +137,9 @@ Object methods
    ``fix`` |listi|            A list of ``1`` and ``0`` to indicate corresponding dofs fixed or not. Its lenght must be :attr:`node.ndf`.
    ========================   ===========================================================
 
+   ::
+
+      nd.fix([1,1,0])
 
 .. method:: node.sp(dof,value,const=False)
 
@@ -115,6 +150,10 @@ Object methods
    ``value`` |float|          The constrained value.
    ``const`` |bool|           If the constraint is constant. (optional)
    ========================   =============================================================
+
+   ::
+
+      nd.sp(dof=1, value=0.0, const=True)
 	    
 .. method:: node.mp(cnd,rdofs,cdofs,cMat)
 
@@ -129,6 +168,9 @@ Object methods
    ``cMat`` |listl|           The constraint matrix. 
    ========================   =============================================================
 
+   ::
+
+      nd2.mp(cnd=nd1, rdofs=[1,2], cdofs=[1,2], cMat=[[1.0,0.1],[0.1,0.2]])
 	    
 .. method:: node.equalDOF(cnd,dofs)
 
@@ -140,6 +182,10 @@ Object methods
    ``cnd`` |node|             The :class:`node` to be constrained.
    ``dofs`` |listi|           The constrained dofs.
    ========================   =============================================================
+
+   ::
+
+      nd2.equalDOF(cnd=nd1, dofs=[1,2,3])
 
 .. method:: node.rigidDiaphragm(perpDirn,cnds)
 
@@ -154,6 +200,11 @@ Object methods
    ``cnds`` |list|            A list of :class:`node` objects to be constrained.
    ========================   =============================================================
 
+
+   ::
+
+      nd3.rigidDiaphragm(perpDirn=2, cnds=[nd1,nd2])
+
 .. method:: node.rigidLink(cnd)
 
    Constrain the translational dof of constrained :class:`node`
@@ -163,6 +214,10 @@ Object methods
    ``cnd`` |node|             The node to be constrained
    ========================   =============================================================
 
+   ::
+
+      nd2.rigidLink(cnd=nd1)
+   
 .. method:: node.rigidBeam(cnd)
 
    Constrain both the translational and rotational dofs of constrained :class:`node`
@@ -172,35 +227,7 @@ Object methods
    ``cnd`` |node|             The node to be constrained
    ========================   =============================================================
 
+   ::
+
+      nd2.rigidBeam(cnd=nd1)
 	    
-Examples
---------
-::
-
-     node(1, crds=[0.0, 0.0], disp=[1.0, 0.0])
-
-     nds = [node(1, crds=[0.0, 0.0],disp=[0.0,0.0]),
-            node(2, [72.0, 0.0], vel = [0.0,0.0]),
-            node(3, [168.0, 0.0], mass = [0.0, 0.0]),
-            node(4, [48.0, 144.0], ndf = 2)]
-
-     for nd in nds:
-         nd.disp = [-1.0, -2.0]
-	 nd.vel = [50.0, -20.0]
-	 nd.accel = [1.9, 2.8]
-	 nd.mass = [3.19, 0.12]
-	 print(nd.ndf, nd.tag, nd.mass, nd.crds, nd.disp, nd.vel, nd.accel)
-	 print(nd)
-         nd.remove()
-
-     del nds
-   
-     nds = {}
-     nds[1] = node(1)
-     nds[2] = node(2)
-     nds[3] = node(3)
-     nds[4] = node(4)
-
-     for tag, nd in nds.items():
-         print(nd)
-

@@ -21,7 +21,11 @@ Model Object
    
       After creating a :class:`model`, you must assign it
       to a variable in order to keep it from being destructed.
-      See :ref:`modelobj-example`.
+
+   ::
+
+      m = model(ndm=2, ndf=2)
+      m = model(ndm=3, ndf=6)
      
 Object attributes
 ------------------------
@@ -31,11 +35,19 @@ Object attributes
    An object attribute (get/set) |int|.
    The number of dimentions of the model.
 
+   ::
+   
+      m.ndm = 3
+
 .. attribute:: model.ndf
 
    An object attribute (get/set) |int|.
    The default number of degrees of freedoms per :class:`node`.
-
+	       
+   ::
+   
+      m.ndf = 6
+   
 .. attribute:: model.rayleigh
 
    An object attribute (set) |listf|.
@@ -48,6 +60,10 @@ Object attributes
    ``betaKinit`` |float|      Factor applied to elements initial stiffness matrix.
    ``betaKcomm`` |float|      Factor applied to elements committed stiffness matrix.
    ========================   ====================================================================
+
+   ::
+
+      m.rayleigh = [0.01, 0.02, 0.0, 0.0]
 
 
 
@@ -62,23 +78,17 @@ Object methods
    The string reprsentation of the :class:`model`. Usually
    used in the |print| function.
 
+
+   ::
+
+      print(m)
+
 .. method:: model.wipe()
 
    Wipe all objects in this model including analysis objects. 
 
+   ::
 
-.. _modelobj-example:
-
-Examples
----------
-
-::
-
-  m = model(ndm=2, ndf=2)
-
-  print(m)
-
-  m.wipe()
-
+      m.wipe()
 
 
