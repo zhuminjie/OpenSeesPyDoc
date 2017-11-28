@@ -86,6 +86,7 @@ Class methods
    ``tag`` |int|              :class:`element` tag.
    ``nds`` |list|             Truss end :class:`node` objects.
    ``A`` |float|              Cross-sectional area of element.
+   ``mat`` |unimat|           A |unimat| object.
    ``rho`` |float|            Mass per unit length. (optional)
    ``cMass`` |int|            Consistent mass flag (0 lumped mass, 1 consistent mass).
 		              (optional)

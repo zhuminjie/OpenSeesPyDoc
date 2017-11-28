@@ -42,12 +42,35 @@ Object methods
 -------------------
 
 #. :meth:`section.__str__`
+#. :meth:`section.fiber`
+#. :meth:`section.patch`
 #. :meth:`section.remove`
 		  
 .. method:: section.__str__()
 
    The string reprsentation of the :class:`section`. Usually
    used in the |print| function.
+
+.. method:: section.fiber(yLoc,zLoc,A,mat)
+
+   Create and add a fiber into a :meth:`section.Fiber` or :meth:`section.NDFiber`.
+
+   ============================   =============================================================
+   ``yLoc`` |float|               y coordinate of the fiber in the section (local coordinate system)
+   ``zLoc`` |float|               z coordinate of the fiber in the section (local coordinate system)
+   ``A`` |float|                  Cross-sectional area of fiber.
+   ``mat`` |unimat| or |ndmat|    material for the fiber.
+   ============================   =============================================================
+
+.. method:: section.patch(mat,num,vertex)
+
+   Generate a number of :meth:`fiber` over a cross-sectional area. Currently there are three types of cross-section that :meth:`fiber` can be generated: quadrilateral, rectangular and circular.
+
+   ============================   =============================================================
+   ``mat`` |unimat| or |ndmat|    Material for the patch.
+   ``num`` |listf|                Number of subdivisions in the IJ and JK directions (quad), local y and z directions (rect), or in circumferential and radial directions (circular).
+   ``vertex`` |listl|             y and z cordinates of vertex I, J, K, L (quad), vertex I, J (rect), or vertex C at the center of the circle, internal and external radius, and starting and ending angle (circular).
+   ============================   =============================================================
 
 .. method:: section.remove()
 
@@ -64,6 +87,8 @@ Class methods
 --------------
 
 #. :meth:`section.Elastic`
+#. :meth:`section.Fiber`
+#. :meth:`section.NDFiber`
 
 .. classmethod:: section.Elastic(tag, E, A, Iz, Iy=0.0, G=0.0, J=0.0, alphaY=0.0, alphaZ=0.0)
 
@@ -83,6 +108,24 @@ Class methods
 		              (required for 3D analysis).
    ``alphaY`` |float|         Shear shape factor along the local y-axis (optional).
    ``alphaZ`` |float|         Shear shape factor along the local z-axis (optional).
+   ========================   =============================================================
+
+.. classmethod:: section.Fiber(tag, GJ=0.0)
+
+   Create a Fiber :class:`section` object, which is composed of :meth:`section.fiber`, with each fiber containing a :class:`uniaxialMaterial`, an area and a location (y,z). 
+
+   ========================   =============================================================
+   ``tag`` |int|              :class:`section` tag.
+   ``GJ`` |float|             Linear-elastic torsional stiffness assigned to the section.
+   ========================   =============================================================
+
+.. classmethod:: section.NDFiber(tag, GJ=0.0)
+
+   Create a NDFiber :class:`section` object, which is composed of :meth:`section.fiber`, with each fiber containing a :class:`NDMaterial`, an area and a location (y,z). 
+
+   ========================   =============================================================
+   ``tag`` |int|              :class:`section` tag.
+   ``GJ`` |float|             Linear-elastic torsional stiffness assigned to the section.
    ========================   =============================================================
 
 Examples

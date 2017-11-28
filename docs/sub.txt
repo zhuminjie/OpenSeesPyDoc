@@ -30,6 +30,10 @@
 
 .. |timeSeries| replace:: (:class:`timeSeries`)
 
+.. |unimat| replace:: (:class:`uniaxialMaterial`)
+
+.. |ndmat| replace:: (:class:`NDMaterial`)
+
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
 .. _int: https://docs.python.org/3/library/functions.html#int
