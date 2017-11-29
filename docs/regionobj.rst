@@ -100,3 +100,6 @@ Object methods
       used in the |print| function.
 
 
+   ::
+
+      print(reg)

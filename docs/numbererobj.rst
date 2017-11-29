@@ -15,7 +15,7 @@ Numberer Object
 
       There is only one global :class:`numberer` object.
       Creating another :class:`numberer` object
-      will automatically invalid the previous :class:`numberer` objects.
+      will automatically invalidate the previous :class:`numberer` objects.
 
 .. _numberer-class-methods:
 
@@ -38,14 +38,5 @@ Class methods
 .. classmethod:: numberer.AMD()
 
    Create a Alternative Minimum Degree :class:`numberer`.
-
-
-   
-Examples
-----------
-
-::
-
-   numberer.Plain()
 
 

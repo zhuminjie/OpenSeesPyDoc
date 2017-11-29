@@ -15,7 +15,7 @@ Algorithm Object
 
       There is only one global :class:`algorithm` object.
       Creating another :class:`algorithm` object
-      will automatically invalid the previous :class:`algorithm` objects.
+      will automatically invalidate the previous :class:`algorithm` objects.
 
 .. _algorithm-class-methods:
 
@@ -129,14 +129,4 @@ Class methods
    Create a Broyden :class:`algorithm` for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.
 
    See :meth:`algorithm.BFGS` for parameters.
-
-
-
-Examples
-----------
-
-::
-
-   algorithm.Newton()
-
 

@@ -20,16 +20,28 @@ Object attributes
       
    An object attribute (get) |int|.
    The unique tag of the :class:`mp` object.
-      
+
+   ::
+
+      print(mpobj.tag)
+
 .. attribute:: mp.rnd
 
    An object attribute (get) |node|.
    The retained :class:`node`.
 
+   ::
+
+      print(mpobj.rnd)
+
 .. attribute:: mp.cnd
 
    An object attribute (get) |node|.
    The constrained :class:`node`.
+
+   ::
+
+      print(mpobj.cnd)
 
 .. attribute:: mp.rdofs
 
@@ -37,17 +49,29 @@ Object attributes
    The retained dofs of the :attr:`mp.rnd`.
    The value starts from 1 through :attr:`node.ndf`.
 
+   ::
+
+      print(mpobj.rdofs)
+
 .. attribute:: mp.cdofs
 
    An object attribute (get) |listi|.
    The constrained dofs of the :attr:`mp.cnd`.
    The value starts from 1 through :attr:`node.ndf`.
 
+   ::
+
+      print(mpobj.cdofs)
+
 .. attribute:: mp.cmat
 
    An object attribute (get) |listl|.
    The constraint matrix of the :class:`mp` object.
 
+
+   ::
+
+      print(mpobj.cmat)
 
 Object methods
 -----------------
@@ -60,6 +84,10 @@ Object methods
       The string reprsentation of the :class:`mp` object. Usually
       used in the |print| function.
 
+   ::
+
+      print(mpobj)
+
 
 .. method:: mp.remove()
 
@@ -69,4 +97,8 @@ Object methods
 
       :meth:`node.remove`
 
+
+   ::
+
+      mpobj.remove()
 

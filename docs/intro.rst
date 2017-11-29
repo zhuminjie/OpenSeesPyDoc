@@ -49,5 +49,5 @@ The `OpenSeesPy`_ objects:
 #. :class:`constraint`
 #. :class:`integrator`
 #. :class:`algorithm`
-#. :class:`ctest`
+#. :class:`test`
 #. :class:`analysis`

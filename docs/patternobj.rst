@@ -21,20 +21,36 @@ Object attributes
    An object attribute (get) |int|.
    The :class:`pattern` tag.
 
+   ::
+
+      print(ptn.tag)
+
 .. attribute:: pattern.sps
       
    An object attribute (get) |list|.
    All python :class:`sp` objects in the :class:`pattern`.
+
+   ::
+
+      print(ptn.sps)
 
 .. attribute:: pattern.loads
       
    An object attribute (get) |list|.
    All python :class:`load` objects in the :class:`pattern`.
 
+   ::
+
+      print(ptn.loads)
+
 .. attribute:: pattern.loadFactor
       
    An object attribute (get) |float|.
    Get current load factor in the :class:`pattern`.
+
+   ::
+
+      print(ptn.loadFactor)
 
 Object methods
 ---------------
@@ -50,6 +66,10 @@ Object methods
    The string reprsentation of the pattern. Usually
    used in the `print`_ function.
 
+   ::
+
+      print(ptn)
+
 .. method:: pattern.sp(nd,dof,value,const=False)
 
    Create and add a python :class:`sp` object to the :class:`pattern`.
@@ -62,6 +82,10 @@ Object methods
    ``const`` |bool|           If the constraint is constant. (optional)
    ========================   =============================================================
 
+   ::
+
+      s = ptn.sp(nd=nd, dof=1, value=0.1)
+
 .. method:: pattern.load(nd,load,const=False)
 
    Create and add a python :class:`load` object to the :class:`pattern`.
@@ -72,11 +96,19 @@ Object methods
    ``load`` |listf|           Load values.
    ``const`` |bool|           Whether the load is constant. (optional)
    ========================   =============================================================
+
+   ::
+
+      l = ptn.load(nd=nd, load=[1.0,-1.0])
 	    
 .. method:: pattern.wipe()
 
    Wipe all :class:`sp`, :class:`load`, and :class:`eleLoad` objects
    from the :class:`pattern`.
+
+   ::
+
+      ptn.wipe()
 
 .. method:: pattern.remove()
 
@@ -87,6 +119,10 @@ Object methods
 
       :meth:`node.remove`
 
+   ::
+
+      ptn.remove()
+
 .. _pattern-class-methods:
 
 Class methods
@@ -94,27 +130,16 @@ Class methods
 
 #. :meth:`pattern.Plain`
 	       
-.. classmethod:: pattern.Plain(tag, ts, factor=1.0)
+.. classmethod:: pattern.Plain(ts, factor=1.0)
 
    Create a plain load :class:`pattern`.
 
    ========================   =============================================================
-   ``tag`` |int|              :class:`pattern` tag.
    ``ts`` |timeSeries|        A :class:`timeSeries` object.
    ``factor`` |float|         Load factor. (optional)
    ========================   =============================================================
 
-   
-Examples
-----------
 
-::
+   ::
 
-   ptn = pattern.Plain(1, ts)
-
-   ptn.sp(nd, dof=1, value=0.0)
-   ptn.load(nd, load=[0,1.0])
-
-   print(ptn)
-
-
+      ptn = pattern.Plain(ts = ts)

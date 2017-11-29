@@ -15,7 +15,7 @@ Constraints Object
 
       There is only one global :class:`constraints` object.
       Creating another :class:`constraints` object
-      will automatically invalid the previous :class:`constraints` objects.
+      will automatically invalidate the previous :class:`constraints` objects.
 
 .. _constraints-class-methods:
 
@@ -72,11 +72,3 @@ Class methods
    And remember if a node is constrained to multiple nodes in your model it probably means you have messed up.
 
    
-Examples
-----------
-
-::
-
-   constraints.Plain()
-
-

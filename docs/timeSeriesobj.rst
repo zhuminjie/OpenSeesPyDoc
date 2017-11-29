@@ -22,6 +22,10 @@ Object attributes
    An object attribute (get) |int|.
    The :class:`timeSeries` tag.
 
+   ::
+
+      print(ts.tag)
+
 Object methods
 ---------------
 
@@ -33,6 +37,10 @@ Object methods
    The string reprsentation of the :class:timeSeries`. Usually
    used in the `print`_ function.
 
+   ::
+
+      print(ts)
+
 .. method:: timeSeries.remove()
 
    Remove the corresponding OpenSees ``TimeSeries`` object.
@@ -41,7 +49,10 @@ Object methods
 
       :meth:`node.remove`
 
+   ::
 
+      rs.remove()
+   
 .. _timeSeries-class-methods:
 
 Class methods
@@ -49,22 +60,15 @@ Class methods
 
    #. :meth:`Linear`
 
-   .. classmethod:: timeSeries.Linear(tag, factor=1.0)
+   .. classmethod:: timeSeries.Linear(factor=1.0)
 
       Create a Linear :class:`timeSeries` object.
 
       ========================   =============================================================
-      ``tag`` |int|              :class:`timeSeries` tag.
       ``factor`` |float|         Linear factor. (optional)
       ========================   =============================================================
-	
 
+      ::
 
-Examples
----------
-
-::
-
-     ts = timeSeries.Linear(1)
-     print(ts)
+	 ts = timeSeries.Linear(factor = 0.1)
 

@@ -16,7 +16,7 @@ System Object
 
       There is only one global :class:`system` object.
       Creating another :class:`system` object
-      will automatically invalid the previous :class:`system` objects.
+      will automatically invalidate the previous :class:`system` objects.
 
 .. _system-class-methods:
 
@@ -116,17 +116,4 @@ Class methods
 		           ``'LSCG'``, ``'BiCG'``, ``'PBiCG'``
    ``pSolver`` |str|       Pressure solver (optional)
    =====================   ================================================================
-
-
-
-   
-
-
-Examples
-----------
-
-::
-
-   system.ProfileSPD()
-
 

@@ -15,7 +15,7 @@ Integrator Object
 
       There is only one global :class:`integrator` object.
       Creating another :class:`integrator` object
-      will automatically invalid the previous :class:`integrator` objects.
+      will automatically invalidate the previous :class:`integrator` objects.
 
 .. _integrator-class-methods:
 
@@ -56,6 +56,10 @@ Transient Integrators
    #. The change in applied loads that this causes depends on the active load :class:`pattern` (those load :class:`pattern` not set constant) and the :class:`load` in the load :class:`pattern`. If the only active :class:`load` acting on the ``Domain`` are in load :class:`pattern` with a Linear :class:`timeSeries` with a factor of 1.0, this :class:`integrator` is the same as the classical load control method.
    #. The optional arguments are supplied to speed up the step size in cases where convergence is too fast and slow down the step size in cases where convergence is too slow.
 
+   ::
+
+      integrator.LoadControl(incr=1.0/Nsteps)
+
 .. classmethod:: integrator.DisplacementControl(nd,dof,incr,numIter=1,dUmin=incr,dUmax=incr)
 
    Create a DisplacementControl :class:`integrator`.  In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
@@ -73,6 +77,13 @@ Transient Integrators
 		              (optional)
    ========================   =============================================================
 
+
+   ::
+
+      integrator.DisplacementControl(nd=nd, dof=2, inc=0.1)
+
+
+
 .. classmethod:: integrator.MinUnbalDispNorm(dlambda1,Jd=1,minLambda=dlambda1,maxLambda=dlambda1,det=False)
 
    Create a MinUnbalDispNorm :class:`integrator`. 
@@ -86,6 +97,10 @@ Transient Integrators
    ``maxLambda`` |float|      Max load increment. (optional)
    ========================   ================================================================
 
+   ::
+
+      integrator.MinUnbalDispNorm(dlambda1=0.1)
+
 
 .. classmethod:: integrator.ArcLength(s,alpha)
 
@@ -96,6 +111,10 @@ Transient Integrators
    ``alpha`` |float|          :math:`\alpha` a scaling factor on the reference loads.
    ========================   ================================================================
 
+   ::
+
+      integrator.ArcLenght(s=1.0, alpha=0.1)
+
 
 .. classmethod:: integrator.CentralDifference()
 
@@ -104,6 +123,10 @@ Transient Integrators
    #. The calculation of :math:`U_t + \Delta t`, is based on using the equilibrium equation at time t. For this reason the method is called an explicit integration method.
    #. If there is no rayleigh damping and the C matrix is 0, for a diagonal mass matrix a diagonal solver may and should be used.
    #. For stability, :math:`\frac{\Delta t}{T_n} < \frac{1}{\pi}`
+
+   ::
+
+      integrator.CentralDifference()
 
 
 .. classmethod:: integrator.Newmark(gamma,beta,formD=True)
@@ -126,6 +149,10 @@ Transient Integrators
    #. :math:`\gamma > \tfrac{1}{2}` results in numerical damping proportional to :math:`\gamma - \tfrac{1}{2}`
    #. The method is second order accurate if and only if :math:`\gamma=\tfrac{1}{2}`
    #. The method is unconditionally stable for  :math:`\beta >= \frac{\gamma}{2} >= \tfrac{1}{4}`
+   
+   ::
+
+      integrator.Newmark(gamma=0.5, beta=0.25)
 
 .. classmethod:: integrator.HHT(alpha,gamma=1.5-alpha,beta=(2-alpha)^2/4)
 
@@ -147,6 +174,10 @@ Transient Integrators
       and
 	    
       :math:`\gamma = \frac{3}{2} - \alpha`
+
+   ::
+
+      integrator.HHT(alpha=0.9)
 
 .. classmethod:: integrator.GeneralizedAlpha(alphaM,alphaF,gamma=0.5+alphaM-alphaF,beta=(1+alphaM-alphaF)^2/4)
 
@@ -174,11 +205,20 @@ Transient Integrators
 	    
       :math:`\beta = \tfrac{1}{4}(1 + \alpha_M - \alpha_F)^2`
 
+
+   ::
+
+      integrator.GeneralizedAlpha(alphaM=1.0, alphaF=0.8)
+
 .. classmethod:: integrator.TRBDF2()
 
    Create a TRBDF2 :class:`integrator`. The TRBDF2 integrator is a composite scheme that alternates between the Trapezoidal scheme and a 3 point backward Euler scheme. It does this in an attempt to conserve energy and momentum, something :meth:`integrator.Newmark` does not always do.
 
    As opposed to dividing the time-step in 2 as outlined in the `Bathe2007`_, we just switch alternate between the 2 integration strategies,i.e. the time step in our implementation is double that described in the `Bathe2007`_.
+
+   ::
+
+      integrator.TRBDF2()
 
 .. classmethod:: integrator.Explicitdifference()
 
@@ -189,27 +229,17 @@ Transient Integrators
    #. Diagonal solver should be used when lumped mass matrix is used because the equations are uncoupled.
    #. For stability, :math:`\Delta t \leq \left(\sqrt{\zeta^2+1}-\zeta\right)\frac{2}{\omega}`
 
+   ::
+
+      integrator.Explicitdifference()
+
 
 .. classmethod:: integrator.PFEM()
 
    Create a PFEM :class:`integrator`, which is for Fluid-Structure Interaction
    using PFEM.
 
-	 
-Examples
-----------
+   ::
 
-::
-
-   integrator.LoadControl(incr=1.0/Nsteps)
-
-   integrator.DisplacementControl(nd, dof=2, inc=0.1)
-
-   integrator.ArcLenght(s=1.0, alpha=0.1)
-
-   integrator.Newmark(gamma=0.5, beta=0.25)
-
-   integrator.HHT(alpha=0.9)
-
-   integrator.GeneralizedAlpha(alphaM=1.0, alphaF=0.8)
+      integrator.PFEM()
 

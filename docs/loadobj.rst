@@ -21,10 +21,18 @@ Object attributes
    An object attribute (get) |int|.
    The unique tag of the :class:`load` object.
 
+   ::
+
+      print(l.tag)
+
 .. attribute:: load.nd
 
    An object attribute (get) |node|.
    The :class:`node` where the load is applied.
+
+   ::
+
+      print(l.nd)
 
 Object methods
 ---------------
@@ -37,6 +45,10 @@ Object methods
    The string reprsentation of the :class:`load`. Usually
    used in the `print`_ function.
 
+   ::
+
+      print(l)
+
 .. method:: load.remove()
 
    Remove the corresponding OpenSees ``NodalLoad`` object
@@ -46,12 +58,6 @@ Object methods
 
       :meth:`node.remove`
 
-Examples
----------
+   ::
 
-::
-
-     l = ptn.load(nds[4], load=[Px,Py])
-     l.remove()
-
-
+      l.remove()

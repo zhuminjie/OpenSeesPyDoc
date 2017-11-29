@@ -15,7 +15,7 @@ Test Object
 
       There is only one global :class:`test` object.
       Creating another :class:`test` object
-      will automatically invalid the previous :class:`test` objects.
+      will automatically invalidate the previous :class:`test` objects.
 
 .. _test-class-methods:
 
@@ -54,6 +54,11 @@ Class methods
    ======================   =============================================================
 
    When using the Penalty method additional large forces to enforce the penalty functions exist on the right hand side, making convergence using this test usually impossible (even though solution might have converged).
+
+::
+
+   test.NormUnbalance(tol=1.0e-8, iter=10, pFlag=4)
+
    
 .. classmethod:: test.NormDispIncr(tol,iter,pFlag=0,nType=2)
 
@@ -62,6 +67,10 @@ Class methods
    See :meth:`test.NormUnbalance` for parameters.
 
    When using the Lagrange method to enforce the constraints, the Lagrange multipliers appear in the solution vector.
+
+::
+
+   test.NormDispIncr(tol=1.0e-8, iter=10)
 
 .. classmethod:: test.EnergyIncr(tol,iter,pFlag=0,nType=2)
 
@@ -72,6 +81,10 @@ Class methods
    * When using the Penalty method additional large forces to enforce the penalty functions exist on the right hand side, making convergence using this test usually impossible (even though solution might have converged).
    * When using the Lagrange method to enforce the constraints, the Lagrange multipliers appear in the solution vector.
 
+::
+
+   test.EnergyIncr(tol=1.0e-8, iter=10)
+
 .. classmethod:: test.RelativeNormUnbalance(tol,iter,pFlag=0,nType=2)
 
    Create a RelativeNormUnbalance :class:`test`, which uses the relative norm of the right hand side of the matrix equation to determine if convergence has been reached.
@@ -80,6 +93,10 @@ Class methods
 
    * When using the Penalty method additional large forces to enforce the penalty functions exist on the right hand side, making convergence using this test usually impossible (even though solution might have converged).
 
+::
+
+   test.RelativeNormUnbalance(tol=1.0e-10, iter=10)
+
 .. classmethod:: test.RelativeNormDispIncr(tol,iter,pFlag=0,nType=2)
 
    Create a RelativeNormDispIncr :class:`test`, which uses the relative of the solution vector of the matrix equation to determine if convergence has been reached. 
@@ -87,11 +104,19 @@ Class methods
    See :meth:`test.NormUnbalance` for parameters.
 
 
+::
+
+   test.RelativeNormDispIncr(tol=1.0e-10, iter=10)
+
 .. classmethod:: test.RelativeTotalNormDispIncr(tol,iter,pFlag=0,nType=2)
 
    Create a RelativeTotalNormDispIncr :class:`test`, which uses the ratio of the current norm to the total norm (the sum of all the norms since last convergence) of the solution vector.
 
    See :meth:`test.NormUnbalance` for parameters.
+
+::
+
+   test.RelativeTotalNormDispIncr(tol=1.0e-8, iter=10)
 
 .. classmethod:: test.RelativeEnergyIncr(tol,iter,pFlag=0,nType=2)
 
@@ -99,11 +124,19 @@ Class methods
 
    See :meth:`test.NormUnbalance` for parameters.
 
+::
+
+   test.RelativeEnergyIncr(tol=1.0e-10, iter=10)
+
 .. classmethod:: test.FixedNumIter(iter,pFlag=0,nType=2)
 
    Create a FixedNumIter :class:`test`, that performs a fixed number of iterations without testing for convergence
 
    See :meth:`test.NormUnbalance` for parameters.
+
+::
+
+   test.FixedNumIter(iter=20)
 
 .. classmethod:: test.NormDispAndUnbalance(tolIncr,tolR,iter,pFlag=0,nType=2,maxincr=-1)
 
@@ -119,6 +152,10 @@ Class methods
    ``maxincr`` |int|        See :meth:`test.NormUnbalance` (optional)
    ======================   =============================================================
 
+::
+
+   test.NormDispAndUnbalance(tolIncr=1.0e-8, tolR=1.0e-6, iter=10)
+
 .. classmethod:: test.NormDispOrUnbalance(tolIncr,tolR,iter,pFlag=0,nType=2,maxincr=-1)
 
    Create a NormDispOrUnbalance :class:`test`, which check if either
@@ -126,6 +163,10 @@ Class methods
 
    See :meth:`test.NormDispAndUnbalance` for parameters.
 
+
+::
+
+   test.NormDispAndUnbalance(tolIncr=1.0e-8, tolR=1.0e-6, iter=10)
 
 .. classmethod:: test.PFEM(tolv,tolp,tolrv,tolrp,iter,maxincr,tolrelv=1e-15,tolrelp=1e-15,pFlag=0,nType=2)
 
@@ -144,13 +185,10 @@ Class methods
    ``pFlag`` |int|          See :meth:`test.NormUnbalance` (optional)		    
    ``nType`` |int|          See :meth:`test.NormUnbalance` (optional)
    ======================   =========================================================================
-	 
-Examples
-----------
 
-::
+   ::
 
-   test.NormUnbalance(tol=1.0e-8, iter=10, pFlag=4)
-   test.PFEM(tolv=1e-6, tolp=1e-6, tolrv=1e-6, tolrp=1e-6, iter=20, maxincr=3, pFlag=1)
+      test.PFEM(tolv=1e-6, tolp=1e-6, tolrv=1e-6, tolrp=1e-6, iter=20, maxincr=3, pFlag=1)
+
 
 

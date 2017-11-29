@@ -115,6 +115,10 @@ Object methods
    The string reprsentation of the :class:`node` object. Usually
    used in the |print| function.
 
+   ::
+
+      print(nd)
+
 .. method:: node.remove()
 
    Remove the corresponding OpenSees ``Node`` object.
@@ -128,6 +132,9 @@ Object methods
       the python :class:`node` object is removed, but
       the OpenSees ``Node`` is not.
 
+   ::
+
+      nd.remove()
 
 .. method:: node.fix(fix)
 

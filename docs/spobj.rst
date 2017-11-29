@@ -20,11 +20,19 @@ Object attributes
       
    An object attribute (get) |int|.
    The unique tag of the :class:`sp` object.
-      
+
+   ::
+
+      print(s.tag)
+
 .. attribute:: sp.nd
 
    An object attribute (get) |node|.
    The constrained :class:`node`.
+
+   ::
+
+      print(s.nd)
 
 .. attribute:: sp.dof
 
@@ -32,10 +40,18 @@ Object attributes
    The constrained dof of the :class:`node`.
    The value starts from 1 through :attr:`node.ndf` of the :class:`node`.
 
+   ::
+
+      print(s.dof)
+
 .. attribute:: sp.value
 
    An object attribute (get) |float|.
    The constrained value.
+
+   ::
+
+      print(s.value)
 
 Object methods
 -----------------
@@ -48,6 +64,9 @@ Object methods
       The string reprsentation of the :class:`sp` object. Usually
       used in the |print| function.
 
+   ::
+
+      print(s)
 
 .. method:: sp.remove()
 
@@ -59,6 +78,10 @@ Object methods
    .. seealso::
 
       :meth:`node.remove`
+
+   ::
+
+      s.remove()
 
 
 

@@ -65,6 +65,10 @@ Object methods
    The string reprsentation of the :class:`NDMaterial`. Usually
    used in the |print| function.
 
+   ::
+
+      print(mat)
+
 .. method:: NDMaterial.remove()
 
    Remove the corresponding OpenSees ``NDMaterial`` object.
@@ -74,6 +78,10 @@ Object methods
 
       :meth:`node.remove`
 
+
+   ::
+
+      mat.remove()
 
 .. _ndmat-class-methods:
 

@@ -68,6 +68,10 @@ Object methods
    The string reprsentation of the :class:`section`. Usually
    used in the |print| function.
 
+   ::
+
+      print(sec)
+
 .. method:: section.fiber(yLoc,zLoc,A,mat)
 
    Create and add a fiber into a :meth:`section.Fiber` or :meth:`section.NDFiber`.
@@ -148,6 +152,10 @@ Object methods
 
       :meth:`node.remove`
 
+
+   ::
+
+      sec.remove()
 
 .. _section-class-methods:
 

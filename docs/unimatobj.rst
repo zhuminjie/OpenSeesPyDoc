@@ -74,6 +74,10 @@ Object methods
    The string reprsentation of the :class:`uniaxialMaterial`. Usually
    used in the |print| function.
 
+   ::
+
+      print(mat)
+
 .. method:: uniaxialMaterial.remove()
 
    Remove the corresponding OpenSees ``UniaxialMaterial`` object.
@@ -82,6 +86,10 @@ Object methods
    .. seealso::
 
       :meth:`node.remove`
+
+   ::
+
+      mat.remove()
 
 
 .. _unimat-class-methods:

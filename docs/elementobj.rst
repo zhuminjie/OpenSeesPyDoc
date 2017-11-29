@@ -3,15 +3,10 @@
 Element Object
 =======================
 
-.. class:: element(tag)
+.. class:: element()
 
    A python :class:`element` object
    is a wrapper to the OpenSees ``Element`` object.
-
-   ========================   ===========================================================
-   ``tag`` |int|              Tag of :class:`element`, when only ``tag`` is given,
-	                      it creates a wrapper to an existing OpenSees ``Element``.
-   ========================   ===========================================================
 
    .. note::
    
@@ -27,30 +22,54 @@ Object attributes
    An object attribute (get) |int|.
    The :class:`element` tag.
 
+   ::
+
+      print(ele.tag)
+
 .. attribute:: element.nds
 
    An object attribute (get) |list|.
    The element :class:`node` objects.
+
+   ::
+
+      print(ele.nds)
 
 .. attribute:: element.ndf
 
    An object attribute (get) |int|.
    The element number of dofs.
 
+   ::
+
+      print(ele.ndf)
+
 .. attribute:: element.stiff
 
    An object attribute (get) |listl|.
    The element stiffness matrix.
+
+   ::
+
+      print(ele.stiff)
 
 .. attribute:: element.damp
 
    An object attribute (get) |listl|.
    The element damping matrix.
 
+   ::
+
+      print(ele.damp)
+
 .. attribute:: element.mass
 
    An object attribute (get) |listl|.
    The element mass matrix.
+
+   ::
+
+      print(ele.mass)
 
 Object methods
 ---------------
@@ -63,6 +82,10 @@ Object methods
    The string reprsentation of the :class:`element`. Usually
    used in the |print| function.
 
+   ::
+
+      print(ele)
+
 .. method:: element.remove()
 
    Remove the corresponding OpenSees ``Element`` object.
@@ -71,6 +94,10 @@ Object methods
 
       :meth:`node.remove`
 
+   ::
+
+      ele.remove()
+
 .. _element-class-methods:
 
 Class methods
@@ -78,12 +105,11 @@ Class methods
 
 #. :meth:`element.Truss`
 
-.. classmethod:: element.Truss(tag, nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
+.. classmethod:: element.Truss(nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
    Create a Truss :class:`element` object.
 
    ========================   =============================================================
-   ``tag`` |int|              :class:`element` tag.
    ``nds`` |list|             Truss end :class:`node` objects.
    ``A`` |float|              Cross-sectional area of element.
    ``mat`` |unimat|           A |unimat| object.
@@ -93,25 +119,12 @@ Class methods
    ``doRayleigh`` |int|       Rayleigh damping flag (0 no rayleigh damping,
 		              1 include rayleigh damping). (optional)
    ========================   =============================================================
-		 
-
-Examples
------------
-
-::
-
-     mat = uniaxialMaterial.Hardening(1, E=E, sigmaY=sY, Hiso=0.0, Hkin=alpha/(1-alpha)*E)
-
-     eles = {}
-     eles[1] = element.Truss(1, nds=[nds[1],nds[4]], A=A, mat=mat)
-     eles[2] = element.Truss(2, nds=[nds[2],nds[4]], A=A, mat=mat)
-     eles[3] = element.Truss(3, nds=[nds[3],nds[4]], A=A, mat=mat)
-
-     for tag,ele in eles.items():
-         print(ele.nds, ele.ndf)
-	 print(np.array(ele.stiff))
-	 print(np.array(ele.damp))
-	 print(np.array(ele.mass))
-	 print(ele)
 
 
+   ::
+
+      # create a truss element
+      ele = element.Truss(nds=[nds[1],nds[4]], A=A, mat=mat)
+   
+      # create 100 truss elements
+      eles = [element.Truss(nds=[nds[i],nds[i+1]], A=A, mat=mat) for i in range(100)] 
