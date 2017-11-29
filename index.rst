@@ -60,6 +60,7 @@ can be imported as::
    docs/timeSeriesobj
    docs/loadobj
    docs/patternobj
+   docs/geomTransfobj
    docs/systemobj
    docs/numbererobj
    docs/constraintobj
