@@ -56,6 +56,7 @@ can be imported as::
    docs/unimatobj
    docs/ndmatobj
    docs/sectionobj
+   docs/beamIntegrationobj
    docs/elementobj
    docs/timeSeriesobj
    docs/loadobj

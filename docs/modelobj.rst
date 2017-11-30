@@ -32,12 +32,12 @@ Object attributes
 
 .. attribute:: model.ndm
       
-   An object attribute (get/set) |int|.
+   An object attribute (get) |int|.
    The number of dimentions of the model.
 
    ::
    
-      m.ndm = 3
+      print(m.ndm)
 
 .. attribute:: model.ndf
 

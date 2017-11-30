@@ -40,6 +40,7 @@ The `OpenSeesPy`_ objects:
 #. :class:`uniaxialMaterial`
 #. :class:`NDMaterial`
 #. :class:`section`
+#. :class:`beamIntegration`
 #. :class:`element`
 #. :class:`timeSeries`
 #. :class:`load`

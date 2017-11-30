@@ -34,6 +34,10 @@
 
 .. |ndmat| replace:: (:class:`NDMaterial`)
 
+.. |transf| replace:: (:class:`geomTransf`)
+
+.. |section| replace:: (:class:`section`)
+
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
 .. _int: https://docs.python.org/3/library/functions.html#int
@@ -61,3 +65,6 @@
 .. _UmfPack: http://faculty.cse.tamu.edu/davis/suitesparse.html
 .. _Eigen: http://eigen.tuxfamily.org/index.php?title=Main_Page
 .. _Bathe2007: http://www.sciencedirect.com/science/article/pii/S0045794906003099
+.. _Neuenhofer and Filippou 1997: https://doi.org/10.1061/(ASCE)0733-9445(1997)123:7(958)
+.. _Scott and Fenves 2006: https://doi.org/10.1061/(ASCE)0733-9445(2006)132:2(244)
+.. _Kidarsa, Scott and Higgins 2008: https://doi.org/10.1016/j.finel.2007.11.013
