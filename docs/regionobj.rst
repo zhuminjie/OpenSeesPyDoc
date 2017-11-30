@@ -34,6 +34,13 @@ Region Object
 Object attributes
 ------------------
 
+#. :attr:`region.tag`
+#. :attr:`region.nds`
+#. :attr:`region.ndsOnly`
+#. :attr:`region.eles`
+#. :attr:`region.elesOnly`
+#. :attr:`region.rayleigh`
+
 .. attribute:: region.tag
       
    An object attribute (get) |int|.

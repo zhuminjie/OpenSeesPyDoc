@@ -34,6 +34,14 @@ Node Object
 Object attributes
 -----------------
 
+#. :attr:`node.tag`
+#. :attr:`node.crds`
+#. :attr:`node.disp`
+#. :attr:`node.vel`
+#. :attr:`node.accel`
+#. :attr:`node.mass`
+#. :attr:`node.ndf`
+
 .. attribute:: node.tag
       
    An object attribute (get) |int|.

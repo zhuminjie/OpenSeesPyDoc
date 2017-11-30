@@ -16,6 +16,13 @@ MP Object
 Object attributes
 ------------------
 
+#. :attr:`mp.tag`
+#. :attr:`mp.rnd`
+#. :attr:`mp.cnd`
+#. :attr:`mp.rdofs`
+#. :attr:`mp.cdofs`
+#. :attr:`mp.cmat`
+
 .. attribute:: mp.tag
       
    An object attribute (get) |int|.

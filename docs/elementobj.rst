@@ -17,6 +17,13 @@ Element Object
 Object attributes
 -------------------
 
+#. :attr:`element.tag`
+#. :attr:`element.nds`
+#. :attr:`element.ndf`
+#. :attr:`element.stiff`
+#. :attr:`element.damp`
+#. :attr:`element.mass`
+
 .. attribute:: element.tag
       
    An object attribute (get) |int|.

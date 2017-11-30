@@ -17,6 +17,12 @@ UniaxialMaterial Object
 Object attributes
 -------------------
 
+#. :attr:`uniaxialMaterial.tag`
+#. :attr:`uniaxialMaterial.strain`
+#. :attr:`uniaxialMaterial.stress`
+#. :attr:`uniaxialMaterial.tangent`
+#. :attr:`uniaxialMaterial.dampTangent`
+
 .. attribute:: uniaxialMaterial.tag
       
    An object attribute (get) |int|.

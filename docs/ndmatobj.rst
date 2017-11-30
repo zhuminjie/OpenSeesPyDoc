@@ -17,6 +17,11 @@ NDMaterial Object
 Object attributes
 -------------------
 
+#. :attr:`NDMaterial.tag`
+#. :attr:`NDMaterial.strain`
+#. :attr:`NDMaterial.stress`
+#. :attr:`NDMaterial.tangent`
+
 .. attribute:: NDMaterial.tag
       
    An object attribute (get) |int|.

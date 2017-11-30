@@ -17,6 +17,8 @@ GeomTransf Object
 Object attributes
 ------------------
 
+#. :attr:`geomTransf.tag`
+
 .. attribute:: geomTransf.tag
       
    An object attribute (get) |int|.

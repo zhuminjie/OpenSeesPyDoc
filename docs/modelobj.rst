@@ -30,6 +30,10 @@ Model Object
 Object attributes
 ------------------------
 
+#. :attr:`model.ndm`
+#. :attr:`model.ndf`
+#. :attr:`model.rayleigh`
+
 .. attribute:: model.ndm
       
    An object attribute (get) |int|.

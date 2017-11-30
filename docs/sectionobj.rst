@@ -17,6 +17,11 @@ Section Object
 Object attributes
 -------------------
 
+#. :attr:`section.tag`
+#. :attr:`section.deformation`
+#. :attr:`section.stress`
+#. :attr:`section.tangent`
+
 .. attribute:: section.tag
       
    An object attribute (get) |int|.

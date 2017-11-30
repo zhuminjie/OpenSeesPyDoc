@@ -16,6 +16,9 @@ Load Object
 Object attributes
 ------------------
 
+#. :attr:`load.tag`
+#. :attr:`load.nd`
+
 .. attribute:: load.tag
       
    An object attribute (get) |int|.

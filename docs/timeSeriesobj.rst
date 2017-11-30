@@ -17,6 +17,8 @@ TimeSeries Object
 Object attributes
 ------------------
 
+#. :attr:`timeSeries.tag`
+
 .. attribute:: timeSeries.tag
       
    An object attribute (get) |int|.

@@ -16,6 +16,11 @@ SP Object
 Object attributes
 ------------------
 
+#. :attr:`sp.tag`
+#. :attr:`sp.nd`
+#. :attr:`sp.dof`
+#. :attr:`sp.value`
+
 .. attribute:: sp.tag
       
    An object attribute (get) |int|.

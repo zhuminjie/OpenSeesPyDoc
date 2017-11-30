@@ -19,6 +19,8 @@ BeamIntegration Object
 Object attributes
 -------------------
 
+#. :attr:`beamIntegration.tag`
+
 .. attribute:: beamIntegration.tag
       
    An object attribute (get) |int|.

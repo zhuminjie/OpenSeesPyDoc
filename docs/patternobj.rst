@@ -16,6 +16,11 @@ Pattern Object
 Object attributes
 ------------------
 
+#. :attr:`pattern.tag`
+#. :attr:`pattern.sps`
+#. :attr:`pattern.loads`
+#. :attr:`pattern.loadFactor`
+
 .. attribute:: pattern.tag
       
    An object attribute (get) |int|.
