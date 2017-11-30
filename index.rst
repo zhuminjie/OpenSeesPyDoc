@@ -62,13 +62,13 @@ can be imported as::
    docs/loadobj
    docs/patternobj
    docs/geomTransfobj
+   docs/analysisobj
    docs/systemobj
    docs/numbererobj
    docs/constraintobj
    docs/integratorobj
    docs/algorithmobj
    docs/ctestobj
-   docs/analysisobj
    docs/examples
 
 Indices and tables

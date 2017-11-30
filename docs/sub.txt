@@ -38,6 +38,8 @@
 
 .. |section| replace:: (:class:`section`)
 
+.. |bi| replace:: (:class:`beamIntegration`)
+
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
 .. _int: https://docs.python.org/3/library/functions.html#int
@@ -60,10 +62,11 @@
 .. _Fortran: http://en.wikipedia.org/wiki/Fortran
 .. _C: http://en.wikipedia.org/wiki/C_programming_language
 .. _open source: http://en.wikipedia.org/wiki/Open_source
-.. _McKenna, Scott and Fenves: http://ascelibrary.org/doi/10.1061/%28ASCE%29CP.1943-5487.0000002
 .. _SuperLU: http://crd.lbl.gov/~xiaoye/SuperLU/
 .. _UmfPack: http://faculty.cse.tamu.edu/davis/suitesparse.html
 .. _Eigen: http://eigen.tuxfamily.org/index.php?title=Main_Page
+
+.. _McKenna, Scott and Fenves: http://ascelibrary.org/doi/10.1061/%28ASCE%29CP.1943-5487.0000002
 .. _Bathe2007: http://www.sciencedirect.com/science/article/pii/S0045794906003099
 .. _Neuenhofer and Filippou 1997: https://doi.org/10.1061/(ASCE)0733-9445(1997)123:7(958)
 .. _Scott and Fenves 2006: https://doi.org/10.1061/(ASCE)0733-9445(2006)132:2(244)

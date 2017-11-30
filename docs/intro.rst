@@ -46,10 +46,10 @@ The `OpenSeesPy`_ objects:
 #. :class:`load`
 #. :class:`pattern`
 #. :class:`geomTransf`
+#. :class:`analysis`
 #. :class:`system`
 #. :class:`numberer`
-#. :class:`constraint`
+#. :class:`constraints`
 #. :class:`integrator`
 #. :class:`algorithm`
 #. :class:`test`
-#. :class:`analysis`

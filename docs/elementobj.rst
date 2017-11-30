@@ -110,6 +110,7 @@ Class methods
 * Beam-Column Elements
 
   #. :meth:`element.elasticBeamColumn`
+  #. :meth:`element.forceBeamColumn`
 
 .. classmethod:: element.Truss(nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
@@ -166,3 +167,23 @@ Class methods
    ::
 
       ele = element.elasticBeamColumn(nds=[nd1,nd2], A=5.5, E=100, Iz=1e6, transf=transf)
+
+
+
+.. classmethod:: element.forceBeamColumn(nds,transf,bi,mass=0.0,tol=1e-12,maxIter=10)
+
+   Create a 3D forceBeamColumn :class:`element` object.
+
+   ========================   =============================================================
+   ``nds`` |list|             End :class:`node` objects.
+   ``transf`` |transf|        Previously-defined |transf| object.
+   ``bi`` |bi|                Previously-defined |bi| object.
+   ``mass`` |float|           Element mass per unit length, from which a lumped-mass matrix is formed  (optional)
+   ``tol`` |float|            Tolerance for satisfaction of element compatibility (optional)
+   ``maxIter`` |int|          maximum number of iterations to undertake to satisfy element compatibility (optional)
+   ========================   =============================================================
+
+
+   ::
+
+      ele = element.forceBeamColumn(nds=[nd1,nd2], transf=transf, bi=bi)
