@@ -19,6 +19,7 @@ Object attributes
 #. :attr:`pattern.tag`
 #. :attr:`pattern.sps`
 #. :attr:`pattern.loads`
+#. :attr:`pattern.eleLoads`
 #. :attr:`pattern.loadFactor`
 
 .. attribute:: pattern.tag
@@ -48,6 +49,16 @@ Object attributes
 
       print(ptn.loads)
 
+.. attribute:: pattern.eleLoads
+      
+   An object attribute (get) |list|.
+   All python :class:`eleLoad` objects in the :class:`pattern`.
+
+   ::
+
+      for el in ptn.eleLoads:
+          print(el)
+
 .. attribute:: pattern.loadFactor
       
    An object attribute (get) |float|.
@@ -63,6 +74,7 @@ Object methods
 #. :meth:`pattern.__str__`
 #. :meth:`pattern.sp`
 #. :meth:`pattern.load`
+#. :meth:`pattern.eleLoad`
 #. :meth:`pattern.wipe`
 #. :meth:`pattern.remove`
 
@@ -105,7 +117,30 @@ Object methods
    ::
 
       l = ptn.load(nd=nd, load=[1.0,-1.0])
-	    
+
+
+.. method:: pattern.eleLoad(eles,beamUniform=[],beamPoint=[])
+
+   Create and add a |list| of python :class:`eleLoad` object to the :class:`pattern`.
+   Return a |list| of python :class:`eleLoad` object.
+
+   ========================   =============================================================
+   ``eles`` |list|            A list of :class:`element` objects.
+   ``beamUniform`` |listf|    Beam uniform loads, ``[Wy,Wx]`` for 2D and ``[Wy,Wz,Wx]``
+	                      for 3D, ``Wx`` is along member length, ``Wy`` is in local
+	                      y direction and ``Wz`` local z direction.
+   ``beamPoint`` |listf|      Beam point loads, ``[Py,xL,Px]`` for 2D and
+	                      ``[Py,Pz,xL,Px]``
+	                      for 3D, ``Px`` is along member length, ``Py`` is in local
+	                      y direction and ``Pz`` local z direction, ``xL``
+	                      is the location of point load relative to |node| I,
+	                      prescribed as fraction of |element| length.
+   ========================   =============================================================
+
+   ::
+
+      el = ptn.eleLoad(eles=[e1,e2,e3], beamUniform=[-0.1, 0.5])
+   
 .. method:: pattern.wipe()
 
    Wipe all :class:`sp`, :class:`load`, and :class:`eleLoad` objects

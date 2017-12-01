@@ -44,6 +44,7 @@ The `OpenSeesPy`_ objects:
 #. :class:`element`
 #. :class:`timeSeries`
 #. :class:`load`
+#. :class:`eleLoad`
 #. :class:`pattern`
 #. :class:`geomTransf`
 #. :class:`analysis`
