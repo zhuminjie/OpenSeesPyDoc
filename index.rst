@@ -49,6 +49,7 @@ can be imported as::
 
    docs/intro
    docs/modelobj
+   docs/meshobj
    docs/nodeobj
    docs/spobj
    docs/mpobj

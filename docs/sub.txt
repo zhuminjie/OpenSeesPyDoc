@@ -24,6 +24,8 @@
 
 .. |bool| replace:: (`bool`_)
 
+.. |callable| replace:: (`callable`_)
+
 .. |node| replace:: (:class:`node`)
 
 .. |element| replace:: (:class:`element`)
@@ -48,6 +50,7 @@
 .. _float: https://docs.python.org/3/library/functions.html#float
 .. _str: https://docs.python.org/3/library/stdtypes.html#str
 .. _bool: https://docs.python.org/3/library/functions.html#bool
+.. _callable: https://docs.python.org/3/library/functions.html#callable
 
 .. _OpenSeesPy: https://github.com/zhuminjie/OpenSeesPyDoc
 .. _OpenSees: http://opensees.berkeley.edu/

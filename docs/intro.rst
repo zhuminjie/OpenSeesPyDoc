@@ -33,6 +33,7 @@ Examples can be found in the last chapter.
 The `OpenSeesPy`_ objects:
 
 #. :class:`model`
+#. :class:`mesh`
 #. :class:`node`
 #. :class:`sp`
 #. :class:`mp`
