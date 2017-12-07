@@ -3,36 +3,17 @@
 Mesh Object
 ==============
 
-.. class:: mesh(bgsize=0.0, bgtol=0.0)
+.. class:: mesh()
 
-   Create a python :class:`mesh` object which is
-   for creating moving mesh and background mesh in the OpenSees.
-   All regular FE mesh are considered as moving mesh.
-   The backgroundm mesh is useful for Fluid-Structure Interaction.
-
-   ========================   ===============================================================
-   ``bgsize`` |float|         Mesh size for background mesh. (optional)
-   ``bgtol`` |float|          Boundary tolerance for background mesh. (optional)
-   ========================   ===============================================================
-
-   .. note::
-
-      If ``bgsize`` is given  then a background mesh is created.
-      Otherwise, a moving mesh is created.
-
-   ::
-
-      # a moving mesh
-      msh = mesh()
-
-      # a background mesh
-      msh = mesh(bgsize = 0.01)
+   The :class:`mesh` object is for creating and updating moving and background mesh
+   in OpenSees. Use :ref:`mesh-class-methods` below to create meshes.
      
 Object attributes
 ------------------------
 
 #. :attr:`mesh.tag`
-#. :attr:`mesh.moving`
+#. :attr:`mesh.meshsize`
+#. :attr:`mesh.numEleNodes`
 #. :attr:`mesh.eleType`
 
 .. attribute:: mesh.tag
@@ -44,23 +25,32 @@ Object attributes
    
       print(msh.tag)
 
-.. attribute:: mesh.moving
+.. attribute:: mesh.meshsize
 
-   An object attribute (get) |bool|.
-   Indicate if the mesh is a moving mesh or a background mesh.
+   An object attribute (get/set) |float|.
+   The mesh size for the mesh object.
 	       
    ::
    
-      if msh.moving:
-          print('This is a moving mesh')
+      msh.meshsize = 0.001
+
+.. attribute:: mesh.numEleNodes
+
+   An object attribute (get/set) |int|.
+   The number of nodes for elements to be meshed.
+   If not set, 2 is used for line mesh, 3 for face mesh, and 4 for volume mesh.
+	       
+   ::
+   
+      msh.numEleNodes = 2
 
 
 .. attribute:: mesh.eleType
 
    An object attribute (get/set) |callable|.
-   A python callable object which will create the element with given :meth:`mesh.eleArgs`.
-   For example, the :ref:`element-class-methods` of the |element| class.
-   The ``eleType`` must be set before doing any meshing.
+   A python callable object which will create the element with given :meth:`mesh.eleArgs`,
+   for example, the :ref:`element-class-methods` of the |element| class.
+   If not set, no elements will be meshed, but nodes will.
 	       
    ::
    
@@ -72,7 +62,6 @@ Object methods
 #. :meth:`mesh.__str__`
 #. :meth:`mesh.remove`
 #. :meth:`mesh.eleArgs`
-#. :meth:`mesh.line`
 
 .. method:: mesh.__str__()
 
@@ -107,20 +96,68 @@ Object methods
 
       msh.eleArgs(A=0.1, mat=mat)
 
-.. method:: mesh.line(meshsize, nds)
 
-   Mesh lines elements between ``nds`` with the ``meshsize``.
+
+
+
+
+.. _mesh-class-methods:
+
+
+Class methods
+---------------
+
+#. :meth:`mesh.line`
+#. :meth:`mesh.face`
+#. :meth:`mesh.volume`
+
+
+.. classmethod:: mesh.line(nds)
+
+   Create a line mesh object.
 
    ========================   ======================================================================
-   ``meshsize`` |float|       The mesh size, i.e. the length of each meshed line element.
-   ``nds`` |list|             A list of two nodes, which are the ends of the line.
+   ``nds`` |list|             A list of :class:`node`, which define the line.
    ========================   ======================================================================
 
 
    ::
 
-      msh = mesh()
-      msh.eleType = element.Truss
-      msh.eleArgs(A=0.1, mat=mat)
-      nds = [node([0.0,0.0]), node([1.0,0.0])
-      eles = msh.line(meshsize=0.01, nds=nds)
+      line = mesh.line(nds=nds)
+      line.eleType = element.Truss
+      line.eleArgs(A=0.1, mat=mat)
+      print(line)
+
+
+
+
+
+.. classmethod:: mesh.face(lines)
+
+   Create a face mesh object.
+
+   ========================   ============================================================================
+   ``lines`` |list|           A list of :meth:`mesh.line`, which define the face.
+   ========================   ============================================================================
+
+
+   ::
+
+      face = mesh.face(lines=lines)
+      face.eleType = element.Tri31
+      face.eleArgs(thick=1.0,type='PlaneStress',mat=mat)
+
+
+
+.. classmethod:: mesh.volume(faces)
+
+   Create a volume mesh object.
+
+   ========================   ================================================================================
+   ``faces`` |list|           A list of :meth:`mesh.face`, which define the volme.
+   ========================   ================================================================================
+
+
+   ::
+
+      vol = mesh.volume(faces=faces)
