@@ -14,7 +14,11 @@ Object attributes
 #. :attr:`mesh.tag`
 #. :attr:`mesh.meshsize`
 #. :attr:`mesh.numEleNodes`
+#. :attr:`mesh.inclDisp`
+#. :attr:`mesh.ndf`
 #. :attr:`mesh.eleType`
+#. :attr:`mesh.nds`
+#. :attr:`mesh.eles`
 
 .. attribute:: mesh.tag
       
@@ -44,6 +48,25 @@ Object attributes
    
       msh.numEleNodes = 2
 
+.. attribute:: mesh.inclDisp
+
+   An object attribute (get/set) |int|.
+   When it is ``1`` (default), it will add displacement
+   to nodal coordinates when meshing.
+	       
+   ::
+   
+      msh.inclDisp = 0
+
+.. attribute:: mesh.ndf
+
+   An object attribute (get/set) |int|.
+   The :attr:`node.ndf` for |node| objects to be meshed.
+   If not set, :attr:`model.ndf` is used.
+	       
+   ::
+   
+      msh.ndf = 3
 
 .. attribute:: mesh.eleType
 
@@ -56,12 +79,33 @@ Object attributes
    
       msh.eleType = element.Truss
 
+
+.. attribute:: mesh.nds
+
+   An object attribute (get) |list|.
+   The list of |node| objects in the mesh.
+	       
+   ::
+   
+      nds = msh.nds
+
+.. attribute:: mesh.eles
+
+   An object attribute (get) |list|.
+   The list of |element| objects in the mesh.
+	       
+   ::
+   
+      eles = msh.eles
+
 Object methods
 ---------------------
 
 #. :meth:`mesh.__str__`
 #. :meth:`mesh.remove`
+#. :meth:`mesh.clear`
 #. :meth:`mesh.eleArgs`
+#. :meth:`mesh.mesh`
 
 .. method:: mesh.__str__()
 
@@ -80,6 +124,14 @@ Object methods
 
       msh.remove()
 
+.. method:: mesh.clear()
+
+   Clear the mesh by removing OpenSees nodes and elements.
+
+   ::
+
+      msh.clear()
+
 
 .. method:: mesh.eleArgs(*args, **kwargs)
 
@@ -97,7 +149,14 @@ Object methods
       msh.eleArgs(A=0.1, mat=mat)
 
 
+.. classmethod:: mesh.mesh()
 
+   Do the mesh. A face mesh will mesh its lines first. A volume mesh
+   will mesh its faces first.
+
+   ::
+
+      line.mesh()
 
 
 
@@ -161,3 +220,7 @@ Class methods
    ::
 
       vol = mesh.volume(faces=faces)
+
+
+
+
