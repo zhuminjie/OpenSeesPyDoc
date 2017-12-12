@@ -64,6 +64,7 @@ can be imported as::
    docs/eleloadobj
    docs/patternobj
    docs/geomTransfobj
+   docs/recorderobj
    docs/analysisobj
    docs/systemobj
    docs/numbererobj

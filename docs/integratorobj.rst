@@ -22,12 +22,17 @@ Integrator Object
 Class methods
 --------------
 
+.. _static-integrator-class-methods:
+
 Static Integrators
 
 #. :meth:`integrator.LoadControl`
 #. :meth:`integrator.DisplacementControl`
 #. :meth:`integrator.MinUnbalDispNorm`
 #. :meth:`integrator.ArcLength`
+
+
+.. _transient-integrator-class-methods:
 
 Transient Integrators
 

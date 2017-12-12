@@ -48,6 +48,7 @@ The `OpenSeesPy`_ objects:
 #. :class:`eleLoad`
 #. :class:`pattern`
 #. :class:`geomTransf`
+#. :class:`recorder`
 #. :class:`analysis`
 #. :class:`system`
 #. :class:`numberer`

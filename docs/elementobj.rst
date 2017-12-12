@@ -108,6 +108,11 @@ Object methods
 
 Class methods
 ---------------
+
+* Zero-Length Elements
+
+  #. :meth:`element.zeroLengthSection`
+
 * Truss Elements
 
   #. :meth:`element.Truss`
@@ -118,6 +123,36 @@ Class methods
 
   #. :meth:`element.elasticBeamColumn`
   #. :meth:`element.forceBeamColumn`
+
+
+* Triangular Elements
+
+  #. :meth:`element.tri31`
+
+
+
+.. classmethod:: element.zeroLengthSection(nds, sec, x=[1.0,0.0,0.0], yp=[0.0,1.0,0.0], doRayleigh=1)
+
+   Create a zeroLengthSection :class:`element` object, which is defined by two |node| objects at the same location. The nodes are connected by a single |section| object to represent the force-deformation relationship for the element.
+
+   ========================   =============================================================
+   ``nds`` |list|             End :class:`node` objects.
+   ``sec`` |section|          A |section| object.
+   ``x`` |listf|              Vector components in global coordinates defining
+		              local x-axis. (optional)
+   ``yp`` |listf|             Vector components in global coordinates defining
+		              vector yp which lies in the local x-y plane for
+                              the element. (optional)
+   ``doRayleigh`` |int|       Rayleigh damping flag (0 no rayleigh damping,
+		              1 include rayleigh damping). (optional)
+   ========================   =============================================================
+
+
+   ::
+
+      # create a  element
+      ele = element.zeroLengthSection(nds=[nds[1],nds[4]], sec=sec)
+   
 
 .. classmethod:: element.Truss(nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
@@ -194,3 +229,30 @@ Class methods
    ::
 
       ele = element.forceBeamColumn(nds=[nd1,nd2], transf=transf, bi=bi)
+
+
+.. classmethod:: element.tri31(nds, thk, type, mat, pressure=0.0, rho=0.0, b1=0.0, b2=0.0)
+
+   Create a constant strain triangular :class:`element` object, which which uses three nodes and one integration points.
+
+   ========================   =============================================================
+   ``nds`` |list|             End :class:`node` objects.
+   ``thk`` |section|          Element thickness.
+   ``type`` |str|             String representing material behavior.
+		              The type parameter can be
+                              either ``'PlaneStrain'`` or ``'PlaneStress'``.
+   ``mat`` |ndmat|            A :class:`NDMaterial` object.
+   ``pressure`` |float|       Surface pressure. (optional)
+   ``rho`` |float|            Element mass density (per unit volume) from
+		              which a lumped element mass matrix
+                              is computed. (optional)
+   ``b1`` |float|             Constant body forces defined in the domain. (optional)
+   ``b2`` |float|             Constant body forces defined in the domain. (optional)
+   ========================   =============================================================
+
+
+   ::
+
+      # create a  element
+      ele = element.tri31(nds=[nd1,nd2,nd3], thk=0.1, type='PlaneStress', mat=mat)
+  
