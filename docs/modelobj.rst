@@ -76,6 +76,7 @@ Object methods
 
 #. :meth:`model.__str__`
 #. :meth:`model.wipe`
+#. :meth:`model.reactions`
 
 .. method:: model.__str__()
 
@@ -96,3 +97,16 @@ Object methods
       m.wipe()
 
 
+.. method:: model.reactions(dynamic=0,rayliegh=0)
+
+   Calculate reactions for all :class:`node` objects in the :class:`model`.
+
+   ========================   =========================================================================
+   ``dynamic`` |int|          Include dynamic effects in reactions. (optional)
+   ``rayleigh`` |int|         Include rayleigh damping in reactions. (optional)
+   ========================   =========================================================================
+
+
+   ::
+
+      m.reactions(dynamic=1)

@@ -41,6 +41,7 @@ Object attributes
 #. :attr:`node.accel`
 #. :attr:`node.mass`
 #. :attr:`node.ndf`
+#. :attr:`node.reaction`
 
 .. attribute:: node.tag
       
@@ -104,6 +105,15 @@ Object attributes
    ::
 
       print(nd.ndf)
+
+.. attribute:: node.reaction
+
+   An object attribute (get) |listf|.
+   The nodal reactions.
+
+   ::
+
+      print(nd.reaction)
 
 Object methods
 ---------------
