@@ -103,7 +103,8 @@ Object methods
 
 #. :meth:`mesh.__str__`
 #. :meth:`mesh.remove`
-#. :meth:`mesh.clear`
+#. :meth:`mesh.clearEles`
+#. :meth:`mesh.clearNodes`
 #. :meth:`mesh.eleArgs`
 #. :meth:`mesh.mesh`
 
@@ -124,13 +125,21 @@ Object methods
 
       msh.remove()
 
-.. method:: mesh.clear()
+.. method:: mesh.clearEles()
 
-   Clear the mesh by removing OpenSees nodes and elements.
+   Clear OpenSees elements in the mesh.
 
    ::
 
-      msh.clear()
+      msh.clearEles()
+
+.. method:: mesh.clearNodes()
+
+   Clear OpenSees nodes in the mesh.
+
+   ::
+
+      msh.clearNodes()
 
 
 .. method:: mesh.eleArgs(*args, **kwargs)
