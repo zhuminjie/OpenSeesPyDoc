@@ -63,7 +63,6 @@ can be imported as::
    docs/regionobj
    docs/sectionobj
    docs/spobj
-   docs/structureobj
    docs/timeSeriesobj
    docs/unimatobj
    docs/analysisobj
