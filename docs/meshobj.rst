@@ -176,8 +176,7 @@ Class methods
 ---------------
 
 #. :meth:`mesh.line`
-#. :meth:`mesh.face`
-#. :meth:`mesh.volume`
+#. :meth:`mesh.tri`
 
 
 .. classmethod:: mesh.line(nds)
@@ -202,10 +201,10 @@ Class methods
 
 .. classmethod:: mesh.face(lines)
 
-   Create a face mesh object.
+   Create a triangular mesh object.
 
    ========================   ============================================================================
-   ``lines`` |list|           A list of :meth:`mesh.line`, which define the face.
+   ``lines`` |list|           A list of :meth:`mesh.line`, which define the area to be meshed.
    ========================   ============================================================================
 
 
@@ -214,22 +213,6 @@ Class methods
       face = mesh.face(lines=lines)
       face.eleType = element.Tri31
       face.eleArgs(thick=1.0,type='PlaneStress',mat=mat)
-
-
-
-.. classmethod:: mesh.volume(faces)
-
-   Create a volume mesh object.
-
-   ========================   ================================================================================
-   ``faces`` |list|           A list of :meth:`mesh.face`, which define the volme.
-   ========================   ================================================================================
-
-
-   ::
-
-      vol = mesh.volume(faces=faces)
-
 
 
 
