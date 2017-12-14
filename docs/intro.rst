@@ -47,6 +47,7 @@ The `OpenSeesPy`_ objects:
 #. :class:`region`
 #. :class:`section`
 #. :class:`sp`
+#. :class:`structure`
 #. :class:`timeSeries`
 #. :class:`uniaxialMaterial`
 #. :class:`analysis`
