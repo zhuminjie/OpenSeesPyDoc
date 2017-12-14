@@ -19,6 +19,7 @@ Object attributes
 #. :attr:`mesh.eleType`
 #. :attr:`mesh.nds`
 #. :attr:`mesh.eles`
+#. :attr:`mesh.id`
 
 .. attribute:: mesh.tag
       
@@ -40,13 +41,13 @@ Object attributes
 
 .. attribute:: mesh.numEleNodes
 
-   An object attribute (get/set) |int|.
+   An object attribute (get) |int|.
    The number of nodes for elements to be meshed.
-   If not set, 2 is used for line mesh, 3 for face mesh, and 4 for volume mesh.
+   By default, 2 is used for line mesh, 3 for tri mesh
 	       
    ::
    
-      msh.numEleNodes = 2
+      print(msh.numEleNodes)
 
 .. attribute:: mesh.inclDisp
 
@@ -97,6 +98,19 @@ Object attributes
    ::
    
       eles = msh.eles
+
+.. attribute:: mesh.id
+
+   An object attribute (get/set) |int|.
+   The id of the mesh. When :attr:`mesh.id` >= 0,
+   the mesh is considered as a structural mesh.
+   Otherwise, it is considered as fluid mesh.
+   The meshes with same :attr:`mesh.id` are
+   considered as part of a same single structure.
+	       
+   ::
+   
+      mesh.id = -1;
 
 Object methods
 ---------------------
@@ -199,7 +213,7 @@ Class methods
 
 
 
-.. classmethod:: mesh.face(lines)
+.. classmethod:: mesh.tri(lines)
 
    Create a triangular mesh object.
 
