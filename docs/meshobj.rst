@@ -191,11 +191,11 @@ Class methods
 
 #. :meth:`mesh.line`
 #. :meth:`mesh.tri`
-
+#. :meth:`mesh.PFEM`
 
 .. classmethod:: mesh.line(nds)
 
-   Create a line mesh object.
+   Create a line mesh object. The line mesh take 2 :class:`node` objects for each element.
 
    ========================   ======================================================================
    ``nds`` |list|             A list of :class:`node`, which define the line.
@@ -215,7 +215,7 @@ Class methods
 
 .. classmethod:: mesh.tri(lines)
 
-   Create a triangular mesh object.
+   Create a triangular mesh object. The line mesh take 3 :class:`node` objects for each element.
 
    ========================   ============================================================================
    ``lines`` |list|           A list of :meth:`mesh.line`, which define the area to be meshed.
@@ -230,3 +230,20 @@ Class methods
 
 
 
+.. classmethod:: mesh.PFEM(lines)
+   
+   Create a PFEM mesh object. A PFEM mesh take 6 :class:`node` objects for each
+   :ref:`PFEM Elements <PFEM-Elements>`.
+
+   ========================   ============================================================================
+   ``lines`` |list|           A list of :meth:`mesh.line`, which define the area to be meshed.
+   ========================   ============================================================================
+
+
+   ::
+
+      fluid = mesh.PFEM([line1,line2,line3,line4])
+      fluid.meshsize = 0.01
+      fluid.eleType = element.PFEMElement2DBubble
+      fluid.eleArgs(rho=1000.0, mu=1e-3, b1=0.0, b2=-9.81)
+      fluid.mesh()

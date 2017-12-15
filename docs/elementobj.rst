@@ -130,13 +130,18 @@ Class methods
   #. :meth:`element.tri31`
 
 
+.. _PFEM-Elements:
+  
+* PFEM Elements
+
+  #. :meth:`element.PFEMElement2DBubble`
 
 .. classmethod:: element.zeroLengthSection(nds, sec, x=[1.0,0.0,0.0], yp=[0.0,1.0,0.0], doRayleigh=1)
 
    Create a zeroLengthSection :class:`element` object, which is defined by two |node| objects at the same location. The nodes are connected by a single |section| object to represent the force-deformation relationship for the element.
 
    ========================   =============================================================
-   ``nds`` |list|             End :class:`node` objects.
+   ``nds`` |list|             Two end :class:`node` objects.
    ``sec`` |section|          A |section| object.
    ``x`` |listf|              Vector components in global coordinates defining
 		              local x-axis. (optional)
@@ -159,7 +164,7 @@ Class methods
    Create a Truss :class:`element` object.
 
    ========================   =============================================================
-   ``nds`` |list|             Truss end :class:`node` objects.
+   ``nds`` |list|             Two end :class:`node` objects.
    ``A`` |float|              Cross-sectional area of element.
    ``mat`` |unimat|           A |unimat| object.
    ``rho`` |float|            Mass per unit length. (optional)
@@ -189,7 +194,7 @@ Class methods
    Create a 3D elasticBeamColumn :class:`element` object.
 
    ========================   =============================================================
-   ``nds`` |list|             End :class:`node` objects.
+   ``nds`` |list|             Two end :class:`node` objects.
    ``A`` |float|              Cross-sectional area of element.
    ``E`` |float|              Young's Modulus
    ``G`` |float|              Shear Modulus
@@ -217,7 +222,7 @@ Class methods
    Create a 3D forceBeamColumn :class:`element` object.
 
    ========================   =============================================================
-   ``nds`` |list|             End :class:`node` objects.
+   ``nds`` |list|             Two end :class:`node` objects.
    ``transf`` |transf|        Previously-defined |transf| object.
    ``bi`` |bi|                Previously-defined |bi| object.
    ``mass`` |float|           Element mass per unit length, from which a lumped-mass matrix is formed  (optional)
@@ -236,7 +241,7 @@ Class methods
    Create a constant strain triangular :class:`element` object, which which uses three nodes and one integration points.
 
    ========================   =============================================================
-   ``nds`` |list|             End :class:`node` objects.
+   ``nds`` |list|             Three end :class:`node` objects.
    ``thk`` |section|          Element thickness.
    ``type`` |str|             String representing material behavior.
 		              The type parameter can be
@@ -255,4 +260,33 @@ Class methods
 
       # create a  element
       ele = element.tri31(nds=[nd1,nd2,nd3], thk=0.1, type='PlaneStress', mat=mat)
+  
+
+
+
+.. classmethod:: element.PFEMElement2DBubble(nds, rho, mu, b1, b2, thk=1.0, kappa=-1)
+
+   Create a PFEM :class:`element` object, which uses P1+P1 formulation, i.e.
+   three velocity nodes and three pressure nodes. The bubble mode is
+   condensed internally. 
+
+   ========================   =============================================================
+   ``nds`` |list|             Six velocity and pressure :class:`node` objects in
+		              the order of
+		              ``[vnd1,pnd1,vnd2,pnd2,vnd3,pnd3]``.
+   ``rho`` |float|            Fluid density.
+   ``mu`` |float|             Fluid viscosity.
+   ``b1`` |float|             Body acceleration in x direction.
+   ``b2`` |float|             Body acceleration in y direction.
+   ``thk`` |float|            Element thickness. (optional)
+   ``kappa`` |float|          Fluid bulk modulus. Negative values mean incompressible
+		              fluid. (optional)
+   ========================   =============================================================
+
+
+   ::
+
+      # create an element
+      ele = element.PFEMElement2DBubble(nds=[vnd1,pnd1,vnd2,pnd2,vnd3,pnd3],
+                                        rho=1000.0, mu=1e-3, b1=0.0, b2=-9.81)
   
