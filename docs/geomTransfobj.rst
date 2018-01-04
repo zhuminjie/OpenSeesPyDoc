@@ -1,60 +1,32 @@
 .. include:: sub.txt
 
-GeomTransf Object
-=======================
+============================================================
+ geomTransf -- Coordinates Transformation for Line Elements
+============================================================
 
 .. class:: geomTransf()
 
-   A python :class:`geomTransf` object
-   is a wrapper to the OpenSees ``CrdTransf`` object.
+   A subclass of :class:`tagged`
+   and a base class for CrdTransf objects.
 
-   .. note::
-   
-      One cannot create an :class:`geomTransf` object
-      directly, but only through :ref:`geomTransf-class-methods`.
+   One cannot create an :class:`geomTransf` object
+   directly, but only through its subclasses.
+
+   * attributes
+
+     #. :attr:`tagged.tag`
+
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+
+Following are  available subclasses in the OpenSees:
+
+.. toctree::
+   :maxdepth: 2
 
 
-Object attributes
-------------------
-
-#. :attr:`geomTransf.tag`
-
-.. attribute:: geomTransf.tag
-      
-   An object attribute (get) |int|.
-   The :class:`geomTransf` tag.
-
-   ::
-
-      print(transf.tag)
-
-Object methods
----------------
-
-#. :meth:`geomTransf.__str__`
-#. :meth:`geomTransf.remove`
-
-.. method:: geomTransf.__str__()
-
-   The string reprsentation of the :class:geomTransf`. Usually
-   used in the `print`_ function.
-
-   ::
-
-      print(transf)
-
-.. method:: geomTransf.remove()
-
-   Remove the corresponding OpenSees ``CrdTransf`` object.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      transf.remove()
-   
 .. _geomTransf-class-methods:
 
 Class methods

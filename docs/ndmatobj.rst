@@ -1,35 +1,34 @@
 .. include:: sub.txt
 
-NDMaterial Object
-=======================
+==========================================
+ nDMaterial -- Multi Dimentional Material
+==========================================
 
-.. class:: NDMaterial()
+.. class:: nDMaterial()
 
-   A python :class:`NDMaterial` object
-   is a wrapper to the OpenSees ``NDMaterial`` object.
+   A subclass of :class:`tagged`
+   and a base class for NDMaterial objects.
 
-   .. note::
-   
-      One cannot create an :class:`NDMaterial` object
-      directly, but only through :ref:`ndmat-class-methods`.
+   One cannot create an :class:`NDMaterial` object
+   directly, but only through its subclasses.
 
+   * attributes
 
-Object attributes
--------------------
+     #. :attr:`tagged.tag`
+     #. :attr:`NDMaterial.strain`
+     #. :attr:`NDMaterial.stress`
+     #. :attr:`NDMaterial.tangent`
 
-#. :attr:`NDMaterial.tag`
-#. :attr:`NDMaterial.strain`
-#. :attr:`NDMaterial.stress`
-#. :attr:`NDMaterial.tangent`
+   * methods
 
-.. attribute:: NDMaterial.tag
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+
+Following are  available subclasses in the OpenSees:
+
+.. toctree::
+   :maxdepth: 2
       
-   An object attribute (get) |int|.
-   The tag of the :class:`NDMaterial` object.
-
-   ::
-
-      print(mat.tag)
 
 .. attribute:: NDMaterial.strain
       
@@ -59,34 +58,6 @@ Object attributes
       print(mat.tangent)
 
 
-Object methods
--------------------
-
-#. :meth:`NDMaterial.__str__`
-#. :meth:`NDMaterial.remove`
-		  
-.. method:: NDMaterial.__str__()
-
-   The string reprsentation of the :class:`NDMaterial`. Usually
-   used in the |print| function.
-
-   ::
-
-      print(mat)
-
-.. method:: NDMaterial.remove()
-
-   Remove the corresponding OpenSees ``NDMaterial`` object.
-   It will not remove the materials in :class:`element`.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-
-   ::
-
-      mat.remove()
 
 .. _ndmat-class-methods:
 

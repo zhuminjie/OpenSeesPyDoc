@@ -1,32 +1,24 @@
 .. include:: sub.txt
 
-EleLoad Object
-=====================
+===========================
+ eleLoad -- Elemental Load
+===========================
 
 .. class:: eleLoad()
 
-   A python :class:`eleLoad` object is a wrapper to
-   the OpenSees ``ElementalLoad`` object.
+   A subclass of :class:`tagged`.
+   To create a :class:`eleLoad` object, use :meth:`pattern.eleLoad`.
 
-   .. note::
-   
-      One cannot create an python :class:`eleLoad` object
-      directly, but only through :meth:`pattern.eleLoad`.
+   * attributes
 
-Object attributes
-------------------
+     #. :attr:`tagged.tag`
+     #. :attr:`eleLoad.ele`
 
-#. :attr:`eleLoad.tag`
-#. :attr:`eleLoad.ele`
+   * methods
 
-.. attribute:: eleLoad.tag
-      
-   An object attribute (get) |int|.
-   The unique tag of the :class:`eleLoad` object.
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
-   ::
-
-      print(el.tag)
 
 .. attribute:: eleLoad.ele
 
@@ -37,30 +29,3 @@ Object attributes
 
       print(el.ele)
 
-Object methods
----------------
-
-#. :meth:`eleLoad.__str__`
-#. :meth:`eleLoad.remove`
-
-.. method:: eleLoad.__str__()
-
-   The string reprsentation of the :class:`eleLoad`. Usually
-   used in the `print`_ function.
-
-   ::
-
-      print(el)
-
-.. method:: eleLoad.remove()
-
-   Remove the corresponding OpenSees ``ElementalLoad`` object
-   from its :class:`pattern`.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      el.remove()

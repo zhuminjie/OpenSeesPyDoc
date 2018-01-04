@@ -1,64 +1,28 @@
 .. include:: sub.txt
 
-TimeSeries Object
-=======================
+==================================
+ timeSeries -- A Series of Values
+==================================
 
 .. class:: timeSeries()
 
-   A python :class:`timeSeries` object
-   is a wrapper to the OpenSees ``TimeSeries`` object.
+   A subclass of :class:`tagged` and
+   a base class for the OpenSees TimeSeries object.
 
-   .. note::
-   
-      One cannot create an :class:`timeSeries` object
-      directly, but only through :ref:`timeSeries-class-methods`.
+   One cannot create an :class:`timeSeries` object
+   directly, but only through its subclasses.
+
+   * attributes
+
+     #. :attr:`tagged.tag`
+
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
 
-Object attributes
-------------------
-
-#. :attr:`timeSeries.tag`
-
-.. attribute:: timeSeries.tag
-      
-   An object attribute (get) |int|.
-   The :class:`timeSeries` tag.
-
-   ::
-
-      print(ts.tag)
-
-Object methods
----------------
-
-#. :meth:`timeSeries.__str__`
-#. :meth:`timeSeries.remove`
-
-.. method:: timeSeries.__str__()
-
-   The string reprsentation of the :class:timeSeries`. Usually
-   used in the `print`_ function.
-
-   ::
-
-      print(ts)
-
-.. method:: timeSeries.remove()
-
-   Remove the corresponding OpenSees ``TimeSeries`` object.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      rs.remove()
-   
-.. _timeSeries-class-methods:
-
-Class methods
---------------
+Following are timeSeries subclasses available in the OpenSees:
 
 #. :meth:`timeSeries.Constant`
 #. :meth:`timeSeries.Linear`
@@ -250,7 +214,7 @@ Class methods
 
    * Linear interpolation between points.
    * If the specified time is beyond last point (AND WATCH FOR NUMERICAL ROUNDOFF), 0.0 is returned. Specify ``useLast=1`` to use the last data point instead of 0.0.
-   * The :ref:`transient integration methods <transient-integrator-class-methods>` in OpenSees assume zero initial conditions. So it is important that any |timeSeries| that is being used in a :meth:`analysis.Transient` starts from zero (first data point in the timeSeries = 0.0). To guarantee that this is the case the optional parameter ``prependZero`` can be specified to prepend a zero value to the provided |timeSeries|.
+   * The :ref:`transient integration methods <transient-integrators>` in OpenSees assume zero initial conditions. So it is important that any |timeSeries| that is being used in a :meth:`analysis.Transient` starts from zero (first data point in the timeSeries = 0.0). To guarantee that this is the case the optional parameter ``prependZero`` can be specified to prepend a zero value to the provided |timeSeries|.
 
    ::
 

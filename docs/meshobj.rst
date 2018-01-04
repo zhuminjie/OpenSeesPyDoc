@@ -1,34 +1,41 @@
 .. include:: sub.txt
 
-Mesh Object
-==============
+==================================
+ mesh -- Make Finite-Element Mesh
+==================================
 
 .. class:: mesh()
 
-   The :class:`mesh` object is for creating and updating moving and background mesh
-   in OpenSees. Use :ref:`mesh-class-methods` below to create meshes.
-     
-Object attributes
-------------------------
+   A subclass of :class:`tagged`.
+   The :class:`mesh` object is for creating and updating mesh
+   in OpenSees. Use subclasses to create meshes.
 
-#. :attr:`mesh.tag`
-#. :attr:`mesh.meshsize`
-#. :attr:`mesh.numEleNodes`
-#. :attr:`mesh.inclDisp`
-#. :attr:`mesh.ndf`
-#. :attr:`mesh.eleType`
-#. :attr:`mesh.nds`
-#. :attr:`mesh.eles`
-#. :attr:`mesh.id`
+   * attributes
 
-.. attribute:: mesh.tag
-      
-   An object attribute (get) |int|.
-   The tag of the mesh.
+     #. :attr:`tagged.tag`
+     #. :attr:`mesh.meshsize`
+     #. :attr:`mesh.numEleNodes`
+     #. :attr:`mesh.inclDisp`
+     #. :attr:`mesh.ndf`
+     #. :attr:`mesh.eleType`
+     #. :attr:`mesh.nds`
+     #. :attr:`mesh.eles`
+     #. :attr:`mesh.id`
 
-   ::
-   
-      print(msh.tag)
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+     #. :meth:`mesh.clearEles`
+     #. :meth:`mesh.clearNodes`
+     #. :meth:`mesh.eleArgs`
+     #. :meth:`mesh.mesh`
+
+
+Following are available mesh subclasses in the OpenSees:
+
+.. toctree::
+   :maxdepth: 2
 
 .. attribute:: mesh.meshsize
 
@@ -43,7 +50,8 @@ Object attributes
 
    An object attribute (get) |int|.
    The number of nodes for elements to be meshed.
-   By default, 2 is used for line mesh, 3 for tri mesh
+   By default, 2 is used for :meth:`mesh.line`,
+   3 for :meth:`mesh.tri`, 6 for :meth:`mesh.PFEM`.
 	       
    ::
    
@@ -73,7 +81,7 @@ Object attributes
 
    An object attribute (get/set) |callable|.
    A python callable object which will create the element with given :meth:`mesh.eleArgs`,
-   for example, the :ref:`element-class-methods` of the |element| class.
+   for example, the subclasses of the |element| class.
    If not set, no elements will be meshed, but nodes will.
 	       
    ::
@@ -102,42 +110,19 @@ Object attributes
 .. attribute:: mesh.id
 
    An object attribute (get/set) |int|.
-   The id of the mesh. When :attr:`mesh.id` >= 0,
+   The id of the mesh. When :attr:`mesh.id` > 0,
    the mesh is considered as a structural mesh.
-   Otherwise, it is considered as fluid mesh.
+   When :attr:`mesh.id` < 0, it is considered as fluid mesh.
+   When :attr:`mesh.id` = 0, it will not considered in FSI.
    The meshes with same :attr:`mesh.id` are
    considered as part of a same single structure.
+   By default, it is ``1`` for :meth:`mesh.line` and :meth:`mesh.tri`
+   and ``-1`` for :meth:`mesh.PFEM`.
 	       
    ::
    
       mesh.id = -1;
 
-Object methods
----------------------
-
-#. :meth:`mesh.__str__`
-#. :meth:`mesh.remove`
-#. :meth:`mesh.clearEles`
-#. :meth:`mesh.clearNodes`
-#. :meth:`mesh.eleArgs`
-#. :meth:`mesh.mesh`
-
-.. method:: mesh.__str__()
-
-   The string reprsentation of the :class:`mesh`. Usually
-   used in the |print| function.
-
-   ::
-
-      print(m)
-
-.. method:: mesh.remove()
-
-   Remove the mesh in the OpenSees.
-
-   ::
-
-      msh.remove()
 
 .. method:: mesh.clearEles()
 
@@ -162,7 +147,7 @@ Object methods
 
    .. note::
 
-      The ``args`` and ``kwargs`` can be found in :ref:`element-class-methods`
+      The ``args`` and ``kwargs`` can be found in subclasses
       of the |element| class
       but without the ``nds``, which will be automatically
       added.

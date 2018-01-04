@@ -1,35 +1,49 @@
 .. include:: sub.txt
 
-Pattern Object
-=======================
+===============================
+ pattern -- Loading Pattern
+===============================
 
-.. class:: pattern()
+.. class:: pattern(ts, factor=1.0)
 
-   A python :class:`pattern` object
-   is a wrapper to the OpenSees ``LoadPattern`` object.
+   Create a plain load :class:`pattern`.
+   A subclass of :class:`tagged` and
+   a base class of other patterns.
 
-   .. note::
-   
-      One cannot create an :class:`pattern` object
-      directly, but only through the :ref:`pattern-class-methods`.
+   ========================   =============================================================
+   ``ts`` |timeSeries|        A :class:`timeSeries` object.
+   ``factor`` |float|         Load factor. (optional)
+   ========================   =============================================================
 
-Object attributes
-------------------
 
-#. :attr:`pattern.tag`
-#. :attr:`pattern.sps`
-#. :attr:`pattern.loads`
-#. :attr:`pattern.eleLoads`
-#. :attr:`pattern.loadFactor`
+   * attributes
 
-.. attribute:: pattern.tag
-      
-   An object attribute (get) |int|.
-   The :class:`pattern` tag.
+     #. :attr:`tagged.tag`
+     #. :attr:`pattern.sps`
+     #. :attr:`pattern.loads`
+     #. :attr:`pattern.eleLoads`
+     #. :attr:`pattern.loadFactor`
+
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+     #. :meth:`pattern.wipe`
+     #. :meth:`pattern.sp`
+     #. :meth:`pattern.load`
+     #. :meth:`pattern.eleLoad`
 
    ::
 
-      print(ptn.tag)
+      ptn = pattern.Plain(ts = ts)
+
+
+
+Following are pattern subclasses available in the OpenSees:
+
+.. toctree::
+   :maxdepth: 2
+      
 
 .. attribute:: pattern.sps
       
@@ -68,24 +82,7 @@ Object attributes
 
       print(ptn.loadFactor)
 
-Object methods
----------------
 
-#. :meth:`pattern.__str__`
-#. :meth:`pattern.sp`
-#. :meth:`pattern.load`
-#. :meth:`pattern.eleLoad`
-#. :meth:`pattern.wipe`
-#. :meth:`pattern.remove`
-
-.. method:: pattern.__str__()
-
-   The string reprsentation of the pattern. Usually
-   used in the `print`_ function.
-
-   ::
-
-      print(ptn)
 
 .. method:: pattern.sp(nd,dof,value,const=False)
 
@@ -150,36 +147,3 @@ Object methods
 
       ptn.wipe()
 
-.. method:: pattern.remove()
-
-   Remove the corresponding OpenSees ``LoadPattern`` object
-   and every thing in it.
-
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      ptn.remove()
-
-.. _pattern-class-methods:
-
-Class methods
---------------
-
-#. :meth:`pattern.Plain`
-	       
-.. classmethod:: pattern.Plain(ts, factor=1.0)
-
-   Create a plain load :class:`pattern`.
-
-   ========================   =============================================================
-   ``ts`` |timeSeries|        A :class:`timeSeries` object.
-   ``factor`` |float|         Load factor. (optional)
-   ========================   =============================================================
-
-
-   ::
-
-      ptn = pattern.Plain(ts = ts)

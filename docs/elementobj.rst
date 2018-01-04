@@ -1,37 +1,77 @@
 .. include:: sub.txt
 
-Element Object
-=======================
+===========================
+ element -- Finite Element
+===========================
 
 .. class:: element()
 
-   A python :class:`element` object
-   is a wrapper to the OpenSees ``Element`` object.
+   A subclass of :class:`tagged` and
+   a base class for the OpenSees Element objects.
 
-   .. note::
+   One cannot create an :class:`element` object
+   directly, but only through its subclasses.
+
+
+   * attributes
+
+     #. :attr:`tagged.tag`
+     #. :attr:`element.nds`
+     #. :attr:`element.ndf`
+     #. :attr:`element.stiff`
+     #. :attr:`element.damp`
+     #. :attr:`element.mass`
+
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+
    
-      One cannot create an :class:`element` object
-      directly, but only through :ref:`element-class-methods`.
+
+Following are element subclasses available in the OpenSees:
+
+Zero-Length Elements
+
+.. toctree::
+   :maxdepth: 2
 
 
-Object attributes
--------------------
 
-#. :attr:`element.tag`
-#. :attr:`element.nds`
-#. :attr:`element.ndf`
-#. :attr:`element.stiff`
-#. :attr:`element.damp`
-#. :attr:`element.mass`
+Truss Elements
 
-.. attribute:: element.tag
-      
-   An object attribute (get) |int|.
-   The :class:`element` tag.
+.. toctree::
+   :maxdepth: 2
 
-   ::
 
-      print(ele.tag)
+.. _Beam-Column-Elements:
+  
+Beam-Column Elements
+
+.. toctree::
+   :maxdepth: 2
+
+
+Triangular Elements
+
+.. toctree::
+   :maxdepth: 2
+
+
+.. _PFEM-Elements:
+  
+PFEM Elements
+
+.. toctree::
+   :maxdepth: 2
+
+   bubble2d
+
+
+
+
+
+	      
 
 .. attribute:: element.nds
 
@@ -78,63 +118,7 @@ Object attributes
 
       print(ele.mass)
 
-Object methods
----------------
-#. :meth:`element.__str__`
-#. :meth:`element.remove`
 
-.. method:: element.__str__()
-
-   The string reprsentation of the :class:`element`. Usually
-   used in the |print| function.
-
-   ::
-
-      print(ele)
-
-.. method:: element.remove()
-
-   Remove the corresponding OpenSees ``Element`` object.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      ele.remove()
-
-.. _element-class-methods:
-
-Class methods
----------------
-
-* Zero-Length Elements
-
-  #. :meth:`element.zeroLengthSection`
-
-* Truss Elements
-
-  #. :meth:`element.Truss`
-
-.. _Beam-Column-Elements:
-  
-* Beam-Column Elements
-
-  #. :meth:`element.elasticBeamColumn`
-  #. :meth:`element.forceBeamColumn`
-
-
-* Triangular Elements
-
-  #. :meth:`element.tri31`
-
-
-.. _PFEM-Elements:
-  
-* PFEM Elements
-
-  #. :meth:`element.PFEMElement2DBubble`
 
 .. classmethod:: element.zeroLengthSection(nds, sec, x=[1.0,0.0,0.0], yp=[0.0,1.0,0.0], doRayleigh=1)
 

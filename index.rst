@@ -48,23 +48,24 @@ can be imported as::
    :numbered: 
 
    docs/intro
+   docs/tagged
    docs/modelobj
-   docs/beamIntegrationobj
-   docs/eleloadobj
-   docs/elementobj
-   docs/geomTransfobj
-   docs/loadobj
-   docs/meshobj
-   docs/mpobj
-   docs/ndmatobj
    docs/nodeobj
-   docs/patternobj
-   docs/recorderobj
-   docs/regionobj
-   docs/sectionobj
+   docs/elementobj
    docs/spobj
+   docs/mpobj
    docs/timeSeriesobj
+   docs/patternobj
+   docs/loadobj
+   docs/eleloadobj
+   docs/sectionobj
+   docs/meshobj
+   docs/regionobj
    docs/unimatobj
+   docs/ndmatobj
+   docs/geomTransfobj
+   docs/beamIntegrationobj
+   docs/recorderobj
    docs/analysisobj
    docs/algorithmobj
    docs/constraintobj

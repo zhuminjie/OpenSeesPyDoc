@@ -1,49 +1,51 @@
 .. include:: sub.txt
 
-Recorder Object
-================
+================================
+ recorder -- Record the Outputs
+================================
 
 .. class:: recorder()
 
    The :class:`recorder` object is to monitor what is happening during the
    analysis and generate output for the user.
-   Use :ref:`recorder-class-methods` below to create recorderes.
+   A subclass of :class:`tagged` and
+   a base class for Recorders.
+   Use subclasses to create recorderes.
 
-Object methods
----------------------
+   * attributes
 
-#. :attr:`recorder.automatic`
+     #. :attr:`tagged.tag`
+     #. :attr:`recorder.automatic`
 
-   An object attribute (get) |int|.
-   If it's ``1``, the recorder will be called in each time step to
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+     #. :meth:`recorder.record`
+
+
+Following are beamIntegration subclasses available in the OpenSees:
+
+.. toctree::
+   :maxdepth: 2
+
+.. attribute:: recorder.automatic
+
+   An object attribute (get) |bool|.
+   If it's ``True``, the recorder will be called in each time step to
    record outputs. Otherwise, the user should invoke the call.
 
    ::
    
-      if re.automatic == 0:
+      if not re.automatic:
           re.record()
 
 	   
      
-Object methods
----------------------
-
-#. :meth:`recorder.__str__`
-#. :meth:`recorder.record`
-
-.. method:: recorder.__str__()
-
-   The string reprsentation of the :class:`recorder`. Usually
-   used in the |print| function.
-
-   ::
-
-      print(m)
-
 .. method:: recorder.record()
 
    Record the outputs. This method will be called automatically
-   after the analysis if :attr:`recorder.automatric` is ``1``.
+   after the analysis if :attr:`recorder.automatric` is ``True``.
 
    ::
 

@@ -1,55 +1,31 @@
 .. include:: sub.txt
 
-Region Object
-=====================
+============================================
+ region -- A Region of Finite-Element Model
+============================================
 
-.. class:: region(eles=[],elesOnly=[],nds=[],ndsOnly=[],rayleigh=[])
+.. class:: region()
 
-   A python :class:`region` object is a wrapper to the OpenSees ``MeshRegion`` object.
+   
+   Create a OpenSees MeshRegion object.
+   A subclass of :class:`tagged`.
 
-   ========================   ===========================================================
-   ``eles`` |liste|           The region includes
-	                      these :class:`element` objects and all connected
-	                      :class:`node` objects. (optional)
-   ``elesOnly`` |liste|       The region includes only
-	                      these :class:`element` objects. (optional)
-   ``nds`` |listn|            The region includes
-	                      these :class:`node` objects and all 
-	                      :class:`element` objects of which all
-			      :class:`node` objects are prescribed to be in
-			      the :class:`region`. (optional)
-   ``ndsOnly`` |listn|        The region includes only
-	                      these :class:`node` objects. (optional)
-   ``rayleigh`` |listf|       Set Rayleigh damping factors for this :class:`region`.
-	                      See :attr:`model.rayleigh`. (optional)
-   ========================   ===========================================================
+   * attributes
 
-   ::
+     #. :attr:`tagged.tag`
+     #. :attr:`region.nds`
+     #. :attr:`region.ndsOnly`
+     #. :attr:`region.eles`
+     #. :attr:`region.elesOnly`
+     #. :attr:`region.rayleigh`
 
-      reg = region() # create an empty region
-      reg = region(eles=eles) # create a region with eles
-      reg = region(ndsOnly=nds) # create a region with only nodes
+   * methods
 
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
-Object attributes
-------------------
+   
 
-#. :attr:`region.tag`
-#. :attr:`region.nds`
-#. :attr:`region.ndsOnly`
-#. :attr:`region.eles`
-#. :attr:`region.elesOnly`
-#. :attr:`region.rayleigh`
-
-.. attribute:: region.tag
-      
-   An object attribute (get) |int|.
-   The unique tag of the :class:`sp` object.
-
-   ::
-
-      print(reg.tag)
-      
 .. attribute:: region.nds
 
    An object attribute (get/set) |listn|.
@@ -96,17 +72,3 @@ Object attributes
 
       reg.rayleigh = [0.01, 0.01, 0.0, 0.0]
 
-Object methods
------------------
-
-#. :meth:`region.__str__`
-	       
-.. method:: region.__str__()
-
-      The string reprsentation of the :class:`region` object. Usually
-      used in the |print| function.
-
-
-   ::
-
-      print(reg)

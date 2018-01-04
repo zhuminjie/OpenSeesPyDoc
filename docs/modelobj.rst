@@ -1,38 +1,48 @@
 .. include:: sub.txt
 
-Model Object
-==============
+===============================
+ model -- Finite-Element Model
+===============================
 
-.. class:: model(type='basic', ndm=0, ndf=0)
+.. class:: model(ndm=2, ndf=3)
 
-   Create a python :class:`model` object which is
-   a wrapper to the OpenSees ``Domain`` object.
+   Create a basic OpenSees model. A subclass of :class:`tagged`.
 
-   ========================   ===============================================================
+   ========================   ===========================================================================
    ``ndm`` |int|              Number of dimentions. (optional)
-   ``ndf`` |int|              Number of dofs. (optional)
-   ``type`` |str|             Type of the model. (optional)
-   ========================   ===============================================================
+   ``ndf`` |int|              Number of dofs per node. (optional)
+   ========================   ===========================================================================
+
+   * attributes
+
+     #. :attr:`tagged.tag`
+     #. :attr:`model.ndm`
+     #. :attr:`model.ndf`
+     #. :attr:`model.rayleigh`
+
+   * methods
+
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+     #. :meth:`model.wipe`
+     #. :meth:`model.wipeAnalysis`
+     #. :meth:`model.reactions`
+     #. :meth:`model.eigen`
 
    .. note::
 
-      For compatibility reason,
-      ``type`` should always be ``'basic'``, which can be omitted.
-   
       After creating a :class:`model`, you must assign it
       to a variable in order to keep it from being destructed.
+
+      If more than one :class:`model` are created, the last created
+      one is used.
 
    ::
 
       m = model(ndm=2, ndf=2)
       m = model(ndm=3, ndf=6)
      
-Object attributes
-------------------------
 
-#. :attr:`model.ndm`
-#. :attr:`model.ndf`
-#. :attr:`model.rayleigh`
 
 .. attribute:: model.ndm
       
@@ -69,25 +79,6 @@ Object attributes
 
       m.rayleigh = [0.01, 0.02, 0.0, 0.0]
 
-
-
-Object methods
----------------------
-
-#. :meth:`model.__str__`
-#. :meth:`model.wipe`
-#. :meth:`model.reactions`
-
-.. method:: model.__str__()
-
-   The string reprsentation of the :class:`model`. Usually
-   used in the |print| function.
-
-
-   ::
-
-      print(m)
-
 .. method:: model.wipe()
 
    Wipe all objects in this model including analysis objects. 
@@ -96,6 +87,13 @@ Object methods
 
       m.wipe()
 
+.. method:: model.wipeAnalysis()
+
+   Wipe all analysis objects. 
+
+   ::
+
+      m.wipeAnalysis()
 
 .. method:: model.reactions(dynamic=0,rayliegh=0)
 
@@ -110,3 +108,26 @@ Object methods
    ::
 
       m.reactions(dynamic=1)
+
+
+.. method:: model.eigen(numEigen,genBandArpack=True,symmBandLapack=False,fullGenLapack=False,frequency=True,findLargest=False)
+
+   Perform the eigen value analysis. Return eigen values |listf|.
+
+   ===============================   ======================================================================================
+   ``numEigen`` |int|                Number of eigenvalues required.
+   ``genBandArpack`` |bool|          Use genBandArpack eigen solver. (optional)
+   ``symmBandLapack`` |bool|         Use symmBandLapack eigen solver. (optional)
+   ``fullGenLapack`` |bool|          Use fullGenLapack eigen solver. (optional)
+   ``frequency`` |bool|              Use generalized algorithm. (optional)
+   ``findLargest`` |bool|            Find the largest. (optional)
+   ===============================   ======================================================================================
+
+
+   #. The eigenvectors are stored at the nodes.
+   #. The default eigensolver is able to solve only for N-1 eigenvalues, where N is the number of inertial DOFs. When running into this limitation the -fullGenLapack solver can be used instead of the default Arpack solver.
+
+   
+   ::
+
+      m.eigen(numEigen = 10)

@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-Examples
+examples
 ===========
 
 

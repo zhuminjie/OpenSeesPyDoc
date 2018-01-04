@@ -1,35 +1,31 @@
 .. include:: sub.txt
 
-Section Object
-=======================
+===========================================
+ section -- Cross Section of Line Elements
+===========================================
 
 .. class:: section()
 
-   A python :class:`section` object
-   is a wrapper to the OpenSees ``Section`` object.
+   A subclass of :class:`tagged`
+   and a base class of the OpenSees Section objects.
 
-   .. note::
-   
-      One cannot create an :class:`section` object
-      directly, but only through :ref:`section-class-methods`.
+   One cannot create an :class:`section` object
+   directly, but only through its subclasses.
 
 
-Object attributes
--------------------
+   * attributes
 
-#. :attr:`section.tag`
-#. :attr:`section.deformation`
-#. :attr:`section.stress`
-#. :attr:`section.tangent`
+     #. :attr:`tagged.tag`
+     #. :attr:`section.deformation`
+     #. :attr:`section.stress`
+     #. :attr:`section.tangent`
 
-.. attribute:: section.tag
-      
-   An object attribute (get) |int|.
-   The tag of the :class:`section` object.
+   * methods
 
-   ::
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
-      print(sec.tag)
+Following are available section subclasses in the OpenSees:
 
 .. attribute:: section.deformation
       

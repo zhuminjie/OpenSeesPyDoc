@@ -1,36 +1,36 @@
 .. include:: sub.txt
 
-UniaxialMaterial Object
-=======================
+==============================================
+ uniaxialMaterial -- One Dimentional Material
+==============================================
 
 .. class:: uniaxialMaterial()
 
-   A python :class:`uniaxialMaterial` object
-   is a wrapper to the OpenSees ``UniaxialMaterial`` object.
+   A subclass of :class:`tagged`
+   and a base class for UniaxialMaterial objects.
 
-   .. note::
-   
-      One cannot create an :class:`uniaxialMaterial` object
-      directly, but only through :ref:`unimat-class-methods`.
+   One cannot create an :class:`uniaxialMaterial` object
+   directly, but only through its subclasses.
 
+   * attributes
 
-Object attributes
--------------------
+     #. :attr:`tagged.tag`
+     #. :attr:`uniaxialMaterial.tag`
+     #. :attr:`uniaxialMaterial.strain`
+     #. :attr:`uniaxialMaterial.stress`
+     #. :attr:`uniaxialMaterial.tangent`
+     #. :attr:`uniaxialMaterial.dampTangent`
 
-#. :attr:`uniaxialMaterial.tag`
-#. :attr:`uniaxialMaterial.strain`
-#. :attr:`uniaxialMaterial.stress`
-#. :attr:`uniaxialMaterial.tangent`
-#. :attr:`uniaxialMaterial.dampTangent`
+   * methods
 
-.. attribute:: uniaxialMaterial.tag
-      
-   An object attribute (get) |int|.
-   The tag of the :class:`uniaxialMaterial` object.
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
-   ::
+Following are  available uniaxial material subclasses in the OpenSees:
 
-      print(mat.tag)
+.. toctree::
+   :maxdepth: 2
+
 
 .. attribute:: uniaxialMaterial.strain
       
@@ -69,33 +69,6 @@ Object attributes
       print(mat.dampTangent)
 
 
-Object methods
--------------------
-
-#. :meth:`uniaxialMaterial.__str__`
-#. :meth:`uniaxialMaterial.remove`
-		  
-.. method:: uniaxialMaterial.__str__()
-
-   The string reprsentation of the :class:`uniaxialMaterial`. Usually
-   used in the |print| function.
-
-   ::
-
-      print(mat)
-
-.. method:: uniaxialMaterial.remove()
-
-   Remove the corresponding OpenSees ``UniaxialMaterial`` object.
-   It will not remove the materials in :class:`element`.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      mat.remove()
 
 
 .. _unimat-class-methods:

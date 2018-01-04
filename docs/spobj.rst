@@ -1,34 +1,27 @@
 .. include:: sub.txt
 
-SP Object
-=====================
+===============================
+ sp -- Single-point constraint
+===============================
 
 .. class:: sp()
 
-   A python :class:`sp` object is a wrapper to the OpenSees ``SP_Constraint`` object.
+   A subclass of :class:`tagged`.
+   To create a :class:`sp` object, use :meth:`node.sp`,
+   :meth:`node.fix` or :meth:`pattern.sp`.
 
-   .. note::
+   * attributes
 
-      To create a python :class:`sp` object, use :meth:`node.sp`,
-      :meth:`node.fix` or :meth:`pattern.sp`.
+     #. :attr:`tagged.tag`
+     #. :attr:`sp.nd`
+     #. :attr:`sp.dof`
+     #. :attr:`sp.value`
 
+   * methods
 
-Object attributes
-------------------
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
-#. :attr:`sp.tag`
-#. :attr:`sp.nd`
-#. :attr:`sp.dof`
-#. :attr:`sp.value`
-
-.. attribute:: sp.tag
-      
-   An object attribute (get) |int|.
-   The unique tag of the :class:`sp` object.
-
-   ::
-
-      print(s.tag)
 
 .. attribute:: sp.nd
 
@@ -58,35 +51,6 @@ Object attributes
 
       print(s.value)
 
-Object methods
------------------
 
-#. :meth:`sp.__str__`
-#. :meth:`sp.remove`
 	       
-.. method:: sp.__str__()
-
-      The string reprsentation of the :class:`sp` object. Usually
-      used in the |print| function.
-
-   ::
-
-      print(s)
-
-.. method:: sp.remove()
-
-   Remove the corresponding OpenSees ``SP_Constraint`` object.
-   The :class:`sp` object knows if it is in the OpenSees
-   ``Domain`` or
-   in a :class:`pattern`.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-   ::
-
-      s.remove()
-
-
 

@@ -1,42 +1,18 @@
 .. include:: sub.txt
 
-Numberer Object
-=======================
+numberer -- Number equations
+===============================
 
 .. class:: numberer()
 
-   A python :class:`numberer` object
-   is a wrapper to the OpenSees ``DOF_Numberer`` object.
+   A subclass of :class:`tagged` and 
+   a base class for OpenSees DOF_Numberer.
 
-   .. note::
-   
-      One cannot create an :class:`numberer` object
-      directly, but only through the :ref:`numberer-class-methods`.
+Following are numberer subclasses available in the OpenSees:
 
-      There is only one global :class:`numberer` object.
-      Creating another :class:`numberer` object
-      will automatically invalidate the previous :class:`numberer` objects.
+.. toctree::
+   :maxdepth: 2
 
-.. _numberer-class-methods:
-
-Class methods
---------------
-
-#. :meth:`numberer.Plain`
-#. :meth:`numberer.RCM`
-#. :meth:`numberer.AMD`
-	       
-.. classmethod:: numberer.Plain()
-
-   Create a Plain :class:`numberer`, which takes whatever
-   order the OpenSees ``Domain`` gives it ``Nodes`` and numbers them.
-
-.. classmethod:: numberer.RCM()
-
-   Create a Reverse Cuthill-McKee :class:`numberer`.
-
-.. classmethod:: numberer.AMD()
-
-   Create a Alternative Minimum Degree :class:`numberer`.
-
-
+   plainNumberer
+   rcm
+   amd

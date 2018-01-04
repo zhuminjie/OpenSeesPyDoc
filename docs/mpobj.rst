@@ -1,36 +1,28 @@
 .. include:: sub.txt
 
-MP Object
-=====================
+==============================
+ mp -- Multi-point constraint
+==============================
 
 .. class:: mp()
 
-   A python :class:`mp` object is a wrapper to the OpenSees ``MP_Constraint`` object.
+   A subclass of :class:`tagged`.
+   To create a :class:`mp` object, use :meth:`node.mp`,
+   :meth:`node.equalDOF`, :meth:`node.rigidDiaphragm`, or :meth:`node.rigidLink`. 
 
-   .. note::
+   * attributes
 
-      To create a python :class:`mp` object, use :meth:`node.mp`,
-      :meth:`node.equalDOF`, :meth:`node.rigidDiaphragm`, or :meth:`node.rigidLink`. 
+     #. :attr:`tagged.tag`
+     #. :attr:`mp.rnd`
+     #. :attr:`mp.cnd`
+     #. :attr:`mp.rdofs`
+     #. :attr:`mp.cdofs`
+     #. :attr:`mp.cmat`
 
+   * methods
 
-Object attributes
-------------------
-
-#. :attr:`mp.tag`
-#. :attr:`mp.rnd`
-#. :attr:`mp.cnd`
-#. :attr:`mp.rdofs`
-#. :attr:`mp.cdofs`
-#. :attr:`mp.cmat`
-
-.. attribute:: mp.tag
-      
-   An object attribute (get) |int|.
-   The unique tag of the :class:`mp` object.
-
-   ::
-
-      print(mpobj.tag)
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
 
 .. attribute:: mp.rnd
 
@@ -79,33 +71,4 @@ Object attributes
    ::
 
       print(mpobj.cmat)
-
-Object methods
------------------
-
-#. :meth:`mp.__str__`
-#. :meth:`mp.remove`
-	       
-.. method:: mp.__str__()
-
-      The string reprsentation of the :class:`mp` object. Usually
-      used in the |print| function.
-
-   ::
-
-      print(mpobj)
-
-
-.. method:: mp.remove()
-
-   Remove the corresponding OpenSees ``MP_Constraint`` object.
-	       
-   .. seealso::
-
-      :meth:`node.remove`
-
-
-   ::
-
-      mpobj.remove()
 

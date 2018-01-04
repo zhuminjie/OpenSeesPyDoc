@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-Introduction
+introduction
 ==============
 
 `OpenSees`_ is an `object-oriented`_ software framework.
@@ -30,29 +30,3 @@ class methods are defined for creating objects of subclasses.
 Examples can be found in the last chapter.
 
 
-The `OpenSeesPy`_ objects:
-
-#. :class:`model`
-#. :class:`beamIntegration`
-#. :class:`eleLoad`
-#. :class:`element`
-#. :class:`geomTransf`
-#. :class:`load`
-#. :class:`mesh`
-#. :class:`mp`
-#. :class:`NDMaterial`
-#. :class:`node`
-#. :class:`pattern`
-#. :class:`recorder`
-#. :class:`region`
-#. :class:`section`
-#. :class:`sp`
-#. :class:`timeSeries`
-#. :class:`uniaxialMaterial`
-#. :class:`analysis`
-#. :class:`algorithm`
-#. :class:`constraints`
-#. :class:`integrator`
-#. :class:`numberer`
-#. :class:`system`
-#. :class:`test`

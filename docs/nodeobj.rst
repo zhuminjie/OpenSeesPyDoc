@@ -1,56 +1,54 @@
 .. include:: sub.txt
 
-Node Object
-===========
+=============================
+ node -- Finite-Element Node
+=============================
 
-.. class:: node(crds,disp=[],vel=[],accel=[],mass=[],ndf=0)
+.. class:: node(crds,ndf=model.ndf)
 
-   Create a python :class:`node` object, which
-   is a wrapper to the OpenSees ``Node`` object.
+   Create a OpenSees Node object. A subclass of :class:`tagged`.
 
    ========================   =====================================================================
    ``crds`` |listf|           Coordinates of :class:`node`, its length must
                               be :attr:`model.ndm`.
-   ``disp`` |listf|           Displacements of :class:`node`, its length
-	                      must be :attr:`node.ndf`. (optional)
-   ``vel`` |listf|            Velocities of :class:`node`, its length
-	                      must be :attr:`node.ndf`. (optional)
-   ``accel`` |listf|          Accelerations of :class:`node`, its length
-	                      must be :attr:`node.ndf`. (optional)
-   ``mass`` |listf|           Mass of :class:`node`, its length
-	                      must be :attr:`node.ndf`. (optional)
    ``ndf`` |int|              Ndf of :class:`node`, it can be different
                               to :attr:`model.ndf`. (optional)
    ========================   =====================================================================
 
-
-   ::
-
-      nd = node([0.0, 0.0], disp=[1.0,0.0]) # create a node with initial disp
-      nd = node(crds=[72.0, 0.0], vel=[1.0,0.0]) # create a node with initial vel
-      nds = [node([168.0,0.0]), node([48.0, 144.0])] # create a list of 2 nodes
-      nds = [node([i*0.1,0.0]) for i in range(100)] # create a list of 100 nodes
+   * attributes
    
-Object attributes
------------------
+     #. :attr:`tagged.tag`
+     #. :attr:`node.crds`
+     #. :attr:`node.disp`
+     #. :attr:`node.vel`
+     #. :attr:`node.accel`
+     #. :attr:`node.mass`
+     #. :attr:`node.ndf`
+     #. :attr:`node.reaction`
 
-#. :attr:`node.tag`
-#. :attr:`node.crds`
-#. :attr:`node.disp`
-#. :attr:`node.vel`
-#. :attr:`node.accel`
-#. :attr:`node.mass`
-#. :attr:`node.ndf`
-#. :attr:`node.reaction`
+   * methods
 
-.. attribute:: node.tag
-      
-   An object attribute (get) |int|.
-   A unique tag of the :class:`node` object.
+     #. :meth:`tagged.__str__`
+     #. :meth:`tagged.remove`
+     #. :meth:`node.fix`
+     #. :meth:`node.sp`
+     #. :meth:`node.mp`
+     #. :meth:`node.equalDOF`
+     #. :meth:`node.rigidDiaphragm`
+     #. :meth:`node.rigidLink`
+     #. :meth:`node.rigidBeam`
+     
+
 
    ::
 
-      print(nd.tag)
+      nd = node([0.0, 0.0]) 
+      nd = node(crds=[72.0, 0.0]) 
+      nds = [node([168.0,0.0]), node([48.0, 144.0])] 
+      nds = [node([i*0.1,0.0]) for i in range(100)]
+   
+
+
 
 .. attribute:: node.crds
 
@@ -115,44 +113,8 @@ Object attributes
 
       print(nd.reaction)
 
-Object methods
----------------
 
-#. :meth:`node.__str__`
-#. :meth:`node.remove`
-#. :meth:`node.fix`
-#. :meth:`node.sp`
-#. :meth:`node.mp`
-#. :meth:`node.equalDOF`
-#. :meth:`node.rigidDiaphragm`
-#. :meth:`node.rigidLink`
-#. :meth:`node.rigidBeam`
 
-.. method:: node.__str__()
-
-   The string reprsentation of the :class:`node` object. Usually
-   used in the |print| function.
-
-   ::
-
-      print(nd)
-
-.. method:: node.remove()
-
-   Remove the corresponding OpenSees ``Node`` object.
-
-   .. note::
-      
-      By calling :meth:`node.remove`, 
-      the python :class:`node` object is not removed, but
-      any operation on the python :class:`node` object will fail.
-      However, when you |del| a :class:`node` or set it to |None|,
-      the python :class:`node` object is removed, but
-      the OpenSees ``Node`` is not.
-
-   ::
-
-      nd.remove()
 
 .. method:: node.fix(fix)
 
