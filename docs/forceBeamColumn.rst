@@ -34,7 +34,9 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`forceBeamColumn.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`forceBeamColumn.localForce`
      #. :attr:`forceBeamColumn.basicForce`
      #. :attr:`forceBeamColumn.basicStiff`
@@ -47,19 +49,14 @@
      #. :attr:`forceBeamColumn.integrationPoints`
      #. :attr:`forceBeamColumn.integrationWeights`
      #. :attr:`forceBeamColumn.rayleighForces`
-     #. :attr:`forceBeamColumn.secs`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
-
-
-
-.. attribute:: forceBeamColumn.force
-
-   An object attribute (get) |listf|.
-   The global force of forceBeamColumn.
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
 .. attribute:: forceBeamColumn.localForce
 
@@ -123,12 +120,3 @@
 
    An object attribute (get) |listf|.
    The rayleigh forces of the element.
-
-.. attribute:: forceBeamColumn.secs
-
-   An object attribute (get) |list|.
-   The sections of the element, which can be used to get section responses.
-
-
-
-

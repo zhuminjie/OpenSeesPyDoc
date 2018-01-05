@@ -37,22 +37,20 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`truss.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`truss.N`
      #. :attr:`truss.deformation`
-     #. :attr:`truss.mat`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
-
-
-.. attribute:: truss.force
-
-   An object attribute (get) |listf|.
-   The global force of truss.
 
 .. attribute:: truss.N
 
@@ -64,13 +62,4 @@
 
    An object attribute (get) |listf|.
    The deformation of truss.
-
-
-.. attribute:: truss.mat
-
-   An object attribute (get) |unimat|.
-   The :class:`uniaxialMaterial` of truss, which can be used
-   to get the material responses.
-
-
 

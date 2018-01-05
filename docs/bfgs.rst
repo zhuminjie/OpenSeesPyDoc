@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-bfgs object 
-============================================================
+======
+ bfgs
+======
 
 .. class:: bfgs(secant=False,initial=False,count=10)
 

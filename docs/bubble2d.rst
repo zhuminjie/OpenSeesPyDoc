@@ -44,11 +44,16 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
-
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
 

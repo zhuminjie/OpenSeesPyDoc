@@ -21,11 +21,17 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
    
 
@@ -84,45 +90,75 @@ PFEM Elements
    An object attribute (get) |list|.
    The element :class:`node` objects.
 
-   ::
-
-      print(ele.nds)
 
 .. attribute:: element.ndf
 
    An object attribute (get) |int|.
    The element number of dofs.
 
-   ::
-
-      print(ele.ndf)
 
 .. attribute:: element.stiff
 
    An object attribute (get) |listl|.
    The element stiffness matrix.
 
-   ::
-
-      print(ele.stiff)
 
 .. attribute:: element.damp
 
    An object attribute (get) |listl|.
    The element damping matrix.
 
-   ::
-
-      print(ele.damp)
 
 .. attribute:: element.mass
 
    An object attribute (get) |listl|.
    The element mass matrix.
 
-   ::
 
-      print(ele.mass)
+.. attribute:: element.force
+
+   An object attribute (get) |listl|.
+   The resisting force.
 
 
+
+.. attribute:: element.dampingForce
+
+   An object attribute (get) |listl|.
+   The damping force.
+
+
+.. attribute:: element.dynamicForce
+
+   An object attribute (get) |listl|.
+   The dynamic resisting force.
+
+
+.. method:: element.section(num)
+
+   Return the ``num`` th |section| in the element.
+   If no such section, return |none|.
+
+   ========================   ====================================================================
+   ``num`` |int|              The section number in element, start from ``1``.
+   ========================   ====================================================================
+
+.. method:: element.uniMat(num)
+
+   Return the ``num`` th |unimat| in the element.
+   If no such section, return |none|.
+
+   ========================   ====================================================================
+   ``num`` |int|              The material number in element, start from ``1``.
+   ========================   ====================================================================
+
+
+.. method:: element.nDMat(num)
+
+   Return the ``num`` th |ndmat| in the element.
+   If no such section, return |none|.
+
+   ========================   ====================================================================
+   ``num`` |int|              The material number in element, start from ``1``.
+   ========================   ====================================================================
 

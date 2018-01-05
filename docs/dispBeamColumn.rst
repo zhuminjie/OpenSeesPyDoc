@@ -34,7 +34,9 @@ dispBeamColum
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`dispBeamColumn.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`dispBeamColumn.localForce`
      #. :attr:`dispBeamColumn.basicForce`
      #. :attr:`dispBeamColumn.basicStiff`
@@ -45,17 +47,14 @@ dispBeamColum
      #. :attr:`dispBeamColumn.integrationPoints`
      #. :attr:`dispBeamColumn.integrationWeights`
      #. :attr:`dispBeamColumn.rayleighForces`
-     #. :attr:`dispBeamColumn.secs`
 
    * method
    
    #. :meth:`tagged.__str__`
    #. :meth:`tagged.remove`
-
-.. attribute:: dispBeamColumn.force
-
-   An object attribute (get) |listf|
-   The global force of dispBeamColumn.
+   #. :meth:`element.section`
+   #. :meth:`element.uniMat`
+   #. :meth:`element.nDMat`
 
 .. attribute:: dispBeamColumn.localForce
 
@@ -108,11 +107,3 @@ dispBeamColum
 
    An object attribute (get) |listf|
    The rayleigh disps of the element.
-
-.. attribute:: dispBeamColumn.secs
-
-   An object attribute (get) |list|
-   The sections of the element, which can be used to get section responses.
-
-
-

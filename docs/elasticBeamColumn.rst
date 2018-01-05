@@ -45,7 +45,9 @@ elasticBeamColum
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`elasticBeamColumn.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`elasticBeamColumn.localForce`
      #. :attr:`elasticBeamColumn.basicForce`
      #. :attr:`elasticBeamColumn.deformation`
@@ -55,11 +57,9 @@ elasticBeamColum
    
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
-
-.. attribute:: elasticBeamColumn.force
-
-   An object attribute (get) |listf|
-   The global force of elasticBeamColumn.
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
 .. attribute:: elasticBeamColumn.localForce
 

@@ -40,33 +40,21 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`tri31.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`tri31.stress`
-     #. :attr:`tri31.mat`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
-
-
-
-.. attribute:: tri31.force
-
-   An object attribute (get) |listf|.
-   The global force of tri31.
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
 .. attribute:: tri31.stress
 
    An object attribute (get) |listf|.
    The stresses of tri31.
-
-
-.. attribute:: tri31.mat
-
-   An object attribute (get) |ndmat|.
-   The :class:`nDMaterial` of tri31, which can be used
-   to get the material responses.
-
-
 

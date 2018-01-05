@@ -38,22 +38,20 @@
      #. :attr:`element.stiff`
      #. :attr:`element.damp`
      #. :attr:`element.mass`
-     #. :attr:`zeroLengthSection.force`
+     #. :attr:`element.force`
+     #. :attr:`element.dampingForce`
+     #. :attr:`element.dynamicForce`
      #. :attr:`zeroLengthSection.localForce`
      #. :attr:`zeroLengthSection.deformation`
-     #. :attr:`zeroLengthSection.sec`
 
    * methods
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+     #. :meth:`element.section`
+     #. :meth:`element.uniMat`
+     #. :meth:`element.nDMat`
 
-
-
-.. attribute:: zeroLengthSection.force
-
-   An object attribute (get) |listf|.
-   The global force of zeroLengthSection.
 
 .. attribute:: zeroLengthSection.localForce
 
@@ -65,13 +63,5 @@
 
    An object attribute (get) |listf|.
    The deformation of zeroLengthSection.
-
-
-.. attribute:: zeroLengthSection.sec
-
-   An object attribute (get) |section|.
-   The :class:`section` of zeroLengthSection, which can be used
-   to get the section responses.
-
 
 
