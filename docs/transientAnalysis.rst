@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-transientAnalysis -- Transient Analysis
+transientAnalysis 
 ----------------------------------------
 
 .. class:: transientAnalysis()
@@ -37,3 +37,6 @@ transientAnalysis -- Transient Analysis
    ::
 
       transient.analyze(numIncr = 10, dt = 0.01)
+
+
+

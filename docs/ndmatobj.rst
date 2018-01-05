@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==========================================
- nDMaterial -- Multi Dimentional Material
+ nDMaterial 
 ==========================================
 
 .. class:: nDMaterial()
@@ -80,5 +80,8 @@ Class methods
    ::
 
       mat = NDMaterial.ElasticIsotropic(E=1e6, nu=0.3)
+
+
+
 
 

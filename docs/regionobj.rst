@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ============================================
- region -- A Region of Finite-Element Model
+ region 
 ============================================
 
 .. class:: region()
@@ -71,4 +71,7 @@
    ::
 
       reg.rayleigh = [0.01, 0.01, 0.0, 0.0]
+
+
+
 

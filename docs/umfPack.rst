@@ -1,10 +1,13 @@
 .. include:: sub.txt
 
 ===========================
- umfPack -- UmfPack solver
+ umfPack 
 ===========================
 
 .. class:: umfPack()
 
    Create a UmfPack system for sparse matrix
    using `UmfPack`_. A subclass of :class:`system`.
+
+
+

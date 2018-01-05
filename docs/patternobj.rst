@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ===============================
- pattern -- Loading Pattern
+ pattern 
 ===============================
 
 .. class:: pattern(ts, factor=1.0)
@@ -146,4 +146,7 @@ Following are pattern subclasses available in the OpenSees:
    ::
 
       ptn.wipe()
+
+
+
 

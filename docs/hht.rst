@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-hht -- Time Integration with the Hilber-Hughes-Taylor
+hht 
 ======================================================
 
 .. class:: hht(alpha,gamma=1.5-alpha,beta=(2-alpha)^2/4)
@@ -27,3 +27,6 @@ hht -- Time Integration with the Hilber-Hughes-Taylor
    ::
 
       hht(alpha=0.9)
+
+
+

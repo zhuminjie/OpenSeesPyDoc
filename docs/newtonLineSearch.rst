@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-newtonLineSearch -- Newton Algorithm with line search
+newtonLineSearch 
 =======================================================
 
 .. class:: newtonLineSearch(Bisection=False,Secant=False,RegulaFalsi=False,InitialInterpolated=False,tol=0.8,maxIter=10,minEta=0.1,maxEta=10.0)
@@ -17,3 +17,6 @@ newtonLineSearch -- Newton Algorithm with line search
    ``minEta`` |float|                 Min :math:`\eta` value. (optional)
    ``maxEta`` |float|                 Max :math:`\eta` value. (optional)
    ================================   =============================================================
+
+
+

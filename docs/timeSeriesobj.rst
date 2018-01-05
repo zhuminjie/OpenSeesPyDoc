@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==================================
- timeSeries -- A Series of Values
+ timeSeries 
 ==================================
 
 .. class:: timeSeries()
@@ -220,3 +220,6 @@ Following are timeSeries subclasses available in the OpenSees:
 
       ts = timeSeries.Path(dt=0.02, filePath='A-ELC270.AT2', factor=G)
       ts = timeSeries.Path(time=[0.0,0.0,0.0,1.0], values=[0.0,1.0,2.0,0.0])
+
+
+

@@ -41,7 +41,7 @@ Static Elastic Truss Example
    # Create the nodal load - command: load nodeID xForce yForce
    l = ptn.load(nds[4], load=[100.0, -50.0])
 
-   # ------------------------------
+   # 
    # Start of analysis generation
    # ------------------------------
 
@@ -82,5 +82,8 @@ Static Elastic Truss Example
    print("Failed!")
    
    results.close()
+
+
+
 
 

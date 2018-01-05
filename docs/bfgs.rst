@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-bfgs object -- Broyden–Fletcher–Goldfarb–Shanno Algorithm
+bfgs object 
 ============================================================
 
 .. class:: bfgs(secant=False,initial=False,count=10)
@@ -12,3 +12,6 @@ bfgs object -- Broyden–Fletcher–Goldfarb–Shanno Algorithm
    ``initial`` |bool|                 Flag to indicate to use initial stiffness.(optional)
    ``count`` |int|                    Number of iterations. (optional)
    ================================   =============================================================
+
+
+

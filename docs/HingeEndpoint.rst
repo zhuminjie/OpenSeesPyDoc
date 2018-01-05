@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ============================================
- hingeEndpoint -- HingeEndpoint Integration
+ hingeEndpoint 
 ============================================
 
 .. class:: hingeEndpoint(secI,lpI,secJ,lpJ,secE)
@@ -19,3 +19,6 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+

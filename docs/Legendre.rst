@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ========================================
- legendre -- Gauss-Legendre Integration
+ legendre 
 ========================================
 
 .. class:: legendre(sec,N)
@@ -26,4 +26,7 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+
 

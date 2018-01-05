@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-staticAnalysis -- Static Analysis
+staticAnalysis 
 -----------------------------------
 
 .. class:: staticAnalysis()
@@ -34,6 +34,9 @@ staticAnalysis -- Static Analysis
    ::
 
       static.analyze(numIncr = 10)
+
+
+
 
 
 

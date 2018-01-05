@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ======================================
- lobatto -- Gauss-Lobatto Integration
+ lobatto 
 ======================================
 
 .. class:: lobatto(sec,N)
@@ -32,3 +32,6 @@
    ::
 
       bi = lobatto(sec=sec, N=5)
+
+
+

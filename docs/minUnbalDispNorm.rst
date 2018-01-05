@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-minUnbalDispNorm -- Static Integrator by controlling minimum unbalanced displacements
+minUnbalDispNorm 
 ========================================================================================
 
 .. class:: minUnbalDispNorm(dlambda1,Jd=1,minLambda=dlambda1,maxLambda=dlambda1,det=False)
@@ -19,3 +19,6 @@ minUnbalDispNorm -- Static Integrator by controlling minimum unbalanced displace
    ::
 
       minUnbalDispNorm(dlambda1=0.1)
+
+
+

@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-load -- Nodal Load
+load 
 =====================
 
 .. class:: load()
@@ -27,5 +27,8 @@ load -- Nodal Load
    ::
 
       print(l.nd)
+
+
+
 
 

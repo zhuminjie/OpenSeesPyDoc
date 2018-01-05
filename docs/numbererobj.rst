@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-numberer -- Number equations
+numberer 
 ===============================
 
 .. class:: numberer()
@@ -16,3 +16,6 @@ Following are numberer subclasses available in the OpenSees:
    plainNumberer
    rcm
    amd
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ======================================
- sparseSYM -- Sparse Symmetric solver
+ sparseSYM 
 ======================================
 
 .. class:: sparseSYM(lSparse=1)
@@ -17,3 +17,6 @@
 			   #. -- ND
 			   #. -- RCM
    =====================   ======================
+
+
+

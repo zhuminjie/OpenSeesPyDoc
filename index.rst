@@ -5,6 +5,12 @@
 
 .. include:: docs/sub.txt
 
+.. warning::
+
+   The OpenSeesPy library is still in beta version and its
+   functions are limited. Please send any questions and
+   comments to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
+
 The OpenSeesPy Library
 ======================================
 
@@ -23,16 +29,11 @@ equation solving, and material and element routines.
 
 `OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_,
 which makes an effort to represent
-the OO design at the script level.
-All user related OpenSees objects are
-exported as python objects even the :class:`model`.
+the OO design of OpenSees at the script level.
 Everything users do will be creating objects
-and calling object and class methods.
-Users
-of OpenSees will have a very different
-experience in writing OpenSees scirpts in
-a more efficient and organized way. 
-
+and calling object.
+Users of `OpenSeesPy`_ will have a very different
+experience in writing OpenSees scirpts.
 
 All functions and objects in `OpenSeesPy`_
 accept keywords arguments, which means

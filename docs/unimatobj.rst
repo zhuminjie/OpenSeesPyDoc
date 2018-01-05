@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==============================================
- uniaxialMaterial -- One Dimentional Material
+ uniaxialMaterial 
 ==============================================
 
 .. class:: uniaxialMaterial()
@@ -109,5 +109,8 @@ Class methods
    ::
 
       mat = uniaxialMaterial.Hardening(E=1e6, sigmaY=36.0, Hiso=0.0, Hkin=alpha/(1-alpha)*E)
+
+
+
 
 

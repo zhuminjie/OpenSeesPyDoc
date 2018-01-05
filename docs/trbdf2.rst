@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-trbdf2 -- Time Integration with the TRBDF2 method
+trbdf2 
 ====================================================
 
 .. class:: trbdf2()
@@ -12,4 +12,7 @@ trbdf2 -- Time Integration with the TRBDF2 method
    ::
 
       trbdf2()
+
+
+
 

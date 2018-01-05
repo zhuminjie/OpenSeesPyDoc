@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-transformation -- Handle with transformation method
+transformation 
 =====================================================
 
 .. class:: transformation()
@@ -14,3 +14,6 @@ transformation -- Handle with transformation method
      #. If :class:`mp` are constrained, make sure that the retained node is not constrained in any other constraint.
 
    And remember if a node is constrained to multiple nodes in your model it probably means you have messed up.
+
+
+

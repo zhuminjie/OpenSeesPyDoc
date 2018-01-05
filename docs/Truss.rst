@@ -56,7 +56,7 @@ Static Nonlinear Truss Example
    # Create the nodal load - command: load nodeID xForce yForce
    l = ptn.load(nds[4], load=[Px,Py])
 
-   # ------------------------------
+   # 
    # Start of analysis generation
    # ------------------------------
 
@@ -95,3 +95,6 @@ Static Nonlinear Truss Example
    print(nds[4])
    for tag,ele in eles.items():
        print(ele)
+
+
+

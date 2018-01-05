@@ -1,7 +1,7 @@
 include:: sub.txt
 
 ==============================================================
- relativeNormUnbalance -- Relative unbalanced right hand test
+ relativeNormUnbalance 
 ==============================================================
 
 .. class:: relativeNormUnbalance(tol,iter,pFlag=0,nType=2)
@@ -15,3 +15,6 @@ include:: sub.txt
 ::
 
    relativeNormUnbalance(tol=1.0e-10, iter=10)
+
+
+

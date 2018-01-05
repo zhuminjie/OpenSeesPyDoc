@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =================================================
- lowOrderBeamIntegration -- LowOrder Integration
+ lowOrderBeamIntegration 
 =================================================
 
 .. class:: lowOrderBeamIntegration(secs,locs,wts)
@@ -56,3 +56,6 @@
       integration is recovered when ``wts`` is an empty list and
       :meth:`userDefinedBeamIntegration` integration is
       recovered when the ``wts`` and ``locs`` lists are of equal length.
+
+
+

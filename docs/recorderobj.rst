@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ================================
- recorder -- Record the Outputs
+ recorder 
 ================================
 
 .. class:: recorder()
@@ -159,6 +159,9 @@ Class methods
       #. One must set one of ``file``, ``xml``, ``binary``, ``csv``, or ``inetAddr`` and ``port``.
       #. One must set one of the response types.
       #. In the last example, for a :meth:`pattern.UniformExcitation` analysis, this method generates output file ``nodesA.out`` that contains absolute accelerations (ground motion acceleration + relative acceleration) in x direction for ``nd1`` and ``nd2``. NOTE that if no :class:`timeSeries` is provided and a :meth:`pattern.UniformExcitation` analysis is performed, the relative accelerations are recorded.
+
+
+
 
 
 

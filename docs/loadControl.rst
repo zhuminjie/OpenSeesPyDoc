@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-loadControl -- Static Integratrion by controlling load
+loadControl 
 =========================================================
 
 .. class:: loadControl(incr,numIter=1,minIncr=incr,maxIncr=incr)
@@ -23,4 +23,7 @@ loadControl -- Static Integratrion by controlling load
    ::
 
       loadControl(incr=1.0/Nsteps)
+
+
+
 

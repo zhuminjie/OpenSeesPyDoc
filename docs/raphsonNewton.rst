@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-raphsonNewton -- Newton Algorithm with Raphson accelerator
+raphsonNewton 
 ==============================================================
 
 .. class:: raphsonNewton(iterate='current',increment='current')
@@ -8,3 +8,6 @@ raphsonNewton -- Newton Algorithm with Raphson accelerator
    Create a RaphsonNewton :class:`algorithm` which uses Raphson accelerator. A subclass of :class:`algorithm`.
 
    See :class:`krylovNewton` for parameters.
+
+
+

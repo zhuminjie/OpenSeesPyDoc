@@ -80,3 +80,6 @@ elasticBeamColum
    
    An object attribute (get) |listf|
    The rotation of chord.
+
+
+

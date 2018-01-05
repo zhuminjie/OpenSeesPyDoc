@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-displacementControl -- Static Integration by controlling displacements
+displacementControl 
 ==========================================================================
 
 .. class:: displacementControl(nd,dof,incr,numIter=1,dUmin=incr,dUmax=incr)
@@ -24,3 +24,6 @@ displacementControl -- Static Integration by controlling displacements
    ::
 
       displacementControl(nd=nd, dof=2, inc=0.1)
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ======================================================
- normDispIncr -- Increment of left hand unknowns test
+ normDispIncr 
 ======================================================
 
 .. class:: normDispIncr(tol,iter,pFlag=0,nType=2)
@@ -15,3 +15,6 @@
 ::
 
    normDispIncr(tol=1.0e-8, iter=10)
+
+
+

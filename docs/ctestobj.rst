@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==========================
- test -- Convergence Test
+ test 
 ==========================
 
 .. class:: test()
@@ -25,3 +25,6 @@ Following are test subclasses available in the OpenSees:
    normDispAndUnbalance
    normDispOrUnbalance
    pfemTest
+
+
+

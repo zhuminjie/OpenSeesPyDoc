@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =====================================================
- bandSPD -- Symmetric-Postive-Definite Banded solver
+ bandSPD 
 =====================================================
 
 .. class:: bandSPD()
@@ -10,3 +10,6 @@
    which have a banded profile.
    When a solution is required, the Lapack routines DPBSV and DPBTRS are used.
    A subclass of :class:`system`.
+
+
+

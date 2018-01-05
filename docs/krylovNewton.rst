@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-krylovNewton -- Newton Algorithm with Krylve subspace
+krylovNewton 
 ======================================================
 
 .. class:: krylovNewton(iterate='current',increment='current',maxDim=3)
@@ -16,3 +16,6 @@ krylovNewton -- Newton Algorithm with Krylve subspace
 		                      the tangent is reformed and
                                       the acceleration restarts. (optional)
    ================================   =============================================================
+
+
+

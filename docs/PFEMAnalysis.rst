@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-pfemAnalysis -- Transient Analysis for PFEM
+pfemAnalysis 
 ----------------------------------------------
 
 .. class:: pfemAnalysis(dtmax,dtmin,gravity,ratio=0.5)
@@ -46,4 +46,7 @@ pfemAnalysis -- Transient Analysis for PFEM
    ::
 
       PFEM.analyze()
+
+
+
 

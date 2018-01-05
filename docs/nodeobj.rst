@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =============================
- node -- Finite-Element Node
+ node 
 =============================
 
 .. class:: node(crds,ndf=model.ndf)
@@ -220,3 +220,7 @@
 
       mpobj = nd2.rigidBeam(cnd=nd1)
 	    
+
+
+
+

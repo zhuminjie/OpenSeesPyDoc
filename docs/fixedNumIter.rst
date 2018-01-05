@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =================================================
- fixedNumIter -- Fixed number of iterations test
+ fixedNumIter 
 =================================================
 
 .. class:: fixedNumIter(iter,pFlag=0,nType=2)
@@ -13,3 +13,6 @@
 ::
 
    fixedNumIter(iter=20)
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ========================================
- newtonCotes -- NewtonCotes Integration
+ newtonCotes 
 ========================================
 
 .. class:: newtonCotes(sec,N)
@@ -25,3 +25,6 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =============================================
- normUnbalance -- Unbalanced right hand test
+ normUnbalance 
 =============================================
 
 .. class:: normUnbalance(tol,iter,pFlag=0,nType=2,maxincr=-1)
@@ -29,3 +29,6 @@
    ::
 
       normUnbalance(tol=1.0e-8, iter=10, pFlag=4)
+
+
+

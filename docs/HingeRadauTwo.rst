@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ============================================
- hingeRadauTwo -- HingeRadauTwo Integration
+ hingeRadauTwo 
 ============================================
 
 .. class:: hingeRadauTwo(secI,lpI,secJ,lpJ,secE)
@@ -21,3 +21,6 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+

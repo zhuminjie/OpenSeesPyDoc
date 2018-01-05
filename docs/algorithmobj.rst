@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-algorithm -- Find solutions to system of equations
+algorithm 
 ========================================================
 
 .. class:: algorithm()
@@ -22,3 +22,6 @@ Following are algorithm subclasses available in the OpenSees:
    periodicNewton
    bfgs
    broyden
+
+
+

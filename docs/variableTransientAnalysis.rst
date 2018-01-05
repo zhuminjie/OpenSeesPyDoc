@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-variableTransientAnalysis -- Transient Analysis with variable time steps
+variableTransientAnalysis 
 --------------------------------------------------------------------------
 
 .. class:: variableTransientAnalysis()
@@ -39,4 +39,7 @@ variableTransientAnalysis -- Transient Analysis with variable time steps
    ::
 
       variableTransient.analyze(numIncr = 10, dt = 0.01, dtMin=1e-6, dtMax=0.01, Jd=1)
+
+
+
 

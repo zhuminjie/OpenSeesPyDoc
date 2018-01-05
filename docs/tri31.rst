@@ -67,3 +67,6 @@
    An object attribute (get) |ndmat|.
    The :class:`nDMaterial` of tri31, which can be used
    to get the material responses.
+
+
+

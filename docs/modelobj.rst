@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ===============================
- model -- Finite-Element Model
+ model 
 ===============================
 
 .. class:: model(ndm=2, ndf=3)
@@ -99,5 +99,8 @@
    ::
 
       m.reactions(dynamic=1)
+
+
+
 
 

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ===========================================================
- fixedLocationBeamIntegration -- FixedLocation Integration
+ fixedLocationBeamIntegration 
 ===========================================================
 
 .. class:: fixedLocationBeamIntegration(secs,locs)
@@ -41,3 +41,6 @@
 
       bi = fixedLocationBeamIntegration(secs=[sec1,sec2,sec2,sec2,sec1],
                                         locs=[0.0,0.2,0.5,0.8,1.0])
+
+
+

@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-generalizedAlpha -- Time Integration with a Generalized :math:`\alpha` method
+generalizedAlpha 
 =================================================================================
 
 .. class:: generalizedAlpha(alphaM,alphaF,gamma=0.5+alphaM-alphaF,beta=(1+alphaM-alphaF)^2/4)
@@ -33,3 +33,6 @@ generalizedAlpha -- Time Integration with a Generalized :math:`\alpha` method
    ::
 
       generalizedAlpha(alphaM=1.0, alphaF=0.8)
+
+
+

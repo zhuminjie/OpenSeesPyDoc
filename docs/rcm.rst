@@ -1,10 +1,13 @@
 .. include:: sub.txt
 
 ==============================================
- rcm -- Reverse Cuthill-McKee numberer
+ rcm 
 ==============================================
 
 
 .. class:: rcm()
 
    Create a Reverse Cuthill-McKee numberer. A subclass of :class:`numberer`.
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =====================================
- beamIntegration -- Beam Integration
+ beamIntegration 
 =====================================
 
 .. class:: beamIntegration
@@ -58,6 +58,9 @@ Plastic Hinge Integration Methods. Plastic hinge integration methods confine mat
    HingeRadau
    HingeRadauTwo
    HingeEndpoint
+
+
+
 
 
 

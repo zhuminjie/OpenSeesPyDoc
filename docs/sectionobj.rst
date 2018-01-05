@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ===========================================
- section -- Cross Section of Line Elements
+ section 
 ===========================================
 
 .. class:: section()
@@ -265,4 +265,7 @@ Class methods
       bh4 = section.BiaxialHysteretic(k=1.0, fc=0.5, fn=1.0, alp=0.15, als=0.0, eta=0.6,
                                       r0=0.05, rp=0.05, rs=0.0, rc=0.0, rn=0.0, Rs=0.3,
 				      sig=0.1,lmbda=0.0)
+
+
+
 

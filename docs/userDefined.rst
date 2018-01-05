@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =======================================================
- userDefinedBeamIntegration -- UserDefined Integration
+ userDefinedBeamIntegration 
 =======================================================
 
 .. class:: userDefinedBeamIntegration(secs,locs,wts)
@@ -39,3 +39,6 @@
    is defined by the ``secs``. The ``locs``, ``wts``, and ``secs``
    should be of length ``N``. In general, there is no accuracy for this approach
    to numerical integration.
+
+
+

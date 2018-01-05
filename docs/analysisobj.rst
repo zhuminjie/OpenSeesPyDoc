@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-analysis -- Perform Finite-Element Analysis
+analysis 
 =============================================
 
 .. class:: analysis()
@@ -53,3 +53,6 @@ Following are analysis subclasses available in the OpenSees:
 
    #. The eigenvectors are stored at the nodes.
    #. The default eigensolver is able to solve only for N-1 eigenvalues, where N is the number of inertial DOFs. When running into this limitation the -fullGenLapack solver can be used instead of the default Arpack solver.
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ============================================================
- geomTransf -- Coordinates Transformation for Line Elements
+ geomTransf 
 ============================================================
 
 .. class:: geomTransf()
@@ -75,4 +75,7 @@ Class methods
    Create a PDelta :class:`geomTransf` object, which can be used in large displacement-small strain problems. NOTE: Currently the transformation does not deal with element loads and will ignore any that are applied to the element.
 
    Parameters and examples see :meth:`geomTransf.Linear`
+
+
+
 

@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-arcLength -- Static Integrator with arc curve
+arcLength 
 ===================================================
 
 .. class:: arcLength(s,alpha)
@@ -15,3 +15,6 @@ arcLength -- Static Integrator with arc curve
    ::
 
       arcLenght(s=1.0, alpha=0.1)
+
+
+

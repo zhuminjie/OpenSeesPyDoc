@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-handler -- Handle constraints
+handler 
 =============================
 
 .. class:: handler()
@@ -18,3 +18,6 @@ Following are handler subclasses available in the OpenSees:
    penalty
    lagrange
    transformation
+
+
+

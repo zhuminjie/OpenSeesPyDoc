@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ===========================
- element -- Finite Element
+ element 
 ===========================
 
 .. class:: element()
@@ -123,3 +123,6 @@ PFEM Elements
    ::
 
       print(ele.mass)
+
+
+

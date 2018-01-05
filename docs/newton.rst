@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-newton -- Newton-Raphson Algorithm
+newton 
 =====================================
 
 .. class:: newton(secant=False,initial=False,initialThenCurrent=False)
@@ -14,4 +14,7 @@ newton -- Newton-Raphson Algorithm
 		                      on first step, then use current stiffness
                                       for subsequent steps. (optional)
    ================================   =============================================================
+
+
+
 

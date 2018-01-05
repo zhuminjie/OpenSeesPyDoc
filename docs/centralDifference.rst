@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-centralDifference -- Time Integration with the central difference method
+centralDifference 
 =========================================================================
 
 .. class:: centralDifference()
@@ -14,3 +14,6 @@ centralDifference -- Time Integration with the central difference method
    ::
 
       centralDifference()
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =======================================================================
- relativeNormDispIncr -- Relative increment of left hand unknowns test
+ relativeNormDispIncr 
 =======================================================================
 
 .. class:: relativeNormDispIncr(tol,iter,pFlag=0,nType=2)
@@ -14,3 +14,6 @@
 ::
 
    relativeNormDispIncr(tol=1.0e-10, iter=10)
+
+
+

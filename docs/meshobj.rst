@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==================================
- mesh -- Make Finite-Element Mesh
+ mesh 
 ==================================
 
 .. class:: mesh()
@@ -232,3 +232,6 @@ Class methods
       fluid.eleType = element.PFEMElement2DBubble
       fluid.eleArgs(rho=1000.0, mu=1e-3, b1=0.0, b2=-9.81)
       fluid.mesh()
+
+
+

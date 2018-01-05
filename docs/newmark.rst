@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-newmark -- Time Integration with the Newmark method
+newmark 
 ==========================================================
 
 .. class:: newmark(gamma,beta,formD=True)
@@ -27,3 +27,6 @@ newmark -- Time Integration with the Newmark method
    ::
 
       newmark(gamma=0.5, beta=0.25)
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =================================
- egen -- A solver using `Eigen`_
+ egen 
 =================================
 
 .. class:: egen(sSolver, pSolver=sSolver)
@@ -15,4 +15,7 @@
 		           ``'LSCG'``, ``'BiCG'``, ``'PBiCG'``
    ``pSolver`` |str|       Pressure solver (optional)
    =====================   ================================================================
+
+
+
 

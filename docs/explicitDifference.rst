@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-explicitDifference -- Time Integratio with the explicit difference method
+explicitDifference 
 ==========================================================================
 
 .. class:: explicitDifference()
@@ -15,3 +15,6 @@ explicitDifference -- Time Integratio with the explicit difference method
    ::
 
       explicitDifference()
+
+
+

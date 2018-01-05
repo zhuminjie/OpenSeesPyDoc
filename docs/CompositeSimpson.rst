@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==================================================
- compositeSimpson -- CompositeSimpson Integration
+ compositeSimpson 
 ==================================================
 
 .. class:: compositeSimpson(sec,N)
@@ -17,4 +17,7 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+
 

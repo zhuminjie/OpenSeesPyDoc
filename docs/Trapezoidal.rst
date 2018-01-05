@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ========================================
- trapezoidal -- Trapezoidal Integration
+ trapezoidal 
 ========================================
 
 .. class:: trapezoidal(sec,N)
@@ -17,3 +17,6 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+

@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==========================================
- system -- Solver for system of equations
+ system 
 ==========================================
 
 .. class:: system()
@@ -26,3 +26,6 @@ Following are system objects available in the OpenSees:
    pfemUmfPack
    pfemQuasi
    egen
+
+
+

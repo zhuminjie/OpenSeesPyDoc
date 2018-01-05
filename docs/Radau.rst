@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ======================================
- radau -- Gauss-Radau Integration
+ radau 
 ======================================
 
 .. class:: radau(sec,N)
@@ -23,3 +23,6 @@
    * methods
 
      #. :meth:`beamIntegration.__str__`
+
+
+

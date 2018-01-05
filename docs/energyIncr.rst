@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ========================================
- energyIncr -- Increment of energy test
+ energyIncr 
 ========================================
 
 .. class:: energyIncr(tol,iter,pFlag=0,nType=2)
@@ -16,3 +16,6 @@
 ::
 
    energyIncr(tol=1.0e-8, iter=10)
+
+
+

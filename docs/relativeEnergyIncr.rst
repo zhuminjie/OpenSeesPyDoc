@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =========================================================
- relativeEnergyIncr -- Relative increment of energy test
+ relativeEnergyIncr 
 =========================================================
 
 .. class:: relativeEnergyIncr(tol,iter,pFlag=0,nType=2)
@@ -13,3 +13,6 @@
 ::
 
    relativeEnergyIncr(tol=1.0e-10, iter=10)
+
+
+

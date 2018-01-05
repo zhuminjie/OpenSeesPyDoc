@@ -1,6 +1,6 @@
 .. include:: sub.txt
 
-lagrange -- Handle with Lagrange Multipliers
+lagrange 
 ============================================
 
 .. class:: lagrange(alphaS=1.0, alphaM=1.0)
@@ -15,3 +15,6 @@ lagrange -- Handle with Lagrange Multipliers
    ========================   ================================================================
 
    The Lagrange multiplier method introduces new unknowns to the system of equations. The diagonal part of the system corresponding to these new unknowns is 0.0. This ensure that the system IS NOT symmetric positive definite.
+
+
+

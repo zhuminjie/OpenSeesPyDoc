@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ==============================
- mp -- Multi-point constraint
+ mp 
 ==============================
 
 .. class:: mp()
@@ -71,4 +71,7 @@
    ::
 
       print(mpobj.cmat)
+
+
+
 
