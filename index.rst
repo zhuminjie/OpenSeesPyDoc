@@ -10,6 +10,8 @@ The OpenSeesPy Library
 
 `OpenSees`_, the Open System for `Earthquake Engineering`_ Simulation, is
 an `object-oriented`_, `open source`_ software framework.
+It widely uses the class inheritance and object
+composition in its design (`McKenna, Scott and Fenves`_).
 It allows users to create both serial
 and `parallel`_  `Finite Element Analysis`_ computer applications
 for simulating the response of structural and geotechnical systems
@@ -19,14 +21,18 @@ several `Fortran`_ and `C`_ numerical libraries for linear
 equation solving, and material and element routines. 
 
 
-`OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_.
-In `OpenSeesPy`_, OpenSees objects are wrapped
-in `Python`_ objects
-and manipulated through `Python`_
-object interface. Therefore, users of `OpenSees`_ could
-use `object-oriented`_ to write the scripts, which
-is very different to the traditional `OpenSees`_
-scripts, which are functional.
+`OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_,
+which makes an effort to represent
+the OO design at the script level.
+All user related OpenSees objects are
+exported as python objects even the :class:`model`.
+Everything users do will be creating objects
+and calling object and class methods.
+Users
+of OpenSees will have a very different
+experience in writing OpenSees scirpts in
+a more efficient and organized way. 
+
 
 All functions and objects in `OpenSeesPy`_
 accept keywords arguments, which means
@@ -41,13 +47,20 @@ can be imported as::
 
   from OpenSees import*
 
+The document is organized in chapters of OpenSees objects.
+Every object has its attributes and methods, which
+reassemble original OpenSees commands.
+For abstract classes such as :class:`element`, :class:`uniaxialMaterial`,
+class methods are defined for creating objects of subclasses.
+
+Examples can be found in the last chapter.
 
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 
+   :numbered:
+   :caption: Model
 
-   docs/intro
    docs/tagged
    docs/modelobj
    docs/nodeobj
@@ -66,6 +79,12 @@ can be imported as::
    docs/geomTransfobj
    docs/beamIntegrationobj
    docs/recorderobj
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Analysis
+   
    docs/analysisobj
    docs/algorithmobj
    docs/constraintobj

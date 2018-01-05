@@ -9,6 +9,8 @@ transientAnalysis -- Transient Analysis
 
    * methods
 
+     #. :meth:`analysis.eigen`
+     #. :meth:`analysis.wipe`
      #. :meth:`transientAnalysis.analyze`
 
 
