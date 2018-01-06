@@ -25,6 +25,9 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+     #. :meth:`section.uniMat`
+     #. :meth:`section.nDMat`
+
 
 Following are available section subclasses in the OpenSees:
 
@@ -67,4 +70,23 @@ Following are available section subclasses in the OpenSees:
 
    An object attribute (get) |listl|.
    The section flexibility.
+
+.. method:: section.uniMat(num)
+
+   Return the ``num`` th |unimat| in the section.
+   If no such material, return |none|.
+
+   ========================   ====================================================================
+   ``num`` |int|              The material number in element, start from ``1``.
+   ========================   ====================================================================
+
+
+.. method:: section.nDMat(num)
+
+   Return the ``num`` th |ndmat| in the section.
+   If no such material, return |none|.
+
+   ========================   ====================================================================
+   ``num`` |int|              The material number in element, start from ``1``.
+   ========================   ====================================================================
 

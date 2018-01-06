@@ -31,6 +31,8 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+     #. :meth:`section.uniMat`
+     #. :meth:`section.nDMat`
      #. :meth:`fiberSection.fiber`
      #. :meth:`fiberSection.patch`
      #. :meth:`fiberSection.layer`
