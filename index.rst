@@ -102,6 +102,7 @@ Examples can be found in the last chapter.
       
    docs/elasticTruss.rst
    docs/nonlinearTruss.rst
+   docs/elasticObstacleMM.rst
 
 Indices and tables
 ==================

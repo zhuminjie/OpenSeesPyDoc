@@ -21,10 +21,12 @@ for f in glob.glob('**',recursive=True):
         for line in data.split('\n'):
             if not found:
                 if check:
-                    i = line.find('--')
-                    if i > 0:
-                        line = line[:i]
-                        found = True
+                    line = line + ' class'
+                    found = True
+                    # i = line.find('--')
+                    # if i > 0:
+                    #     line = line[:i]
+                    #     found = True
                 
                 if all([ele == '=' for ele in line]):
                     check = True
@@ -33,3 +35,4 @@ for f in glob.glob('**',recursive=True):
 
         fd.close()
 
+    break
