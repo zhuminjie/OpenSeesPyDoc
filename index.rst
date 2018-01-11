@@ -100,7 +100,8 @@ Examples can be found in the last chapter.
    :numbered:
    :caption: Example
       
-   docs/examples
+   docs/elasticTruss.rst
+   docs/nonlinearTruss.rst
 
 Indices and tables
 ==================
