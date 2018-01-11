@@ -37,3 +37,4 @@ Results
 -------
 
 .. image:: ../_static/nonlinearTruss.png
+

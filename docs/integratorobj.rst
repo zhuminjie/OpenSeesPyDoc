@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-integrator 
-======================================================
+===================
+ integrator  class
+===================
 
 .. class:: integrator()
 
@@ -34,6 +35,7 @@ Transient integrator objects:
    trbdf2
    explicitDifference
    pfemIntegrator
+
 
 
 

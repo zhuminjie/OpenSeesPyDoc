@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- pathSeries
-====================================
+==========================================
+ pathSeries class
+==========================================
 
 .. class:: pathSeries(dt=0.0,values=[],time=[],filePath='',fileTime='',factor=1.0,startTime=0.0,useLast=0,prependZero=0)
 
@@ -42,5 +42,6 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+
 
 

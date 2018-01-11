@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- elasticMaterial
-====================================
+==========================================
+ elasticMaterial class
+==========================================
 
 .. class:: elasticMaterial(E, eta=0.0, Eneg=E)
 
@@ -27,3 +27,4 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+

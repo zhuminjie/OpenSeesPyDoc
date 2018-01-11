@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-numberer 
-===============================
+=================
+ numberer  class
+=================
 
 .. class:: numberer()
 
@@ -16,6 +17,7 @@ Following are numberer subclasses available in the OpenSees:
    plainNumberer
    rcm
    amd
+
 
 
 

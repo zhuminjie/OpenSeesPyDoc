@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- elasticSection
-====================================
+==========================================
+ elasticSection class
+==========================================
 
 .. class:: elasticSection(E, A, Iz, Iy=0.0, G=0.0, J=0.0, alphaY=0.0, alphaZ=0.0)
 
@@ -37,3 +37,4 @@
      #. :meth:`tagged.remove`
      #. :meth:`section.uniMat`
      #. :meth:`section.nDMat`
+

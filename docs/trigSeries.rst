@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- trigSeries
-====================================
+==========================================
+ trigSeries class
+==========================================
 
 .. class:: trigSeries(tStart,tEnd,period,factor=1.0,shift=0.0,zeroShift=0.0)
 
@@ -37,5 +37,6 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+
 
 

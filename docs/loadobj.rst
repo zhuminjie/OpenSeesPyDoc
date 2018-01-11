@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-load 
-=====================
+=============
+ load  class
+=============
 
 .. class:: load()
 
@@ -27,6 +28,7 @@ load
    ::
 
       print(l.nd)
+
 
 
 

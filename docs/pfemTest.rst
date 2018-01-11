@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- pfemTest 
-====================================
+==========================================
+ pfemTest  class
+==========================================
 
 .. class:: pfemTest(tolv,tolp,tolrv,tolrp,iter,maxincr,tolrelv=1e-15,tolrelp=1e-15,pFlag=0,nType=2)
 
@@ -25,6 +25,7 @@
    ::
 
       pfemTest(tolv=1e-6, tolp=1e-6, tolrv=1e-6, tolrp=1e-6, iter=20, maxincr=3, pFlag=1)
+
 
 
 

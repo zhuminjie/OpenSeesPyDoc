@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-hht 
-======================================================
+============
+ hht  class
+============
 
 .. class:: hht(alpha,gamma=1.5-alpha,beta=(2-alpha)^2/4)
 
@@ -27,6 +28,7 @@ hht
    ::
 
       hht(alpha=0.9)
+
 
 
 

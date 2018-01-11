@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- rectangularSeries
-====================================
+==========================================
+ rectangularSeries class
+==========================================
 
 .. class:: rectangularSeries(tStart,tEnd,factor=1.0)
 
@@ -32,5 +32,6 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+
 
 

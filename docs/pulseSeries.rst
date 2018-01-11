@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- pulseSeries
-====================================
+==========================================
+ pulseSeries class
+==========================================
 
 .. class:: pulseSeries(tStart,tEnd,period,width=0.5,shift=0.0,factor=1.0,zeroShift=0.0)
 
@@ -40,5 +40,6 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+
 
 

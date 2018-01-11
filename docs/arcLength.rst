@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-arcLength 
-===================================================
+=================
+ arcLength class
+=================
 
 .. class:: arcLength(s,alpha)
 
@@ -15,6 +16,7 @@ arcLength
    ::
 
       arcLenght(s=1.0, alpha=0.1)
+
 
 
 

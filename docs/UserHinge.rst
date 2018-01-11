@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-============================================
- userHinge 
-============================================
+==================================================
+ userHinge  class
+==================================================
 
 .. class:: userHinge(secE,secsL,locsL,wtsL,secsR,locsR,wtsR)
 
@@ -32,6 +32,7 @@
       bi = userHinge(secE=secE,
                      secsL=[sec1,sec2], locsL=[0.1,0.2], wtsL=[0.5,0.5],
                      secsR=[sec3,sec4], locsR=[0.8,0.9], wtsR=[0.5,0.5])
+
 
 
 

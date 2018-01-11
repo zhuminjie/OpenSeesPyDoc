@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-centralDifference 
-=========================================================================
+==========================
+ centralDifference  class
+==========================
 
 .. class:: centralDifference()
 
@@ -14,6 +15,7 @@ centralDifference
    ::
 
       centralDifference()
+
 
 
 

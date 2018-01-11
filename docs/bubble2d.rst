@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- bubble
-====================================
+==========================================
+ bubble class
+==========================================
 
 .. class:: bubble(nds, rho, mu, b1, b2, thk=1.0, kappa=-1)
 
@@ -55,5 +55,6 @@
      #. :meth:`element.section`
      #. :meth:`element.uniMat`
      #. :meth:`element.nDMat`
+
 
 

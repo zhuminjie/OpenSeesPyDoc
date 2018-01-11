@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========================================
- system 
-==========================================
+================================================
+ system  class
+================================================
 
 .. class:: system()
 
@@ -26,6 +26,7 @@ Following are system objects available in the OpenSees:
    pfemUmfPack
    pfemQuasi
    egen
+
 
 
 

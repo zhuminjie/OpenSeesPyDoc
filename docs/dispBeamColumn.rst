@@ -1,8 +1,8 @@
 .. include:: sub.txt
    
-=============
-dispBeamColum
-=============
+===================
+dispBeamColum class
+===================
 
 .. class:: dispBeamColumn(nds,transf,bi,mass=0.0,tol=1e-12,maxIter=10)
 
@@ -107,3 +107,4 @@ dispBeamColum
 
    An object attribute (get) |listf|
    The rayleigh disps of the element.
+

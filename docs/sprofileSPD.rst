@@ -1,13 +1,14 @@
 .. include:: sub.txt
 
-==========================================================
- sprofileSPD 
-==========================================================
+================================================================
+ sprofileSPD  class
+================================================================
 
 .. class:: sprofileSPD()
 
    Create a SProfileSPD system for symmetric positive definite matrix.
    A subclass of :class:`system`.
+
 
 
 

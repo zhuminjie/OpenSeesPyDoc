@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-pfemIntegrator 
-================================================
+=======================
+ pfemIntegrator  class
+=======================
 
 .. class:: pfemIntegrator()
 
@@ -11,6 +12,7 @@ pfemIntegrator
    ::
 
       pfemIntegrator()
+
 
 
 

@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-linearAlgo 
-================================
+===================
+ linearAlgo  class
+===================
 
 .. class:: linearAlgo(secant=False,initial=False,factorOnce=False)
 
@@ -16,6 +17,7 @@ linearAlgo
    ================================   =============================================================
 
    As the tangent matrix typically will not change during the analysis in case of an elastic system it is highly advantageous to use the -factorOnce option. Do not use this option if you have a nonlinear system and you want the tangent used to be actual tangent at time of the analysis step.
+
 
 
 

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===========================================================
- normDispAndUnbalance 
-===========================================================
+=================================================================
+ normDispAndUnbalance  class
+=================================================================
 
 .. class:: normDispAndUnbalance(tolIncr,tolR,iter,pFlag=0,nType=2,maxincr=-1)
 
@@ -21,6 +21,7 @@
 ::
 
    normDispAndUnbalance(tolIncr=1.0e-8, tolR=1.0e-6, iter=10)
+
 
 
 

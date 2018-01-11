@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-explicitDifference 
-==========================================================================
+===========================
+ explicitDifference  class
+===========================
 
 .. class:: explicitDifference()
 
@@ -15,6 +16,7 @@ explicitDifference
    ::
 
       explicitDifference()
+
 
 
 

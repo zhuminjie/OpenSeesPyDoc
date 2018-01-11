@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-minUnbalDispNorm 
-========================================================================================
+=========================
+ minUnbalDispNorm  class
+=========================
 
 .. class:: minUnbalDispNorm(dlambda1,Jd=1,minLambda=dlambda1,maxLambda=dlambda1,det=False)
 
@@ -19,6 +20,7 @@ minUnbalDispNorm
    ::
 
       minUnbalDispNorm(dlambda1=0.1)
+
 
 
 

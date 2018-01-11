@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- elasticIsotropic
-====================================
+==========================================
+ elasticIsotropic class
+==========================================
 
 .. class:: elasticIsotropic(E, nu, rho=0.0)
 
@@ -27,3 +27,4 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+

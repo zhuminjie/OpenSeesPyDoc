@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==================================
- timeSeries 
-==================================
+========================================
+ timeSeries  class
+========================================
 
 .. class:: timeSeries()
 
@@ -34,5 +34,6 @@ Following are timeSeries subclasses available in the OpenSees:
    rectangularSeries
    pulseSeries
    pathSeries
+
 
 

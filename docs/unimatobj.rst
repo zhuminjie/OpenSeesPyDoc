@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============================================
- uniaxialMaterial 
-==============================================
+====================================================
+ uniaxialMaterial  class
+====================================================
 
 .. class:: uniaxialMaterial()
 
@@ -57,3 +57,4 @@ Following are  available uniaxial material subclasses in the OpenSees:
    An object attribute (get) |float|.
    The material tangent at current strain.
  
+

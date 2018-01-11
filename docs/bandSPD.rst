@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=====================================================
- bandSPD 
-=====================================================
+===========================================================
+ bandSPD  class
+===========================================================
 
 .. class:: bandSPD()
 
@@ -10,6 +10,7 @@
    which have a banded profile.
    When a solution is required, the Lapack routines DPBSV and DPBTRS are used.
    A subclass of :class:`system`.
+
 
 
 

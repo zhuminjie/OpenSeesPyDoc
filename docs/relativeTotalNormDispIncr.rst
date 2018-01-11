@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-============================================================
- relativeTotalNormDispIncr 
-============================================================
+==================================================================
+ relativeTotalNormDispIncr  class
+==================================================================
 
 .. class:: relativeTotalNormDispIncr(tol,iter,pFlag=0,nType=2)
 
@@ -13,6 +13,7 @@
 ::
 
    relativeTotalNormDispIncr(tol=1.0e-8, iter=10)
+
 
 
 

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============
- nodeRecorder
-==============
+====================
+ nodeRecorder class
+====================
 
 .. class:: nodeRecorder(nds,dofs,automatic=1,file='',xml='',binary='',csv='',inetAddr='',port=0,precision=6,scientific=0,timeSeries=[],time=0,dT=0.0,closeOnWrite=0,disp=0,vel=0,accel=0,incrDisp=0,reaction=0,reactionIncInertia=0,pressure=0,unbalancedLoad=0,rayleighForces=0)
 
@@ -79,5 +79,6 @@
       #. One must set one of ``file``, ``xml``, ``binary``, ``csv``, or ``inetAddr`` and ``port``.
       #. One must set one of the response types.
       #. In the last example, for a :meth:`pattern.UniformExcitation` analysis, this method generates output file ``nodesA.out`` that contains absolute accelerations (ground motion acceleration + relative acceleration) in x direction for ``nd1`` and ``nd2``. NOTE that if no :class:`timeSeries` is provided and a :meth:`pattern.UniformExcitation` analysis is performed, the relative accelerations are recorded.
+
 
 

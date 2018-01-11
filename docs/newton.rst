@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-newton 
-=====================================
+===============
+ newton  class
+===============
 
 .. class:: newton(secant=False,initial=False,initialThenCurrent=False)
 
@@ -14,6 +15,7 @@ newton
 		                      on first step, then use current stiffness
                                       for subsequent steps. (optional)
    ================================   =============================================================
+
 
 
 

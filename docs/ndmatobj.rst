@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========================================
- nDMaterial 
-==========================================
+================================================
+ nDMaterial  class
+================================================
 
 .. class:: nDMaterial()
 
@@ -46,6 +46,7 @@ Following are  available subclasses in the OpenSees:
 
    An object attribute (get) |listl|.
    The material tangent at current strain.
+
 
 
 

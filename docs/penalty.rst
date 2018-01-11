@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-penalty 
-=========================================
+================
+ penalty  class
+================
 
 .. class:: penalty(alphaS, alphaM)
 
@@ -13,6 +14,7 @@ penalty
    ========================   =============================================================
 
    The degree to which the constraints are enforced is dependent on the penalty values chosen. Problems can arise if these values are too small (constraint not enforced strongly enough) or too large (problems associated with conditioning of the system of equations).
+
 
 
 

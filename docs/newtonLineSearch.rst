@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-newtonLineSearch 
-=======================================================
+=========================
+ newtonLineSearch  class
+=========================
 
 .. class:: newtonLineSearch(Bisection=False,Secant=False,RegulaFalsi=False,InitialInterpolated=False,tol=0.8,maxIter=10,minEta=0.1,maxEta=10.0)
 
@@ -17,6 +18,7 @@ newtonLineSearch
    ``minEta`` |float|                 Min :math:`\eta` value. (optional)
    ``maxEta`` |float|                 Max :math:`\eta` value. (optional)
    ================================   =============================================================
+
 
 
 

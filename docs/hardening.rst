@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- harderning
-====================================
+==========================================
+ harderning class
+==========================================
 
 .. class:: hardening(E, sigmaY, Hiso, Hkin, eta=0.0)
 
@@ -30,3 +30,4 @@
 
      #. :meth:`tagged.__str__`
      #. :meth:`tagged.remove`
+

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- ndFiberSection
-====================================
+==========================================
+ ndFiberSection class
+==========================================
 
 .. class:: ndFiberSection()
 
@@ -101,3 +101,4 @@
 
       # circ layer
       sec.patch(mat=mat, num=5, C=[0.0,0.0], radius=0.8, angle=[0.0, 180.0])
+

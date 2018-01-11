@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-krylovNewton 
-======================================================
+=====================
+ krylovNewton  class
+=====================
 
 .. class:: krylovNewton(iterate='current',increment='current',maxDim=3)
 
@@ -16,6 +17,7 @@ krylovNewton
 		                      the tangent is reformed and
                                       the acceleration restarts. (optional)
    ================================   =============================================================
+
 
 
 

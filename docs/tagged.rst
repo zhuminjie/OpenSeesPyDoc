@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=================================
- tagged 
-=================================
+=======================================
+ tagged  class
+=======================================
 
 
 .. class:: tagged()
@@ -44,6 +44,7 @@
       However, when you |del| a python object or set it to |None|,
       the python object is removed, but
       the OpenSees object is not.
+
 
 
 

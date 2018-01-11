@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-================
-elasticBeamColum
-================
+======================
+elasticBeamColum class
+======================
 
 .. class:: elasticBeamColumn(nds,A,E,Iz,transf,mass=0.0,alpha=0.0,depth=0.0,cMass=0)
    
@@ -80,6 +80,7 @@ elasticBeamColum
    
    An object attribute (get) |listf|
    The rotation of chord.
+
 
 
 

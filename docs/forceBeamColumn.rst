@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-================================================
- forceBeamColumn
-================================================
+======================================================
+ forceBeamColumn class
+======================================================
 
 .. class:: forceBeamColumn(nds,transf,bi,mass=0.0,tol=1e-12,maxIter=10)
 
@@ -120,3 +120,4 @@
 
    An object attribute (get) |listf|.
    The rayleigh forces of the element.
+

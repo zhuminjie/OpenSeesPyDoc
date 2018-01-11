@@ -1,6 +1,6 @@
-=======================
+===============
  Elastic Truss
-=======================
+===============
 
 Two scripts are shown below with
 the :ref:`elasticTrussCurrent`, the :ref:`elasticTrussTclLike`,
@@ -29,3 +29,4 @@ Comparison of two scripts
 
 .. literalinclude:: elasticTruss.py
    :diff: elasticTrussOld.py
+

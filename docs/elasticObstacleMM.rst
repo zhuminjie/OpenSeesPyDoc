@@ -33,3 +33,4 @@ Results
 -------
 
 .. image:: ../_static/elasticObstacleMM.png
+

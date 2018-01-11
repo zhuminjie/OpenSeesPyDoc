@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================================
- truss
-====================================
+==========================================
+ truss class
+==========================================
 
 .. class:: truss(nds, A, mat, rho=0.0, cMass=0,doRayleigh=0)
 
@@ -62,4 +62,5 @@
 
    An object attribute (get) |listf|.
    The deformation of truss.
+
 

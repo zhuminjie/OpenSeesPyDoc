@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-plainHandler 
-==============================================
+=====================
+ plainHandler  class
+=====================
 
 .. class:: plainHandler()
 
@@ -10,6 +11,7 @@ plainHandler
    It can only enforce homogeneous :class:`sp` constraints (:meth:`node.fix`)
    and :class:`mp` constraints constructed where the constraint
    matrix is equal to the identity (:meth:`node.equalDOF`).
+
 
 
 

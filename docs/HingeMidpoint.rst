@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-============================================
- hingeMidpoint 
-============================================
+==================================================
+ hingeMidpoint  class
+==================================================
 
 .. class:: hingeMidpoint(secI,lpI,secJ,lpJ,secE)
 
@@ -36,6 +36,7 @@
    ::
 
       bi = hingeMidpoint(secI=sec1,lpI=0.1,secJ=sec2,lpJ=0.2,secE=sec3)
+
 
 
 

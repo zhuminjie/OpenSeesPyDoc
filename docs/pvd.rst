@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============
- pvd
-==============
+====================
+ pvd class
+====================
 
 .. class:: pvd(filename,automatic=1,dT=0.0,disp=0,vel=0,accel=0,incrDisp=0,reaction=0,pressure=0,unbalancedLoad=0,mass=0,eigen=0,precision=10,indent=2)
 
@@ -49,5 +49,6 @@
 
       pvd = recorder.pvd('test',automatic = 0)
       pvd.record()
+
 
 

@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-loadControl 
-=========================================================
+====================
+ loadControl  class
+====================
 
 .. class:: loadControl(incr,numIter=1,minIncr=incr,maxIncr=incr)
 
@@ -23,6 +24,7 @@ loadControl
    ::
 
       loadControl(incr=1.0/Nsteps)
+
 
 
 

@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-algorithm 
-========================================================
+=================
+ algorithm class
+=================
 
 .. class:: algorithm()
 
@@ -22,6 +23,7 @@ Following are algorithm subclasses available in the OpenSees:
    periodicNewton
    bfgs
    broyden
+
 
 
 

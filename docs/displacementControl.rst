@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-displacementControl 
-==========================================================================
+============================
+ displacementControl  class
+============================
 
 .. class:: displacementControl(nd,dof,incr,numIter=1,dUmin=incr,dUmax=incr)
 
@@ -24,6 +25,7 @@ displacementControl
    ::
 
       displacementControl(nd=nd, dof=2, inc=0.1)
+
 
 
 

@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-generalizedAlpha 
-=================================================================================
+=========================
+ generalizedAlpha  class
+=========================
 
 .. class:: generalizedAlpha(alphaM,alphaF,gamma=0.5+alphaM-alphaF,beta=(1+alphaM-alphaF)^2/4)
 
@@ -33,6 +34,7 @@ generalizedAlpha
    ::
 
       generalizedAlpha(alphaM=1.0, alphaF=0.8)
+
 
 
 

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=======================================================
- midDistanceBeamIntegration 
-=======================================================
+=============================================================
+ midDistanceBeamIntegration  class
+=============================================================
 
 .. class:: midDistanceBeamIntegration(sec,N)
 
@@ -41,6 +41,7 @@
 
    For the ``locs`` shown above, the associated integration weights
    will be ``[0.15, 0.2, 0.3, 0.2, 0.15]``.
+
 
 
 

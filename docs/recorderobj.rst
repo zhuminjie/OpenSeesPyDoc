@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========
- recorder
-==========
+================
+ recorder class
+================
 
 .. class:: recorder()
 
@@ -53,4 +53,5 @@ Following are beamIntegration subclasses available in the OpenSees:
    ::
 
       re.record()
+
 

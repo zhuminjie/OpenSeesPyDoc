@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-======
- bfgs
-======
+============
+ bfgs class
+============
 
 .. class:: bfgs(secant=False,initial=False,count=10)
 
@@ -13,6 +13,7 @@
    ``initial`` |bool|                 Flag to indicate to use initial stiffness.(optional)
    ``count`` |int|                    Number of iterations. (optional)
    ================================   =============================================================
+
 
 
 

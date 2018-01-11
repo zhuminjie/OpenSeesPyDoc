@@ -28,11 +28,12 @@ for f in glob.glob('**',recursive=True):
                     #     line = line[:i]
                     #     found = True
                 
-                if all([ele == '=' for ele in line]):
-                    check = True
+            if len(line)>0 and all([ele == '=' for ele in line]):
+                check = True
+                line = '='*(len(line)+6)
                             
             fd.write(line+'\n')
 
         fd.close()
 
-    break
+

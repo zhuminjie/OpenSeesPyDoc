@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============
- line
-==============
+====================
+ line class
+====================
 
 .. class:: line(nds)
 
@@ -31,3 +31,4 @@
      #. :meth:`tagged.remove`
      #. :meth:`mesh.clearEles`
      #. :meth:`mesh.clearNodes`
+

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====
- sp
-====
+==========
+ sp class
+==========
 
 .. class:: sp()
 
@@ -39,4 +39,5 @@
 
    An object attribute (get) |float|.
    The constrained value.
+
 

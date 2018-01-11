@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-================================================
- zeroLengthSection
-================================================
+======================================================
+ zeroLengthSection class
+======================================================
 
 .. class:: zeroLengthSection(nds, sec, x=[1.0,0.0,0.0], yp=[0.0,1.0,0.0], doRayleigh=1)
 
@@ -63,5 +63,6 @@
 
    An object attribute (get) |listf|.
    The deformation of zeroLengthSection.
+
 
 

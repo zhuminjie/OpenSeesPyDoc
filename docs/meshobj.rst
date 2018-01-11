@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==================================
- mesh 
-==================================
+========================================
+ mesh  class
+========================================
 
 .. class:: mesh()
 
@@ -96,4 +96,5 @@ Following are available mesh subclasses in the OpenSees:
 .. classmethod:: mesh.make()
 
    Make all meshes. This is a class method.
+
 

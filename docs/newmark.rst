@@ -1,7 +1,8 @@
 .. include:: sub.txt
 
-newmark 
-==========================================================
+================
+ newmark  class
+================
 
 .. class:: newmark(gamma,beta,formD=True)
 
@@ -27,6 +28,7 @@ newmark
    ::
 
       newmark(gamma=0.5, beta=0.25)
+
 
 
 
