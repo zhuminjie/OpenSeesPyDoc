@@ -93,6 +93,13 @@ Examples can be found in the last chapter.
    docs/numbererobj
    docs/systemobj
    docs/ctestobj
+
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Example
+      
    docs/examples
 
 Indices and tables
