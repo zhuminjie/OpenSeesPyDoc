@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===============================
- sp 
-===============================
+====
+ sp
+====
 
 .. class:: sp()
 
@@ -28,33 +28,15 @@
    An object attribute (get) |node|.
    The constrained :class:`node`.
 
-   ::
-
-      print(s.nd)
-
 .. attribute:: sp.dof
 
    An object attribute (get) |int|.
    The constrained dof of the :class:`node`.
    The value starts from 1 through :attr:`node.ndf` of the :class:`node`.
 
-   ::
-
-      print(s.dof)
 
 .. attribute:: sp.value
 
    An object attribute (get) |float|.
    The constrained value.
-
-   ::
-
-      print(s.value)
-
-
-	       
-
-
-
-
 
