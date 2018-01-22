@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. include:: docs/sub.txt
+.. include:: sub.txt
 
 .. warning::
 
@@ -28,86 +28,44 @@ equation solving, and material and element routines.
 
 
 `OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_,
-which makes an effort to represent
-the OO design of OpenSees at the script level.
-Everything users do will be creating objects
-and calling object.
-Users of `OpenSeesPy`_ will have a very different
-experience in writing OpenSees scirpts.
-
-All functions and objects in `OpenSeesPy`_
-accept keywords arguments, which means
-the order of keywords arguments can be
-arbitrary. But if positional arguments are
-given, they should in the order given
-in definition. The `OpenSeesPy`_ library
-can be imported as::
+which can be imported as::
 
   import sys
   sys.path.append('/path/to/OpenSeesPy')
 
-  from OpenSees import*
-
-The document is organized in chapters of OpenSees objects.
-Every object has its attributes and methods, which
-reassemble original OpenSees commands.
-For abstract classes such as :class:`element`, :class:`uniaxialMaterial`,
-class methods are defined for creating objects of subclasses.
-
-Examples can be found in the last chapter.
-
+  from opensees import*
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: Model
 
-   docs/tagged
-   docs/modelobj
-   docs/nodeobj
-   docs/elementobj
-   docs/spobj
-   docs/mpobj
-   docs/timeSeriesobj
-   docs/patternobj
-   docs/loadobj
-   docs/eleloadobj
-   docs/sectionobj
-   docs/meshobj
-   docs/regionobj
-   docs/unimatobj
-   docs/ndmatobj
-   docs/geomTransfobj
-   docs/beamIntegrationobj
-   docs/recorderobj
+   model
+   element
+   node
+   fix
+   fixX
+   fixY
+   fixZ
+   equalDOF
+   rigidDiaphragm
+   rigidLink
+   timeSeries
+   pattern
+   mass
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: Analysis
    
-   docs/analysisobj
-   docs/algorithmobj
-   docs/constraintobj
-   docs/integratorobj
-   docs/numbererobj
-   docs/systemobj
-   docs/ctestobj
+  
 
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Example
+   :caption: Examples
       
-   docs/elasticTruss.rst
-   docs/nonlinearTruss.rst
-   docs/elasticObstacleMM.rst
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-
-..   * :ref:`modindex`
-..   * :ref:`search`
