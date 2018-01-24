@@ -77,6 +77,7 @@ Examples of OpenSees can be found below.
    :caption: Tutorials
 
    truss
+   nonlinearTruss
 
 .. _OpenSees-Model-Command:
 
