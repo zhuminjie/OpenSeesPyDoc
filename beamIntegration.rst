@@ -1,12 +1,12 @@
 .. include:: sub.txt
 
-===========================================
- beamIntegration func
-===========================================
+=========================
+ beamIntegration command
+=========================
 
-.. function:: beamIntegration
+.. function:: beamIntegration(type, tag, *args)
 
-   A wide range of numerical integration options are available in OpenSees to represent distributed plasticity or non-prismatic section details in :ref:`Beam-Column Elements <Beam-Column-Elements>`, i.e., across the entire element domain [0, L].
+   A wide range of numerical integration options are available in OpenSees to represent distributed plasticity or non-prismatic section details in Beam-Column Elements, i.e., across the entire element domain [0, L].
 
 
 Following are beamIntegration types available in the OpenSees:

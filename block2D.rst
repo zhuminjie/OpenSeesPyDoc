@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============
- block2D func
-==============
+=================
+ block2D command
+=================
 
 .. function:: block2D(numX, numY, startNode, startEle, eleType, *eleArgs, *crds)
 
@@ -35,5 +35,7 @@
 			      <8>, <x8>, <y8>, <z8>,
 			      
 			      <9>, <x9>, <y9>, <z9>]
+
+			      <> means optional
    ========================   ===========================================================================
 

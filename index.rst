@@ -13,7 +13,7 @@
 
 The OpenSeesPy Library
 ======================================
-`OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_,
+`OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_,
 which can be imported as,
 
 ::
@@ -23,7 +23,7 @@ which can be imported as,
 
   from opensees import*
 
-and follows 
+It strictly follows 
 the `commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_
 of the Tcl version
 of `OpenSees`_. Here are
@@ -47,12 +47,26 @@ below.
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Changed or New Commands
+   :caption: Changed Commands
 
    node
    block2D
    block3D
-   region
+   ForceBeamColumn
+   dispBeamColumn
+   analyze
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: New Commands
+
+   mesh
+   pvdRecorder
+   pfemIntegrator
+   pfemSystem
+   pfemTest
+   pfemAnalysis
    beamIntegration
 
 Examples of OpenSees can be found below.
@@ -60,12 +74,14 @@ Examples of OpenSees can be found below.
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Examples
+   :caption: Tutorials
+
+   truss
 
 .. _OpenSees-Model-Command:
 
-Model Command
--------------
+Model Command Comparison
+------------------------
 
 Tcl `Model Command <http://opensees.berkeley.edu/wiki/index.php/Model_command>`_
 
@@ -81,8 +97,8 @@ Python Model Command
 
 .. _OpenSees-Node-Command:
 
-Node Command
-------------
+Node Command Comparison
+-----------------------
 		
 Tcl `Node Command <http://opensees.berkeley.edu/wiki/index.php/Node_command>`_
 
@@ -103,8 +119,8 @@ where in the second form ``crds`` is a python |list| which can be unpacked using
 
 .. _OpenSees-Truss-Command:
 
-Element Command
----------------------
+Element Command Comparison
+--------------------------
 		
 Tcl `Truss Element Command <http://opensees.berkeley.edu/wiki/index.php/Truss_Element>`_
 
@@ -125,8 +141,8 @@ where in the second form ``eleArgs`` is a python |list| which can be unpacked us
 
 .. _OpenSees-Fix-Command:
 
-Fix Command
----------------------
+Fix Command Comparison
+----------------------
 		
 Tcl `Fix Command <http://opensees.berkeley.edu/wiki/index.php/Fix_Command>`_
 
@@ -147,8 +163,8 @@ where in the second form ``vals`` is a python |list| which can be unpacked using
 
 .. _OpenSees-LinearTimeSeries-Command:
 
-TimeSeries Command
--------------------------
+TimeSeries Command Comparison
+-----------------------------
 		
 Tcl `Linear TimeSeries Command <http://opensees.berkeley.edu/wiki/index.php/Linear_TimeSeries>`_
 
@@ -165,8 +181,8 @@ Python Linear TimeSeries Command
 
 .. _OpenSees-Pattern-Command:
 
-Pattern Command
----------------------
+Pattern Command Comparison
+--------------------------
 
 Tcl `Plain Pattern Command <http://opensees.berkeley.edu/wiki/index.php/Plain_Pattern>`_
 
@@ -190,8 +206,8 @@ Python Plain Pattern Command
 
 .. _OpenSees-Steel01-Command:
 
-UniaxialMaterial Command
---------------------------------
+UniaxialMaterial Command Comparison
+-----------------------------------
 
 Tcl `Steel01 UniaxialMaterial Command <http://opensees.berkeley.edu/wiki/index.php/Steel01_Material>`_
 
@@ -212,8 +228,8 @@ where in the second form ``prop`` is a python |list| which can be unpacked using
 
 .. _OpenSees-ElasticIsotropic-Command:
 
-NDMaterial Command
------------------------------------
+NDMaterial Command Comparison
+-----------------------------
 
 Tcl `ElasticIsotropic NDMaterial Command <http://opensees.berkeley.edu/wiki/index.php/Elastic_Isotropic_Material>`_
 
@@ -236,8 +252,8 @@ where in the second form ``prop`` is a python |list| which can be unpacked using
 
 .. _OpenSees-FiberSection-Command:
 
-Section Command
----------------------
+Section Command Comparison
+--------------------------
 
 Tcl `Fiber Section Command <http://opensees.berkeley.edu/wiki/index.php/Fiber_Section>`_
 
@@ -260,8 +276,8 @@ subcommands are added to the last :ref:`OpenSees-FiberSection-Command`.
 
 .. _OpenSees-LinearTransformation-Command:
 
-Transformation Command
------------------------------
+Transformation Command Comparison
+---------------------------------
 
 Tcl `Linear Transformation Command <http://opensees.berkeley.edu/wiki/index.php/Linear_Transformation>`_
 

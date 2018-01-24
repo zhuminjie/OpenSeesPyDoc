@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-============
- node func
-============
+==============
+ node command
+==============
 
 .. function:: node(nodeTag, *crds, '-mass', *mass, '-disp', *disp, '-vel', *vel, '-accel', *accel, '-ndf', ndf)
 
@@ -11,9 +11,9 @@
    ========================   ===========================================================================
    ``nodeTag`` |int|          node tag.
    ``crds`` |listf|           nodal coordinates.
-   ``mass`` |listf|           nodal mass.
-   ``vel`` |listf|            nodal velocities.
-   ``accel`` |listf|          nodal accelerations.
-   ``ndf`` |float|            nodal ndf.
+   ``mass`` |listf|           nodal mass. (optional)
+   ``vel`` |listf|            nodal velocities. (optional)
+   ``accel`` |listf|          nodal accelerations. (optional)
+   ``ndf`` |float|            nodal ndf. (optional)
    ========================   ===========================================================================
 

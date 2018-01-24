@@ -12,6 +12,8 @@
 
 .. |liste| replace:: (`list`_ (:class:`element`))
 
+.. |lists| replace:: (`list`_ (`str`_))
+
 .. |int| replace:: (`int`_)
    
 .. |del| replace:: `del`_
@@ -56,7 +58,7 @@
 .. _OpenSees: http://opensees.berkeley.edu/
 .. _OpenSees Wiki: http://opensees.berkeley.edu/wiki/index.php/Main_Page
 .. _Finite Element Analysis: https://en.wikipedia.org/wiki/Finite_element_method
-.. _Python: https://docs.python.org/3/
+.. _Python 3: https://docs.python.org/3/
 .. _Earthquake Engineering: http://en.wikipedia.org/wiki/Earthquake_engineering
 .. _object-oriented: http://en.wikipedia.org/wiki/Object-oriented
 .. _parallel: http://en.wikipedia.org/wiki/Parallel_computing

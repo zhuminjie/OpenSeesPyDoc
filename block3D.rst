@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==============
- block3D func
-==============
+=================
+ block3D command
+=================
 
 .. function:: block3D(numX, numY, numZ, startNode, startEle, eleType, *eleArgs, *crds)
 
@@ -71,6 +71,7 @@
 			      <26>, <x26>, <y26>, <z26>,
    
 			      <27>, <x27>, <y27>, <z27>]
-			      
+
+			      <> means optional
    ========================   ===========================================================================
 
