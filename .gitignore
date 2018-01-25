@@ -2,3 +2,5 @@ Makefile
 make.bat
 *~
 _build
+*.pvd
+obstacle
