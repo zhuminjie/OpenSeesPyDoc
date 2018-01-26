@@ -8,11 +8,12 @@
 .. warning::
 
    The OpenSeesPy library is still in beta version.
-   Please send any questions and
-   comments to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
+   Please send any questions,
+   comments and wishlist to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
 
-The OpenSeesPy Library
-======================================
+========================
+ The OpenSeesPy Library
+========================
 `OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_,
 which can be imported as,
 
