@@ -55,6 +55,8 @@ below.
    ForceBeamColumn
    dispBeamColumn
    analyze
+   getNodeTags
+   getEleTags
 
 .. toctree::
    :maxdepth: 2

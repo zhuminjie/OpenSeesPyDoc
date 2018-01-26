@@ -6,7 +6,7 @@
  triangular mesh
 =================
 
-.. function:: mesh('tri',tag,ndf,meshsize,numlines,*ltags,'-remesh',eleType,*eleArgs)
+.. function:: mesh('tri',tag,numlines,*ltags,id,ndf,meshsize,eleType='',*eleArgs=[])
    :noindex:
 
    Create a triangular mesh object.
@@ -14,11 +14,16 @@
 
    ========================   ===========================================================================
    ``tag`` |int|              mesh tag.
-   ``ndf`` |int|              ndf for nodes to be created.
-   ``meshsize`` |float|       mesh size.
    ``numlines`` |int|         number of lines (:ref:`LineMesh`) for defining a polygon.
    ``ltags`` |listi|          the :ref:`LineMesh` tags
-   ``'-remesh'``              this mesh can be remeshed. (optional)
+   ``id`` |int|               mesh id. Meshes with same id are considered as same structure
+                              of fluid identity.
+
+                              * ``id`` = 0 : not considered in FSI
+			      * ``id`` > 0 : structure
+			      * ``id`` < 0 : fluid
+   ``ndf`` |int|              ndf for nodes to be created.
+   ``meshsize`` |float|       mesh size.
    ``eleType`` |str|          the element type, (optional)
 
                               * ``'PFEMElement2DBubble'``

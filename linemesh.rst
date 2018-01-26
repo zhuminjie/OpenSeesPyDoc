@@ -6,15 +6,15 @@
  line mesh
 ===========
 
-.. function:: mesh('line',tag,nd1,nd2,id,ndf,meshsize,eleType='',*eleArgs=[])
+.. function:: mesh('line',tag,numnodes,*ndtags,id,ndf,meshsize,eleType='',*eleArgs=[])
    :noindex:
 
    Create a line mesh object. 
 
    ========================   ===========================================================================
    ``tag`` |int|              mesh tag.
-   ``nd1`` |int|              line end node 1
-   ``nd2`` |int|              line end node 2
+   ``numnodes`` |int|         number of nodes for defining consective lines.
+   ``ndtags`` |listi|         the node tags
    ``id`` |int|               mesh id. Meshes with same id are considered as same structure
                               of fluid identity.
 

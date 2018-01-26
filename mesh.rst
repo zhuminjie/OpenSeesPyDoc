@@ -10,16 +10,6 @@
 
    Create a mesh object. See below for available mesh types.
 
-.. function:: mesh('getNodeTags')
-   :noindex:
-
-   Return the node tags in this mesh
-
-.. function:: mesh('getEleTags')
-   :noindex:
-
-   Return the element tags in this mesh
-
 .. toctree::
    :maxdepth: 2
 
