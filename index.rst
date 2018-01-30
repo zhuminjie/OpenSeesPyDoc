@@ -68,6 +68,7 @@ as demonstrated with few commands above.
    :caption: New Commands
 
    mesh
+   remesh
    pvdRecorder
    pfemIntegrator
    pfemSystem

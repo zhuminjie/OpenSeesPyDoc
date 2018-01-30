@@ -18,7 +18,7 @@
    ``id`` |int|               mesh id. Meshes with same id are considered as same structure
                               of fluid identity.
 
-                              * ``id`` = 0 : not considered in FSI
+                              * ``id`` = 0 : reserved
 			      * ``id`` > 0 : structure
 			      * ``id`` < 0 : fluid
    ``ndf`` |int|              ndf for nodes to be created.
