@@ -4,14 +4,14 @@
  PFEM system
 =============
 
-.. function:: system('PFEM','-quasi')
+.. function:: system('PFEM','-compressible')
    :noindex:
 
    Create a incompressible PFEM system of equations using the Umfpack solver
    
 
    ========================   ===========================================================================
-   ``-quasi``                 Solve using a quasi-incompressible formulation. (optional)
+   ``-compressible``          Solve using a quasi-incompressible formulation. (optional)
    
    ========================   ===========================================================================
 

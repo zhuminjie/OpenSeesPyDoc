@@ -29,7 +29,7 @@ which can be imported as,
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Conversion from Tcl to Python
+   :caption: From Tcl to Python
       
    model
    element
@@ -79,8 +79,9 @@ as demonstrated with few commands above.
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Tutorials
+   :caption: Examples
 
    truss
    nonlinearTruss
-
+   dambreak
+   elasticobstacle
