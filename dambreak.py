@@ -1,5 +1,6 @@
 import sys
 sys.path.append('/path/to/OpenSeesPy')
+sys.path.append('/scratch/opensees/SRC/interpreter')
 from opensees import *
 
 # ------------------------------
@@ -81,7 +82,7 @@ constraints('Plain')
 numberer('Plain')
 
 # create convergence test object
-test('PFEM', 1e-5, 1e-5, 1e-5, 1e-5, 1e-5, 1e-5, 100, 3, 1, 2)
+test('PFEM', 1e-5, 1e-5, 1e-5, 1e-5, 1e-15, 1e-15, 100, 3, 1, 2)
 
 # create algorithm object
 algorithm('Newton')
