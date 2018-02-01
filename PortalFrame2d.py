@@ -3,6 +3,10 @@ sys.path.append('path/to/directory/of/pyd/file')
 
 from opensees import *
 from math import asin, sqrt
+
+import numpy as np
+import matplotlib.pyplot as plt
+
 # Two dimenional Frame: Eigenvalue & Static Loads
 
 

@@ -2,6 +2,9 @@ import sys
 sys.path.append('/path/to/OpenSeesPy')
 from opensees import *
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 # ------------------------------
 # Start of model generation
 # -----------------------------

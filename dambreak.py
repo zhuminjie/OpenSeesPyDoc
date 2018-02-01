@@ -1,7 +1,9 @@
 import sys
 sys.path.append('/path/to/OpenSeesPy')
-sys.path.append('/scratch/opensees/SRC/interpreter')
 from opensees import *
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 # ------------------------------
 # Start of model generation
