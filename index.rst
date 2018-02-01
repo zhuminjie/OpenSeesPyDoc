@@ -25,6 +25,26 @@ which can be imported as,
   from opensees import*
 
 
+* :ref:`Installation <installation>`
+* :ref:`From Tcl to Python <conversion>`
+* :ref:`Changed Commands <changedcmds>`
+* :ref:`New Commands <newcmds>`
+* :ref:`Examples <examples>`
+
+   
+.. _installation:
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Installation
+      
+   windows
+   linux
+   license
+
+
+.. _conversion: 
 
 .. toctree::
    :maxdepth: 2
@@ -47,6 +67,8 @@ The conversion from Tcl to Python is easy and straightforward
 as demonstrated with few commands above.
 
 
+.. _changedcmds:
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -62,6 +84,8 @@ as demonstrated with few commands above.
    getEleTags
 
 
+.. _newcmds:
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -76,6 +100,9 @@ as demonstrated with few commands above.
    pfemAnalysis
    beamIntegration
 
+
+.. _examples:
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -83,5 +110,6 @@ as demonstrated with few commands above.
 
    truss
    nonlinearTruss
+   PortalFrame2d
    dambreak
    elasticobstacle
