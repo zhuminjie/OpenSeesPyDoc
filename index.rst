@@ -29,28 +29,29 @@ which can be imported as,
 * :ref:`From Tcl to Python <conversion>`
 * :ref:`Changed Commands <changedcmds>`
 * :ref:`New Commands <newcmds>`
+* :ref:`Fluid-Structure Interaction commands <fsicmds>`
 * :ref:`Examples <examples>`
 
-   
+
 .. _installation:
-   
+
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: Installation
-      
+
    windows
    linux
    license
 
 
-.. _conversion: 
+.. _conversion:
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: From Tcl to Python
-      
+
    model
    element
    fix
@@ -91,14 +92,22 @@ as demonstrated with few commands above.
    :numbered:
    :caption: New Commands
 
-   mesh
-   remesh
    pvdRecorder
-   pfemIntegrator
-   pfemSystem
-   pfemTest
-   pfemAnalysis
    beamIntegration
+
+.. _fsicmds:
+
+.. toctree::
+  :maxdepth: 2
+  :numbered:
+  :caption: FSI Commands
+
+  mesh
+  remesh
+  pfemIntegrator
+  pfemSystem
+  pfemTest
+  pfemAnalysis
 
 
 .. _examples:
