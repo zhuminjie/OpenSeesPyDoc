@@ -13,8 +13,12 @@ Check the Tcl version
 .. image:: _static/tcl.jpeg
 
 
-Install `Python 3.6`_ or `Anaconda 5.0 Windows`_
-------------------------------------------------
+Install `Python 3.6 Windows`_ or `Anaconda 5.0 Windows`_
+--------------------------------------------------------
+
+.. note::
+
+   64bit Python 3.6 version is required!
 
 Both work, but Anaconda comes with many libraries and editors
 

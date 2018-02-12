@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 .. _MeshCmd:
-   
+
 ==============
  mesh command
 ==============
@@ -15,3 +15,4 @@
 
    linemesh
    trimesh
+   bgmesh

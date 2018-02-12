@@ -26,6 +26,7 @@ which can be imported as,
 
 
 * :ref:`Installation <installation>`
+* :ref:`Available Elements and Materials <availablelib>`
 * :ref:`From Tcl to Python <conversion>`
 * :ref:`Changed Commands <changedcmds>`
 * :ref:`New Commands <newcmds>`
@@ -43,6 +44,17 @@ which can be imported as,
    windows
    linux
    license
+
+.. _availablelib:
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Available Elements and Materials
+
+   availableEles
+   availableUniMats
+   availableNDMats
 
 
 .. _conversion:

@@ -74,7 +74,8 @@
 .. _numpy: http://www.numpy.org/
 .. _matplotlib: https://matplotlib.org/
 .. _ActiveStateTcl 8.5: https://www.activestate.com/activetcl/downloads/thank-you?dl=http://downloads.activestate.com/ActiveTcl/releases/8.5.18.0/ActiveTcl8.5.18.0.298892-win32-x86_64-threaded.exe
-.. _Python 3.6: https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64-webinstall.exe
+.. _Python 3.6 Windows: https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64-webinstall.exe
+.. _Python 3.6 Linux: https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
 .. _Anaconda 5.0 Windows: https://repo.continuum.io/archive/Anaconda3-5.0.1-Windows-x86_64.exe
 .. _Anaconda 5.0 Linux: https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 .. _OpenSeesPy Windows Library: http://web.engr.oregonstate.edu/~zhum/openseespy.zip
