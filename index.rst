@@ -104,6 +104,7 @@ as demonstrated with few commands above.
 
   mesh
   remesh
+  particle
   pfemIntegrator
   pfemSystem
   pfemTest

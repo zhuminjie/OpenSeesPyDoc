@@ -37,4 +37,4 @@ to
 
 ::
 
-   sys.path.append('/path/to/OpenSeesPy')
+   sys.path.append('C:/path/to/OpenSeesPy')
