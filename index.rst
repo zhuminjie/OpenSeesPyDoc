@@ -135,3 +135,7 @@ as demonstrated with few commands above.
    PortalFrame2d
    dambreak
    elasticobstacle
+
+.. raw:: html
+
+   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw"></script>
