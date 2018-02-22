@@ -82,4 +82,4 @@ as demonstrated with commands below.
 
 .. raw:: html
 
-   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw"></script>
+   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
