@@ -22,6 +22,7 @@ which can be imported as,
 
   import sys
   sys.path.append('/path/to/OpenSeesPy')
+  sys.path.append('C:/path/to/OpenSeesPy')
 
   from opensees import*
 
