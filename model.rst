@@ -4,19 +4,12 @@
  model command
 ===============
 
-The Tcl model command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Model_command>`_.
+.. function:: model('basic', '-ndm', ndm, '-ndf', ndf=ndm*(ndm+1)/2)
 
-The Tcl version of the model command:
+   Set the default model dimensions and number of dofs.
 
-.. code-block:: tcl
-
-   model basic -ndm $ndm -ndf $ndf
-
-The corresponding Python version of the model command
-
-.. code-block:: python
-
-   model('basic','-ndm',ndm,'-ndf',ndf)
-
+   ========================   ===========================================================================
+   ``ndm`` |int|              number of dimensions (1,2,3)
+   ``ndf`` |int|              number of dofs (optional)
+   ========================   ===========================================================================
 

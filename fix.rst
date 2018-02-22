@@ -4,25 +4,24 @@
  fix command
 =============
 
-The Tcl fix command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Fix_Command>`_.
+.. function:: fix(nodeTag, *constrValues)
 
-The Tcl version of the fix command:
+   Create a homogeneous SP constriant.
 
-.. code-block:: tcl
+   ========================   ===========================================================================
+   ``nodeTag`` |int|          tag of node to be constrained
+   ``constrValues`` |listi|   a list of constraint values (0 or 1),
+	                      must be preceded with ``*``.
 
-   fix $nodeTag 1 1 1
+			      * ``0`` free
+			      * ``1`` fixed
+   ========================   ===========================================================================
 
-The corresponding Python version of the fix command
-
-.. code-block:: python
-
-   fix(nodeTag, 1,1,1)
-
-A more pythonic Python version using a list
+For example, 
 
 .. code-block:: python
 
+   # fully fixed
    vals = [1,1,1]
    fix(nodeTag, *vals)
 

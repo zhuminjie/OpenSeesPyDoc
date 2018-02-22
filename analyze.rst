@@ -6,7 +6,7 @@
 
 .. function:: analyze(numIncr=1, dt=0.0, dtMin=0.0, dtMax=0.0, Jd=0)
 
-   Perform the analysis.
+   Perform the analysis. Return ``0`` if successful, ``<0`` if **NOT** successful
 
    ===============================   ======================================================================================
    ``numIncr`` |int|                 Number of analysis steps to perform. (required except for :ref:`PFEM-Analysis`)

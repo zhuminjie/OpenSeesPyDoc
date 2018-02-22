@@ -8,6 +8,7 @@
 .. warning::
 
    The OpenSeesPy library is still in beta version.
+   This manual is not complete.
    Please send any questions,
    comments and wishlist to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
 
@@ -24,20 +25,16 @@ which can be imported as,
 
   from opensees import*
 
-
-* :ref:`Installation <installation>`
-* :ref:`Available Elements and Materials <availablelib>`
-* :ref:`From Tcl to Python <conversion>`
-* :ref:`Changed Commands <changedcmds>`
-* :ref:`New Commands <newcmds>`
-* :ref:`Fluid-Structure Interaction commands <fsicmds>`
-* :ref:`Examples <examples>`
+Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
+OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.
+The conversion from Tcl to Python is easy and straightforward
+as demonstrated with commands below.
 
 
 .. _installation:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: Installation
 
@@ -48,7 +45,7 @@ which can be imported as,
 .. _availablelib:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: Available Elements and Materials
 
@@ -57,76 +54,22 @@ which can be imported as,
    availableNDMats
 
 
-.. _conversion:
+.. _cmdsmanual:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
-   :caption: From Tcl to Python
+   :caption: Commands Manual 
 
-   model
-   element
-   fix
-   timeSeries
-   pattern
-   uniaxialMaterial
-   ndMaterial
-   section
-   geomTransf
-
-Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
-OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.
-The conversion from Tcl to Python is easy and straightforward
-as demonstrated with few commands above.
-
-
-.. _changedcmds:
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Changed Commands
-
-   node
-   block2D
-   block3D
-   ForceBeamColumn
-   dispBeamColumn
-   analyze
-   getNodeTags
-   getEleTags
-
-
-.. _newcmds:
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: New Commands
-
-   pvdRecorder
-   beamIntegration
-
-.. _fsicmds:
-
-.. toctree::
-  :maxdepth: 2
-  :numbered:
-  :caption: FSI Commands
-
-  mesh
-  remesh
-  particle
-  pfemIntegrator
-  pfemSystem
-  pfemTest
-  pfemAnalysis
-
+   modelcmds
+   analysiscmds
+   outputcmds
+   fsicmds
 
 .. _examples:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: Examples
 

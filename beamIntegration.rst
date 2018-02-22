@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=========================
- beamIntegration command
-=========================
+==========================
+ beamIntegration commands
+==========================
 
 .. function:: beamIntegration(type, tag, *args)
 

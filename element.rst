@@ -4,28 +4,34 @@
  element command
 =================
 
-Use truss as an example.
+.. function:: element(eleType, eleTag, *eleNodes, *eleArgs)
 
-The Tcl truss command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Truss_Element>`_.
+   Create a OpenSees element.
 
-The Tcl version of the truss command:
+   ================================   ===========================================================================
+   ``eleType`` |str|                  element type
+   ``eleTag`` |int|                   element tag.
+   ``eleNodes`` |listi|               a list of element nodes, must be preceded with ``*``.
+   ``eleArgs`` |list|                 a list of element arguments, must be preceded with ``*``.
+   ================================   ===========================================================================
 
-.. code-block:: tcl
-
-   element truss $eleTag $iNode $jNode $A $matTag
-
-The corresponding Python version of the truss command
-
-.. code-block:: python
-
-   element('truss', eleTag, iNode, jNode, A, matTag)
-
-A more pythonic Python version using a list
-
+For example, 
 
 .. code-block:: python
 
-   eleType = ['truss', eleTag, iNode, jNode]
+   eleType = 'truss'
+   eleTag = 1
+   eleNodes = [iNode, jNode]
    eleArgs = [A, matTag]
-   element(*eleType, *eleArgs)
+   element(eleType, eleTag, *eleNodes, *eleArgs)
+
+
+
+The following contain information about available ``eleType``:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Beam-Column Elements
+
+   ForceBeamColumn
+   dispBeamColumn
