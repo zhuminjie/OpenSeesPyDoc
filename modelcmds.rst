@@ -14,6 +14,7 @@ The model or domain in OpenSees is a collection (an aggregation in object-orient
    element
    node
    SP_Constraint
+   mp_constraint
    timeSeries
    pattern
    block

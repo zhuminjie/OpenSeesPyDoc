@@ -8,13 +8,15 @@
 
 .. function:: remesh(alpha=-1.0)
 
-   Update the mesh with ``id <= 0``.
+   * :math:`\alpha \ge 0` for updating moving mesh.
+   * :math:`\alpha \lt 0` for updating background mesh.
+
+
 
 
    ========================   ===========================================================================
    ``alpha`` |float|          Parameter for the :math:`\alpha` method to construct a mesh
-	                      from the node cloud of all meshes.
-	                      :math:`\alpha \ge 0`. (optional)
+	                      from the node cloud of moving meshes. (optional)
 
 			      * :math:`\alpha = 0` : no elements are created
 			      * large :math:`\alpha` : all elements in the convex hull are created

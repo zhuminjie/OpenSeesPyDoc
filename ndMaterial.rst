@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========================
- nDMaterial command
-==========================
+=====================
+ nDMaterial commands
+=====================
 
 Use the ElasticIsotropic material as an example.
 

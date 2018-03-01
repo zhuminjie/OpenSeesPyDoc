@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=================
- pattern command
-=================
+==================
+ pattern commands
+==================
 
 Use the plain pattern as an example.
 

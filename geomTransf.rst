@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-====================
- geomTransf command
-====================
+=====================
+ geomTransf commands
+=====================
 
 Use the linear geomTransf as an example.
 

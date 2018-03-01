@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ========================
- SP_Constraint commands
+ sp constraint commands
 ========================
 
 Create constraints for a single dof of a node.
@@ -11,3 +11,6 @@ Create constraints for a single dof of a node.
    :maxdepth: 2
 
    fix
+   fixX
+   fixY
+   fixZ

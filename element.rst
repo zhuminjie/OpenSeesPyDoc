@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=================
- element command
-=================
+==================
+ element commands
+==================
 
 .. function:: element(eleType, eleTag, *eleNodes, *eleArgs)
 

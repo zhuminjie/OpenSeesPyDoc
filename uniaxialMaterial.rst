@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========================
- uniaxialMaterial command
-==========================
+===========================
+ uniaxialMaterial commands
+===========================
 
 Use the Steel01 material as an example.
 

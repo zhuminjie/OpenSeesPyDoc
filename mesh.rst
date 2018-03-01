@@ -15,4 +15,5 @@
 
    linemesh
    trimesh
+   partmesh
    bgmesh
