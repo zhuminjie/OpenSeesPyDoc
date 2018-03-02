@@ -26,3 +26,9 @@ The following contain information about available ``tsType``:
    :maxdepth: 2
 
    constantTs
+   linearTs
+   trigTs
+   triangleTs
+   rectTs
+   pulseTs
+   pathTs
