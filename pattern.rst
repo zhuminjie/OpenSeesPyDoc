@@ -4,33 +4,22 @@
  pattern commands
 ==================
 
-Use the plain pattern as an example.
+.. function:: pattern(patternType, patternTag, *patternArgs)
 
-The Tcl plain pattern command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Plain_Pattern>`_.
-
-The Tcl version of the plain pattern command:
-
-.. code-block:: tcl
-
-   pattern Plain $patternTag $tsTag {
-       load $nodeTag $Px $Py
-       eleLoad -ele $eleTag1 $eleTag2 -type -beamUniform $Wy
-       sp $nodeTag $dofTag $dofValue
-   }
-
-The corresponding Python version of the plain pattern command
-
-.. code-block:: python
-
-   pattern('Plain', patternTag, tsTag)
-   eleLoad('-ele', eleTag1, eleTag2, '-type', '-beamUniform', Wy)
-   load(nodeTag, Py, Py)
-   sp(nodeTag, dofTag, dofValue)
+The pattern command is used to construct a LoadPattern and add it to the Domain. Each LoadPattern in OpenSees has a TimeSeries associated with it. In addition it may contain ElementLoads, NodalLoads and SinglePointConstraints. Some of these SinglePoint constraints may be associated with GroundMotions.
 
 
+================================   ===========================================================================
+   ``patternType`` |str|           pattern type.
+   ``patternTag`` |int|            pattern tag.
+   ``patternArgs`` |list|          a list of pattern arguments
+================================   ===========================================================================
 
-As shown above, the Tcl pattern commands include the subcommands,
-load, eleLoad, sp, as the last parameter. While this is not possible
-in Python, in which subcommands issued after a pattern command are
-considered as in that pattern.
+
+The following contain information about available ``patternType``:
+
+.. toctree::
+   :maxdepth: 2
+
+   plainPattern
+   uniformExcitation
