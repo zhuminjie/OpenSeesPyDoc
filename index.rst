@@ -77,6 +77,7 @@ as demonstrated with commands below.
    truss
    nonlinearTruss
    PortalFrame2d
+   Canti2DEQ
    dambreak
    elasticobstacle
 
