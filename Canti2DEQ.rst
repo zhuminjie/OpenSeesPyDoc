@@ -7,7 +7,7 @@
 
 #. The source code is shown below, which can be downloaded :download:`here <Canti2DEQ.py>`.
 #. The ground motion data file :download:`here <A10000.dat>` must be put in the same folder.
-#. Change the line 2 below to set the right path where the OpenSeesPy library located.
+#. Change the line 4 below to set the right path where the OpenSeesPy library located.
 #. Run the source code in your favorate Python program and should see results below
 
 ::
