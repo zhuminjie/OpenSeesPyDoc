@@ -20,4 +20,4 @@
 
 .. literalinclude:: Canti2DEQ.py
    :linenos:
-   :emphasize-lines: 2
+   :emphasize-lines: 5
