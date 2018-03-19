@@ -16,4 +16,8 @@ In OpenSees, an analysis is an object which is composed by the aggregation of co
 .. toctree::
    :maxdepth: 1
 
+   constraints
+   numberer
+   system
+   test
    analyze
