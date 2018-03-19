@@ -4,28 +4,31 @@
  uniaxialMaterial commands
 ===========================
 
-Use the Steel01 material as an example.
+.. function:: uniaxialMaterial(matType, matTag, *matArgs)
 
-The Tcl uniaxialMaterial command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Steel01_Material>`_.
+   This command is used to construct a UniaxialMaterial object which represents uniaxial stress-strain (or force-deformation) relationships.
 
-The Tcl version of the uniaxialMaterial command:
+   ================================   ===========================================================================
+   ``matType`` |str|                  material type
+   ``matTag`` |int|                   material tag.
+   ``matArgs`` |list|                 a list of material arguments, must be preceded with ``*``.
+   ================================   ===========================================================================
 
-.. code-block:: tcl
-
-   uniaxialMaterial Steel01 $matTag $Fy $E0 $b 
-
-
-The corresponding Python version of the uniaxialMaterial command
+For example,
 
 .. code-block:: python
 
-   uniaxialMaterial('Steel01', matTag, Fy, E0, b)
+   matType = 'Steel01'
+   matTag = 1
+   matArgs = [Fy, E0, b]
+   uniaxialMaterial(matType, matTag, *matArgs)
 
-A more pythonic Python version using a list
 
-.. code-block:: python
 
-   args = [Fy, E0, b]
-   uniaxialMaterial('Steel01', matTag, *args)
+The following contain information about available ``matType``:
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Steel & Reinforcing-Steel Materials
+
+   steel01

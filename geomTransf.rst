@@ -4,19 +4,30 @@
  geomTransf commands
 =====================
 
-Use the linear geomTransf as an example.
+.. function:: geomTransf(transfType, transfTag, *transfArgs)
 
-The Tcl linear geomTransf command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Linear_Transformation>`_.
+   The geometric-transformation command is used to construct a coordinate-transformation (CrdTransf) object, which transforms beam element stiffness and resisting force from the basic system to the global-coordinate system. The command has at least one argument, the transformation type.
 
-The Tcl version of the geomTransf command:
+   ================================   ===========================================================================
+   ``transfType`` |str|               geomTransf type
+   ``transfTag`` |int|                geomTransf tag.
+   ``transfArgs`` |list|              a list of geomTransf arguments, must be preceded with ``*``.
+   ================================   ===========================================================================
 
-.. code-block:: tcl
-
-   geomTransf Linear $transfTag
-
-The corresponding Python version of the geomTransf command
+For example,
 
 .. code-block:: python
 
-   geomTransf('Linear', transfTag)
+   transfType = 'Linear'
+   transfTag = 1
+   transfArgs = []
+   geomTransf(transfType, transfTag, *transfArgs)
+
+
+
+The following contain information about available ``transfType``:
+
+.. toctree::
+   :maxdepth: 2
+
+   LinearTransf

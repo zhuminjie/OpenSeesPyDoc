@@ -1,30 +1,33 @@
 .. include:: sub.txt
 
-=====================
+===========================
  nDMaterial commands
-=====================
+===========================
 
-Use the ElasticIsotropic material as an example.
+.. function:: nDMaterial(matType, matTag, *matArgs)
 
-The Tcl nDMaterial command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Elastic_Isotropic_Material>`_.
+   This command is used to construct an NDMaterial object which represents the stress-strain relationship at the gauss-point of a continuum element.
 
-The Tcl version of the nDMaterial command:
+   ================================   ===========================================================================
+   ``matType`` |str|                  material type
+   ``matTag`` |int|                   material tag.
+   ``matArgs`` |list|                 a list of material arguments, must be preceded with ``*``.
+   ================================   ===========================================================================
 
-.. code-block:: tcl
-
-   nDMaterial ElasticIsotropic $matTag $E $v 
-
-The corresponding Python version of the nDMaterial command
-
-.. code-block:: python
-
-   nDMaterial('ElasticIsotropic', matTag, E, v)
-
-A more pythonic Python version using a list
+For example,
 
 .. code-block:: python
 
-   args = [E, v]
-   nDMaterial('ElasticIsotropic', matTag, *args)
+   matType = 'ElasticIsotropic'
+   matTag = 1
+   matArgs = [E, v]
+   nDMaterial(matType, matTag, *matArgs)
 
+
+
+The following contain information about available ``matType``:
+
+.. toctree::
+   :maxdepth: 2
+
+   elasticIsotropic

@@ -17,9 +17,13 @@ The model or domain in OpenSees is a collection (an aggregation in object-orient
    mp_constraint
    timeSeries
    pattern
+   mass
+   region
+   reyleigh
    block
    beamIntegration
    uniaxialMaterial
    ndMaterial
    section
+   frictionModel
    geomTransf

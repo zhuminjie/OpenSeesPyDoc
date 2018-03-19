@@ -23,3 +23,4 @@ The following contain information about available ``patternType``:
 
    plainPattern
    uniformExcitation
+   multiExcitation

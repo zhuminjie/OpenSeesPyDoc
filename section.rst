@@ -4,27 +4,30 @@
  section commands
 ==================
 
-Use the fiber section as an example.
+.. function:: section(secType, secTag, *secArgs)
 
-The Tcl section command can be found 
-`here <http://opensees.berkeley.edu/wiki/index.php/Fiber_Section>`_.
+   This command is used to construct a SectionForceDeformation object, hereto referred to as Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
 
-The Tcl version of the section command:
+   ================================   ===========================================================================
+   ``secType`` |str|                  section type
+   ``secTag`` |int|                   section tag.
+   ``secArgs`` |list|                 a list of section arguments, must be preceded with ``*``.
+   ================================   ===========================================================================
 
-.. code-block:: tcl
-
-   section Fiber $secTag {
-       fiber $yLoc $zLoc $A $matTag
-   }
-
-The corresponding Python version of the section command
+For example,
 
 .. code-block:: python
 
-   section('Fiber', secTag)
-   fiber(yLoc,zLoc,A,matTag)
+   secType = 'Elastic'
+   secTag = 1
+   secArgs = [E, A, Iz]
+   section(secType, secTag, *secArgs)
 
-As shown above, the Tcl section commands include the subcommands,
-fiber, as the last parameter. While this is not possible
-in Python, in which subcommands issued after a section command are
-considered as in that section.
+
+
+The following contain information about available ``secType``:
+
+.. toctree::
+   :maxdepth: 2
+
+   elasticSection
