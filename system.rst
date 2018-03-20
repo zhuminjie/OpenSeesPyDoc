@@ -26,3 +26,5 @@ The following contain information about available ``systemType``:
    UmfPack
    FullGeneral
    SparseSYM
+
+* :ref:`PFEM-System`

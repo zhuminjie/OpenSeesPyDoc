@@ -20,4 +20,8 @@ In OpenSees, an analysis is an object which is composed by the aggregation of co
    numberer
    system
    test
+   algorithm
+   integrator
+   analysis
+   eigen
    analyze

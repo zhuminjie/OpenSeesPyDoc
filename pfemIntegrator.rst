@@ -1,5 +1,7 @@
 .. include:: sub.txt
 
+.. _PFEM-Integrator:
+
 =================
  PFEM integrator
 =================

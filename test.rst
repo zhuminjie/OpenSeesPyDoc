@@ -29,3 +29,6 @@ The following contain information about available ``testType``:
    fixedNumIter
    normDispAndUnbalance
    normDispOrUnbalance
+
+
+* :ref:`PFEM-Test`
