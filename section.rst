@@ -31,3 +31,14 @@ The following contain information about available ``secType``:
    :maxdepth: 2
 
    elasticSection
+   fibersection
+   ndfiber
+   wfsection2d
+   rcsection2d
+   parallelsection
+   sectionaggregator
+   uniaxialsection
+   elasticMembranePlateSection
+   plateFiberSection
+   bidirectionalSection
+   isolatorsection
