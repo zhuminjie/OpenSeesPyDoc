@@ -31,3 +31,5 @@ The following contain information about available ``transfType``:
    :maxdepth: 2
 
    LinearTransf
+   pdelta
+   corotational

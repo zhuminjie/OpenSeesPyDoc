@@ -31,3 +31,7 @@ The following contain information about available ``frnType``:
    :maxdepth: 2
 
    Coulomb
+   veldependent
+   velnormal
+   velpressure
+   velmulti
