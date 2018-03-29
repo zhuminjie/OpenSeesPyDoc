@@ -11,9 +11,7 @@ These commands are related to the Fluid-Structure Interaction analysis in OpenSe
 
    mesh
    remesh
-   particle
    pfemIntegrator
    pfemSystem
    pfemTest
    pfemAnalysis
-
