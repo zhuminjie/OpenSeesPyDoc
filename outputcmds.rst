@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===============
-Output Commands
-===============
+================
+Utility Commands
+================
 
 Get outputs from OpenSees. These commands don't change internal states of OpenSees.
 
@@ -13,3 +13,4 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
    getEleTags
    getTime
    recorder
+   record

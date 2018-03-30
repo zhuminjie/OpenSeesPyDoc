@@ -2,9 +2,9 @@
 
 .. _PVDRecorder:
    
-======================
- pvd recorder command
-======================
+====================
+pvd recorder command
+====================
 
 .. function:: recorder('PVD',filename,'-precision',precision=10,'-dT',dT=0.0,*res)
    :noindex:
@@ -19,13 +19,13 @@
    ``res`` |lists|            a list of |str| of responses to be recorded, (optional)
 
                               * ``'disp'``
-			      * ``'vel'``
-			      * ``'accel'``
-			      * ``'incrDisp'``
-			      * ``'reaction'``
-			      * ``'pressure'``
-			      * ``'unbalancedLoad'``
-			      * ``'mass'``
-			      * ``'eigen'``
+			                     * ``'vel'``
+			                     * ``'accel'``
+			                     * ``'incrDisp'``
+			                     * ``'reaction'``
+			                     * ``'pressure'``
+			                     * ``'unbalancedLoad'``
+			                     * ``'mass'``
+			                     * ``'eigen'``
    ========================   =============================================================
 
