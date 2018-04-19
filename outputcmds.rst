@@ -1,16 +1,28 @@
 .. include:: sub.txt
 
-================
-Utility Commands
-================
+===============
+Output Commands
+===============
 
 Get outputs from OpenSees. These commands don't change internal states of OpenSees.
 
 .. toctree::
    :maxdepth: 1
 
-   getNodeTags
+   eleNodes
+   eleResponse
    getEleTags
+   getNodeTags
    getTime
-   recorder
+   nodeAccel
+   nodeBounds
+   nodeCoord
+   nodeDisp
+   nodeEigenvector
+   nodeVel
+   printA
+   printModel
    record
+   recorder
+   testIter
+   testNorm

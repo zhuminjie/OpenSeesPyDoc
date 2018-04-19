@@ -60,11 +60,12 @@ as demonstrated with commands below.
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Commands Manual 
+   :caption: Commands Manual
 
    modelcmds
    analysiscmds
    outputcmds
+   utilitycmds
    fsicmds
 
 .. _examples:
