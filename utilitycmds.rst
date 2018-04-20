@@ -9,9 +9,28 @@ These commands are used to monitor and change the state of the model.
 .. toctree::
    :maxdepth: 1
 
+   convertBinaryToText
+   convertTextToBinary
+   database
+   domainChange
+   InitialStateAnalysis
    loadConst
+   modalDamping
+   reactions
    remove
    reset
+   restore
+   save
    setTime
+   setNodeCoord
+   setNodeDisp
+   setNodeVel
+   setNodeAccel
+   setPrecision
+   setElementRayleighDampingFactors
+   start
+   stop
+   stripXML
+   updateElementDomain
    wipe
    wipeAnalysis
