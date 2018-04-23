@@ -42,3 +42,4 @@ The following contain information about available ``secType``:
    plateFiberSection
    bidirectionalSection
    isolatorsection
+   LayeredShell

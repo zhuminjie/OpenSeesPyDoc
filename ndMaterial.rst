@@ -31,3 +31,41 @@ The following contain information about available ``matType``:
    :maxdepth: 2
 
    elasticIsotropic
+   elasticOrthotropic
+   J2Plasticity
+   DrunkerPrager
+   Damage2p
+   PlaneStress
+   PlaneStrain
+   MultiAxialCyclicPlasticity
+   BoundingCamClay
+   PlateFiber
+   FSAM
+   ManzariDafalias
+   PM4Sand
+   StressDensityModel
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tsinghua Sand Models
+
+   CycLiqCP
+   CycLiqCPSP
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Materials for Modeling Concrete Walls
+
+   PlaneStressUserMaterial
+   PlateFromPlaneStress
+   PlateRebar
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contact Materials for 2D and 3D
+
+   ContactMaterial2D
