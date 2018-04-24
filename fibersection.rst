@@ -15,6 +15,13 @@
                                       to the section (optional)
    ================================   ===========================================================================
 
+.. function:: section('FiberThermal', secTag, '-GJ', GJ=0.0)
+   :noindex:
+
+   This command create a FiberSectionThermal object.
+
+
+
 .. note::
 
 

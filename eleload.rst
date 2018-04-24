@@ -4,7 +4,7 @@
  eleLoad command
 ===================
 
-.. function:: eleLoad('-ele', *eleTags, '-range', eleTag1, eleTag2, '-type', '-beamUniform', Wy, Wz=0.0, Wx=0.0, '-beamPoint',Py,Pz=0.0,xL,Px=0.0)
+.. function:: eleLoad('-ele', *eleTags, '-range', eleTag1, eleTag2, '-type', '-beamUniform', Wy, Wz=0.0, Wx=0.0, '-beamPoint',Py,Pz=0.0,xL,Px=0.0,'-beamThermal',*tempPts)
 
    The eleLoad command is used to construct an ElementalLoad object and add it to the enclosing LoadPattern.
 
@@ -25,11 +25,16 @@
 	                      element. (optional and only for 3D)
    ``xL`` |float|             location of point load relative to node I,
 	                      prescribed as fraction of element length
+   ``tempPts`` |listf|        temperature points:
+	                      ``temPts = [T1, y1, T2, y2, ..., T9, y9]``
+			      Each point ``(T1, y1)`` define a temperature and
+			      location. This command may accept 2,5 or 9
+			      temperature points.
    ========================   =============================================================
 
 
 .. note::
 
-   
+
    #. The load values are reference loads values, it is the time sereries that provides the load factor. The load factor times the reference values is the load that is actually applied to the node.
    #. At the moment, eleLoads do not work with 3D beam-column elements if Corotational geometric transformation is used.
