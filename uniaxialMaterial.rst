@@ -48,3 +48,10 @@ The following contain information about available ``matType``:
    Concrete01
    Concrete02
    Concrete04
+   Concrete06
+   Concrete07
+   Concrete01WithSITC
+   ConfinedConcrete01
+   ConcreteD
+   FRPConfinedConcrete
+   ConcreteCM
