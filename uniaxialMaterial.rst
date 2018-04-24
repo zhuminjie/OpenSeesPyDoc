@@ -32,3 +32,19 @@ The following contain information about available ``matType``:
    :caption: Steel & Reinforcing-Steel Materials
 
    steel01
+   steel02
+   steel4
+   Hysteretic
+   ReinforcingSteel
+   Dodd_Restrepo
+   RambergOsgoodSteel
+   SteelMPF
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Concrete Materials
+
+   Concrete01
+   Concrete02
+   Concrete04
