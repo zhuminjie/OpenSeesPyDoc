@@ -44,6 +44,7 @@ The following contain information about available ``matType``:
    ManzariDafalias
    PM4Sand
    StressDensityModel
+   AcousticMedium
 
 .. toctree::
    :maxdepth: 2
@@ -69,3 +70,27 @@ The following contain information about available ``matType``:
    :caption: Contact Materials for 2D and 3D
 
    ContactMaterial2D
+   ContactMaterial3D
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Wrapper material for Initial State Analysis
+
+   InitialStateAnalysisWrapper
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: UC San Diego soil models
+
+   PressureIndependMultiYield
+   PressureDependMultiYield
+   PressureDependMultiYield02
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: UC San Diego Saturated Undrained soil
+
+   FluidSolidPorousMaterial
