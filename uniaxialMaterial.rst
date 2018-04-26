@@ -55,3 +55,66 @@ The following contain information about available ``matType``:
    ConcreteD
    FRPConfinedConcrete
    ConcreteCM
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Standard Uniaxial Materials
+
+   ElasticUni
+   ElasticPP
+   ElasticPPGap
+   ENT
+   ParallelUni
+   SeriesUni
+
+.. toctree::
+   :maxdepth: 2
+   :caption: PyTzQz uniaxial materials for p-y, t-z and q-z elements for modeling soil-structure interaction through the piles in a structural foundation
+
+   PySimple1
+   TzSimple1
+   QzSimple1
+   PyLiq1
+   TzLiq1
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other Uniaxial Materials
+
+   Hardening
+   Cast
+   ViscousDamper
+   BilinearOilDamper
+   Bilin
+   ModIMKPeakOriented
+   ModIMKPinching
+   SAWS
+   BarSlip
+   Bond_SP01
+   Fatigue
+   ImpactMaterial
+   HyperbolicGapMaterial
+   LimitState
+   MinMax
+   ElasticBilin
+   ElasticMultiLinear
+   MultiLinear
+   InitStrainMaterial
+   InitStressMaterial
+   PathIndependent
+   Pinching4
+   ECC01
+   SelfCentering
+   Viscous
+   BoucWen
+   BWBN
+   KikuchiAikenHDR
+   KikuchiAikenLRB
+   AxialSp
+   AxialSpHD
+   PinchingLimitStateMaterial
+   CFSWSWP
+   CFSSSWP
