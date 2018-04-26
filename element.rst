@@ -15,7 +15,7 @@
    ``eleArgs`` |list|                 a list of element arguments, must be preceded with ``*``.
    ================================   ===========================================================================
 
-For example, 
+For example,
 
 .. code-block:: python
 
@@ -31,7 +31,49 @@ The following contain information about available ``eleType``:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Zero-Length Elements
+
+   ZeroLength
+   zeroLengthND
+   zeroLengthSection
+   CoupledZeroLength
+   zeroLengthContact2D
+   zeroLengthContactNTS2D
+   zeroLengthInterface2D
+   zeroLengthImpact3D
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Truss Elements
+
+   trussEle
+   corotTruss
+
+.. toctree::
+   :maxdepth: 2
    :caption: Beam-Column Elements
 
-   ForceBeamColumn
+   elasticBeamColumn
+   ModElasticBeam2d
+   ElasticTimoshenkoBeam
+   beamWithHinges
    dispBeamColumn
+   ForceBeamColumn
+   dispBeamColumnInt
+   MVLEM
+   SFI_MVLEM
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Joint Elements
+
+   beamColumnJoint
+   ElasticTubularJoint
+   Joint2D
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Link Elements
+
+   twoNodeLink
