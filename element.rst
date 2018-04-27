@@ -77,3 +77,34 @@ The following contain information about available ``eleType``:
    :caption: Link Elements
 
    twoNodeLink
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Bearing Elements
+
+   elastomericBearingPlasticity
+   elastomericBearingBoucWen
+   flatSliderBearing
+   singleFPBearing
+   TFP
+   TripleFrictionPendulum
+   multipleShearSpring
+   KikuchiBearing
+   YamamotoBiaxialHDR
+   ElastomericX
+   LeadRubberX
+   HDR
+   RJWatsonEqsBearing
+   FPBearingPTV
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Quadrilateral Elements
+
+   quad
+   ShellMITC4
+   ShellDKGQ
+   ShellDKGT
+   ShellNLDKGQ
