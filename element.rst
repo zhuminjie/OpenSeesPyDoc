@@ -108,3 +108,83 @@ The following contain information about available ``eleType``:
    ShellDKGQ
    ShellDKGT
    ShellNLDKGQ
+   ShellNLDKGT
+   ShellNL
+   bbarQuad
+   enhancedQuad
+   SSPquad
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Triangular Elements
+
+   tri31
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Brick Elements
+
+   stdBrick
+   bbarBrick
+   Brick20N
+   SSPbrick
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tetrahedron Elements
+
+   FourNodeTetrahedron
+
+.. toctree::
+   :maxdepth: 2
+   :caption: UC San Diego u-p element (saturated soil)
+
+   quadUP
+   brickUP
+   bbarQuadUP
+   bbarBrickUP
+   NineFourNodeQuadUP
+   TwentyEightNodeBrickUP
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other u-p elements
+
+   SSPquadUP
+   SSPbrickUP
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contact Elements
+
+   SimpleContact2D
+   SimpleContact3D
+   BeamContact2D
+   BeamContact3D
+   BeamEndContact3D
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Cable Elements
+
+
+   CatenaryCable
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Misc.
+
+   SurfaceLoad
+   VS3D4
+   AC3D8
+   ASI3D8
+   AV3D4

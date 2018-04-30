@@ -9,8 +9,8 @@
 
    The OpenSeesPy library is still in beta version.
    This manual is not complete.
-   Please send any questions,
-   comments and wishlist to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
+   Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
+   or requests for adding your commands through github.
 
 ========================
  The OpenSeesPy Library
