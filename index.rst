@@ -8,9 +8,8 @@
 .. warning::
 
    The OpenSeesPy library is still in beta version.
-   This manual is not complete.
    Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
-   or requests for adding your commands through github.
+   or requests for adding your commands through `github <https://github.com/zhuminjie/OpenSeesPyDoc/pulls>`_.
 
 ========================
  The OpenSeesPy Library
@@ -42,17 +41,6 @@ as demonstrated with commands below.
    windows
    linux
    license
-
-.. _availablelib:
-
-.. toctree::
-   :maxdepth: 1
-   :numbered:
-   :caption: Available Elements and Materials
-
-   availableEles
-   availableUniMats
-   availableNDMats
 
 
 .. _cmdsmanual:
