@@ -69,6 +69,7 @@ as demonstrated with commands below.
    Canti2DEQ
    dambreak
    elasticobstacle
+   beamThermal
 
 .. raw:: html
 
