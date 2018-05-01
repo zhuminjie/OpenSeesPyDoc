@@ -45,7 +45,7 @@ Saturation Isotropic Hardening with linear term
 
 .. math::
 
- q(x_i) = \sigma_0 + (\sigma_\inf - \sigma_0)*exp(-delta*\xi) + H*\xi
+ q(x_i) = \sigma_0 + (\sigma_\infty - \sigma_0)*exp(-delta*\xi) + H*\xi
 
 Flow Rules
 

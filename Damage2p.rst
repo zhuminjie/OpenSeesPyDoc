@@ -33,7 +33,7 @@
 				      :math:6250*fcc*fcc/E`
 				      (from comparison with tests by Karsan and Jirsa 1969)
    ``rho_bar`` |float|                optional parameter of plastic volume change,
-                                      positive real value :math:`0=rhoBar\lt sqrt(2/3)`,
+                                      positive real value :math:`0=rhoBar< sqrt(2/3)`,
 				      0.2 (from comparison with tests by Kupfer Hilsdorf Rusch 1969)
    ``H`` |float|                      optional linear hardening parameter for plasticity,
                                       positive real value (usually less than E),

@@ -63,13 +63,10 @@ as demonstrated with commands below.
    :numbered:
    :caption: Examples
 
-   truss
-   nonlinearTruss
-   PortalFrame2d
-   Canti2DEQ
-   dambreak
-   elasticobstacle
-   beamThermal
+   structure
+   earthquake
+   tsunami
+   other
 
 .. raw:: html
 
