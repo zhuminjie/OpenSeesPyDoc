@@ -14,16 +14,25 @@
 ========================
  The OpenSeesPy Library
 ========================
-`OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_,
-which can be imported as,
+`OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_.
+A minimum script is shown below:
 
 ::
 
   import sys
+
+  # for Linux
   sys.path.append('/path/to/OpenSeesPy')
+
+  # for Windows
   sys.path.append('C:/path/to/OpenSeesPy')
 
   from opensees import*
+
+  # Using OpenSees ...
+
+  # wipe before exiting
+  wipe()
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
 OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.
