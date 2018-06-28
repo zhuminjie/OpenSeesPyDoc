@@ -10,3 +10,4 @@
    truss
    nonlinearTruss
    PortalFrame2d
+   MomentCurvature
