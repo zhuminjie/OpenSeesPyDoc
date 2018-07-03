@@ -39,6 +39,18 @@ OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manu
 The conversion from Tcl to Python is easy and straightforward
 as demonstrated with commands below.
 
+Author
+------
+
+.. topic::
+   *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
+
+   | PostDoctoral Scholar
+   | Civil and Construction Engineering
+   | Oregon State University
+
+   
+
 
 .. _installation:
 
