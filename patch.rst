@@ -52,5 +52,5 @@
    ``numSubdivRad`` |int|             number of subdivisions (fibers) in the radial direction (number of rings)
    ``center`` |listf|                 y & z-coordinates of the center of the circle
    ``rad`` |listf|                    internal & external radius
-   ``ang`` |listf|                    starting & ending-coordinates angles
+   ``ang`` |listf|                    starting & ending-coordinates angles (degrees)
    ================================   ===========================================================================
