@@ -41,7 +41,7 @@
    ================================   ===========================================================================
 
 
-.. function:: patch('quad', matTag,numSubdivCirc,numSubdivRad,*center,*rad,*ang)
+.. function:: patch('circ', matTag,numSubdivCirc,numSubdivRad,*center,*rad,*ang)
    :noindex:
 
    This is the command to generate a circular shaped patch
