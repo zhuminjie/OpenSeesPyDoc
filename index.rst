@@ -45,7 +45,7 @@ Author
 .. topic::
    *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
 
-   | PostDoctoral Scholar
+   | Faculty Research Assistant
    | Civil and Construction Engineering
    | Oregon State University
 
