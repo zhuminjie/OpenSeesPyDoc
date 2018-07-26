@@ -76,6 +76,7 @@ Author
    outputcmds
    utilitycmds
    fsicmds
+   senscmds
 
 .. _examples:
 
