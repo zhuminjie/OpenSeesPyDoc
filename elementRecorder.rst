@@ -25,7 +25,7 @@ element recorder command
    ``startEle`` |int|            tag for start node whose response is being recorded (optional)
    ``endEle`` |int|              tag for end node whose response is being recorded (optional)     
    ``regionTag`` |int|           a region tag; to specify all nodes in the previously defined region. (optional)
-   ``args`` |list|               arguments which are passed to the setResponse() element method
+   ``args`` |list|               arguments which are passed to the setResponse() element method, all arguments must be in string format even for double and integer numbers because internally the setResponse() element method only accepts strings.
    ===========================   =====================================================================================================================================================
 
 .. note::
