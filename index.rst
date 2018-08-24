@@ -3,111 +3,93 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. include:: docs/sub.txt
+.. include:: sub.txt
 
 .. warning::
 
-   The OpenSeesPy library is still in beta version and its
-   functions are limited. Please send any questions and
-   comments to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_.
+   The OpenSeesPy library is still in beta version.
+   Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
+   or requests for adding your commands through `github <https://github.com/zhuminjie/OpenSeesPyDoc/pulls>`_.
 
-The OpenSeesPy Library
-======================================
+========================
+ The OpenSeesPy Library
+========================
+`OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_.
+A minimum script is shown below:
 
-`OpenSees`_, the Open System for `Earthquake Engineering`_ Simulation, is
-an `object-oriented`_, `open source`_ software framework.
-It widely uses the class inheritance and object
-composition in its design (`McKenna, Scott and Fenves`_).
-It allows users to create both serial
-and `parallel`_  `Finite Element Analysis`_ computer applications
-for simulating the response of structural and geotechnical systems
-subjected to `earthquakes`_ and other hazards.
-OpenSees is primarily written in `C++`_ and uses
-several `Fortran`_ and `C`_ numerical libraries for linear
-equation solving, and material and element routines. 
-
-
-`OpenSeesPy`_ is a `Python`_ 3 interpreter of `OpenSees`_,
-which makes an effort to represent
-the OO design of OpenSees at the script level.
-Everything users do will be creating objects
-and calling object.
-Users of `OpenSeesPy`_ will have a very different
-experience in writing OpenSees scirpts.
-
-All functions and objects in `OpenSeesPy`_
-accept keywords arguments, which means
-the order of keywords arguments can be
-arbitrary. But if positional arguments are
-given, they should in the order given
-in definition. The `OpenSeesPy`_ library
-can be imported as::
+::
 
   import sys
+
+  # for Linux
   sys.path.append('/path/to/OpenSeesPy')
 
-  from OpenSees import*
+  # for Windows
+  sys.path.append('C:/path/to/OpenSeesPy')
 
-The document is organized in chapters of OpenSees objects.
-Every object has its attributes and methods, which
-reassemble original OpenSees commands.
-For abstract classes such as :class:`element`, :class:`uniaxialMaterial`,
-class methods are defined for creating objects of subclasses.
+  from opensees import*
 
-Examples can be found in the last chapter.
+  # Using OpenSees ...
 
+  # wipe before exiting
+  wipe()
 
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Model
+Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
+OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.
+The conversion from Tcl to Python is easy and straightforward
+as demonstrated with commands below.
 
-   docs/tagged
-   docs/modelobj
-   docs/nodeobj
-   docs/elementobj
-   docs/spobj
-   docs/mpobj
-   docs/timeSeriesobj
-   docs/patternobj
-   docs/loadobj
-   docs/eleloadobj
-   docs/sectionobj
-   docs/meshobj
-   docs/regionobj
-   docs/unimatobj
-   docs/ndmatobj
-   docs/geomTransfobj
-   docs/beamIntegrationobj
-   docs/recorderobj
+Author
+------
 
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Analysis
+.. topic::
+   *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
+
+   | Faculty Research Assistant
+   | Civil and Construction Engineering
+   | Oregon State University
+
    
-   docs/analysisobj
-   docs/algorithmobj
-   docs/constraintobj
-   docs/integratorobj
-   docs/numbererobj
-   docs/systemobj
-   docs/ctestobj
 
+
+.. _installation:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
-   :caption: Example
-      
-   docs/elasticTruss.rst
-   docs/nonlinearTruss.rst
-   docs/elasticObstacleMM.rst
+   :caption: Installation
 
-Indices and tables
-==================
+   windows
+   linux
+   license
 
-* :ref:`genindex`
 
-..   * :ref:`modindex`
-..   * :ref:`search`
+.. _cmdsmanual:
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Commands Manual
+
+   modelcmds
+   analysiscmds
+   outputcmds
+   utilitycmds
+   fsicmds
+   senscmds
+
+.. _examples:
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Examples
+
+   structure
+   earthquake
+   tsunami
+   other
+
+.. raw:: html
+
+   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
