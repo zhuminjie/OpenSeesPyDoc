@@ -5,11 +5,25 @@
 
 .. include:: sub.txt
 
-.. warning::
+
+.. note::
+
+   If you use OpenSeesPy, I would like very much to hear from you. A short email
+   to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_ describing who you are and
+   how you use OpenSeesPy will mean a lot to me. I can justify spending time on
+   improvements that I hope will benefit you.
+
+.. note::
 
    The OpenSeesPy library is still in beta version.
    Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
-   or requests for adding your commands through `github <https://github.com/zhuminjie/OpenSeesPyDoc/pulls>`_.
+   or `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
+
+   You are very welcome to contribute to OpenSeesPy with new command
+   documents and examples
+   by sending pull requests
+   through `github pulls <https://github.com/zhuminjie/OpenSeesPyDoc/pulls>`_.
+
 
 ========================
  The OpenSeesPy Library
