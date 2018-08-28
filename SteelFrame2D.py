@@ -13,8 +13,8 @@ print("=========================================================")
 print("Start 2D Steel Frame Example")
 
 import sys
-sys.path.append('C:/OpenSeesPy')					# for Windows Computer
-# sys.path.append('/home/anurag/OpenSeesPy')		# For linux Computer
+#sys.path.append('C:/OpenSeesPy')					# for Windows Computer
+sys.path.append('/home/anurag/OpenSeesPy')		# For linux Computer
 from opensees import *
 
 import numpy as np
