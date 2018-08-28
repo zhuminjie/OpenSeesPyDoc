@@ -11,3 +11,5 @@
    nonlinearTruss
    PortalFrame2d
    MomentCurvature
+   RCFrameGravity
+   RCFramePushOver
