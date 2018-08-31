@@ -6,3 +6,4 @@ _build
 obstacle
 dambreak
 *.out
+__pycache__
