@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 ============================
- Momentu Curvature Analysis
+ Moment Curvature Analysis
 ============================
 
 

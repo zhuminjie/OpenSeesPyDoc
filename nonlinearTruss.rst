@@ -11,7 +11,7 @@
 
 #. Make sure the `numpy`_ and `matplotlib`_ packages are installed in your Python distribution.
 
-#. Run the source code in your favorate Python program and should see
+#. Run the source code in your favorite Python program and should see
 
 .. image:: _static/nonlinearTruss.png
 
