@@ -3,12 +3,9 @@ from eqsig import duhamels
 import matplotlib.pyplot as plt
 import numpy as np
 
-<<<<<<< HEAD
-=======
 import sys
 sys.path.append('/scratch/opensees/SRC/interpreter')
 
->>>>>>> 5dfa83e86672e7e146eab5bc550af21e92545f3f
 import opensees as op  # change this to the path where opensees python is stored
 import opensees_constants as opc
 
@@ -130,11 +127,7 @@ def show_single_comparison():
     r_post = 0.0
 
     periods = np.array([period])
-<<<<<<< HEAD
-    resp_u, resp_v, resp_a = duhamels.response_series(motion=rec, step=motion_step, periods=periods, xi=xi)
-=======
     resp_u, resp_v, resp_a = duhamels.response_series(motion=rec, dt=motion_step, periods=periods, xi=xi)
->>>>>>> 5dfa83e86672e7e146eab5bc550af21e92545f3f
 
     k_spring = 4 * np.pi ** 2 * mass / period ** 2
     outputs = get_inelastic_response(mass, k_spring, f_yield, rec, motion_step, xi=xi, r_post=r_post)
