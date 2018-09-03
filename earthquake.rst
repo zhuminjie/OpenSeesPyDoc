@@ -9,3 +9,4 @@
 
    Canti2DEQ
    RCFrameEarthquake
+   exampleNamedSpacedNonlinearSDOF
