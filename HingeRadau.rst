@@ -4,7 +4,7 @@
  HingeRadau
 ============
 
-.. function:: beamIntegration('HingeRadau',secI,lpI,secJ,lpJ,secE)
+.. function:: beamIntegration('HingeRadau',tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
 
    Create a HingeRadau beamIntegration object.
