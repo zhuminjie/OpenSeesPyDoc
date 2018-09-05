@@ -41,7 +41,7 @@ H = 10.0  # Reference lateral load
 pattern('Plain', 2, 1)
 
 # Create nodal loads at nodes 3 & 4
-#    nd    FX  FY  MZ 
+#    nd    FX  FY  MZ
 load(3, H, 0.0, 0.0)
 load(4, H, 0.0, 0.0)
 

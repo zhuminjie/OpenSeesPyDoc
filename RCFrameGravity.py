@@ -18,7 +18,7 @@ width = 360.0
 height = 144.0
 
 # Create nodes
-#    tag        X       Y 
+#    tag        X       Y
 node(1, 0.0, 0.0)
 node(2, width, 0.0)
 node(3, 0.0, height)
@@ -39,7 +39,7 @@ uniaxialMaterial('Concrete01', 1, -6.0, -0.004, -5.0, -0.014)
 uniaxialMaterial('Concrete01', 2, -5.0, -0.002, 0.0, -0.006)
 
 # STEEL
-# Reinforcing steel 
+# Reinforcing steel
 fy = 60.0;  # Yield stress
 E = 30000.0;  # Young's modulus
 #                        tag  fy E0    b
@@ -79,7 +79,7 @@ layer('straight', 3, 3, As, cover - y1, z1 - cover, cover - y1, cover - z1)
 # ----------------------
 
 # Geometry of column elements
-#                tag 
+#                tag
 
 geomTransf('PDelta', 1)
 
@@ -99,7 +99,7 @@ element(eleType, 2, 2, 4, 1, 1)
 # -----------------------------
 
 # Geometry of column elements
-#                tag 
+#                tag
 geomTransf('Linear', 2)
 
 # Create the beam element
@@ -117,7 +117,7 @@ timeSeries('Linear', 1)
 pattern('Plain', 1, 1)
 
 # Create nodal loads at nodes 3 & 4
-#    nd    FX          FY  MZ 
+#    nd    FX          FY  MZ
 load(3, 0.0, -P, 0.0)
 load(4, 0.0, -P, 0.0)
 
@@ -139,14 +139,14 @@ constraints('Transformation')
 # Create the DOF numberer, the reverse Cuthill-McKee algorithm
 numberer('RCM')
 
-# Create the convergence test, the norm of the residual with a tolerance of 
+# Create the convergence test, the norm of the residual with a tolerance of
 # 1e-12 and a max number of iterations of 10
 test('NormDispIncr', 1.0e-12, 10, 3)
 
 # Create the solution algorithm, a Newton-Raphson algorithm
 algorithm('Newton')
 
-# Create the integration scheme, the LoadControl scheme using steps of 0.1 
+# Create the integration scheme, the LoadControl scheme using steps of 0.1
 integrator('LoadControl', 0.1)
 
 # Create the analysis object

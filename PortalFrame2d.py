@@ -5,12 +5,15 @@ sys.path.append('path/to/directory/of/pyd/file')
 from opensees import *
 from math import asin, sqrt
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 # Two dimenional Frame: Eigenvalue & Static Loads
 
 
 # REFERENCES:
 # used in verification by SAP2000:
-# SAP2000 Integrated Finite Element Analysis and Design of Structures, Verification Manual, 
+# SAP2000 Integrated Finite Element Analysis and Design of Structures, Verification Manual,
 # Computers and Structures, 1997. Example 1.
 # and seismo-struct (Example 10)
 # SeismoStruct, Verification Report For Version 6, 2012. Example 11.
@@ -21,7 +24,7 @@ wipe()
 
 model('Basic', '-ndm', 2)
 
-# properties  
+# properties
 
 #    units kip, ft
 
@@ -55,7 +58,7 @@ WSection = {
 nodeTag = 1
 
 
-# procedure to read 
+# procedure to read
 def ElasticBeamColumn(eleTag, iNode, jNode, sectType, E, transfTag, M, massType):
     found = 0
 
@@ -66,8 +69,8 @@ def ElasticBeamColumn(eleTag, iNode, jNode, sectType, E, transfTag, M, massType)
     element('elasticBeamColumn', eleTag, iNode, jNode, A, E, I, transfTag, '-mass', M, massType)
 
 
-# add the nodes         
-#  - floor at a time    
+# add the nodes
+#  - floor at a time
 yLoc = 0.
 for j in range(0, numFloor + 1):
 
@@ -103,7 +106,7 @@ for j in range(1, numFloor + 1):
     nodeTagR += numBay + 1
 
 # add the columns
-# add column element    
+# add column element
 geomTransf(coordTransf, 1)
 eleTag = 1
 for j in range(0, numBay + 1):
@@ -130,7 +133,7 @@ for j in range(1, numFloor + 1):
         end2 = end1 + 1
         eleTag += 1
 
-# calculate eigenvalues & print results     
+# calculate eigenvalues & print results
 numEigen = 7
 eigenValues = eigen(numEigen)
 PI = 2 * asin(1.0)
@@ -205,3 +208,4 @@ if ok == 0:
     print("PASSED Verification Test PortalFrame2d.py \n\n")
 else:
     print("FAILED Verification Test PortalFrame2d.py \n\n")
+
