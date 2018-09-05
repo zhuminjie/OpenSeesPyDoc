@@ -23,7 +23,7 @@
    ``secE`` |int|             A previous-defined section object for the element interior.
    ========================   ============================================================================
 
-   The plastic hinge length at end I (J) is equal to ``lpI`` (``lpJ``) and the associated force deformation response is defined by the ``secI` (``secJ``). The force deformation
+   The plastic hinge length at end I (J) is equal to ``lpI`` (``lpJ``) and the associated force deformation response is defined by the ``secI`` (``secJ``). The force deformation
    response of the element interior is defined by the ``secE``.
    Typically, the interior section is linear-elastic, but this is not necessary.
 
