@@ -22,7 +22,7 @@
    ================================   ===========================================================================
 
 
-.. function:: patch('circ', matTag,numFiber,areaFiber,*center,radius,*ang=[0.0,360.0-360/numFiber])
+.. function:: layer('circ', matTag,numFiber,areaFiber,*center,radius,*ang=[0.0,360.0-360/numFiber])
    :noindex:
 
    This command is used to construct a line of fibers along a circular arc

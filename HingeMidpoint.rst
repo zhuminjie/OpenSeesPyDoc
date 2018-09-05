@@ -6,7 +6,7 @@
  HingeMidpoint
 ===============
 
-.. function:: beamIntegration('HingeMidpoint',secI,lpI,secJ,lpJ,secE)
+.. function:: beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
 
    Create a HingeMidpoint beamIntegration object.
@@ -15,6 +15,7 @@
    error for linear curvature distributions along the element.
 
    ========================   ============================================================================
+   ``tag`` |int|              tag of the beam integration.
    ``secI`` |int|             A previous-defined section object for hinge at I.
    ``lpI`` |float|            The plastic hinge length at I.
    ``secJ`` |int|             A previous-defined section object for hinge at J.
