@@ -18,20 +18,20 @@ width = 360.0
 height = 144.0
 
 # Create nodes
-#    tag        X       Y
+#    tag, X, Y
 node(1, 0.0, 0.0)
 node(2, width, 0.0)
 node(3, 0.0, height)
 node(4, width, height)
 
 # Fix supports at base of columns
-#    tag   DX   DY   RZ
+#   tag, DX, DY, RZ
 fix(1, 1, 1, 1)
 fix(2, 1, 1, 1)
 
 # Define materials for nonlinear columns
 # ------------------------------------------
-# CONCRETE                  tag   f'c        ec0   f'cu        ecu
+# CONCRETE                   tag  f'c    ec0    f'cu   ecu
 # Core concrete (confined)
 uniaxialMaterial('Concrete01', 1, -6.0, -0.004, -5.0, -0.014)
 
@@ -42,18 +42,18 @@ uniaxialMaterial('Concrete01', 2, -5.0, -0.002, 0.0, -0.006)
 # Reinforcing steel
 fy = 60.0;  # Yield stress
 E = 30000.0;  # Young's modulus
-#                        tag  fy E0    b
+#                         tag  fy E0    b
 uniaxialMaterial('Steel01', 3, fy, E, 0.01)
 
 # Define cross-section for nonlinear columns
 # ------------------------------------------
 
-#  some paramaters
+#  some parameters
 colWidth = 15
 colDepth = 24
 
 cover = 1.5
-As = 0.60;  # area of no. 7 bars
+As = 0.60  # area of no. 7 bars
 
 # some variables derived from the parameters
 y1 = colDepth / 2.0
@@ -103,7 +103,7 @@ element(eleType, 2, 2, 4, 1, 1)
 geomTransf('Linear', 2)
 
 # Create the beam element
-#                          tag ndI ndJ     A       E    Iz   transfTag
+#                          tag, ndI, ndJ, A,     E,    Iz, transfTag
 element('elasticBeamColumn', 3, 3, 4, 360.0, 4030.0, 8640.0, 2)
 
 # Define gravity loads
@@ -117,7 +117,7 @@ timeSeries('Linear', 1)
 pattern('Plain', 1, 1)
 
 # Create nodal loads at nodes 3 & 4
-#    nd    FX          FY  MZ
+#    nd  FX,  FY, MZ
 load(3, 0.0, -P, 0.0)
 load(4, 0.0, -P, 0.0)
 

@@ -5,10 +5,7 @@ sys.path.append('path/to/directory/of/pyd/file')
 from opensees import *
 from math import asin, sqrt
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Two dimenional Frame: Eigenvalue & Static Loads
+# Two dimensional Frame: Eigenvalue & Static Loads
 
 
 # REFERENCES:
@@ -161,7 +158,7 @@ analyze(1)
 ok = 0
 
 #
-# print pretty output of comparsions
+# print pretty output of comparisons
 #
 
 #               SAP2000   SeismoStruct
@@ -179,9 +176,10 @@ for i in range(0, numEigen):
     if abs(period - resultOther) > 9.99e-5:
         ok - 1
 
-# print table of camparsion
+# print table of comparision
 #       Parameter          SAP2000   SeismoStruct
-comparisonResults = [["Disp Top", "Axial Force Bottom Left", "Moment Bottom Left"], [1.45076, 69.99, 2324.68],
+comparisonResults = [["Disp Top", "Axial Force Bottom Left", "Moment Bottom Left"],
+                     [1.45076, 69.99, 2324.68],
                      [1.451, 70.01, 2324.71]]
 tolerances = [9.99e-6, 9.99e-3, 9.99e-3]
 
@@ -196,7 +194,9 @@ for i in range(3):
     else:
         result = response[2]
 
-    print('{:>30}{:>15.3f}{:>15.2f}{:>15.2f}'.format(comparisonResults[0][i], result, comparisonResults[1][i],
+    print('{:>30}{:>15.3f}{:>15.2f}{:>15.2f}'.format(comparisonResults[0][i],
+                                                     result,
+                                                     comparisonResults[1][i],
                                                      comparisonResults[2][i]))
     resultOther = comparisonResults[1][i]
     tol = tolerances[i]
