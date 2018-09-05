@@ -142,7 +142,7 @@ def show_single_comparison():
     sps[1].plot(acc_signal.time, resp_a[0], label="Eqsig")  # Elastic solution
     time = acc_signal.time
     acc_opensees_elastic = np.interp(time, outputs_elastic["time"], outputs_elastic["rel_accel"]) - rec
-    print("diff", sum(acc_opensees_elastic - resp_u[0]))
+    print("diff", sum(acc_opensees_elastic - resp_a[0]))
     sps[1].plot(time, acc_opensees_elastic, label="Opensees fy=%.2gN" % (f_yield * 100), ls="--")
     sps[0].legend()
     sps[1].legend()

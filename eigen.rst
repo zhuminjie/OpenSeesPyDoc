@@ -10,7 +10,7 @@
 
    ================================   ===========================================================================
    numEigenvalues |int|               number of eigenvalues required
-   solver |str|                       optional string detailing type of solver: ``'-genBandArpack'``, ``'-symmBandLapack'``, ``'-fullGenLapack'``, ``'-genBandArpack'``, (optional)
+   solver |str|                       optional string detailing type of solver: ``'-genBandArpack'``, ``'-symmBandLapack'``, ``'-fullGenLapack'``, (optional)
    ================================   ===========================================================================
 
 .. note::

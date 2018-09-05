@@ -31,7 +31,7 @@
    ::
 
       lpI = 0.1
-      loJ = 0.2
+      lpJ = 0.2
       beamIntegration('HingeMidpoint',secI,lpI,secJ,lpJ,secE)
 
 
