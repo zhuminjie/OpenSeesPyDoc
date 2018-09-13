@@ -91,6 +91,7 @@ Author
    utilitycmds
    fsicmds
    senscmds
+   reliabilitycmds
 
 .. _examples:
 
