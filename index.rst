@@ -85,7 +85,6 @@ Author
    windows
    linux
    pypi
-   license
 
 
 .. _cmdsmanual:
