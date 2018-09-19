@@ -33,20 +33,29 @@ A minimum script is shown below:
 
 ::
 
-  import sys
+   ##########################################
+   # If installed directly with library files
+   import sys
 
-  # for Linux
-  sys.path.append('/path/to/OpenSeesPy')
+   # for Linux
+   sys.path.append('/path/to/OpenSeesPy')
 
-  # for Windows
-  sys.path.append('C:/path/to/OpenSeesPy')
+   # for Windows
+   sys.path.append('C:/path/to/OpenSeesPy')
 
-  from opensees import*
+   from opensees import *
+   ###########################################
 
-  # Using OpenSees ...
+   ###########################################
+   # If installed with PyPi
 
-  # wipe before exiting
-  wipe()
+   from openseespy.opensees import *
+   ###########################################
+
+   # Using OpenSees ...
+
+   # wipe before exiting
+   wipe()
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
 OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.
@@ -75,6 +84,7 @@ Author
 
    windows
    linux
+   pypi
    license
 
 
