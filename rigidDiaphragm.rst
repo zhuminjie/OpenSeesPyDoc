@@ -7,7 +7,8 @@
 .. function:: rigidDiaphragm(perpDirn, rNodeTag, *cNodeTags)
 
    Create a multi-point constraint between nodes.
-   These objects will constraint certain degrees-of-freedom at the listed slave nodes to move as if in a rigid plane with the master node.
+   These objects will constraint certain degrees-of-freedom at the listed slave nodes to move as if in a rigid plane with the master node. To enforce this constraint, ``Transformation``
+   constraint is recommended. 
 
 	      
    ========================   ===========================================================================
