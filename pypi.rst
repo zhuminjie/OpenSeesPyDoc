@@ -11,7 +11,7 @@ Use following command to install
 
 ::
 
-   pip install openseepy
+   pip install openseespy
 
 and import OpenSeesPy as
 
