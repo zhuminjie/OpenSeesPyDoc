@@ -322,8 +322,6 @@ if(AnalysisType=="Pushover"):
 	test('NormUnbalance',1e-8, 10)
 	analysis("Static")
 	
-	eleResponse(2, 'stress')
-	
 	PushDataDir = r'PushoverOut'
 	if not os.path.exists(PushDataDir):
 		os.makedirs(PushDataDir)
