@@ -29,6 +29,7 @@
  The OpenSeesPy Library
 ========================
 `OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_.
+Current version is |opspy_version|.
 A minimum script is shown below:
 
 ::
@@ -77,6 +78,7 @@ Author
 
 .. _installation:
 
+
 .. toctree::
    :maxdepth: 1
    :numbered:
@@ -85,6 +87,14 @@ Author
    windows
    linux
    pypi
+
+.. _changelog:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Change Log
+
+   changelog
 
 
 .. _cmdsmanual:

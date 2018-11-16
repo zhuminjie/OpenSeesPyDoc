@@ -1,37 +1,18 @@
 .. include:: sub.txt
 
 
-================================
- Install OpenSeesPy in Windows:
-================================
+======================================================
+ OpenSeesPy |opspy_version| for Python3.6 in Windows:
+======================================================
+
+Only works for Python3.6.
 
 Install `ActiveStateTcl 8.5`_
 ------------------------------
 
-Check the Tcl version
-
-.. image:: _static/tcl.jpeg
-
-
-Install `Python 3.6 Windows`_ or `Anaconda 5.0 Windows`_
+Install `Anaconda 5.0 Windows`_
 --------------------------------------------------------
 
-.. note::
-
-   64bit Python 3.6 version is required!
-
-Both work, but Anaconda comes with many libraries and editors
-
-Check the python version
-
-.. image:: _static/py.jpeg
-
-An anaconda environment
-
-.. image:: _static/ana.jpeg
-
-
-   
 Download `OpenSeesPy Windows Library`_
 --------------------------------------
 
