@@ -5,6 +5,12 @@
 
 .. include:: sub.txt
 
+.. important::
+
+   Version |opspy_version| is released.
+
+   
+
 
 .. note::
 
@@ -15,7 +21,6 @@
 
 .. note::
 
-   The OpenSeesPy library is still in beta version.
    Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
    or `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
@@ -29,7 +34,6 @@
  The OpenSeesPy Library
 ========================
 `OpenSeesPy`_ is a `Python 3`_ interpreter of `OpenSees`_.
-Current version is |opspy_version|.
 A minimum script is shown below:
 
 ::
