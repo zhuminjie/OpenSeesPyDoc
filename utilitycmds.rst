@@ -34,3 +34,4 @@ These commands are used to monitor and change the state of the model.
    updateElementDomain
    wipe
    wipeAnalysis
+   updateMaterialStage

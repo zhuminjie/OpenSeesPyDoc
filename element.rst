@@ -59,6 +59,7 @@ The following contain information about available ``eleType``:
    beamWithHinges
    dispBeamColumn
    ForceBeamColumn
+   nonlinearBeamColumn
    dispBeamColumnInt
    MVLEM
    SFI_MVLEM

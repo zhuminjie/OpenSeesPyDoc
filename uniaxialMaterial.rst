@@ -39,6 +39,7 @@ The following contain information about available ``matType``:
    Dodd_Restrepo
    RambergOsgoodSteel
    SteelMPF
+   steel01thermal
 
 
 .. toctree::

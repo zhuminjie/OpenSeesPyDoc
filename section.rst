@@ -35,6 +35,7 @@ The following contain information about available ``secType``:
    ndfiber
    wfsection2d
    rcsection2d
+   rccircularsection
    parallelsection
    sectionaggregator
    uniaxialsection
