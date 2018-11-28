@@ -44,7 +44,7 @@
 
 .. |bi| replace:: (:class:`beamIntegration`)
 
-.. |opspy_version| replace:: 0.0.5
+.. |opspy_version| replace:: 0.0.6
 
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
@@ -79,8 +79,11 @@
 .. _Python 3.6 Windows: https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64-webinstall.exe
 .. _Python 3.6 Linux: https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
 .. _Anaconda 5.0 Windows: https://repo.continuum.io/archive/Anaconda3-5.0.1-Windows-x86_64.exe
+.. _Anaconda 5.3 Windows: https://repo.anaconda.com/archive/Anaconda3-5.3.1-Windows-x86_64.exe
 .. _Anaconda 5.0 Linux: https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+.. _Anaconda 5.3 Linux: https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 .. _OpenSeesPy Windows Library: http://web.engr.oregonstate.edu/~zhum/openseespy.zip
+.. _OpenSeesPy Windows Library Python3.7: http://web.engr.oregonstate.edu/~zhum/openseespy37.zip
 .. _OpenSeesPy Linux Library: http://web.engr.oregonstate.edu/~zhum/openseespylinux.zip
 
 .. _McKenna, Scott and Fenves: http://ascelibrary.org/doi/10.1061/%28ASCE%29CP.1943-5487.0000002
