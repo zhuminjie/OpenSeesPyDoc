@@ -1,9 +1,9 @@
 .. include:: sub.txt
 
 
-========================================
- OpenSeesPy |opspy_version| though PyPi
-========================================
+=========================================
+ OpenSeesPy |opspy_version| through PyPi
+=========================================
 
 You should have Python 3.6 or higher installed already.
 

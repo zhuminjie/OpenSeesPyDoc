@@ -3,7 +3,7 @@
 =======================
 
 
-* **Version 0.0.6** (`f24a27d <https://github.com/OpenSees/OpenSees/tree/f24a27d45acb1c6a48927a2d83e04af1e92ad8e2>`_)
+* **Version 0.0.6** (`cead6e8 <https://github.com/OpenSees/OpenSees/tree/cead6e858e20b02345a28de379f962b41d0796e9>`_)
 
   #. Add "nonlinearBeamColumn" element for backward compatability
   #. Add "updateMaterialStage" function

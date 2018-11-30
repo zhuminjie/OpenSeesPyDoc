@@ -5,8 +5,7 @@
  OpenSeesPy |opspy_version| for Linux:
 =======================================
 
-For Python3.6 and Python 3.7.
-=============================
+**For Python3.6 and Python 3.7**
 
 * Install Tcl 8.5
 
