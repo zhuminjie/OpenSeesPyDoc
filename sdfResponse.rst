@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=============
- sdfResponse
-=============
+=====================
+ sdfResponse command
+=====================
 
 .. function:: sdfResponse(m, zeta, k, Fy, alpha, dtF, filename, dt[, uresidual, umaxprev])
    :noindex:
