@@ -21,6 +21,7 @@ These commands are used to monitor and change the state of the model.
    reset
    restore
    save
+   sdfResponse
    setTime
    setNodeCoord
    setNodeDisp
@@ -32,6 +33,6 @@ These commands are used to monitor and change the state of the model.
    stop
    stripXML
    updateElementDomain
+   updateMaterialStage
    wipe
    wipeAnalysis
-   updateMaterialStage
