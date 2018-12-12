@@ -16,9 +16,10 @@
    ``Fy`` |float|             yielding strength
    ``alpha`` |float|          strain-hardening ratio
    ``dtF`` |float|            time step for input data
-   ``filename`` |str|         input data file
+   ``filename`` |str|         input data file, one force per line
    ``dt`` |float|             time step for analysis
-   ``uresidual`` |float|      displacement residual tolerence (optional)
-   ``umaxprev`` |float|       displacement tolerence (optional)
+   ``uresidual`` |float|      residual displacement at the end of previous analysis
+                              (optional)
+   ``umaxprev`` |float|       revious displacement (optional)
    ========================   =============================================================
 
