@@ -7,7 +7,8 @@
 .. function:: section('Fiber', secTag, '-GJ', GJ=0.0)
    :noindex:
 
-   This commnand allows the user to construct a FiberSection object. Each FiberSection object is composed of Fibers, with each fiber containing a UniaxialMaterial, an area and a location (y,z).
+   This commnand allows the user to construct a FiberSection object. Each FiberSection object is composed of Fibers, with each fiber containing a UniaxialMaterial, an area and a location (y,z). The dofs for 2D section are ``[P, Mz]``,
+   for 3D are ``[P,Mz,My,T]``.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
@@ -19,7 +20,8 @@
    :noindex:
 
    This command create a FiberSectionThermal object.
-
+   The dofs for 2D section are ``[P, Mz]``,
+   for 3D are ``[P,Mz,My]``.
 
 
 .. note::

@@ -10,7 +10,8 @@
 .. function:: section('Elastic', secTag, E, A, Iz, Iy, G, J, alphaY=0.0, alphaZ=0.0)
    :noindex:
 
-   This command allows the user to construct an ElasticSection. The inclusion of shear deformations is optional.
+   This command allows the user to construct an ElasticSection. The inclusion of shear deformations is optional. The dofs for 2D elastic section are ``[P, Mz]``,
+   for 3D are ``[P,Mz,My,T]``.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
