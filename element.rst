@@ -314,6 +314,18 @@ Cable Elements
    CatenaryCable
 
 
+PFEM Elements
+--------------
+
+#. :doc:`PFEMElementBubble`
+#. :doc:`PFEMElementCompressible`
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   PFEMElementBubble
+   PFEMElementCompressible
       
 Misc.
 -----

@@ -25,11 +25,17 @@
    ``meshsize`` |float|       mesh size.
    ``eleType`` |str|          the type of the element, (optional)
 
-                              * ``'elasticBeamColumn'``
-                              * ``'forceBeamColumn'``
-                              * ``'dispBeamColumn'``
+                              * :ref:`elasticBeamColumn`
+			      * :ref:`forceBeamColumn-Element`
+			      * :ref:`dispBeamColumn-Element`
 
 			      if no type is given, only nodes are created
-   ``eleArgs`` |list|         a list of element arguments. (optional)
+   ``eleArgs`` |list|         a list of element arguments. The arguments
+                              are same as in the element commands, but without
+			      element tag, and node tags. (optional)
+
+			      For example,
+
+			      ``eleArgs = ['elasticBeamColumn', A, E, Iz, transfTag]``
    ========================   ===========================================================================
 

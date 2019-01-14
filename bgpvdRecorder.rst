@@ -1,15 +1,17 @@
 .. include:: sub.txt
 
-.. _PVDRecorder:
+.. _BgPVDRecorder:
    
-====================
-pvd recorder command
-====================
+===========================
+background recorder command
+===========================
 
-.. function:: recorder('PVD',filename,'-precision',precision=10,'-dT',dT=0.0,*res)
+.. function:: recorder('BgPVD',filename,'-precision',precision=10,'-dT',dT=0.0,*res)
    :noindex:
 
-   Create a PVD recorder.
+   Create a PVD recorder for background mesh. This recorder is same as the
+   PVD recorder, but will be automatically called in background mesh and
+   is able to record wave height and velocity.
 
    ========================   =============================================================
    ``filename`` |str|         the name for ``filename.pvd`` and ``filename/`` directory,

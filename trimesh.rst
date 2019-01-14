@@ -26,12 +26,18 @@
    ``meshsize`` |float|       mesh size.
    ``eleType`` |str|          the element type, (optional)
 
-                              * ``'PFEMElement2DBubble'``
-			      * ``'PFEMElement2DQuasi'``
-			      * ``'tri31'``
+                              * :doc:`PFEMElementBubble`
+			      * :doc:`PFEMElementCompressible`
+			      * :doc:`tri31`
 
 			      if no type is given, only nodes are created
 			      
-   ``eleArgs`` |list|         a list of element arguments. (optional)
+   ``eleArgs`` |list|         a list of element arguments. The arguments
+                              are same as in the element commands, but without
+			      element tag, and node tags. (optional)
+
+			      For example,
+
+			      ``eleArgs = ['PFEMElementBubble', rho, mu, b1, b2, thickness, kappa]``
    ========================   ===========================================================================
 

@@ -1,5 +1,7 @@
 .. include:: sub.txt
 
+.. _elasticBeamColumn:
+
 ===========================
 Elastic Beam Column Element
 ===========================

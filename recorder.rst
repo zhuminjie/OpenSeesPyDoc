@@ -28,3 +28,4 @@ The following contain information about available ``recorderType``:
    elementRecorder
    elementEnRecorder
    pvdRecorder
+   bgpvdRecorder
