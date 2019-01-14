@@ -16,8 +16,22 @@
 
 The following contain information about available ``testType``:
 
+#. :doc:`normUnbalance`
+#. :doc:`normDispIncr`
+#. :doc:`energyIncr`
+#. :doc:`relativeNormUnbalance`
+#. :doc:`relativeNormDispIncr`
+#. :doc:`relativeTotalNormDispIncr`
+#. :doc:`relativeEnergyIncr`
+#. :doc:`fixedNumIter`
+#. :doc:`normDispAndUnbalance`
+#. :doc:`normDispOrUnbalance`
+#. :ref:`PFEM-Test`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    normUnbalance
    normDispIncr
@@ -31,4 +45,4 @@ The following contain information about available ``testType``:
    normDispOrUnbalance
 
 
-* :ref:`PFEM-Test`
+

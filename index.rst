@@ -9,15 +9,17 @@
 
    Version |opspy_version| is released.
 
+   The latest version of this document can be found at
+   `<https://openseespydoc.readthedocs.io/en/latest/>`_.
    
+..
+   .. note::
 
+      If you use OpenSeesPy, I would like very much to hear from you. A short email to
+      `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
+      describing who you are and how you use OpenSeesPy will mean a lot to me.
+      I can justify spending time on improvements that I hope will benefit you.
 
-.. note::
-
-   If you use OpenSeesPy, I would like very much to hear from you. A short email
-   to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_ describing who you are and
-   how you use OpenSeesPy will mean a lot to me. I can justify spending time on
-   improvements that I hope will benefit you.
 
 .. note::
 
@@ -67,8 +69,7 @@ OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manu
 The conversion from Tcl to Python is easy and straightforward
 as demonstrated with commands below.
 
-Author
-------
+
 
 .. topic::
    *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
@@ -78,36 +79,13 @@ Author
    | Oregon State University
 
    
-
-
-.. _installation:
-
-
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Installation
-
-   windows
-   linux
-   pypi
-
-.. _changelog:
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Change Log
-
+   :caption: Contents
+      
+   installation
    changelog
-
-
-.. _cmdsmanual:
-
-.. toctree::
-   :maxdepth: 1
-   :numbered:
-   :caption: Commands Manual
-
    modelcmds
    analysiscmds
    outputcmds
@@ -115,18 +93,10 @@ Author
    fsicmds
    senscmds
    reliabilitycmds
+   examples
 
-.. _examples:
 
-.. toctree::
-   :maxdepth: 1
-   :numbered:
-   :caption: Examples
-
-   structure
-   earthquake
-   tsunami
-   other
+   
 
 .. raw:: html
 

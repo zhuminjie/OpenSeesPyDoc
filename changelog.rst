@@ -1,7 +1,14 @@
-=======================
- OpenSeesPy Change Log
-=======================
+==============
+  Change Log
+==============
 
+..
+   * **Version 0.0.7** ()
+
+     #. Add "2D wheel-rail" element
+     #. PVD recorder allows to set a path
+     #. Add "sdfResponse" function for single dof dynamic analysis
+  
 
 * **Version 0.0.6** (`cead6e8 <https://github.com/OpenSees/OpenSees/tree/cead6e858e20b02345a28de379f962b41d0796e9>`_)
 

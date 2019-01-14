@@ -16,8 +16,19 @@
 
 The following contain information about available ``systemType``:
 
+#. :doc:`BandGen`
+#. :doc:`BandSPD`
+#. :doc:`ProfileSPD`
+#. :doc:`SuperLU`
+#. :doc:`UmfPack`
+#. :doc:`FullGeneral`
+#. :doc:`SparseSYM`
+#. :ref:`PFEM-System`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    BandGen
    BandSPD
@@ -27,4 +38,4 @@ The following contain information about available ``systemType``:
    FullGeneral
    SparseSYM
 
-* :ref:`PFEM-System`
+

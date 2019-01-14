@@ -27,9 +27,24 @@ For example,
 
 The following contain information about available ``matType``:
 
+Steel & Reinforcing-Steel Materials
+-----------------------------------
+
+
+#. :doc:`steel01`
+#. :doc:`steel02`
+#. :doc:`steel4`
+#. :doc:`Hysteretic`
+#. :doc:`ReinforcingSteel`
+#. :doc:`Dodd_Restrepo`
+#. :doc:`RambergOsgoodSteel`
+#. :doc:`SteelMPF`
+#. :doc:`steel01thermal`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Steel & Reinforcing-Steel Materials
+   :hidden:
 
    steel01
    steel02
@@ -42,9 +57,26 @@ The following contain information about available ``matType``:
    steel01thermal
 
 
+
+Concrete Materials
+------------------
+
+
+#. :doc:`Concrete01`
+#. :doc:`Concrete02`
+#. :doc:`Concrete04`
+#. :doc:`Concrete06`
+#. :doc:`Concrete07`
+#. :doc:`Concrete01WithSITC`
+#. :doc:`ConfinedConcrete01`
+#. :doc:`ConcreteD`
+#. :doc:`FRPConfinedConcrete`
+#. :doc:`ConcreteCM`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Concrete Materials
+   :hidden:
 
    Concrete01
    Concrete02
@@ -58,10 +90,21 @@ The following contain information about available ``matType``:
    ConcreteCM
 
 
+Standard Uniaxial Materials
+---------------------------
+
+
+#. :doc:`ElasticUni`
+#. :doc:`ElasticPP`
+#. :doc:`ElasticPPGap`
+#. :doc:`ENT`
+#. :doc:`ParallelUni`
+#. :doc:`SeriesUni`
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Standard Uniaxial Materials
+   :hidden:
 
    ElasticUni
    ElasticPP
@@ -70,9 +113,20 @@ The following contain information about available ``matType``:
    ParallelUni
    SeriesUni
 
+
+PyTzQz uniaxial materials for p-y, t-z and q-z elements for modeling soil-structure interaction through the piles in a structural foundation
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+#. :doc:`PySimple1`
+#. :doc:`TzSimple1`
+#. :doc:`QzSimple1`
+#. :doc:`PyLiq1`
+#. :doc:`TzLiq1`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: PyTzQz uniaxial materials for p-y, t-z and q-z elements for modeling soil-structure interaction through the piles in a structural foundation
+   :hidden:
 
    PySimple1
    TzSimple1
@@ -81,9 +135,49 @@ The following contain information about available ``matType``:
    TzLiq1
 
 
+Other Uniaxial Materials
+------------------------
+
+
+#. :doc:`Hardening`
+#. :doc:`Cast`
+#. :doc:`ViscousDamper`
+#. :doc:`BilinearOilDamper`
+#. :doc:`Bilin`
+#. :doc:`ModIMKPeakOriented`
+#. :doc:`ModIMKPinching`
+#. :doc:`SAWS`
+#. :doc:`BarSlip`
+#. :doc:`Bond_SP01`
+#. :doc:`Fatigue`
+#. :doc:`ImpactMaterial`
+#. :doc:`HyperbolicGapMaterial`
+#. :doc:`LimitState`
+#. :doc:`MinMax`
+#. :doc:`ElasticBilin`
+#. :doc:`ElasticMultiLinear`
+#. :doc:`MultiLinear`
+#. :doc:`InitStrainMaterial`
+#. :doc:`InitStressMaterial`
+#. :doc:`PathIndependent`
+#. :doc:`Pinching4`
+#. :doc:`ECC01`
+#. :doc:`SelfCentering`
+#. :doc:`Viscous`
+#. :doc:`BoucWen`
+#. :doc:`BWBN`
+#. :doc:`KikuchiAikenHDR`
+#. :doc:`KikuchiAikenLRB`
+#. :doc:`AxialSp`
+#. :doc:`AxialSpHD`
+#. :doc:`PinchingLimitStateMaterial`
+#. :doc:`CFSWSWP`
+#. :doc:`CFSSSWP`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Other Uniaxial Materials
+   :hidden:
 
    Hardening
    Cast

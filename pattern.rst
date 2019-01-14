@@ -18,8 +18,14 @@ The pattern command is used to construct a LoadPattern and add it to the Domain.
 
 The following contain information about available ``patternType``:
 
+
+#. :doc:`plainPattern`
+#. :doc:`uniformExcitation`
+#. :doc:`multiExcitation`
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    plainPattern
    uniformExcitation

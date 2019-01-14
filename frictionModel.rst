@@ -27,8 +27,17 @@ For example,
 
 The following contain information about available ``frnType``:
 
+
+#. :doc:`Coulomb`
+#. :doc:`veldependent`
+#. :doc:`velnormal`
+#. :doc:`velpressure`
+#. :doc:`velmulti`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    Coulomb
    veldependent

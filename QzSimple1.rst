@@ -4,7 +4,7 @@
 QzSimple1 Material
 ==================
 
-.. function:: uniaxialMaterial('QzSimple1', matTag,qzType, qult, Z50, suction=0.0, cd=0.0)
+.. function:: uniaxialMaterial('QzSimple1', matTag,qzType, qult, Z50, suction=0.0, c=0.0)
    :noindex:
 
    This command is used to construct a QzSimple1 uniaxial material object.

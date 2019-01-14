@@ -29,9 +29,22 @@ For example,
 
 The following contain information about available ``eleType``:
 
+Zero-Length Element
+--------------------
+
+#. :doc:`ZeroLength`
+#. :doc:`zeroLengthND`
+#. :doc:`zeroLengthSection`
+#. :doc:`CoupledZeroLength`
+#. :doc:`zeroLengthContact2D`
+#. :doc:`zeroLengthContactNTS2D`
+#. :doc:`zeroLengthInterface2D`
+#. :doc:`zeroLengthImpact3D`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Zero-Length Elements
+   :hidden:
 
    ZeroLength
    zeroLengthND
@@ -42,16 +55,39 @@ The following contain information about available ``eleType``:
    zeroLengthInterface2D
    zeroLengthImpact3D
 
+
+Truss Elements
+--------------
+
+#. :doc:`trussEle`
+#. :doc:`corotTruss`
+
 .. toctree::
    :maxdepth: 2
-   :caption: Truss Elements
+   :hidden:
 
    trussEle
    corotTruss
 
+
+Beam-Column Elements
+--------------------
+
+#. :doc:`elasticBeamColumn`
+#. :doc:`ModElasticBeam2d`
+#. :doc:`ElasticTimoshenkoBeam`
+#. :doc:`beamWithHinges`
+#. :doc:`dispBeamColumn`
+#. :doc:`ForceBeamColumn`
+#. :doc:`nonlinearBeamColumn`
+#. :doc:`dispBeamColumnInt`
+#. :doc:`MVLEM`
+#. :doc:`SFI_MVLEM`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Beam-Column Elements
+   :hidden:
 
    elasticBeamColumn
    ModElasticBeam2d
@@ -64,25 +100,59 @@ The following contain information about available ``eleType``:
    MVLEM
    SFI_MVLEM
 
+
+Joint Elements
+--------------
+
+#. :doc:`beamColumnJoint`
+#. :doc:`ElasticTubularJoint`
+#. :doc:`Joint2D`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Joint Elements
+   :hidden:
 
    beamColumnJoint
    ElasticTubularJoint
    Joint2D
 
+Link Elements
+-------------
 
+#. :doc:`twoNodeLink`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Link Elements
+   :hidden:
 
    twoNodeLink
 
 
+
+Bearing Elements
+----------------
+
+#. :doc:`elastomericBearingPlasticity`
+#. :doc:`elastomericBearingBoucWen`
+#. :doc:`flatSliderBearing`
+#. :doc:`singleFPBearing`
+#. :doc:`TFP`
+#. :doc:`TripleFrictionPendulum`
+#. :doc:`multipleShearSpring`
+#. :doc:`KikuchiBearing`
+#. :doc:`YamamotoBiaxialHDR`
+#. :doc:`ElastomericX`
+#. :doc:`LeadRubberX`
+#. :doc:`HDR`
+#. :doc:`RJWatsonEqsBearing`
+#. :doc:`FPBearingPTV`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Bearing Elements
+   :hidden:
 
    elastomericBearingPlasticity
    elastomericBearingBoucWen
@@ -99,10 +169,24 @@ The following contain information about available ``eleType``:
    RJWatsonEqsBearing
    FPBearingPTV
 
+Quadrilateral Elements
+----------------------
+
+
+#. :doc:`quad`
+#. :doc:`ShellMITC4`
+#. :doc:`ShellDKGQ`
+#. :doc:`ShellDKGT`
+#. :doc:`ShellNLDKGQ`
+#. :doc:`ShellNLDKGT`
+#. :doc:`ShellNL`
+#. :doc:`bbarQuad`
+#. :doc:`enhancedQuad`
+#. :doc:`SSPquad`
 
 .. toctree::
    :maxdepth: 2
-   :caption: Quadrilateral Elements
+   :hidden:
 
    quad
    ShellMITC4
@@ -116,33 +200,65 @@ The following contain information about available ``eleType``:
    SSPquad
 
 
+Triangular Elements
+-------------------
+
+#. :doc:`tri31`
 
 .. toctree::
    :maxdepth: 2
-   :caption: Triangular Elements
+   :hidden:
 
    tri31
 
 
+Brick Elements
+--------------
+
+#. :doc:`stdBrick`
+#. :doc:`bbarBrick`
+#. :doc:`Brick20N`
+#. :doc:`SSPbrick`
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Brick Elements
+   :hidden:
 
    stdBrick
    bbarBrick
    Brick20N
    SSPbrick
 
+
+Tetrahedron Elements
+--------------------
+
+#. :doc:`FourNodeTetrahedron`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Tetrahedron Elements
+   :hidden:
 
    FourNodeTetrahedron
 
+
+UC San Diego u-p element (saturated soil)
+-----------------------------------------
+
+#. :doc:`quadUP`
+#. :doc:`brickUP`
+#. :doc:`bbarQuadUP`
+#. :doc:`bbarBrickUP`
+#. :doc:`NineFourNodeQuadUP`
+#. :doc:`TwentyEightNodeBrickUP`
+
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: UC San Diego u-p element (saturated soil)
+   :hidden:
 
    quadUP
    brickUP
@@ -151,18 +267,33 @@ The following contain information about available ``eleType``:
    NineFourNodeQuadUP
    TwentyEightNodeBrickUP
 
+Other u-p elements
+------------------
 
+#. :doc:`SSPquadUP`
+#. :doc:`SSPbrickUP`
+
+      
 .. toctree::
    :maxdepth: 2
-   :caption: Other u-p elements
+   :hidden:
 
    SSPquadUP
    SSPbrickUP
 
+Contact Elements
+----------------
+
+#. :doc:`SimpleContact2D`
+#. :doc:`SimpleContact3D`
+#. :doc:`BeamContact2D`
+#. :doc:`BeamContact3D`
+#. :doc:`BeamEndContact3D`
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contact Elements
+   :hidden:
 
    SimpleContact2D
    SimpleContact3D
@@ -171,18 +302,32 @@ The following contain information about available ``eleType``:
    BeamEndContact3D
 
 
+Cable Elements
+--------------
+
+#. :doc:`CatenaryCable`
 
 .. toctree::
    :maxdepth: 2
-   :caption: Cable Elements
-
+   :hidden:
 
    CatenaryCable
 
 
+      
+Misc.
+-----
+
+#. :doc:`SurfaceLoad`
+#. :doc:`VS3D4`
+#. :doc:`AC3D8`
+#. :doc:`ASI3D8`
+#. :doc:`AV3D4`
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Misc.
+   :hidden:
 
    SurfaceLoad
    VS3D4

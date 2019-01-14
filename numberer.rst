@@ -16,8 +16,14 @@
 
 The following contain information about available ``numbererType``:
 
+
+#. :doc:`PlainNumberer`
+#. :doc:`RCM`
+#. :doc:`AMD`
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    PlainNumberer
    RCM

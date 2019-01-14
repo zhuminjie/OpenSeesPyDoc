@@ -7,8 +7,28 @@
 The model or domain in OpenSees is a collection (an aggregation in object-oriented terms) of elements, nodes, single- and multi-point constraints and load patterns. It is the aggregation of these components which define the type of model that is being analyzed.
 
 
+#. :doc:`model`
+#. :doc:`element`
+#. :doc:`node`
+#. :doc:`SP_Constraint`
+#. :doc:`mp_constraint`
+#. :doc:`timeSeries`
+#. :doc:`pattern`
+#. :doc:`mass`
+#. :doc:`region`
+#. :doc:`reyleigh`
+#. :doc:`block`
+#. :doc:`beamIntegration`
+#. :doc:`uniaxialMaterial`
+#. :doc:`ndMaterial`
+#. :doc:`section`
+#. :doc:`frictionModel`
+#. :doc:`geomTransf`
+
+
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    model
    element
@@ -27,3 +47,6 @@ The model or domain in OpenSees is a collection (an aggregation in object-orient
    section
    frictionModel
    geomTransf
+
+
+

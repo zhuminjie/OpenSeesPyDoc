@@ -22,21 +22,41 @@
 
 The following contain information about available ``intType``:
 
+Static integrator objects
+-------------------------
+
+
+#. :doc:`loadControl`
+#. :doc:`displacementControl`
+#. :doc:`minUnbalDispNorm`
+#. :doc:`arcLength`
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Static integrator objects
+   :hidden:
 
    loadControl
    displacementControl
    minUnbalDispNorm
    arcLength
 
+Transient integrator objects
+----------------------------
+
+
+#. :doc:`centralDifference`
+#. :doc:`newmark`
+#. :doc:`hht`
+#. :doc:`generalizedAlpha`
+#. :doc:`trbdf2`
+#. :doc:`explicitDifference`
+#. :ref:`PFEM-Integrator`
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Transient integrator objects
+   :hidden:
 
    centralDifference
    newmark
@@ -45,4 +65,4 @@ The following contain information about available ``intType``:
    trbdf2
    explicitDifference
 
-* :ref:`PFEM-Integrator`
+

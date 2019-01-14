@@ -19,11 +19,23 @@
    ``tsArgs`` |list|                  a list of time series arguments
    ================================   ===========================================================================
 
+	      
+
+
 
 The following contain information about available ``tsType``:
 
+#. :doc:`constantTs`
+#. :doc:`linearTs`
+#. :doc:`trigTs`
+#. :doc:`triangleTs`
+#. :doc:`rectTs`
+#. :doc:`pulseTs`
+#. :doc:`pathTs`
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    constantTs
    linearTs

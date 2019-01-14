@@ -27,8 +27,15 @@ For example,
 
 The following contain information about available ``transfType``:
 
+
+#. :doc:`LinearTransf`
+#. :doc:`pdelta`
+#. :doc:`corotational`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    LinearTransf
    pdelta

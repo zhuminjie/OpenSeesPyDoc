@@ -6,8 +6,56 @@ Output Commands
 
 Get outputs from OpenSees. These commands don't change internal states of OpenSees.
 
+
+
+
+#. :doc:`basicDeformation`
+#. :doc:`basicForce`
+#. :doc:`basicStiffness`
+#. :doc:`eleDynamicalForce`
+#. :doc:`eleForce`
+#. :doc:`eleNodes`
+#. :doc:`eleResponse`
+#. :doc:`getEleTags`
+#. :doc:`getLoadFactor`
+#. :doc:`getNodeTags`
+#. :doc:`getTime`
+#. :doc:`nodeAccel`
+#. :doc:`nodeBounds`
+#. :doc:`nodeCoord`
+#. :doc:`nodeDisp`
+#. :doc:`nodeEigenvector`
+#. :doc:`nodeMass`
+#. :doc:`nodePressure`
+#. :doc:`nodeReaction`
+#. :doc:`nodeResponse`
+#. :doc:`nodeVel`
+#. :doc:`nodeUnbalance`
+#. :doc:`numFact`
+#. :doc:`numIter`
+#. :doc:`printA`
+#. :doc:`printB`
+#. :doc:`printGID`
+#. :doc:`printModel`
+#. :doc:`record`
+#. :doc:`recorder`
+#. :doc:`sectionForce`
+#. :doc:`sectionDeformation`
+#. :doc:`sectionStiff`
+#. :doc:`sectionFlexibility`
+#. :doc:`sectionLocation`
+#. :doc:`sectionWeight`
+#. :doc:`systemSize`
+#. :doc:`testIter`
+#. :doc:`testNorm`
+#. :doc:`version`
+
+
+
+
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    basicDeformation
    basicForce
@@ -49,3 +97,4 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
    testIter
    testNorm
    version
+

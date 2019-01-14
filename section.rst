@@ -27,8 +27,24 @@ For example,
 
 The following contain information about available ``secType``:
 
+#. :doc:`elasticSection`
+#. :doc:`fibersection`
+#. :doc:`ndfiber`
+#. :doc:`wfsection2d`
+#. :doc:`rcsection2d`
+#. :doc:`rccircularsection`
+#. :doc:`parallelsection`
+#. :doc:`sectionaggregator`
+#. :doc:`uniaxialsection`
+#. :doc:`elasticMembranePlateSection`
+#. :doc:`plateFiberSection`
+#. :doc:`bidirectionalSection`
+#. :doc:`isolatorsection`
+#. :doc:`LayeredShell`
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    elasticSection
    fibersection

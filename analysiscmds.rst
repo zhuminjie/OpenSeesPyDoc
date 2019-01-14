@@ -13,8 +13,23 @@ In OpenSees, an analysis is an object which is composed by the aggregation of co
 #. SystemOfEqn/Solver -- within the solution algorithm, it specifies how to store and solve the system of equations in the analysis
 #. Convergence Test -- determines when convergence has been achieved.
 
+
+Analysis commands
+
+#. :doc:`constraints`
+#. :doc:`numberer`
+#. :doc:`system`
+#. :doc:`test`
+#. :doc:`algorithm`
+#. :doc:`integrator`
+#. :doc:`analysis`
+#. :doc:`eigen`
+#. :doc:`analyze`
+
+
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    constraints
    numberer
@@ -25,3 +40,4 @@ In OpenSees, an analysis is an object which is composed by the aggregation of co
    analysis
    eigen
    analyze
+

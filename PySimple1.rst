@@ -4,7 +4,7 @@
 PySimple1 Material
 ==================
 
-.. function:: uniaxialMaterial('PySimple1', matTag,)
+.. function:: uniaxialMaterial('PySimple1', matTag,soildType,pult,Y50,Cd,c=0.0)
    :noindex:
 
    This command is used to construct a PySimple1 uniaxial material object.

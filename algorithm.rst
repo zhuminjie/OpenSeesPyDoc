@@ -15,8 +15,21 @@
 
 The following contain information about available ``algoType``:
 
+#. :doc:`linearAlgo`
+#. :doc:`newton`
+#. :doc:`newtonLineSearch`
+#. :doc:`modifiedNewton`
+#. :doc:`krylovNewton`
+#. :doc:`secantNewton`
+#. :doc:`raphsonNewton`
+#. :doc:`periodicNewton`
+#. :doc:`bfgs`
+#. :doc:`broyden`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    linearAlgo
    newton

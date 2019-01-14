@@ -16,8 +16,16 @@
 
 The following contain information about available ``constraintType``:
 
+
+#. :doc:`PlainConstraint`
+#. :doc:`LagrangeMultipliers`
+#. :doc:`PenaltyMethod`
+#. :doc:`TransformationMethod`
+
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    PlainConstraint
    LagrangeMultipliers
