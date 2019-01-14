@@ -2,12 +2,16 @@
   Change Log
 ==============
 
-..
-   * **Version 0.0.7** ()
 
-     #. Add "2D wheel-rail" element
-     #. PVD recorder allows to set a path
-     #. Add "sdfResponse" function for single dof dynamic analysis
+* **Version 0.0.7** (`b75db21 <https://github.com/zhuminjie/OpenSees/tree/b75db21028c2dbbca55ea86d081893ff9b0f0be3>`_)
+
+  #. Add "2D wheel-rail" element
+  #. PVD recorder allows to set a path
+  #. Add "sdfResponse" function for single dof dynamic analysis
+  #. Fix a bug in Joint2D
+  #. Fix typo in UCSD UP elements
+  #. Fix bugs in PressureIndependMultiYield
+  #. Add JSON print options to some materials and elements
   
 
 * **Version 0.0.6** (`cead6e8 <https://github.com/OpenSees/OpenSees/tree/cead6e858e20b02345a28de379f962b41d0796e9>`_)
