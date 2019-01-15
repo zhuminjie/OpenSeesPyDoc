@@ -5,11 +5,9 @@
  OpenSeesPy |opspy_version| for Linux:
 =======================================
 
-**For Python3.6 and Python 3.7**
+* Install libgfortran3, libtcl8.5, libtk8.5
 
-* Install Tcl 8.5
-
-* Install `Anaconda 5.0 Linux`_ or `Anaconda 5.3 Linux`_
+* Install `Anaconda 2018.12 Linux`_
    
 * Download `OpenSeesPy Linux Library`_
 

@@ -5,17 +5,23 @@
  OpenSeesPy |opspy_version| through PyPi
 =========================================
 
-You should have Python 3.6 or higher installed already.
-
-Windows works only for Python 3.6.
-
-Linux works for both Python 3.6 and Ppthon 3.7
-
 Use following command to install
 
 ::
 
    pip install openseespy
+
+   # or
+   pip install --user openseespy
+
+or to upgrade
+
+::
+
+   pip install --upgrade openseespy
+
+   # or
+   pip install --user --upgrade openseespy
 
 
 and import OpenSeesPy as
