@@ -6,7 +6,7 @@
 
 #. The original model can be found `here <https://www.wiki.ed.ac.uk/display/opensees/Restrained+beam+under+thermal+expansion>`_.
 
-#. The Pypton source code is shown below, which can be downloaded :download:`here <beamThermal.py>`.
+#. The Pypton source code is shown below, which can be downloaded :download:`here <pyExamples/beamThermal.py>`.
 
 #. Change the line 2 below to set the right path where the OpenSeesPy library located.
 
@@ -16,6 +16,6 @@
 
 .. image:: _static/beamThermal.png
 
-.. literalinclude:: beamThermal.py
+.. literalinclude:: pyExamples/beamThermal.py
    :linenos:
    :emphasize-lines: 2

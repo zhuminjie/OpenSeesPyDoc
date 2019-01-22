@@ -5,7 +5,7 @@
 ==========================
 
 
-#. The source code is shown below, which can be downloaded :download:`here <PortalFrame2d.py>`.
+#. The source code is shown below, which can be downloaded :download:`here <pyExamples/PortalFrame2d.py>`.
 #. Change the line 2 below to set the right path where the OpenSeesPy library located.
 #. Run the source code in your favorate Python program and should see results below
 
@@ -29,6 +29,6 @@
             Moment Bottom Left       2324.677        2324.68        2324.71
     PASSED Verification Test PortalFrame2d.py 
 
-.. literalinclude:: PortalFrame2d.py
+.. literalinclude:: pyExamples/PortalFrame2d.py
    :linenos:
    :emphasize-lines: 3

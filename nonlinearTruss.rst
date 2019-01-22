@@ -5,7 +5,7 @@
 ==========================
 
 
-#. The source code is shown below, which can be downloaded :download:`here <NonlinearTruss.py>`.
+#. The source code is shown below, which can be downloaded :download:`here <pyExamples/NonlinearTruss.py>`.
 
 #. Change the line 2 below to set the right path where the OpenSeesPy library located.
 
@@ -15,6 +15,6 @@
 
 .. image:: _static/nonlinearTruss.png
 
-.. literalinclude:: NonlinearTruss.py
+.. literalinclude:: pyExamples/NonlinearTruss.py
    :linenos:
    :emphasize-lines: 2
