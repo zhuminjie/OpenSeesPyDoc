@@ -5,7 +5,7 @@
 ===================
 
 
-#. The source code is shown below, which can be downloaded :download:`here <pyExamples/dambreak.py>`.
+#. The source code is shown below, which can be downloaded :download:`here </pyExamples/dambreak.py>`.
 
 #. Change the line 2 below to set the right path where the OpenSeesPy library located.
 
@@ -19,6 +19,6 @@
 
    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4QhlTNFoWC4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-.. literalinclude:: pyExamples/dambreak.py
+.. literalinclude:: /pyExamples/dambreak.py
    :linenos:
    :emphasize-lines: 2

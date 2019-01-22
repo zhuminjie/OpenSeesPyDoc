@@ -66,7 +66,7 @@
 					 * ``Es0w`` elastic modulus of FRP wraps.
    ===================================   ===========================================================================
 
-.. image:: _static/545px-SectionTypes.png
+.. image:: /_static/545px-SectionTypes.png
 
 
 .. seealso::

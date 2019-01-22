@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. include:: sub.txt
+.. include:: src/sub.txt
 
 .. important::
 
@@ -84,16 +84,16 @@ as demonstrated with commands below.
    :numbered:
    :caption: Contents
       
-   installation
-   changelog
-   modelcmds
-   analysiscmds
-   outputcmds
-   utilitycmds
-   fsicmds
-   senscmds
-   reliabilitycmds
-   examples
+   src/installation
+   src/changelog
+   src/modelcmds
+   src/analysiscmds
+   src/outputcmds
+   src/utilitycmds
+   src/fsicmds
+   src/senscmds
+   src/reliabilitycmds
+   src/examples
 
 
    
