@@ -1,5 +1,5 @@
 ==================
- Other Examples
+ Thermal Examples
 ==================
 
 

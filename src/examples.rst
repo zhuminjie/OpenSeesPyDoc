@@ -9,7 +9,8 @@
 #. :doc:`structure`
 #. :doc:`earthquake`
 #. :doc:`tsunami`
-#. :doc:`other`
+#. :doc:`geotech`
+#. :doc:`thermal`
 
 
 
@@ -20,4 +21,5 @@
    structure
    earthquake
    tsunami
-   other
+   geotech
+   thermal
