@@ -93,3 +93,4 @@
 .. _Scott and Fenves 2006: https://doi.org/10.1061/(ASCE)0733-9445(2006)132:2(244)
 .. _Kidarsa, Scott and Higgins 2008: https://doi.org/10.1016/j.finel.2007.11.013
 .. _eqsig: https://pypi.org/project/eqsig/
+.. _DesignSafe: https://www.designsafe-ci.org/

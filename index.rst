@@ -9,6 +9,8 @@
 
    Version |opspy_version| is released.
 
+   OpenSeesPy has been official in `DesignSafe`_.
+
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
    
@@ -50,13 +52,29 @@ A minimum script is shown below:
    # for Windows
    sys.path.append('C:/path/to/OpenSeesPy')
 
-   from opensees import *
+   import opensees as ops
    ###########################################
+
+
 
    ###########################################
    # If installed with PyPi
+   #
+   # pip install --user --upgrade openseespy
+   #
 
-   from openseespy.opensees import *
+   import openseespy.opensees as ops
+   ###########################################
+
+
+
+   ###########################################
+   # If use in DesignSafe
+   #
+   # pip install --user --upgrade openseespy
+   #
+
+   import openseespy.opensees as ops
    ###########################################
 
    # Using OpenSees ...

@@ -7,6 +7,7 @@
 #. :doc:`windows`
 #. :doc:`linux`
 #. :doc:`pypi`
+#. :doc:`designsafe`
 
 
 .. toctree::
@@ -16,6 +17,6 @@
    windows
    linux
    pypi
-
+   designsafe
 
 
