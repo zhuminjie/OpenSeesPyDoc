@@ -17,22 +17,22 @@
 
                               * ``'quad'`` : [x1, y1, x2, y2, x3, y3, x4, y4, nx, ny]
 			      
-				Coordinates of four corners.
+				Coordinates of four corners in counter-clock wise order.
 			      
 			      * ``'cube'`` : [x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4,
 				              z4, x5, y5, z5, x6, y6, z6, x7, y7, z7, x8,
 				              y8, z8, nx, ny, nz]
 				
-				Coordinates of four corners at bottom and at top
+				Coordinates of four corners at bottom and at top in counter-clock wise order
 			      * ``'tri'`` : [x1, y1, x2, y2, x3, y3, nx, ny]
 			      
-				Coordinates of three corners
+				Coordinates of three corners in counter-clock wise order
                               * ``'line'`` : [x1, y1, x2, y2, nx]
 			      
-				Coordinates of two ends
+				Coordinates of two ends in counter-clock wise order
                               * ``'point'`` : [x1, y1]
 			      
-				Coordinates of the point
+				Coordinates of the point in counter-clock wise order
 
 			      ``nx``, ``ny``, ``nz`` are number of particles in x, y, and z directions
 			      
