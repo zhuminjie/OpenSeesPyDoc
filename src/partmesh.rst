@@ -12,14 +12,16 @@
 
    ========================   ===========================================================================
    ``tag`` |int|              mesh tag.
-   ``type`` |str|             type of the mesh, ``'quad'``, ``'tri'``, ``'line'``, ``'point'``
+   ``type`` |str|             type of the mesh
    ``pArgs`` |listf|          coordinates of points defining the mesh region
 
                               * ``'quad'`` : [x1, y1, x2, y2, x3, y3, x4, y4, nx, ny]
 			      
 				Coordinates of four corners.
 			      
-			      * ``'cube'`` : [x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, x5, y5, z5, x6, y6, z6, x7, y7, z7, x8, y8, z8, nx, ny, nz]
+			      * ``'cube'`` : [x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4,
+				              z4, x5, y5, z5, x6, y6, z6, x7, y7, z7, x8,
+				              y8, z8, nx, ny, nz]
 				
 				Coordinates of four corners at bottom and at top
 			      * ``'tri'`` : [x1, y1, x2, y2, x3, y3, nx, ny]
