@@ -31,7 +31,7 @@ loadConst('-time', 0.0)
 
 # Define nodal mass in terms of axial load on columns
 g = 386.4
-m = P/g
+m = RCFrameGravity.P/g
 
 mass(3, m, m, 0.0)
 mass(4, m, m, 0.0)
