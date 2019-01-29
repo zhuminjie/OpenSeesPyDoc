@@ -16,7 +16,7 @@ wipe()
 # ----------------------------------------------------
 
 # Do operations of Example3.1 by sourcing in the tcl file
-exec(open('RCFrameGravity.py').read())
+import RCFrameGravity
 print("Gravity Analysis Completed")
 
 # Set the gravity loads to be constant & reset the time in the domain

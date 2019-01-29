@@ -19,7 +19,7 @@ wipe()
 # ----------------------------------------------------
 
 # Do operations of Example3.1 by sourcing in the tcl file
-exec(open('RCFrameGravity.py').read())
+import RCFrameGravity
 print("Gravity Analysis Completed")
 
 # Set the gravity loads to be constant & reset the time in the domain
@@ -31,7 +31,7 @@ loadConst('-time', 0.0)
 
 # Define nodal mass in terms of axial load on columns
 g = 386.4
-m = P/g
+m = RCFrameGravity.P/g
 
 mass(3, m, m, 0.0)
 mass(4, m, m, 0.0)
