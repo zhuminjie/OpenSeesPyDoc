@@ -3,7 +3,7 @@ author : JAWAD FAYAZ (email: jfayaz@uci.edu) (website: https://jfayaz.github.io)
 
 ------------------------------ Instructions ------------------------------------- 
 This code develops the RotD50 Sa and RotD100 Sa Spectra of the Bi-Directional 
-Ground Motion records provided in the 'GM' folder which must be in current directory 
+Ground Motion records as '.AT2' files provided in the current directory 
 
 The two directions of the ground motion record must be named as 'GM1i' and 'GM2i',
 where 'i' is the ground motion number which goes from 1 to 'n', 'n' being the total
@@ -20,7 +20,8 @@ the following names must be provided in the given 'GM' folder:
 The Ground Motion file must be a vector file with 4 header lines.The first 3 lines can have
 any content, however, the 4th header line must be written exactly as per the following example:
     'NPTS=  15864, DT= 0.0050'
-    
+The 'ReadGMFile.py' can be edited accordingly  for any other format 
+   
 You may run this code in python IDE: 'Spyder' or any other similar IDE
 
 Make sure you have the following python libraries installed:
@@ -34,22 +35,17 @@ Make sure you have the following python libraries installed:
     numpy
     matplotlib.pyplot 
  
-
 INPUT:
 This codes provides the option to have 3 different regions of developing the Spectra of ground motions with different period intervals (discretizations)
 The following inputs within the code are required:
-
     'Path_to_openpyfiles'--> Path where the library files 'opensees.pyd' and 'LICENSE.rst' of OpenSeesPy are included (for further details go to https://openseespydoc.readthedocs.io/en/latest/windows.html)
-
     'Int_T_Reg_1'        --> Period Interval for the first region of the Spectrum 
     'End_T_Reg_1'        --> Last Period of the first region of the Spectrum (where to end the first region)
     'Int_T_Reg_2'        --> Period Interval for the second region of the Spectrum 
     'End_T_Reg_2'        --> Last Period of the second region of the Spectrum (where to end the second region)
     'Int_T_Reg_3'        --> Period Interval for the third region of the Spectrum 
     'End_T_Reg_3'        --> Last Period of the third region of the Spectrum (where to end the third region)
-
     'Plot_Spectra'       --> whether to plot the generated Spectra of the ground motions (options: 'Yes', 'No')    
-
 
 OUTPUT:
 The output will be provided in a saperate 'GMi_Spectra.txt' file for each ground motion record, where 'i' denotes the number of ground motion in the same of
@@ -83,6 +79,7 @@ End_T_Reg_3       = 5
 Plot_Spectra      = 'Yes'
 
 
+##### =============== CODE BEGINS ================ #######
 ## Importing Libraries
 import os, sys, pathlib, fnmatch
 import shutil as st
@@ -99,7 +96,7 @@ wipe()
 
 # Getting Number of Ground Motions from the GM folder
 GMdir = os.getcwd()
-No_of_GMs = int(len(fnmatch.filter(os.listdir(GMdir+'\\GM'),'*.AT2'))/2)
+No_of_GMs = int(len(fnmatch.filter(os.listdir(GMdir),'*.AT2'))/2)
 print('\nGenerating Spectra for {} provided GMs \n\n'.format(np.round(No_of_GMs,0)))
 
 # Initializations
@@ -173,7 +170,7 @@ for iEQ in range(1,No_of_GMs+1):
         GMinput  = iGMinput.split(' ');
         gmXY     = {}        
         for i in range(0,2):
-            inFile   = GMdir + '\\GM\\'+ GMinput[i]+'.AT2';
+            inFile   = GMdir + '\\'+ GMinput[i]+'.AT2';
             dt, NumPts , gmXY = ReadGMFile()
         
         # Storing GM Histories
@@ -216,17 +213,19 @@ for iEQ in range(1,No_of_GMs+1):
         test('EnergyIncr',1.0e-6, 100, 0)
         analysis("Transient")
         
-        # Variables
+        # Variables (Can alter the speed of analysis)
         dtAnalysis    = dt
         TmaxAnanlysis = dt*NumPts
         tFinal        = int(TmaxAnanlysis/dtAnalysis)
         tCurrent      = getTime()
         ok            = 0
         time          = [tCurrent]
+        
+        # Initializations of response
         u1            = [0.0]
         u2            = [0.0]
                 
-        # Performing the transient analysis (Performance is slow in this loop)
+        # Performing the transient analysis (Performance is slow in this loop, can be altered by changing the parameters)
         while ok == 0 and tCurrent < tFinal:
             ok = analyze(1, dtAnalysis)
             # if the analysis fails try initial tangent iteration
@@ -289,14 +288,12 @@ for iEQ in range(1,No_of_GMs+1):
             axes.axvline(linewidth=10,color='black')
             axes.hold(True)
             axes.legend(fontsize =30)
-
-        
+       
         fig = plt.figure(1,figsize=(18,12))
         plot_spectra('RotD50 Spectra','RotD50Sa(g)',iEQ)
        
         fig = plt.figure(2,figsize=(18,12))
         plot_spectra('RotD100 Spectra','RotD100Sa(g)',iEQ)
-
 
     SDOF_RESPONSE.insert(iEQ-1,DISPLACEMENTS)
     GM_RESPONSE.insert(iEQ-1,GM_SPECTRA)
