@@ -6,6 +6,7 @@
 #. :doc:`Canti2DEQ`
 #. :doc:`RCFrameEarthquake`
 #. :doc:`exampleNamedSpacedNonlinearSDOF`
+#. :doc:`exampleRotDSpectra`
 
 
 .. toctree::
@@ -15,3 +16,4 @@
    Canti2DEQ
    RCFrameEarthquake
    exampleNamedSpacedNonlinearSDOF
+   exampleRotDSpectra

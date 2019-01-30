@@ -10,7 +10,6 @@
 #. :doc:`RCFrameGravity`
 #. :doc:`RCFramePushOver`
 #. :doc:`ThreeStorySteel`
-#. :doc:`exampleRotDSpectra`
 
 
 .. toctree::
@@ -24,4 +23,4 @@
    RCFrameGravity
    RCFramePushOver
    ThreeStorySteel
-   exampleRotDSpectra
+

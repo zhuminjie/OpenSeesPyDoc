@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==========================================
-Example name RotD Spectra of Ground Motion
-==========================================
+=============================
+RotD Spectra of Ground Motion
+=============================
 
 #. The source code is developed by `Jawad Fayaz <https://jfayaz.github.io>`_ from University of California- Irvine.
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/example_RotD_Spectra_Generation.py>`.
