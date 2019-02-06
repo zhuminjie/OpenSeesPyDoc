@@ -2,7 +2,7 @@
 
 
 ===========================================
- OpenSeesPy Paraview through `DesignSafe`_
+ Paraview in `DesignSafe`_
 ===========================================
 
 `DesignSafe`_ provides paraview for viewing OpenSeesPy results:

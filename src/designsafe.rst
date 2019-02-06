@@ -2,14 +2,12 @@
 
 
 ==================================================
- OpenSeesPy |opspy_version| through `DesignSafe`_
+ `DesignSafe`_
 ==================================================
 
-OpenSeesPy has been offical in `DesignSafe`_. You don't have
-to install anything to run, collaborate, and view results.
+OpenSeesPy has been offical in `DesignSafe`_.
 
 #. :doc:`designsaferun`
-#. :doc:`collaboration`
 #. :doc:`paraview`
 
 
@@ -18,7 +16,6 @@ to install anything to run, collaborate, and view results.
    :hidden:
 
    designsaferun
-   collaboration
    paraview
 
 

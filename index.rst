@@ -42,45 +42,12 @@ A minimum script is shown below:
 
 ::
 
-   ##########################################
-   # If installed directly with library files
-   import sys
-
-   # for Linux
-   sys.path.append('/path/to/OpenSeesPy')
-
-   # for Windows
-   sys.path.append('C:/path/to/OpenSeesPy')
-
-   import opensees as ops
-   ###########################################
-
-
-
-   ###########################################
-   # If installed with PyPi
-   #
-   # pip install --user --upgrade openseespy
-   #
-
+   # import opensees
    import openseespy.opensees as ops
-   ###########################################
 
-
-
-   ###########################################
-   # If use in DesignSafe
-   #
-   # pip install --user --upgrade openseespy
-   #
-
-   import openseespy.opensees as ops
-   ###########################################
-
-   # Using OpenSees ...
-
-   # wipe before exiting
-   wipe()
+   # wipe model
+   ops.wipe()
+   
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
 OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manual>`_.

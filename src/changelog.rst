@@ -2,6 +2,12 @@
   Change Log
 ==============
 
+* **Version 0.1.1** (`f9f45fe <https://github.com/OpenSees/OpenSees/tree/f9f45fe7cf0094cd99fd92c2f794187b42cf9289>`_)
+
+  Update to OpenSees 3.0.2
+
+
+
 
 * **Version 0.0.7** (`b75db21 <https://github.com/zhuminjie/OpenSees/tree/b75db21028c2dbbca55ea86d081893ff9b0f0be3>`_)
 

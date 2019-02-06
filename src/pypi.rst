@@ -1,30 +1,44 @@
 .. include:: sub.txt
 
 
-=========================================
- OpenSeesPy |opspy_version| through PyPi
-=========================================
+======
+ PyPi
+======
 
-Use following command to install
+Install Python
+--------------
 
-::
+* For Windows, install `Anaconda 2018.12 Windows`_ 
 
-   pip install openseespy
-
-   # or
-   pip install --user openseespy
-
-or to upgrade
-
-::
-
-   pip install --upgrade openseespy
-
-   # or
-   pip install --user --upgrade openseespy
+* For Linux, install `Anaconda 2018.12 Linux`_ 
 
 
-and import OpenSeesPy as
+Install OpenSeesPy
+------------------
+
+* In Linux, Open a terminal 
+
+* In Windows, go to start menu -> Anaconda3 (64-bit) -> Anaconda Prompt
+
+* To install
+
+   ::
+
+      pip install openseespy
+
+      pip install --user openseespy
+
+* To upgrade
+
+   ::
+
+      pip install --upgrade openseespy
+
+      pip install --user --upgrade openseespy
+
+   
+Import OpenSeesPy
+-----------------
 
 ::
 
