@@ -7,7 +7,7 @@
 .. function:: parameter(tag, <specific parameter args>)
 
    In DDM-based FE response sensitivity analysis, the sensitivity parameters can be material,
-geometry or discrete loading parameters. 
+   geometry or discrete loading parameters. 
 
    ==============================   ===========================================================================
    ``tag`` |int|                    integer tag identifying the parameter.
