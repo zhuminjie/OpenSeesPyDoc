@@ -6,7 +6,11 @@
 
 These commands are for sensitivity analysis in OpenSees.
 
-
+#. :doc:`parameter`
+#. :doc:`addToParameter`
+#. :doc:`updateParameter`
+#. :doc:`getParamTags`
+#. :doc:`getParamValue`
 #. :doc:`computeGradients`
 #. :doc:`sensitivityAlgorithm`
 #. :doc:`sensNodeDisp`
@@ -21,6 +25,11 @@ These commands are for sensitivity analysis in OpenSees.
    :maxdepth: 1
    :hidden:
 
+   parameter
+   addToParameter
+   updateParameter
+   getParamTags
+   getParamValue
    computeGradients
    sensitivityAlgorithm
    sensNodeDisp
