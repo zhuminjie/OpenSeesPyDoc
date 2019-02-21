@@ -9,6 +9,7 @@ These commands are for sensitivity analysis in OpenSees.
 #. :doc:`parameter`
 #. :doc:`addToParameter`
 #. :doc:`updateParameter`
+#. :doc:`setParameter`
 #. :doc:`getParamTags`
 #. :doc:`getParamValue`
 #. :doc:`computeGradients`
@@ -28,6 +29,7 @@ These commands are for sensitivity analysis in OpenSees.
    parameter
    addToParameter
    updateParameter
+   setParameter
    getParamTags
    getParamValue
    computeGradients
