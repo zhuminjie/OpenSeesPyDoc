@@ -1,16 +1,13 @@
 .. include:: sub.txt
 
 ==================
- nodeMass command
+ nodeDOFs command
 ==================
 
-.. function:: nodeMass(nodeTag, dof=-1)
+.. function:: nodeDOFs(nodeTag)
 
-   Returns the mass at a specified node.
+   Returns the DOF numbering of a node.
 
    ========================   ===========================================================================
    ``nodeTag`` |int|          node tag.
-   ``dof`` |int|              specific dof at the node (1 through ndf), (optional),
-	                      if no ``dof`` is
-	                      provided, a list of values for all dofs is returned.
    ========================   ===========================================================================

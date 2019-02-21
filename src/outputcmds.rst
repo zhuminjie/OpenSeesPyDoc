@@ -25,6 +25,7 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
 #. :doc:`nodeCoord`
 #. :doc:`nodeDisp`
 #. :doc:`nodeEigenvector`
+#. :doc:`nodeDOFs`
 #. :doc:`nodeMass`
 #. :doc:`nodePressure`
 #. :doc:`nodeReaction`
@@ -73,6 +74,7 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
    nodeCoord
    nodeDisp
    nodeEigenvector
+   nodeDOFs
    nodeMass
    nodePressure
    nodeReaction
