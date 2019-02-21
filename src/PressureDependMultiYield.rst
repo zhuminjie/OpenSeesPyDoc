@@ -78,7 +78,13 @@
                                       than 40, default is 20). The surfaces are generated
 				      based on the hyperbolic relation defined in Note 2
 				      below.
-   ``yieldSurf`` |listf|              Instead of automatic surfaces generation (Note 2),
+   ``yieldSurf`` |listf|              If ``noYieldSurf<0 && >-100``, the user defined
+                                      yield surface is used. You have to provide
+				      a list of ``2*(-noYieldSurf)``, otherwise, the arguments
+				      will be messed up. Also don't provide user defined
+				      yield surface if ``noYieldSurf>0``, it will
+				      mess up the argument list too.
+                                      Instead of automatic surfaces generation (Note 2),
                                       you can define yield surfaces directly based on
 				      desired shear modulus reduction curve. To do so,
 				      add a minus sign in front of noYieldSurf, then
