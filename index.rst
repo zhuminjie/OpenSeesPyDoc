@@ -7,7 +7,7 @@
 
 .. important::
 
-   Version |opspy_version| is released.
+   Version |opspy_version| is released on Feb. 6 2019.
 
    OpenSeesPy has been official in `DesignSafe`_.
 
