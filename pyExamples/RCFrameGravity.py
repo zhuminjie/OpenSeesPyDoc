@@ -1,9 +1,6 @@
 print("==========================")
 
-import sys
-
-sys.path.append('/scratch/opensees/SRC/interpreter')
-from opensees import *
+from openseespy.opensees import *
 
 print("Starting RCFrameGravity example")
 
