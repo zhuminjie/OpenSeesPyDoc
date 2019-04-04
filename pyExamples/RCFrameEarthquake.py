@@ -5,9 +5,7 @@ print("Start RCFrameEarthquake Example")
 #
 # Written: Minjie
 
-import sys
-sys.path.append('/scratch/opensees/SRC/interpreter')
-from opensees import *
+from openseespy.opensees import *
 
 import ReadRecord
 import numpy as np
