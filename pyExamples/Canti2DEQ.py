@@ -1,9 +1,7 @@
 print("=========================================================")
 print("Start cantilever 2D EQ ground motion with gravity example")
 
-import sys
-sys.path.append('/path/to/direction/of/pyd/file')
-from opensees import *
+from openseespy.opensees import *
 
 
 # --------------------------------------------------------------------------------------------------
