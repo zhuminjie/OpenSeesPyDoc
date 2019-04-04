@@ -5,8 +5,7 @@ Created on Thu Jan 10 18:24:47 2019
 @author: pchi893
 """
 
-import sys
-sys.path.append('')
+
 
 
 ##########################################################
@@ -409,7 +408,7 @@ def get_tzParam ( phi, b, sigV, pEleLength):
 ###########################################################
 
 
-import opensees as op
+from openseespy.opensees import *
 
 op.wipe()
 
