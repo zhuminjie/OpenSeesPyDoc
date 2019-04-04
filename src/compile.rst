@@ -18,6 +18,10 @@ Original instructions can be found at `here <https://github.com/steva44/OpenSees
 A Qt build environment for OpenSees
 -----------------------------------
 
+OpenSeesQt
+
+A Qt build environment for OpenSees -- Open System For Earthquake Engineering Simulation Pacific Earthquake Engineering Research Center(http://opensees.berkeley.edu). 
+
 Qt is an open source, cross-platform development environment that is free for many uses.
 Please see the `license <https://www.qt.io/licensing/>`_.
 

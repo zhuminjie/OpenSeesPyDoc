@@ -25,8 +25,7 @@
 
 .. note::
 
-   Please send any questions to `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
-   or `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
+   Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
