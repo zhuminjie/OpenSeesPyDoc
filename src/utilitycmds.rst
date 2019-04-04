@@ -35,6 +35,8 @@ These commands are used to monitor and change the state of the model.
 #. :doc:`updateMaterialStage`
 #. :doc:`wipe`
 #. :doc:`wipeAnalysis`
+#. :doc:`setNumThread`
+#. :doc:`getNumThreads`
 
 
 .. toctree::
@@ -68,5 +70,7 @@ These commands are used to monitor and change the state of the model.
    updateMaterialStage
    wipe
    wipeAnalysis
+   setNumThread
+   getNumThreads
 
 

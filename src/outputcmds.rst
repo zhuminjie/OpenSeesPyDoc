@@ -50,6 +50,7 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
 #. :doc:`testIter`
 #. :doc:`testNorm`
 #. :doc:`version`
+#. :doc:`logFile`
 
 
 
@@ -99,4 +100,4 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
    testIter
    testNorm
    version
-
+   logFile
