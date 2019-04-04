@@ -5,10 +5,7 @@ print("Start RCFramePushover Example")
 #
 # Written: GLF/MHS/fmk
 # Date: January 2001
-import sys
-
-sys.path.append('/scratch/opensees/SRC/interpreter')
-from opensees import *
+from openseespy.opensees import *
 
 wipe()
 # ----------------------------------------------------
