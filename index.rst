@@ -70,6 +70,7 @@ as demonstrated with commands below.
    :caption: Contents
       
    src/installation
+   src/compile
    src/changelog
    src/modelcmds
    src/analysiscmds
