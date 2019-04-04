@@ -1,6 +1,4 @@
-import sys
-sys.path.append('path')
-from opensees import *
+from openseespy.opensees import *
 
 def MomentCurvature(secTag, axialLoad, maxK, numIncr=100):
     
