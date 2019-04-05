@@ -3,11 +3,8 @@ from eqsig import duhamels
 import matplotlib.pyplot as plt
 import numpy as np
 
-import sys
-sys.path.append('/scratch/opensees/SRC/interpreter')
-
-import opensees as op  # change this to the path where opensees python is stored
-import opensees_constants as opc
+import openseespy.opensees as op
+import opensees_constants as opc  #opensees_constants.py should be close to main file or use sys.path...   to its directory
 
 
 def get_inelastic_response(mass, k_spring, f_yield, motion, dt, xi=0.05, r_post=0.0):

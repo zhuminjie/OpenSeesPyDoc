@@ -1,8 +1,5 @@
-import sys
+from openseespy.opensees import *
 
-sys.path.append('path/to/directory/of/pyd/file')
-
-from opensees import *
 from math import asin, sqrt
 
 # Two dimensional Frame: Eigenvalue & Static Loads

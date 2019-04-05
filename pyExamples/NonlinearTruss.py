@@ -1,6 +1,5 @@
-import sys
-sys.path.append('/path/to/OpenSeesPy')
-from opensees import *
+from openseespy.opensees import *
+
 import numpy as np
 import matplotlib.pyplot as plt
 

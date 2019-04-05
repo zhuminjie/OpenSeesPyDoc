@@ -84,8 +84,9 @@ Plot_Spectra      = 'Yes'
 import os, sys, pathlib, fnmatch
 import shutil as st
 from IPython import get_ipython
-sys.path.append(Path_to_openpyfiles)
-from opensees import *
+
+from openseespy.opensees import *
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
