@@ -3,7 +3,7 @@ from eqsig import duhamels
 import matplotlib.pyplot as plt
 import numpy as np
 
-from openseespy.opensees import *
+import openseespy.opensees as op
 import opensees_constants as opc  #opensees_constants.py should be close to main file or use sys.path...   to its directory
 
 
