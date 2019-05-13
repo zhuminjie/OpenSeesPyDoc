@@ -12,7 +12,7 @@ This command is used to construct a corotational truss element object. There are
    One way is to specify an area and a UniaxialMaterial identifier:
 
 
-.. function:: element('corotTrussSection', eleTag,*eleNodes,A, secTag, ['-rho', rho],['-cMass', cFlag],['-doRayleigh', rFlag])
+.. function:: element('corotTrussSection', eleTag,*eleNodes, secTag, ['-rho', rho],['-cMass', cFlag],['-doRayleigh', rFlag])
    :noindex:
 
    the other is to specify a Section identifier:
