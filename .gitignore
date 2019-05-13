@@ -7,3 +7,4 @@ obstacle
 dambreak
 *.out
 __pycache__
+*.xml
