@@ -8,3 +8,5 @@ dambreak
 *.out
 __pycache__
 *.xml
+.idea
+html
