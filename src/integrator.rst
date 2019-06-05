@@ -46,6 +46,7 @@ Transient integrator objects
 
 
 #. :doc:`centralDifference`
+#. :doc:`ExplicitDifference`
 #. :doc:`newmark`
 #. :doc:`hht`
 #. :doc:`generalizedAlpha`
@@ -59,6 +60,7 @@ Transient integrator objects
    :hidden:
 
    centralDifference
+   ExplicitDifference
    newmark
    hht
    generalizedAlpha
