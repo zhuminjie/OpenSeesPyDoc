@@ -4,7 +4,7 @@
  Newmark Method
 ================
 
-.. function:: integrator('Newmark',gamma,beta,formD=True)
+.. function:: integrator('Newmark',gamma,beta,'-formD', form)
    :noindex:
 
    Create a Newmark integrator.
@@ -12,8 +12,12 @@
    ========================   =============================================================
    ``gamma`` |float|          :math:`\gamma` factor.
    ``beta`` |float|           :math:`\beta` factor.
-   ``formD`` |bool|           Flag to indicate if use displacement as primary variable.
-		              If not, use acceleration. (optional)
+   ``form`` |str|             Flag to indicate which variable to be used as primary
+                              variable (optional)
+
+                              * ``'D'`` -- displacement (default)
+                              * ``'V'`` -- velocity
+                              * ``'A'`` -- acceleration
    ========================   =============================================================
 
    #. If the accelerations are chosen as the unknowns and :math:`\beta` is chosen as 0, the formulation results in the fast but conditionally stable explicit Central Difference method. Otherwise the method is implicit and requires an iterative solution process.

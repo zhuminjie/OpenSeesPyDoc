@@ -44,7 +44,7 @@
 
 .. |bi| replace:: (:class:`beamIntegration`)
 
-.. |opspy_version| replace:: 0.2.0
+.. |opspy_version| replace:: 0.3.0
 
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list

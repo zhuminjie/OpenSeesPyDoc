@@ -2,6 +2,16 @@
   Change Log
 ==============
 
+* **Version 0.3.0** ()
+
+  * Add logFile command
+  * Add partial uniform load fo ForceBeamColumn
+  * Add ShellDKGT element
+  * Add '-V' option in Newmark and HHT
+  * Fix bugs in wipe and Mesh
+  * Various PFEM updates
+  * Update to OpenSees 3.0.3
+
 * **Version 0.2.0** (`8a3d622 <https://github.com/OpenSees/OpenSees/tree/8a3d6225a14ef52c7711248e1a9e65fe298454c6>`_)
 
   * OpenSeesPy now can print messages and errors in Jupyter Notebook and other Windows based Python applications
