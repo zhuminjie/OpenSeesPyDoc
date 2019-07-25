@@ -24,6 +24,7 @@ The following contain information about available ``systemType``:
 #. :doc:`FullGeneral`
 #. :doc:`SparseSYM`
 #. :ref:`PFEM-System`
+#. :doc:`Mumps`
 
 
 .. toctree::
@@ -37,5 +38,6 @@ The following contain information about available ``systemType``:
    UmfPack
    FullGeneral
    SparseSYM
+   Mumps
 
 

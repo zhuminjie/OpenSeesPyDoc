@@ -11,6 +11,7 @@
 #. :doc:`tsunami`
 #. :doc:`geotech`
 #. :doc:`thermal`
+#. :doc:`parallelexs`
 
 
 
@@ -23,3 +24,4 @@
    tsunami
    geotech
    thermal
+   parallelexs

@@ -28,6 +28,7 @@ Static integrator objects
 
 #. :doc:`loadControl`
 #. :doc:`displacementControl`
+#. :doc:`ParallelDisplacementControl`
 #. :doc:`minUnbalDispNorm`
 #. :doc:`arcLength`
 
@@ -38,6 +39,7 @@ Static integrator objects
 
    loadControl
    displacementControl
+   ParallelDisplacementControl
    minUnbalDispNorm
    arcLength
 

@@ -2,7 +2,17 @@
   Change Log
 ==============
 
-* **Version 0.3.0** ()
+* **Version 0.4.2019.7**
+
+  * Parallel: the Linux version is enabled with parallel capability
+  * Python stream: add no echo
+  * Mesh: add CorotTruss
+  * TriMesh: can create line elements
+  * QuadMesh: can create line and triangular elements
+  * Python inputs: more flexible input types
+  * Commands: add ExplicitDifference integrator
+
+* **Version 0.3.0**
 
   * Add logFile command
   * Add partial uniform load fo ForceBeamColumn

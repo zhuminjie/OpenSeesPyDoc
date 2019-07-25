@@ -11,7 +11,6 @@ These commands are used to monitor and change the state of the model.
 #. :doc:`convertBinaryToText`
 #. :doc:`convertTextToBinary`
 #. :doc:`database`
-#. :doc:`domainChange`
 #. :doc:`InitialStateAnalysis`
 #. :doc:`loadConst`
 #. :doc:`modalDamping`
@@ -46,7 +45,6 @@ These commands are used to monitor and change the state of the model.
    convertBinaryToText
    convertTextToBinary
    database
-   domainChange
    InitialStateAnalysis
    loadConst
    modalDamping

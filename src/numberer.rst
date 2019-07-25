@@ -20,6 +20,8 @@ The following contain information about available ``numbererType``:
 #. :doc:`PlainNumberer`
 #. :doc:`RCM`
 #. :doc:`AMD`
+#. :doc:`ParallelPlainNumberer`
+#. :doc:`ParallelRCMNumberer`
 
 .. toctree::
    :maxdepth: 2
@@ -28,3 +30,5 @@ The following contain information about available ``numbererType``:
    PlainNumberer
    RCM
    AMD
+   ParallelPlainNumberer
+   ParallelRCMNumberer

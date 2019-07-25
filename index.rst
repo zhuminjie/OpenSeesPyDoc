@@ -41,7 +41,7 @@ A minimum script is shown below:
 
 ::
 
-   # import opensees
+   # import OpenSeesPy
    import openseespy.opensees as ops
 
    # wipe model
@@ -78,6 +78,7 @@ as demonstrated with commands below.
    src/fsicmds
    src/senscmds
    src/reliabilitycmds
+   src/parallelcmds
    src/examples
 
 

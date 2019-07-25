@@ -44,7 +44,7 @@
 
 .. |bi| replace:: (:class:`beamIntegration`)
 
-.. |opspy_version| replace:: 0.3.2019.6
+.. |opspy_version| replace:: 0.4.2019.7
 
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
@@ -94,3 +94,4 @@
 .. _Kidarsa, Scott and Higgins 2008: https://doi.org/10.1016/j.finel.2007.11.013
 .. _eqsig: https://pypi.org/project/eqsig/
 .. _DesignSafe: https://www.designsafe-ci.org/
+.. _mpich: https://www.mpich.org/downloads/
