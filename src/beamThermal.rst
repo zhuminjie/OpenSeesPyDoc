@@ -8,8 +8,6 @@
 
 #. The Pypton source code is shown below, which can be downloaded :download:`here </pyExamples/beamThermal.py>`.
 
-#. Change the line 2 below to set the right path where the OpenSeesPy library located.
-
 #. Make sure the `numpy`_ and `matplotlib`_ packages are installed in your Python distribution.
 
 #. Run the source code in your favorate Python program and should see
@@ -18,4 +16,3 @@
 
 .. literalinclude:: /pyExamples/beamThermal.py
    :linenos:
-   :emphasize-lines: 2

@@ -6,8 +6,7 @@
 
 
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/MomentCurvature.py>`.
-#. Change the line 2 below to set the right path where the OpenSeesPy library located.
-#. Run the source code in your favorate Python program and should see results below
+#. Run the source code in your favorite Python program and should see results below
 
 ::
 
@@ -18,4 +17,3 @@
 
 .. literalinclude:: /pyExamples/MomentCurvature.py
    :linenos:
-   :emphasize-lines: 2

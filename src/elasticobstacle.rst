@@ -7,8 +7,6 @@
 
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/ElasticObstacle.py>`.
 
-#. Change the line 2 below to set the right path where the OpenSeesPy library located.
-
 #. The folder ``obstacle/`` must exist before running the script.
 
 #. Run the source code in your favorate Python program.
@@ -21,4 +19,3 @@
 
 .. literalinclude:: /pyExamples/ElasticObstacle.py
    :linenos:
-   :emphasize-lines: 2

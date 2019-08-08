@@ -7,8 +7,6 @@
 
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/dambreak.py>`.
 
-#. Change the line 2 below to set the right path where the OpenSeesPy library located.
-
 #. The folder ``dambreak/`` must exist before running the script.
 
 #. Run the source code in your favorate Python program.
@@ -21,4 +19,3 @@
 
 .. literalinclude:: /pyExamples/dambreak.py
    :linenos:
-   :emphasize-lines: 2

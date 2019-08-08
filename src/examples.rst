@@ -4,8 +4,6 @@
  Examples
 ==========
 
-
-
 #. :doc:`structure`
 #. :doc:`earthquake`
 #. :doc:`tsunami`
