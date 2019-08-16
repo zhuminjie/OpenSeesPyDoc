@@ -2,6 +2,19 @@
   Change Log
 ==============
 
+* **Version 0.5.2**
+
+  * Add package openseespy.postprocessing
+  * Add setStartNodeTag command
+  * modalDamping: bug fixes
+  * Add Steel02Fatiuge material
+  * Add Concrete02IS material
+  * Add HardeningMaterial2 material
+  * Add hystereticBackone command
+  * Add stiffnessDegradation command
+  * Add strengthDegradation command
+  * Add unloadingRule command
+
 * **Version 0.4.2019.7**
 
   * Parallel: the Linux version is enabled with parallel capability
