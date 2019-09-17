@@ -55,12 +55,15 @@ as demonstrated with commands below.
 
 
 
-.. topic::
-   *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
+============
+ Developer
+============
 
-   | Faculty Research Assistant
-   | Civil and Construction Engineering
-   | Oregon State University
+*Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
+
+| Faculty Research Assistant
+| Civil and Construction Engineering
+| Oregon State University
 
    
 .. toctree::
