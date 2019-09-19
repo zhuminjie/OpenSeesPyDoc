@@ -2,6 +2,12 @@
   Change Log
 ==============
 
+* **Version 0.5.3**
+
+  * Fix bug in LimitState UniadialMaterial
+  * Automatic trimming spaces for string inputs
+  * Some output commands return lists instead of ints, such as nodeDisp etc.
+
 * **Version 0.5.2**
 
   * Add package openseespy.postprocessing
