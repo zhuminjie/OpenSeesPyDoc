@@ -74,6 +74,7 @@ as demonstrated with commands below.
    src/installation
    src/compile
    src/changelog
+   src/LICENSE
    src/modelcmds
    src/analysiscmds
    src/outputcmds
