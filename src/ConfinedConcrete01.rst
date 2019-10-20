@@ -4,7 +4,7 @@
  ConfinedConcrete01
 ====================
 
-.. function:: uniaxialMaterial('ConfinedConcrete01', matTag, secType, fpc, Ec, '-epscu', epscu, '-gamma', gamma, '-nu', nu, '-varub', '-varnoub', L1, L2, L3, phis, S, fyh, Es0, haRatio, mu, phiLon, '-internal', *intArgs, '-wrap', *wrapArgs, '-gravel', '-silica', '-tol', tol, '-maxNumIter', maxNumIter, '-epscuLimit', epscuLimit, '-stRatio', stRatio)
+.. function:: uniaxialMaterial('ConfinedConcrete01', matTag, secType, fpc, Ec, '-epscu', epscu, '-gamma', gamma, '-nu', nu, nu_fn, L1, L2, L3, phis, S, fyh, Es0, haRatio, mu, phiLon, '-internal', *internalArgs, '-wrap', *wrapArgs, '-gravel', '-silica', '-tol', tol, '-maxNumIter', maxNumIter, '-epscuLimit', epscuLimit, '-stRatio', stRatio)
    :noindex:
 
    ===================================   ===========================================================================
@@ -31,10 +31,10 @@
 					 (optional, default: 0.05) will be assumed as
 					 ultimate strain.
    ``nu`` |float|                        Poisson's Ratio.
-   ``'-varub'`` |float|                  Poisson’s ratio is defined as a function of axial
-                                         strain by means of the expression proposed by Braga
-					 et al. (2006) with the upper bound equal to 0.5
-   ``'-varnoub'`` |float|                Poisson’s ratio is defined as a function of axial
+   ``nu_fn`` |str|                       * ``'-varub'`` Poisson’s ratio is defined as a function of axial
+                                         strain by means of the expression proposed by Braga et al. (2006) with the
+                                         upper bound equal to 0.5
+                                         *``'-varnoub'`` Poisson’s ratio is defined as a function of axial
                                          strain by means of the expression proposed by Braga
 					 et al. (2006) without any upper bound.
    ``L1`` |float|                        length/diameter of square/circular core section
@@ -49,7 +49,7 @@
    ``haRatio`` |float|                   hardening ratio of the hoop steel.
    ``mu`` |float|                        ductility factor of the hoop steel.
    ``phiLon`` |float|                    diameter of longitudinal bars.
-   ``intArgs`` |listf|                   ``intArgs= [phisi, Si, fyhi, Es0i, haRatioi, mui]``
+   ``internalArgs`` |listf|                   ``internalArgs= [phisi, Si, fyhi, Es0i, haRatioi, mui]``
                                          optional parameters for defining the internal
 					 transverse reinforcement. If they are not specified
 					 they will be assumed equal to the external ones
@@ -64,6 +64,12 @@
 					 * ``Sw`` spacing of FRP wraps (if continuous wraps are used the spacing is equal to the wrap width).
 					 * ``ful`` ultimate strength of FRP wraps.
 					 * ``Es0w`` elastic modulus of FRP wraps.
+   ``'-gravel'`` |str|                   Unknown
+   ``'-silica'`` |str|                   Unknown
+   ``tol``       |float|                 Unknown
+   ``maxNumIter`` |int|                  Unknown
+   ``epscuLimit`` |float|                Unknown
+   ``stRatio``   |unk|                   Unknown
    ===================================   ===========================================================================
 
 .. image:: /_static/545px-SectionTypes.png

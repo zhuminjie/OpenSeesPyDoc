@@ -29,8 +29,8 @@
    ``n3`` |listf|                        ``n3=[s3n, e3n]``, stress and strain (or force
                                          & deformation) at third point of the envelope
 					 in the negative direction
-   ``pinchx`` |float|                    pinching factor for strain (or deformation) during reloading
-   ``pinchy`` |float|                    pinching factor for stress (or force) during reloading
+   ``pinchX`` |float|                    pinching factor for strain (or deformation) during reloading
+   ``pinchY`` |float|                    pinching factor for stress (or force) during reloading
    ``damage1`` |float|                   damage due to ductility: D1(mu-1)
    ``damage2`` |float|                   damage due to energy: D2(Eii/Eult)
    ``beta`` |float|                      power used to determine the degraded unloading
