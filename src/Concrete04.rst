@@ -4,7 +4,7 @@
  Concrete04
 ==================
 
-.. function:: uniaxialMaterial('Concrete04', matTag, fc, ec, ecu, Ec, fct, et, beta)
+.. function:: uniaxialMaterial('Concrete04', matTag, fc, epsc, epscu, Ec, fct, et, beta)
    :noindex:
 
    This command is used to construct a uniaxial Popovics concrete material object with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and tensile strength with exponential decay.
@@ -13,8 +13,8 @@
    ``matTag`` |int|                      integer tag identifying material
    ``fc`` |float|                        floating point values defining concrete
                                          compressive strength at 28 days (compression is negative)
-   ``ec`` |float|                        floating point values defining concrete strain at maximum strength
-   ``ecu`` |float|                       floating point values defining concrete strain at crushing strength
+   ``epsc`` |float|                        floating point values defining concrete strain at maximum strength
+   ``epscu`` |float|                       floating point values defining concrete strain at crushing strength
    ``Ec`` |float|                        floating point values defining initial stiffness
    ``fct`` |float|                       floating point value defining the maximum tensile strength of concrete (optional)
    ``et`` |float|                        floating point value defining ultimate tensile strain of concrete (optional)
