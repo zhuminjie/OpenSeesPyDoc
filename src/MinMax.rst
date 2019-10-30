@@ -4,7 +4,7 @@
 MinMax Material
 ===================
 
-.. function:: uniaxialMaterial('MinMax', matTag, otherTag, '-min', minStrain=1e-16, '-max', maxStrain=1e16)
+.. function:: uniaxialMaterial('MinMax', matTag, otherTag, '-min', min_strain=1e-16, '-max', max_strain=1e16)
    :noindex:
 
 
@@ -13,8 +13,8 @@ MinMax Material
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
    ``otherTag`` |float|                  tag of the other material
-   ``minStrain`` |float|                 minimum value of strain. optional default = -1.0e16.
-   ``maxStrain`` |float|                 max value of strain. optional default = 1.0e16.
+   ``min_strain`` |float|                 minimum value of strain. optional default = -1.0e16.
+   ``max_strain`` |float|                 max value of strain. optional default = 1.0e16.
    ===================================   ===========================================================================
 
 .. seealso::

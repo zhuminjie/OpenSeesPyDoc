@@ -15,7 +15,7 @@ CFSWSWP Wood-Sheathed Cold-Formed Steel Shear Wall Panel
    ``matTag`` |int|                      integer tag identifying material
    ``height`` |float|                    SWP’s height (mm)
    ``width`` |float|                     SWP’s width (mm)
-   ``fuf`` |float|                       Tensile strength of framing members (MPa)
+   ``fut`` |float|                       Tensile strength of framing members (MPa)
    ``tf`` |float|                        Framing thickness (mm)
    ``Ife`` |float|                       Moment of inertia of the double end-stud (mm4)
    ``Ifi`` |float|                       Moment of inertia of the intermediate stud (mm4)

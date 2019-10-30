@@ -19,7 +19,7 @@
    ``My_Neg`` |float|                    effective yield strength for negative loading direction (Must be defined as a negative value)
    ``FprPos`` |float|                    Ratio of the force at which reloading begins to force corresponding to the maximum historic deformation demand (positive loading direction)
    ``FprNeg`` |float|                    Ratio of the force at which reloading begins to force corresponding to the absolute maximum historic deformation demand (negative loading direction)
-   ``A_Pinch`` |float|                   Ratio of reloading stiffness
+   ``A_pinch`` |float|                   Ratio of reloading stiffness
    ``Lamda_S`` |float|                   Cyclic deterioration parameter for strength deterioration [E_t=Lamda_S*M_y, see Lignos and Krawinkler (2011); set Lamda_S = 0 to disable this mode of deterioration]
    ``Lamda_C`` |float|                   Cyclic deterioration parameter for post-capping strength deterioration [E_t=Lamda_C*M_y, see Lignos and Krawinkler (2011); set Lamda_C = 0 to disable this mode of deterioration]
    ``Lamda_A`` |float|                   Cyclic deterioration parameter for accelerated reloading stiffness deterioration [E_t=Lamda_A*M_y, see Lignos and Krawinkler (2011); set Lamda_A = 0 to disable this mode of deterioration]

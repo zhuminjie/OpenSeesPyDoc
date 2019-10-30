@@ -13,9 +13,10 @@ AxialSpHD Material
    ===========================================   ===========================================================================
    ``matTag`` |int|                              integer tag identifying material
    ``sce`` |float|                               compressive modulus
-   ``fty1``    ``fcy`` |float|                   yield stress under tension (   ``fty``) and compression (   ``fcy``) (see note 1)
+   ``fty``    ``fcy`` |float|                   yield stress under tension (   ``fty``) and compression (   ``fcy``) (see note 1)
    ``bte``  ``bty``  ``bth``  ``bcy`` |float|    reduction rate for tensile elastic range (   ``bte``), tensile yielding (   ``bty``), tensile hardening (   ``bth``) and compressive yielding (   ``bcy``) (see note 1)
    ``fcr`` |float|                               target point stress (see note 1)
+   ``ath`` |float|                               hardening strain ratio to yield strain
    ===========================================   ===========================================================================
 
 .. note::

@@ -4,7 +4,7 @@
  SAWS Material
 ===================
 
-.. function:: uniaxialMaterial('SAWS', matTag, F0, FI, DU, S0, R1, R2, R3, R4, alph, beta)
+.. function:: uniaxialMaterial('SAWS', matTag, F0, FI, DU, S0, R1, R2, R3, R4, alpha, beta)
    :noindex:
 
    This file contains the class definition for SAWSMaterial. SAWSMaterial provides the implementation of a one-dimensional hysteretic model develeped as part of the CUREe Caltech wood frame project.
