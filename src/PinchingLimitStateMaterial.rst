@@ -37,14 +37,14 @@ This command is used to construct a uniaxial material that simulates a pinched l
                                          This value is used to compute the maximum deformation at flexural yield (δmax Eq. 1) and using the initial elastic stiffness (Kelastic) the monotonic energy (Emono Eq. 1) to yield. Input 1 if this type of damage is not required and set    ``dmgE1``,    ``dmgE2``,    ``dmgE3``,    ``dmgE4``, and    ``dmgELim`` to zero
    ``dmgDispMax`` |float|                floating point for ultimate drift at failure (δmax Eq. 1) and is used for strength and stiffness damage.
                                          This value is used to compute the monotonic energy at axial failure (Emono Eq. 2) by computing the area under the backbone in the positive loading direction up to δmax. Input 1 if this type of damage is not required and set    ``dmgR1``,    ``dmgR2``,    ``dmgR3``,    ``dmgR4``, and    ``dmgRLim`` to zero for reloading stiffness damage. Similarly set    ``dmgS1``,    ``dmgS2``,    ``dmgS3``,    ``dmgS4``, and    ``dmgSLim`` to zero if reloading strength damage is not required
-   ``dmgE1``  ``dmgE2`` |float|
+   ``dmgE1``  ``dmgE2`` |float|          floating point elastic stiffness damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgE3``  ``dmgE4`` |float|          floating point elastic stiffness damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgELim`` |float|                   floating point elastic stiffness damage limit Dlim shown in Eq. 1; **Note: This value must be between zero and unity**
-   ``dmgR1``    ``dmgR2``
+   ``dmgR1``    ``dmgR2`` |float|        floating point reloading stiffness damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgR3``    ``dmgR4`` |float|        floating point reloading stiffness damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgRLim`` |float|                   floating point reloading stiffness damage limit Dlim shown in Eq. 1; **Note: This value must be between zero and unity**
    ``dmgRCyc`` |float|                   floating point cyclic reloading stiffness damage index; **Note: This value must be between zero and unity**
-   ``dmgS1``    ``dmgS2``
+   ``dmgS1``    ``dmgS2`` |float|        floating point backbone strength damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgS3``    ``dmgS4`` |float|        floating point backbone strength damage factors α1,α2,α3,α4 shown in Eq. 1
    ``dmgSLim`` |float|                   floating point backbone strength damage limit Dlim shown in Eq. 1; **Note: This value must be between zero and unity**
    ``dmgSCyc`` |float|                   floating point cyclic backbone strength damage index; **Note: This value must be between zero and unity**

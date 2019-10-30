@@ -4,42 +4,42 @@
  PM4Sand
 ==================
 
-.. function:: nDMaterial('PM4Sand', matTag, Dr, G0, hpo, Den, patm, h0, emax, emin, nb, nd, Ado, zmax, cz, ce, phic, nu, cgd, cdr, ckaf, Q, R, m, Fsed_min, p_sedo)
+.. function:: nDMaterial('PM4Sand', matTag, D_r, G_o, h_po, Den, P_atm, h_o, e_max, e_min, n_b, n_d, A_do, z_max, c_z, c_e, phic, nu, c_degr, c_dr, c_kaf, Q, R, m, F_sed_min, p_sedo)
    :noindex:
 
    This command is used to construct a 2-dimensional PM4Sand material.
 
    ================================   ===========================================================================
    ``matTag`` |int|                   integer tag identifying material
-   ``Dr`` |float|                     Relative density, in fraction
-   ``G0`` |float|                     Shear modulus constant
-   ``hpo`` |float|                    Contraction rate parameter
+   ``D_r`` |float|                     Relative density, in fraction
+   ``G_o`` |float|                     Shear modulus constant
+   ``h_po`` |float|                    Contraction rate parameter
    ``Den`` |float|                    Mass density of the material
    ``P_atm`` |float|                  Optional, Atmospheric pressure
-   ``h0`` |float|                     Optional, Variable that adjusts the ratio of plastic modulus
+   ``h_o`` |float|                     Optional, Variable that adjusts the ratio of plastic modulus
                                       to elastic modulus
-   ``emax`` |float|                   Optional, Maximum and minimum void ratios
-   ``emin`` |float|                   Optional, Maximum and minimum void ratios
-   ``nb`` |float|                     Optional, Bounding surface parameter, :math:`nb \ge 0`
-   ``nd`` |float|                     Optional, Dilatancy surface parameter :math:`nd \ge 0`
-   ``Ado`` |float|                    Optional, Dilatancy parameter, will be computed at the time
+   ``e_max`` |float|                   Optional, Maximum and minimum void ratios
+   ``e_min`` |float|                   Optional, Maximum and minimum void ratios
+   ``n_b`` |float|                     Optional, Bounding surface parameter, :math:`n_b \ge 0`
+   ``n_d`` |float|                     Optional, Dilatancy surface parameter :math:`n_d \ge 0`
+   ``A_do`` |float|                    Optional, Dilatancy parameter, will be computed at the time
                                       of initialization if input value is negative
    ``z_max`` |float|                  Optional, Fabric-dilatancy tensor parameter
-   ``cz`` |float|                     Optional, Fabric-dilatancy tensor parameter
-   ``ce`` |float|                     Optional, Variable that adjusts the rate of strain accumulation
+   ``c_z`` |float|                     Optional, Fabric-dilatancy tensor parameter
+   ``c_e`` |float|                     Optional, Variable that adjusts the rate of strain accumulation
                                       in cyclic loading
    ``phic`` |float|                   Optional, Critical state effective friction angle
    ``nu`` |float|                     Optional, Poisson's ratio
-   ``cgd`` |float|                    Optional, Variable that adjusts degradation of elastic modulus
+   ``c_degr`` |float|                    Optional, Variable that adjusts degradation of elastic modulus
                                       with accumulation of fabric
-   ``cdr`` |float|                    Optional, Variable that controls the rotated dilatancy surface
-   ``ckaf`` |float|                   Optional, Variable that controls the effect that sustained
+   ``c_dr`` |float|                    Optional, Variable that controls the rotated dilatancy surface
+   ``c_kaf`` |float|                   Optional, Variable that controls the effect that sustained
                                       static shear stresses have on plastic modulus
    ``Q`` |float|                      Optional, Critical state line parameter
    ``R`` |float|                      Optional, Critical state line parameter
    ``m`` |float|                      Optional, Yield surface constant (radius of yield surface
                                       in stress ratio space)
-   ``Fsed_min`` |float|               Optional, Variable that controls the minimum value the
+   ``F_sed_min`` |float|               Optional, Variable that controls the minimum value the
                                       reduction factor of the elastic moduli can get during reconsolidation
    ``p_sedo`` |float|                 Optional, Mean effective stress up to which reconsolidation
                                       strains are enhanced

@@ -4,7 +4,7 @@
 ElasticMultiLinear Material
 ===========================
 
-.. function:: uniaxialMaterial('ElasticMultiLinear', matTag, eta=0.0, '-strain', *strainPoints, '-stress', *stressPoints)
+.. function:: uniaxialMaterial('ElasticMultiLinear', matTag, eta=0.0, '-strain', *strain, '-stress', *stress)
    :noindex:
 
 
@@ -13,8 +13,8 @@ ElasticMultiLinear Material
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
    ``eta`` |float|                       damping tangent (optional, default=0.0)
-   ``strainPoints`` |listf|              list of strain points along stress-strain curve
-   ``stressPoints`` |listf|              list of stress points along stress-strain curve
+   ``strain`` |listf|              list of strain points along stress-strain curve
+   ``stress`` |listf|              list of stress points along stress-strain curve
 
    ===================================   ===========================================================================
 
