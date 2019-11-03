@@ -4,7 +4,7 @@
  PM4Sand
 ==================
 
-.. function:: nDMaterial('PM4Sand', matTag, D_r, G_o, h_po, Den, P_atm, h_o, e_max, e_min, n_b, n_d, A_do, z_max, c_z, c_e, phic, nu, c_degr, c_dr, c_kaf, Q, R, m, F_sed_min, p_sedo)
+.. function:: nDMaterial('PM4Sand', matTag, D_r, G_o, h_po, Den, P_atm, h_o, e_max, e_min, n_b, n_d, A_do, z_max, c_z, c_e, phi_cv, nu, g_degr, c_dr, c_kaf, Q_bolt, R_bolt, m_par, F_sed, p_sed)
    :noindex:
 
    This command is used to construct a 2-dimensional PM4Sand material.
@@ -28,20 +28,20 @@
    ``c_z`` |float|                     Optional, Fabric-dilatancy tensor parameter
    ``c_e`` |float|                     Optional, Variable that adjusts the rate of strain accumulation
                                       in cyclic loading
-   ``phic`` |float|                   Optional, Critical state effective friction angle
+   ``phi_cv`` |float|                   Optional, Critical state effective friction angle
    ``nu`` |float|                     Optional, Poisson's ratio
-   ``c_degr`` |float|                    Optional, Variable that adjusts degradation of elastic modulus
+   ``g_degr`` |float|                    Optional, Variable that adjusts degradation of elastic modulus
                                       with accumulation of fabric
    ``c_dr`` |float|                    Optional, Variable that controls the rotated dilatancy surface
    ``c_kaf`` |float|                   Optional, Variable that controls the effect that sustained
                                       static shear stresses have on plastic modulus
-   ``Q`` |float|                      Optional, Critical state line parameter
-   ``R`` |float|                      Optional, Critical state line parameter
-   ``m`` |float|                      Optional, Yield surface constant (radius of yield surface
+   ``Q_bolt`` |float|                      Optional, Critical state line parameter
+   ``R_bolt`` |float|                      Optional, Critical state line parameter
+   ``m_par`` |float|                      Optional, Yield surface constant (radius of yield surface
                                       in stress ratio space)
-   ``F_sed_min`` |float|               Optional, Variable that controls the minimum value the
+   ``F_sed`` |float|               Optional, Variable that controls the minimum value the
                                       reduction factor of the elastic moduli can get during reconsolidation
-   ``p_sedo`` |float|                 Optional, Mean effective stress up to which reconsolidation
+   ``p_sed`` |float|                 Optional, Mean effective stress up to which reconsolidation
                                       strains are enhanced
    ================================   ===========================================================================
 
