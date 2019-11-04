@@ -8,7 +8,7 @@ The FPBearingPTV command creates a single Friction Pendulum bearing element, whi
 
 
 
-.. function:: element('FPBearingPTV', eleTag,*eleNodes,MuRef, IsPressureDependent, pRef, isTemperatureDependent, Diffusivity, Conductivity, IsVelocityDependent, rateParameter, ReffectiveFP, Radius_Contact, kInitial, theMaterialA, theMaterialB, theMaterialC, theMaterialD, x1, x2, x3, y1, y2, y3, shearDist, doRayleigh, mass, iter, tol, unit)
+.. function:: element('FPBearingPTV', eleTag,*eleNodes,MuRef, IsPressureDependent, pRef, IsTemperatureDependent, Diffusivity, Conductivity, IsVelocityDependent, rateParameter, ReffectiveFP, Radius_Contact, kInitial, theMaterialA, theMaterialB, theMaterialC, theMaterialD, x1, x2, x3, y1, y2, y3, shearDist, doRayleigh, mass, iter, tol, unit)
    :noindex:
 
    ===================================   ===========================================================================

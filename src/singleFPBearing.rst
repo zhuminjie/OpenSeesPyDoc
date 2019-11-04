@@ -11,7 +11,7 @@ This command is used to construct a singleFPBearing element object, which is def
 
    For a two-dimensional problem
 
-.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', matTag,'-T', matTag,'-My', matTag,'-Mz', matTag,['-orient',[x1, x2, x3], y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', PMatTag,'-T', TMatTag,'-My', MyMatTag,'-Mz', MzMatTag,['-orient',[x1, x2, x3], y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
    :noindex:
 
    For a three-dimensional problem
@@ -22,10 +22,10 @@ This command is used to construct a singleFPBearing element object, which is def
    ``frnMdlTag`` |float|                 tag associated with previously-defined FrictionModel
    ``Reff`` |float|                      effective radius of concave sliding surface
    ``kInit`` |float|                     initial elastic stiffness in local shear direction
-   ``'-P'``  ``matTag`` |int|            tag associated with previously-defined UniaxialMaterial in axial direction
-   ``'-T'``  ``matTag`` |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
-   ``'-My'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y axis
-   ``'-Mz'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
+   ``PMatTag`` |int|            tag associated with previously-defined UniaxialMaterial in axial direction
+   ``TMatTag``  |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
+   ``MyMatTag``  |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y axis
+   ``MzMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
    ``x1``  ``x2``  ``x3`` |float|        vector components in global coordinates defining local x-axis (optional)
    ``y1``  ``y2``  ``y3`` |float|        vector components in global coordinates defining local y-axis (optional)
    ``sDratio`` |float|                   shear distance from iNode as a fraction of the element length (optional, default = 0.0)

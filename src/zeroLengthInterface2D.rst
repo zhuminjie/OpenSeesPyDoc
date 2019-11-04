@@ -4,7 +4,7 @@
 zeroLengthInterface2D
 ======================
 
-.. function:: element('zeroLengthInterface2D', eleTag,'-sNdNum', sNdNum, '-mNdNum', mNdNum, '-dof',, sdof, mdof , '-Nodes', *Nodes, Kn, kt, phi)
+.. function:: element('zeroLengthInterface2D', eleTag,'-sNdNum', sNdNum, '-mNdNum', mNdNum, '-dof', sdof, mdof, '-Nodes', *Nodes, kn, kt, phi)
    :noindex:
 
    ===================================   ===========================================================================
@@ -13,8 +13,8 @@ zeroLengthInterface2D
    ``mNdNum`` |int|                      Number of Master nodes
    ``sdof``, ``mdof`` |int|              Slave and Master degree of freedom
    ``Nodes`` |listi|                     Slave and master node tags respectively
-   ``Kn`` |float|                        Penalty in normal direction
-   ``Kt`` |float|                        Penalty in tangential direction
+   ``kn`` |float|                        Penalty in normal direction
+   ``kt`` |float|                        Penalty in tangential direction
    ``phi`` |float|                       Friction angle in degrees
    ===================================   ===========================================================================
 

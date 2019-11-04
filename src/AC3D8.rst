@@ -13,7 +13,7 @@ This command is used to construct an eight-node 3D brick acoustic element object
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``eleNdoes`` |listi|                  8 end nodes
+   ``eleNodes`` |listi|                  8 end nodes
    ``matTag`` |int|                      Material Tag of previously defined nD material
    ===================================   ===========================================================================
 
