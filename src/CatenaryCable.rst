@@ -14,13 +14,14 @@ This command is used to construct a catenary cable element object.
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
    ``iNode``  ``jNode`` |int|            end nodes (3 dof per node)
+   ``weight`` |float|                    undefined
    ``E`` |float|                         elastic modulus of the cable material
    ``A`` |float|                         cross-sectional area of element
    ``L0`` |float|                        unstretched length of the cable
    ``alpha`` |float|                     coefficient of thermal expansion
    ``temperature_change`` |float|        temperature change for the element
    ``rho`` |float|                       mass per unit length
-   ``errortol`` |float|                  allowed tolerance for within-element equilbrium (Newton-Rhapson iterations)
+   ``errorTol`` |float|                  allowed tolerance for within-element equilbrium (Newton-Rhapson iterations)
    ``Nsubsteps`` |int|                   number of within-element substeps into which equilibrium iterations are subdivided (not number of steps to convergence)
    ``massType`` |int|                    Mass matrix model to use (``massType`` = 0 lumped mass matrix,    ``massType`` = 1 rigid-body mass matrix (in development))
    ===================================   ===========================================================================
