@@ -7,7 +7,11 @@
 
 .. important::
 
-   Version |opspy_version| is released.
+   Version |opspy_version| is released!
+
+   Mac version is supported!
+
+   Python 3.8 in Windows is supported!
 
    OpenSeesPy has been official in `DesignSafe`_.
 

@@ -8,33 +8,27 @@
 Install Python
 --------------
 
-* For Windows, install `Anaconda 2018.12 Windows`_ 
-
-* For Linux, install `Anaconda 2018.12 Linux`_ 
+* Install `Anaconda`_ 
 
 
 Install OpenSeesPy
 ------------------
 
-* In Linux, Open a terminal 
-
-* In Windows, go to start menu -> Anaconda3 (64-bit) -> Anaconda Prompt
-
 * To install
 
    ::
 
-      pip install openseespy
+      python -m pip install openseespy
 
-      pip install --user openseespy
+      python -m pip install --user openseespy
 
 * To upgrade
 
    ::
 
-      pip install --upgrade openseespy
+      python -m pip install --upgrade openseespy
 
-      pip install --user --upgrade openseespy
+      python -m pip install --user --upgrade openseespy
 
    
 Import OpenSeesPy

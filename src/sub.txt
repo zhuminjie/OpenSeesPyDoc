@@ -83,6 +83,7 @@
 .. _Anaconda 5.3 Linux: https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 .. _Anaconda 2018.12 Windows: https://repo.continuum.io/archive/Anaconda3-2018.12-Windows-x86_64.exe
 .. _Anaconda 2018.12 Linux: https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
+.. _Anaconda: https://www.anaconda.com/distribution/#download-section
 .. _OpenSeesPy Windows Library: http://web.engr.oregonstate.edu/~zhum/downloads/openseespy36win.zip
 .. _OpenSeesPy Windows Library Python3.7: http://web.engr.oregonstate.edu/~zhum/downloads/openseespy37win.zip
 .. _OpenSeesPy Linux Library: http://web.engr.oregonstate.edu/~zhum/downloads/openseespylinux.zip
