@@ -2,6 +2,11 @@
   Change Log
 ==============
 
+* **Version 0.5.4**
+
+  * Support Mac
+  * Support Python3.8 on Windows and Linux
+
 * **Version 0.5.3**
 
   * Fix bug in LimitState UniadialMaterial
