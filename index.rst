@@ -63,7 +63,7 @@ as demonstrated with commands below.
 
 *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
 
-| Faculty Research Assistant
+| Research Associate Post Doc
 | Civil and Construction Engineering
 | Oregon State University
 
