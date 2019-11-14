@@ -48,6 +48,9 @@ A minimum script is shown below:
 
    # wipe model
    ops.wipe()
+
+   # create model
+   ops.model('-ndm', ndm, '-ndf', ndf)
    
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
