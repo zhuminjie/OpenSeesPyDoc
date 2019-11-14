@@ -11,8 +11,6 @@
 
    Mac version is supported!
 
-   Python 3.8 in Windows is supported!
-
    OpenSeesPy has been official in `DesignSafe`_.
 
    The latest version of this document can be found at
