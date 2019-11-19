@@ -7,7 +7,7 @@ SFI MVLEM - Cyclic Shear-Flexure Interaction Model for RC Walls
 The SFI_MVLEM command is used to construct a Shear-Flexure Interaction Multiple-Vertical-Line-Element Model (SFI-MVLEM, Kolozvari et al., 2015a, b, c), which captures interaction between axial/flexural and shear behavior of RC structural walls and columns under cyclic loading. The SFI_MVLEM element (Figure 1) incorporates 2-D RC panel behavior described by the Fixed-Strut-Angle-Model (nDMaterial FSAM; Ulugtekin, 2010; Orakcal et al., 2012), into a 2-D macroscopic fiber-based model (MVLEM). The interaction between axial and shear behavior is captured at each RC panel (macro-fiber) level, which further incorporates interaction between shear and flexural behavior at the SFI_MVLEM element level.
 
 
-.. function:: element('', eleTag,*eleNodes,m,c, '-thick',*Thicknesses,'-width',*Widths,'-mat',*Material_tags)
+.. function:: element('SFI_MVLEM', eleTag,*eleNodes,m,c, '-thick',*thick,'-width',*widths,'-mat',*mat_tags)
    :noindex:
 
    ===================================   ===========================================================================

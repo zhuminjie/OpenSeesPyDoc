@@ -11,7 +11,7 @@ This command is used to construct an ElasticTimoshenkoBeam element object. A Tim
 
    For a two-dimensional problem:
 
-.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E, G, A, Iz, Jx, Iy, Iz, Avy, Avz, transfTag,['-mass', mass],['-cMass])
+.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E, G, A, Iz, Jx, Iy, Iz, Avy, Avz, transfTag,['-mass', mass],['-cMass'])
    :noindex:
 
    For a three-dimensional problem:
