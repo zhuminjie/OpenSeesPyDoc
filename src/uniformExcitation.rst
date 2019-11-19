@@ -4,7 +4,7 @@
  UniformExcitation Pattern
 ===========================
 
-.. function:: pattern('UniformExcitation',patternTag,dir,'-disp',dispSeriesTag,'-vel',velSeriesTag,'-accel',accelSeriesTag,'-vel0',vel0,'-fact',factor)
+.. function:: pattern('UniformExcitation',patternTag,dir,'-disp',dispSeriesTag,'-vel',velSeriesTag,'-accel',accelSeriesTag,'-vel0',vel0,'-fact',fact)
    :noindex:
    
    The UniformExcitation pattern allows the user to apply a uniform excitation to a model acting in a certain direction. The command is as follows:
@@ -27,7 +27,7 @@
    ``accelSeriesTag`` |int|   tag of the TimeSeries series defining the acceleration
                               history. (optional)
    ``vel0`` |float|           the initial velocity (optional, default=0.0)
-   ``factor`` |float|         constant factor (optional, default=1.0)
+   ``fact`` |float|         constant factor (optional, default=1.0)
    ========================   =============================================================
 
 
