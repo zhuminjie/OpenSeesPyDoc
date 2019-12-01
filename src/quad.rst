@@ -8,7 +8,7 @@ This command is used to construct a FourNodeQuad element object which uses a bil
 
 
 
-.. function:: element('quad', eleTag,*eleNodes,thick, type, matTag,[pressure, rho, b1, b2])
+.. function:: element('quad', eleTag,*eleNodes,thick, type, matTag,[pressure=0.0, rho=0.0, b1=0.0, b2=0.0])
    :noindex:
 
    ===================================   ===========================================================================

@@ -17,7 +17,7 @@
    ``jNode`` |int|            tag of node j
    ``transfTag`` |int|        tag of transformation
    ``integrationTag`` |int|   tag of :func:`beamIntegration`
-   ``maxIter`` |float|        maximum number of iterations to undertake to satisfy element compatibility (optional)
+   ``maxIter`` |int|        maximum number of iterations to undertake to satisfy element compatibility (optional)
    ``tol`` |float|            tolerance for satisfaction of element compatibility (optional)
    ``mass`` |float|           element mass density (per unit length), from which a lumped-mass matrix is formed (optional)
    ========================   =============================================================
