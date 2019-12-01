@@ -6,12 +6,10 @@
 ## Created By - Anurag Upadhyay															##
 ##																						##
 ## You can download more examples from https://github.com/u-anurag						##
+## To use rendering with OpenSees Tcl, visit https://anuragupadhyay.weebly.com/python-plotting.html
 ##########################################################################################
 
-import sys
-#sys.path.append('C:/OpenSeesPy')					# for Windows Computer
-sys.path.append('/home/anurag/OpenSeesPy')		# For linux Computer
-from opensees import *
+from openseespy.opensees import *
 import numpy as np
 
 def model_plotter():
