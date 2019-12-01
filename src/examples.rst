@@ -10,7 +10,7 @@
 #. :doc:`geotech`
 #. :doc:`thermal`
 #. :doc:`parallelexs`
-
+#. :doc:`plotting'
 
 
 .. toctree::
@@ -23,3 +23,4 @@
    geotech
    thermal
    parallelexs
+   plotting
