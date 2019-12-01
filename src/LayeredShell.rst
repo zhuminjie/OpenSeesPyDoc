@@ -4,7 +4,7 @@
  LayeredShell
 ==============
 
-.. function:: nDMaterial('LayeredShell', sectionTag, nLayers *mats)
+.. function:: nDMaterial('LayeredShell', sectionTag, nLayers, *mats)
    :noindex:
 
    This command will create the section of the multi-layer shell element, including the multi-dimensional concrete, reinforcement material and the corresponding thickness.

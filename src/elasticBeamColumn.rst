@@ -6,7 +6,7 @@
 Elastic Beam Column Element
 ===========================
 
-This command is used to construct an elasticBeamColumn element object. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, ndm:
+This command is used to construct an elasticBeamColumn element object. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, (ndm)
 
 
 
@@ -30,7 +30,7 @@ This command is used to construct an elasticBeamColumn element object. The argum
    ``J`` |float|                         torsional moment of inertia of cross section
    ``Iz`` |float|                        second moment of area about the local z-axis
    ``Iy`` |float|                        second moment of area about the local y-axis
-   ``transfTag`` |int|                   identifier for previously-defined coordinate-transformation (CrdTransf) object
+   ``transfTag`` |int|                   identifier for previously-defined coordinate-transformation (CrdTransf) object adfg afe asfasffg asffgrgrg szfrgr3gr asgrr
    ``mass`` |float|                      element mass per unit length (optional, default = 0.0)
    ``'-cMass'`` |str|                    to form consistent mass matrix (optional, default = lumped mass matrix)
    ===================================   ===========================================================================

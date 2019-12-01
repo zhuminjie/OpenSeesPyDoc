@@ -4,10 +4,10 @@
  Elastic Section
 =================
 
-.. function:: section('Elastic', secTag, E, A, Iz, G=0.0, alphaY=0.0)
+.. function:: section('Elastic', secTag, E, A, Iz, G=None, alphaY=None)
    :noindex:
 
-.. function:: section('Elastic', secTag, E, A, Iz, Iy, G, J, alphaY=0.0, alphaZ=0.0)
+.. function:: section('Elastic', secTag, E, A, Iz, Iy, G, J, alphaY=None, alphaZ=None)
    :noindex:
 
    This command allows the user to construct an ElasticSection. The inclusion of shear deformations is optional. The dofs for 2D elastic section are ``[P, Mz]``,

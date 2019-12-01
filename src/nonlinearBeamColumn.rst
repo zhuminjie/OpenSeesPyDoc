@@ -18,7 +18,7 @@
    ``numIntgrPts`` |int|      number of integration points.
    ``secTag`` |int|           tag of section
    ``transfTag`` |int|        tag of transformation
-   ``maxIter`` |float|        maximum number of iterations to undertake to satisfy element compatibility (optional)
+   ``maxIter`` |int|        maximum number of iterations to undertake to satisfy element compatibility (optional)
    ``tol`` |float|            tolerance for satisfaction of element compatibility (optional)
    ``mass`` |float|           element mass density (per unit length), from which a lumped-mass matrix is formed (optional)
    ``intType`` |str|          integration type (optional, default is ``'Lobatto'``)
