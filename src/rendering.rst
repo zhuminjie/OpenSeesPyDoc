@@ -9,8 +9,8 @@
 #. Import this file in the main OpenSeesPy model file to plot the model in 2D or 3D.
 #. The procedure has an option to turn off the diplay of node tags and element tags.
 #. Below is an example showing how to visualize an OpenSeesPy model.
-#. Save the file 'Get_Rendering.py' in the same folder as the main model file and import by writing in the model file, "import Get_Rendering". (see line 5 in below example)
-#. Plot the model by writing "Get_Rendering.model_plotter()" after defining all the nodes and elements. (see line 37 in below example)
+#. Save the file 'Get_Rendering.py' in the same folder as the main model file and import by writing in the model file, "import Get_Rendering". (see line 18 in below example)
+#. Plot the model by writing "Get_Rendering.model_plotter()" after defining all the nodes and elements. (see line 129 in below example)
 
 .. image:: /_static/ModelPlotter.png
 
