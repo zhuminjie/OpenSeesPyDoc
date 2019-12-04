@@ -19,3 +19,16 @@ Once the Linux is installed, it will show as an application in the start menu.
 .. image:: /_static/start.png
 
 
+Run OpenSeesPy with Windows Sybsystem for Linux
+-----------------------------------------------
+
+- Run the subsystem from start menu and a terminal window will
+show.
+
+.. image::/_static/terminal.png
+
+- Download Anaconda Linux version with following commands
+
+::
+
+   wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh

@@ -11,7 +11,9 @@
 
    Mac version is supported!
 
-   OpenSeesPy has been official in `DesignSafe`_.
+   OpenSeesPy has been official in :doc:`designsafe`.
+
+   The Linux Version of OpenSeesPy can now run on Windows 10 (see :doc:`wsl`).
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
