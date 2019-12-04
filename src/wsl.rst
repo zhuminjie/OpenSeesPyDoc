@@ -22,10 +22,9 @@ Once the Linux is installed, it will show as an application in the start menu.
 Run OpenSeesPy with Windows Sybsystem for Linux
 -----------------------------------------------
 
-- Run the subsystem from start menu and a terminal window will
-show.
+- Run the subsystem from start menu and a terminal window will show.
 
-.. image:: /_static/terminal.png
+.. image:: /_static/wslterminal.png
 
 - Download Anaconda Linux version
 
@@ -47,11 +46,13 @@ show.
    [/home/username/anaconda3] >>> (enter)
 
 - Run Anaconda with follwing command,
-where `username` is your username of your computer. Please use
-the `username` shown in last step
+  where `username` is your username of your computer. Please use
+  the `username` shown in last step
 
 ::
 
    ~$ /home/username/anaconda3/bin/python3.7
 
-.. image:: /_static/anaconda.png
+.. image:: /_static/wslanaconda.png
+
+- 
