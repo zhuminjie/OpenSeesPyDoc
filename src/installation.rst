@@ -6,6 +6,7 @@
 
 #. :doc:`pypi`
 #. :doc:`designsafe`
+#. :doc:`wsl`
 
 
 .. toctree::
@@ -14,5 +15,6 @@
 
    pypi
    designsafe
+   wsl
 
 
