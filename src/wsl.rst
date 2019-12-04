@@ -24,35 +24,71 @@ Run OpenSeesPy with Windows Sybsystem for Linux
 
 - Run the subsystem from start menu and a terminal window will show.
 
-.. image:: /_static/wslterminal.png
+  .. image:: /_static/wslterminal.png
 
-- Download Anaconda Linux version
+- Download Anaconda Linux version with command
 
-::
+  ::
 
-   wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+     ~$ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 
-- Install Anconda Linux version
+- Install Anconda Linux version with commands
 
-::
+  ::
 
-   >> bash Anaconda3-2019.10-Linux-x86_64.sh
+     ~$ bash Anaconda3-2019.10-Linux-x86_64.sh
 
-   >> Please answer 'yes' or 'no':
-   >> yes
+     >>> Please answer 'yes' or 'no':
+     >>> yes
 
-   >> Anaconda3 will not be installed into this location:
+     >>> Anaconda3 will not be installed into this location:
 
-   [/home/username/anaconda3] >>> (enter)
+     [/home/username/anaconda3] >>> (enter)
 
 - Run Anaconda with follwing command,
   where `username` is your username of your computer. Please use
   the `username` shown in last step
 
+  ::
+
+     ~$ /home/username/anaconda3/bin/python3.7
+
+  .. image:: /_static/wslanaconda.png
+
+- Install or Upgrade OpenSeesPy with commands
+
+  ::
+
+     ~$ /home/username/anaconda3/bin/python3.7 -m pip install openseespy
+     ~$ /home/username/anaconda3/bin/python3.7 -m pip install --upgrade openseespy
+
+  .. image:: /_static/wslinstall.png
+
+- Run OpenSeesPy
+
+  First run Anaconda with
+
+  ::
+
+     ~$ /home/username/anaconda3/bin/python3.7
+
+  Then import OpenSeesPy with
+
+  ::
+
+     import openseespy.opensees as ops
+     ops.printModel()
+
+  .. image:: /_static/wslrun.png
+
+
+
+Run OpenSeesPy scripts
+----------------------
+
+In the terminal,
+
 ::
 
-   ~$ /home/username/anaconda3/bin/python3.7
+   /home/username/anaconda3/bin/python3.7 script.py
 
-.. image:: /_static/wslanaconda.png
-
-- 
