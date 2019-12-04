@@ -10,7 +10,7 @@
 #. :doc:`geotech`
 #. :doc:`thermal`
 #. :doc:`parallelexs`
-#. :doc:`plotting'
+#. :doc:`plotting`
 
 
 
