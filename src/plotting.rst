@@ -3,7 +3,7 @@
 =====================
 
 
-#. :doc:`rendering`
+#. :doc:`3DFrame_Rendering`
 
 
 
@@ -11,4 +11,4 @@
    :maxdepth: 1
    :hidden:
 
-   rendering
+   3DFrame_Rendering
