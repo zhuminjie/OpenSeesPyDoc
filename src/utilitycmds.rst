@@ -36,7 +36,8 @@ These commands are used to monitor and change the state of the model.
 #. :doc:`wipeAnalysis`
 #. :doc:`setNumThread`
 #. :doc:`getNumThreads`
-
+#. :doc:`plot_model`
+#. :doc:`plot_modeshape`
 
 .. toctree::
    :maxdepth: 1
@@ -70,5 +71,6 @@ These commands are used to monitor and change the state of the model.
    wipeAnalysis
    setNumThread
    getNumThreads
-
+   plot_model
+   plot_modeshape
 
