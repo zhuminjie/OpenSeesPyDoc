@@ -1,12 +1,15 @@
 .. include:: sub.txt
 
 =============================================================================
- A Procedure to Render 2D or 3D OpenSees Model and Mode Shapes
+ Visualization of Model and Mode Shapes 
 =============================================================================
+
+A Procedure to Render 2D or 3D OpenSees Model and Mode Shapes
 
 #. The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 #. The source code can be downloaded :download:`here </pyExamples/3DFrame_Rendering.py>`.
 #. Below is an example showing how to visualize an OpenSeesPy model.
+#. Global-Z direction should be vertically upward for 3D models.
 #. Import by writing in the model file, "from openseespy.postprocessing.get_rendering import * ". (see line 11 in below example)
 #. Plot the model by writing "plot_model()" after defining all the nodes and elements. (see line 115 in below example)
 #. Plot mode shapes by writing "plot_modeshape(mode_number)" after performing the eigen analysis. (see line 114 in below example)
