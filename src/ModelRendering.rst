@@ -7,7 +7,7 @@
 #. The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 #. The source code can be downloaded :download:`here </pyExamples/3DFrame_Rendering.py>`.
 #. Below is an example showing how to visualize an OpenSeesPy model.
-#. Import by writing in the model file, "from openseespy.postprocessing.get_gendering import * ". (see line 11 in below example)
+#. Import by writing in the model file, "from openseespy.postprocessing.get_rendering import * ". (see line 11 in below example)
 #. Plot the model by writing "plot_model()" after defining all the nodes and elements. (see line 115 in below example)
 #. Plot mode shapes by writing "plot_modeshape(mode_number)" after performing the eigen analysis. (see line 114 in below example)
 #. Update openseespy to the latest version to get this function.
