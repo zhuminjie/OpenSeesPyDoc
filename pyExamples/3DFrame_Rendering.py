@@ -7,7 +7,7 @@
 ## Date - 12/01/2019
 ##################################################################
 
-from openseespy.postprocessing.Get_Rendering import * 
+from openseespy.postprocessing.get_rendering import * 
 from openseespy.opensees import *
 
 import numpy as np
