@@ -4,7 +4,7 @@
  nodeEigenvector command
 =========================
 
-.. function:: nodeEigenvector(eigenvector, dof=-1)
+.. function:: nodeEigenvector(nodeTag, eigenvector, dof=-1)
 
    Returns the eigenvector at a specified node.
 
