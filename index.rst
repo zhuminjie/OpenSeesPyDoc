@@ -52,7 +52,7 @@ A minimum script is shown below:
    ops.wipe()
 
    # create model
-   ops.model('basic', '-ndm', ndm, '-ndf', ndf)
+   ops.model('basic', '-ndm', 2, '-ndf', 3)
    
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
