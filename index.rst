@@ -15,6 +15,8 @@
 
    The Linux Version of OpenSeesPy can now run on Windows 10 (see :doc:`src/wsl`).
 
+   New plotting commands are added (see :doc:`src/plotcmds`).
+
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
    
@@ -60,35 +62,6 @@ OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manu
 The conversion from Tcl to Python is easy and straightforward
 as demonstrated with commands below.
 
-
-===============================
-OpenSeesPy Model Visualization
-===============================
-Model visualization is an ongoing development to make OpenSeesPy more user friendly.
-It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot interactive 2D and 3D models.
-See the `example <https://openseespydoc.readthedocs.io/en/latest/src/ModelRendering.html>`_ for a sample script.
-
-Following elements are supported:
-    * 2D and 3D Beam-Column Elements
-    * 2D and 3D Quad Elements
-    * 2D and 3D Tri Elements
-    * 8 Node Brick Elements
-    * Tetrahedron Elements (to be added)
-
-The following two commands are needed to visualize the model, as shown below:
-
-::
-
-   # import OpenSeesPy rendering module
-   from openseespy.postprocessing.Get_Rendering import *
-   
-   # render the model after defining all the nodes and elements
-   plot_model()
-   
-
-.. image:: /_static/ModelVisualization_Intro.png
-
-
 ============
  Developer
 ============
@@ -116,6 +89,7 @@ The following two commands are needed to visualize the model, as shown below:
    src/senscmds
    src/reliabilitycmds
    src/parallelcmds
+   src/plotcmds
    src/examples
 
 
