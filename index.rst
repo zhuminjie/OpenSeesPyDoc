@@ -15,7 +15,7 @@
 
    The Linux Version of OpenSeesPy can now run on Windows 10 (see :doc:`src/wsl`).
 
-   New plotting commands are added (see :doc:`src/plotcmds`).
+   New plotting commands will be added in the next version (see :doc:`src/plotcmds`).
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
