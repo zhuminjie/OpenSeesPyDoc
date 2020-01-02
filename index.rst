@@ -108,7 +108,6 @@ The following two commands are needed to visualize the model, as shown below:
    src/installation
    src/compile
    src/changelog
-   src/LICENSE
    src/modelcmds
    src/analysiscmds
    src/outputcmds
