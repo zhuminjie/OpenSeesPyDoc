@@ -24,7 +24,7 @@
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
-   ``matTag`` |float|                 uniaxialMaterial tag assigned to the section
+   ``matTag`` |int|                   uniaxialMaterial tag assigned to the section
                                       for torsional response (can be nonlinear)
    ================================   ===========================================================================
 
