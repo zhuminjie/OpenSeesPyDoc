@@ -18,11 +18,11 @@
    analysisType |str|                 char string identifying type of analysis object
                                       to be constructed. Currently 3 valid options:
 
-                      #. ``'Static'`` - for static analysis
-                      #. ``'Transient'`` - for transient analysis constant time step
-                      #. ``'VariableTransient'`` - for transient analysis with variable time step
-                      #. ``'PFEM'`` - for :ref:`PFEM-Analysis`
-                      #. ``'Creep'`` - for time-dependent concrete analysis (used with :ref:`TDConcrete`, :ref:`TDConcreteEXP`,:ref:`TDConcreteMC10`, and :ref:`TDConcreteMC10NL` models)
+									  #. ``'Static'`` - for static analysis
+									  #. ``'Transient'`` - for transient analysis constant time step
+									  #. ``'VariableTransient'`` - for transient analysis with variable time step
+									  #. ``'PFEM'`` - for :ref:`PFEM-Analysis`
+									  #. ``'Creep'`` - for time-dependent concrete analysis (used with :ref:`TDConcrete`, :ref:`TDConcreteEXP`,:ref:`TDConcreteMC10`, and :ref:`TDConcreteMC10NL` models)
    ================================   =========================================================================================================================================================
 
 .. note::
