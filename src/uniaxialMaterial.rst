@@ -73,6 +73,9 @@ Concrete Materials
 #. :doc:`FRPConfinedConcrete`
 #. :doc:`ConcreteCM`
 #. :doc:`TDConcrete`
+#. :doc:`TDConcreteEXP`
+#. :doc:`TDConcreteMC10`
+#. :doc:`TDConcreteMC10NL`
 
       
 .. toctree::

@@ -1,15 +1,15 @@
 .. include:: sub.txt
 
 ==================
- TDConcrete
+ TDConcreteEXP
 ==================
 
-.. function:: uniaxialMaterial('TDConcrete', matTag, fc, fct, Ec, beta, tD, epsshu, psish, Tcr, phiu, psicr1, psicr2, tcast)
+.. function:: uniaxialMaterial('TDConcreteEXP', matTag, fc, fct, Ec, beta, tD, epsshu, psish, Tcr, epscru, sigCr, psicr1, psicr2, tcast)
    :noindex:
 
    This command is used to construct a uniaxial time-dependent concrete material object with linear behavior in compression, nonlinear behavior in tension (REF: Tamai et al., 1988) and creep and shrinkage according to ACI 209R-92.
 
-   ===================================   ============================================================================
+   ===================================   =====================================================================================================
    ``matTag`` |int|                      integer tag identifying material
    ``fc`` |float|                        concrete compressive strength (compression is negative)
    ``fct`` |float|                       concrete tensile strength (tension is positive)
@@ -19,12 +19,13 @@
    ``epsshu`` |float|                    ultimate shrinkage strain as per ACI 209R-92 (shrinkage is negative)
    ``psish`` |float|                     fitting parameter of the shrinkage time evolution function as per ACI 209R-92
    ``Tcr`` |float|                       creep model age (in days)
-   ``phiu`` |float|                      ultimate creep coefficient as per ACI 209R-92
+   ``epscru`` |float|                    ultimate creep strain (e.g., taken from experimental measurements)
+   ``sigCr`` |float|                     concrete compressive stress (input as negative) associated with $epscru (e.g., experimentally applied)
    ``psicr1`` |float|                    fitting parameter of the creep time evolution function as per ACI 209R-92
    ``psicr2`` |float|                    fitting parameter of the creep time evolution function as per ACI 209R-92
    ``tcast`` |float|                     analysis time corresponding to concrete casting (in days; minimum value 2.0)
 
-   ===================================   =============================================================================
+   ===================================   ======================================================================================================
 
 .. note::
 

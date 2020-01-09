@@ -14,7 +14,7 @@
    * specify the tangent matrix and residual vector at any iteration
    * determine the corrective step based on the displacement increment dU
 
-   ================================   ==============================================================================================================
+   ================================   ========================================================================================================================================================
    analysisType |str|                 char string identifying type of analysis object
                                       to be constructed. Currently 3 valid options:
 
@@ -22,8 +22,8 @@
 				      #. ``'Transient'`` - for transient analysis constant time step
 				      #. ``'VariableTransient'`` - for transient analysis with variable time step
 				      #. ``'PFEM'`` - for :ref:`PFEM-Analysis`
-					  #. ``'Creep'`` - for time-dependent concrete analysis (to be used with :ref:`TDConcrete`, TDConcreteMC10, and TDConcreteMC10NL models)
-   ================================   ===============================================================================================================
+					  #. ``'Creep'`` - for time-dependent concrete analysis (to be used with :ref:`TDConcrete`, :ref:`TDConcreteEXP`,:ref:`TDConcreteMC10`, and :ref:`TDConcreteMC10NL` models)
+   ================================   =========================================================================================================================================================
 
 .. note::
 
