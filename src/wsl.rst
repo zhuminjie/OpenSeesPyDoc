@@ -1,14 +1,14 @@
 .. include:: sub.txt
 
-=============================
- Windows Sybsystem for Linux
-=============================
+=======================================
+ Windows Subsystem for Linux (Windows)
+=======================================
 
-This is a real Linux sybsystem for you
+This is a real Linux subsystem for you
 to run OpenSeesPy Linux version on Windows.
 
 
-Install the Windows Sybsystem for Linux
+Install the Windows Subsystem for Linux
 ---------------------------------------
 
 Follow the instruction on `here <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_

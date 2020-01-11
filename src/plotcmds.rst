@@ -4,6 +4,8 @@
  Plotting Commands
 =======================
 
+The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+
 Model visualization is an ongoing development to make OpenSeesPy more user friendly.
 It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot interactive 2D and 3D models.
 See the example :doc:`ModelRendering` for a sample script.

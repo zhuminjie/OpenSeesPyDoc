@@ -1,9 +1,9 @@
 .. include:: sub.txt
 
 
-======
- PyPi
-======
+============================
+ PyPi (Windows, Linux, Mac)
+============================
 
 Install Python
 --------------
