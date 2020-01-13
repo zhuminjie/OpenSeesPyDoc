@@ -15,7 +15,6 @@
 
    OpenSeesPy can now run on :doc:`src/wsl`.
 
-   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
@@ -35,6 +34,8 @@
 
    Questions about the Mac version please ask `Stevan Gavrilovic <steva44@hotmail.com>`_.
 
+   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+   
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests
