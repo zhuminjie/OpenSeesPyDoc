@@ -16,7 +16,7 @@
    ``Ec`` |float|                        concrete modulus of elasticity at loading age
    ``Ecm`` |float|                       concrete modulus of elasticity at 28 days
    ``beta`` |float|                      tension softening parameter (tension softening exponent)
-   ``tD`` |float|						 analysis time at initiation of drying (in days)
+   ``tD`` |float|                        analysis time at initiation of dryin (in days)
    ``epsba`` |float|                     ultimate basic shrinkage strain (input as negative) as per fib Model Code 2010
    ``epsbb`` |float|                     fitting parameter of basic shrinkage time evolution function as per fib Model Code 2010
    ``epsda`` |float|                     product of ultimate drying shrinkage strain and relative humidity function as per fib Model Code 2010
