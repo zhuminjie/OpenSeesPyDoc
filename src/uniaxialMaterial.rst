@@ -92,6 +92,10 @@ Concrete Materials
    ConcreteD
    FRPConfinedConcrete
    ConcreteCM
+   TDConcrete
+   TDConcreteEXP
+   TDConcreteMC10
+   TDConcreteMC10NL
 
 
 Standard Uniaxial Materials
