@@ -15,7 +15,7 @@
    ``fct`` |float|                       concrete tensile strength (tension is positive)
    ``Ec`` |float|                        concrete modulus of elasticity
    ``beta`` |float|                      tension softening parameter (tension softening exponent)
-   ``tD`` |float|                        analysis time at initiation of dryin (in days)
+   ``tD`` |float|                        analysis time at initiation of drying (in days)
    ``epsshu`` |float|                    ultimate shrinkage strain as per ACI 209R-92 (shrinkage is negative)
    ``psish`` |float|                     fitting parameter of shrinkage time evolution function as per ACI 209R-92
    ``Tcr`` |float|                       creep model age (in days)
