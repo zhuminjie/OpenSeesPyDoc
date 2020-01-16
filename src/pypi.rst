@@ -8,11 +8,15 @@
 Install Python
 --------------
 
-* Install `Anaconda`_ 
+* Install `Anaconda`_
 
+In Jupyter Notebook
+-------------------
 
-Install OpenSeesPy
-------------------
+.. image:: /_static/jupyter.png
+
+In command line (optional)
+-----------------------------------
 
 * To install
 
@@ -30,10 +34,13 @@ Install OpenSeesPy
 
       python -m pip install --user --upgrade openseespy
 
-   
-Import OpenSeesPy
------------------
+* To import
 
-::
+   ::
 
-   import openseespy.opensees as ops
+      import openseespy.opensees as ops
+
+
+
+
+
