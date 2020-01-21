@@ -6,15 +6,14 @@
  nonlinearBeamColumn
 =====================
 
-.. function:: element('nonlinearBeamColumn',eleTag,iNode,jNode,numIntgrPts,secTag,transfTag,'-iter',maxIter=10,tol=1e-12,'-mass',mass=0.0,'-integration',intType)
+.. function:: element('nonlinearBeamColumn',eleTag,*eleNodes,numIntgrPts,secTag,transfTag,'-iter',maxIter=10,tol=1e-12,'-mass',mass=0.0,'-integration',intType)
    :noindex:
 
    Create a nonlinearBeamColumn element. This element is for backward compatability.
 
    ========================   =============================================================
    ``eleTag`` |int|           tag of the element
-   ``iNode`` |int|            tag of node i
-   ``jNode`` |int|            tag of node j
+   ``eleNodes`` |listi|       a list of two element nodes
    ``numIntgrPts`` |int|      number of integration points.
    ``secTag`` |int|           tag of section
    ``transfTag`` |int|        tag of transformation
