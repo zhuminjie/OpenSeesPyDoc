@@ -39,4 +39,4 @@
    `(1) Knaack, A.M., Kurama, Y.C., 2018. Modeling Time-Dependent Deformations: Application for Reinforced Concrete Beams with Recycled Concrete Aggregates. ACI Structural J., 115, 175–190. doi:10.14359/51701153`
    `(2) Knaack, A.M., 2013. Sustainable Concrete Structures Using Recycled Concrete Aggregate: Short-Term and Long-Term Behavior Considering Material Variability. PhD Dissertation, Civil and Environmental Engineering and Earth Sciences, University of Notre Dame, Notre Dame, Indiana, USA, 680 pp`
    `A manual describing the use of the model and sample files can be found at:`  
-   `<https://data.mendeley.com/datasets/z4gxnhchky/1>`_
+   `<https://data.mendeley.com/datasets/z4gxnhchky/2>`_
