@@ -5,10 +5,13 @@
  PyPi (Windows, Linux, Mac)
 ============================
 
-Install Python
---------------
+Install Anaconda
+-----------------
 
 * Install `Anaconda`_
+* Start Jupyter Notebook (Windows)
+
+   .. image:: /_static/startjupyterwin.png
 
 In Jupyter Notebook
 -------------------
