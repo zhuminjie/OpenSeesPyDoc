@@ -1,10 +1,27 @@
+.. include:: sub.txt
+
 ==============
   Change Log
 ==============
 
+* **Version 3.1.5.11** (1.10.2020)
+
+  * Change versioning method. First two digits match the current `OpenSees`_ framework version. The last two digits are the versions for OpenSeesPy.
+  * For Windows, only support the Python version that corresponds to the current version of `Anaconda`_.
+  * Add openseespy.postprocessing.Get_Rendering 
+  * Add '-init' option to Newmark integrator
+  * Some function can return empty or one-element lists
+  * Spaces in string input will be automatically removed
+  * Bug fixes
+
+* **Version 0.5.4**
+
+  * Support Mac
+  * Support Python3.8 on Windows and Linux
+
 * **Version 0.5.3**
 
-  * Fix bug in LimitState UniadialMaterial
+  * Fix bug in LimitState UniaxialMaterial
   * Automatic trimming spaces for string inputs
   * Some output commands return lists instead of ints, such as nodeDisp etc.
 

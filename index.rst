@@ -7,9 +7,14 @@
 
 .. important::
 
-   Version |opspy_version| is released.
+   Version |opspy_version| is released!
 
-   OpenSeesPy has been official in `DesignSafe`_.
+   OpenSeesPy is on :doc:`src/pypi`.
+
+   OpenSeesPy is official in :doc:`src/designsafe`.
+
+   OpenSeesPy can now run on :doc:`src/wsl`.
+
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
@@ -27,6 +32,10 @@
 
    Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
+   Questions about the Mac version please ask `Stevan Gavrilovic <steva44@hotmail.com>`_.
+
+   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+   
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests
@@ -46,6 +55,9 @@ A minimum script is shown below:
 
    # wipe model
    ops.wipe()
+
+   # create model
+   ops.model('basic', '-ndm', 2, '-ndf', 3)
    
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
@@ -53,15 +65,13 @@ OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manu
 The conversion from Tcl to Python is easy and straightforward
 as demonstrated with commands below.
 
-
-
 ============
  Developer
 ============
 
 *Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
 
-| Faculty Research Assistant
+| Research Associate Post Doc
 | Civil and Construction Engineering
 | Oregon State University
 
@@ -74,7 +84,6 @@ as demonstrated with commands below.
    src/installation
    src/compile
    src/changelog
-   src/LICENSE
    src/modelcmds
    src/analysiscmds
    src/outputcmds
@@ -83,6 +92,7 @@ as demonstrated with commands below.
    src/senscmds
    src/reliabilitycmds
    src/parallelcmds
+   src/plotcmds
    src/examples
 
 
@@ -90,4 +100,4 @@ as demonstrated with commands below.
 
 .. raw:: html
 
-   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=SKQBbxa32RopNU9415W5PDNgdO0XjXnxv2wJdeH0CHw'></script>

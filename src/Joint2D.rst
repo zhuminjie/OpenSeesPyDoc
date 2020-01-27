@@ -6,7 +6,7 @@ Joint2D Element
 
 This command is used to construct a two-dimensional beam-column-joint element object. The two dimensional beam-column joint is idealized as a parallelogram shaped shear panel with adjacent elements connected to its mid-points. The midpoints of the parallelogram are referred to as external nodes. These nodes are the only analysis components that connect the joint element to the surrounding structure.
 
-.. function:: element('Joint2D', eleTag,*eleNodes, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag)
+.. function:: element('Joint2D', eleTag,*eleNodes, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, ['-damage', DmgTag], ['-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC])
    :noindex:
 
    ===================================   ===========================================================================
@@ -21,6 +21,12 @@ This command is used to construct a two-dimensional beam-column-joint element ob
                                          * ``0`` - for small deformations and constant geometry
 					 * ``1`` - for large deformations and time varying geometry
 					 * ``2`` - for large deformations ,time varying geometry and length correction
+   ``DmgTag`` |int|                      damage model tag
+   ``Dmg1`` |int|                        damage model tag for Mat1
+   ``Dmg2`` |int|                        damage model tag for Mat2
+   ``Dmg3`` |int|                        damage model tag for Mat3
+   ``Dmg4`` |int|                        damage model tag for Mat4
+   ``DmgC`` |int|                        panel damage model tag
    ===================================   ===========================================================================
 
 .. seealso::
