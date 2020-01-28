@@ -4,7 +4,7 @@
  FSAM
 ==================
 
-.. function:: nDMaterial('FSAM', matTag, rho, sX, sY, conc, rouX, rouY, nu, alfadow)
+.. function:: nDMaterial('FSAM', matTag, rho, sXTag, sYTag, concTag, rouX, rouY, nu, alfadow)
    :noindex:
 
    This command is used to construct a nDMaterial FSAM (Fixed-Strut-Angle-Model, Figure 1, Kolozvari et al., 2015), which is a plane-stress constitutive model for simulating the behavior of RC panel elements under generalized, in-plane, reversed-cyclic loading conditions (Ulugtekin, 2010; Orakcal et al., 2012). In the FSAM constitutive model, the strain fields acting on concrete and reinforcing steel components of a RC panel are assumed to be equal to each other, implying perfect bond assumption between concrete and reinforcing steel bars. While the reinforcing steel bars develop uniaxial stresses under strains in their longitudinal direction, the behavior of concrete is defined using stress–strain relationships in biaxial directions, the orientation of which is governed by the state of cracking in concrete. Although the concrete stress–strain relationship used in the FSAM is fundamentally uniaxial in nature, it also incorporates biaxial softening effects including compression softening and biaxial damage. For transfer of shear stresses across the cracks, a friction-based elasto-plastic shear aggregate interlock model is adopted, together with a linear elastic model for representing dowel action on the reinforcing steel bars (Kolozvari, 2013). Note that FSAM constitutive model is implemented to be used with Shear-Flexure Interaction model for RC walls (SFI_MVLEM), but it could be also used elsewhere.
@@ -12,9 +12,9 @@
    ================================   ===========================================================================
    ``matTag`` |int|                   integer tag identifying material
    ``rho`` |float|                    Material density
-   ``sX`` |float|                     Tag of uniaxialMaterial simulating horizontal (x) reinforcement
-   ``sY`` |float|                     Tag of uniaxialMaterial simulating vertical (y) reinforcement
-   ``conc`` |float|                   Tag of uniaxialMaterial simulating concrete,
+   ``sXTag`` |int|                       Tag of uniaxialMaterial simulating horizontal (x) reinforcement
+   ``sYTag`` |int|                       Tag of uniaxialMaterial simulating vertical (y) reinforcement
+   ``concTag`` |int|                     Tag of uniaxialMaterial simulating concrete,
                                       shall be used with uniaxialMaterial ConcreteCM
    ``rouX`` |float|                   Reinforcing ratio in horizontal (x) direction
                                       (:math:`rouX = _{s,x}/A_{gross,x}`)

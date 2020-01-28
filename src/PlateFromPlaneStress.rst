@@ -4,14 +4,14 @@
  PlateFromPlaneStress
 =========================
 
-.. function:: nDMaterial('PlateFromPlaneStress', newmatTag, matTag, OutofPlaneModulus)
+.. function:: nDMaterial('PlateFromPlaneStress', matTag, pre_def_matTag, OutofPlaneModulus)
    :noindex:
 
    This command is used to create the multi-dimensional concrete material model that is based on the damage mechanism and smeared crack model.
 
    ================================   ===========================================================================
-   ``newmatTag`` |int|                new integer tag identifying material deriving from pre-defined
+   ``matTag`` |int|                new integer tag identifying material deriving from pre-defined
                                       PlaneStress material
-   ``matTag`` |int|                   integer tag identifying PlaneStress material
+   ``pre_def_matTag`` |int|           integer tag identifying PlaneStress material
    ``OutofPlaneModulus`` |float|      shear modulus for out of plane stresses
    ================================   ===========================================================================
