@@ -4,14 +4,14 @@
  ViscousDamper Material
 ========================
 
-.. function:: uniaxialMaterial('ViscousDamper', matTag, K, Cd, alpha, LGap=0.0,  NM=1, RelTol=1e-6, AbsTol=1e-10, MaxHalf=15)
+.. function:: uniaxialMaterial('ViscousDamper', matTag, K_el, Cd, alpha, LGap=0.0,  NM=1, RelTol=1e-6, AbsTol=1e-10, MaxHalf=15)
    :noindex:
 
    This command is used to construct a ViscousDamper material, which represents the Maxwell Model (linear spring and nonlinear dashpot in series). The ViscousDamper material simulates the hysteretic response of nonlinear viscous dampers. An adaptive iterative algorithm has been implemented and validated to solve numerically the constitutive equations within a nonlinear viscous damper with a high-precision accuracy.
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``K`` |float|                         Elastic stiffness of linear spring to model the axial flexibility of a
+   ``K_el`` |float|                         Elastic stiffness of linear spring to model the axial flexibility of a
                                          viscous damper (e.g. combined stiffness of the supporting brace and
 					 internal damper portion)
    ``Cd`` |float|                        Damping coefficient

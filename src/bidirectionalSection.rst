@@ -4,14 +4,14 @@
  Bidirectional Section
 =======================
 
-.. function:: section('Bidirectional',secTag,E,Fy,Hiso,Hkin,code1='Vy',code2='P')
+.. function:: section('Bidirectional',secTag,E_mod,Fy,Hiso,Hkin,code1='Vy',code2='P')
    :noindex:
 
    This command allows the user to construct a Bidirectional section, which is a stress-resultant plasticity model of two coupled forces. The yield surface is circular and there is combined isotropic and kinematic hardening.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
-   ``E`` |float|                      elastic modulus
+   ``E_mod`` |float|                      elastic modulus
    ``Fy`` |float|                     yield force
    ``Hiso`` |float|                   isotropic hardening modulus
    ``Hkin`` |float|                   kinematic hardening modulus
