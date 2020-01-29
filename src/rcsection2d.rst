@@ -4,16 +4,16 @@
  RC Section
 =====================
 
-.. function:: section('RCSection2d',secTag,coreTag,coverTag,steelTag,d,b,cover_depth,Atop,Abot,Aside,Nfcore,Nfcover,Nfs)
+.. function:: section('RCSection2d',secTag,coreMatTag,coverMatTag,steelMatTag,d,b,cover_depth,Atop,Abot,Aside,Nfcore,Nfcover,Nfs)
    :noindex:
 
    This command allows the user to construct an RCSection2d object, which is an encapsulated fiber representation of a rectangular reinforced concrete section with core and confined regions of concrete and single top and bottom layers of reinforcement appropriate for plane frame analysis.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
-   ``coreTag`` |int|                  tag of uniaxialMaterial assigned to each fiber in the core region
-   ``coverTag`` |int|                 tag of uniaxialMaterial assigned to each fiber in the cover region
-   ``steelTag`` |int|                 tag of uniaxialMaterial assigned to each reinforcing bar
+   ``coreMatTag`` |int|               tag of uniaxialMaterial assigned to each fiber in the core region
+   ``coverMatTag`` |int|              tag of uniaxialMaterial assigned to each fiber in the cover region
+   ``steelMatTag`` |int|              tag of uniaxialMaterial assigned to each reinforcing bar
    ``d`` |float|                      section depth
    ``b`` |float|                      section width
    ``cover_depth`` |float|            cover depth (assumed uniform around perimeter)
