@@ -26,7 +26,7 @@
    ``dlong`` |float|                     diameter of the longitudinal bars of the circular section.
    ``dtrans`` |float|                    diameter of the steel spiral/stirrups.
    ``Es`` |float|                        elastic modulus of steel.
-   ``vo`` |float|                        initial Poisson’s coefficient for concrete.
+   ``vo`` |float|                        initial Poisson's coefficient for concrete.
    ``k`` |float|                         reduction factor for the rupture strain of the FRP
                                          jacket, recommended values 0.5-0.8.
    ``useBuck`` |float|                   FRP jacket failure criterion due to buckling of longitudinal compressive steel bars (0 = not                                            include it, 1= to include it).

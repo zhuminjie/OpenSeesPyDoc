@@ -19,25 +19,25 @@
    ``rho`` |float|                    Saturated soil mass density.
    ``refShearModul`` |float|          (:math:`G_r`) Reference low-strain shear modulus,
                                       specified at a reference mean effective confining
-                                      pressure refPress of p’r (see below).
+                                      pressure refPress of p'r (see below).
    ``refBulkModul`` |float|           (:math:`B_r`) Reference bulk modulus,
                                       specified at a reference
                                       mean effective confining pressure refPress
-                                      of p’r (see below).
+                                      of p'r (see below).
    ``frictionAng`` |float|            (:math:`phi`) Friction angle at peak shear
                                       strength in degrees, optional (default is 0.0).
    ``peakShearStra`` |float|          (:math:`\gamma_{max}`) An octahedral shear strain at
                                       which the maximum shear strength is reached,
 				      specified at a reference mean effective confining
-				      pressure refPress of p’r (see below).
-   ``refPress`` |float|               (:math:`p’_r`) Reference mean effective confining
+				      pressure refPress of p'r (see below).
+   ``refPress`` |float|               (:math:`p'_r`) Reference mean effective confining
                                       pressure at which
 				      :math:`G_r`, :math:`B_r`, and :math:`\gamma_{max}`
 				      are defined, optional (default is 100. kPa).
    ``pressDependCoe`` |float|         (:math:`d`) A positive constant defining variations
                                       of :math:`G` and :math:`B` as a function of
 				      instantaneous effective
-				      confinement :math:`p’` (default is 0.0)
+				      confinement :math:`p'` (default is 0.0)
 
 				      :math:`G=G_r(\frac{p'}{p'_r})^d`
 

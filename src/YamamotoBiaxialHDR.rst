@@ -18,7 +18,7 @@ This command is used to construct a YamamotoBiaxialHDR element object, which is 
    ``DDo`` |float|                       outer diameter [m]
    ``DDi`` |float|                       bore diameter [m]
    ``Hr`` |float|                        total thickness of rubber layer [m] Optional Data
-   ``cr``  ``cs`` |float|                coefficients for shear stress components of τr and τs
+   ``cr``  ``cs`` |float|                coefficients for shear stress components of tau_r and tau_s
    ``vecx`` |listf|                      a list of vector components in global coordinates defining local x-axis (optional)
    ``vecyp`` |listf|                     a list of vector components in global coordinates defining vector yp which lies in the local x-y plane for the element.
    ``m`` |float|                         element mass [kg]

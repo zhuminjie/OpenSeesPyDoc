@@ -14,16 +14,16 @@
    ``fpcc`` |float|                      Compressive strength (:math:`f'_c`)
    ``epcc`` |float|                      Strain at compressive strength (:math:`\epsilon'_c`)
    ``Ec`` |float|                        Initial tangent modulus (:math:`E_c`)
-   ``rc`` |float|                        Shape parameter in Tsai’s equation defined for compression (:math:`r_c`)
+   ``rc`` |float|                        Shape parameter in Tsai's equation defined for compression (:math:`r_c`)
    ``xcrn`` |float|                      Non-dimensional critical strain on compression
                                          envelope (:math:`\epsilon^{-}_{cr}`, where the envelope
 					 curve starts following a straight line)
    ``ft`` |float|                        Tensile strength (:math:`f_t`)
    ``et`` |float|                        Strain at tensile strength (:math:`\epsilon_t`)
-   ``rt`` |float|                        Shape parameter in Tsai’s equation defined for tension (:math:`r_t`)
+   ``rt`` |float|                        Shape parameter in Tsai's equation defined for tension (:math:`r_t`)
    ``xcrp`` |float|                      Non-dimensional critical strain on tension envelope
                                          (:math:`\epsilon^{+}_{cr}`, where the envelope curve
-					 starts following a straight line – large value
+					 starts following a straight line - large value
 					 [e.g., 10000] recommended when tension stiffening
 					 is considered)
    ``GapClose`` |float|                  GapClose = 0, less gradual gap closure (default);

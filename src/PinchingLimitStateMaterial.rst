@@ -17,15 +17,15 @@ This command is used to construct a uniaxial material that simulates a pinched l
    ``nodeB`` |int|                       integer node tag to define the last node at the extreme end of the associated flexural frame member (L2 or D2 in Figure)
    ``driftAxis`` |int|                   integer to indicate the drift axis in which lateral-strength degradation will occur. This axis should be orthogonal to the axis of measured rotation (see    ``rotAxis`` in Rotation Shear Curve definition)
 
-                                         ``driftAxis`` = 1 – Drift along the x-axis
-					 ``driftAxis`` = 2 – Drift along the y-axis
-					 ``driftAxis`` = 3 – Drift along the z-axis
+                                         ``driftAxis`` = 1 - Drift along the x-axis
+					 ``driftAxis`` = 2 - Drift along the y-axis
+					 ``driftAxis`` = 3 - Drift along the z-axis
    ``Kelas`` |float|                     floating point value to define the initial material elastic stiffness (Kelastic); Kelas > 0
    ``crvTyp`` |int|                      integer flag to indicate the type of limit curve associated with this material.
 
-                                         ``crvTyp`` = 0 – No limit curve
-					 ``crvTyp`` = 1 – axial limit curve
-					 ``crvTyp`` = 2 – RotationShearCurve
+                                         ``crvTyp`` = 0 - No limit curve
+					 ``crvTyp`` = 1 - axial limit curve
+					 ``crvTyp`` = 2 - RotationShearCurve
    ``crvTag`` |int|                      integer tag for the unique limit curve object associated with this material
    ``YpinchUPN`` |float|                 floating point unloading force pinching factor for loading in the negative direction. **Note: This value must be between zero and unity**
    ``YpinchRPN`` |float|                 floating point reloading force pinching factor for loading in the negative direction. **Note: This value must be between negative one and unity**
@@ -61,21 +61,21 @@ This command is used to construct a uniaxial material that simulates a pinched l
    ``nodeB`` |int|                       integer node tag to define the last node at the extreme end of the associated flexural frame member (L2 or D2 in Figure)
    ``driftAxis`` |int|                   integer to indicate the drift axis in which lateral-strength degradation will occur. This axis should be orthogonal to the axis of measured rotation (see    ``rotAxis``` in Rotation Shear Curve definition)
 
-                                         ``driftAxis`` = 1 – Drift along the x-axis
-					 ``driftAxis`` = 2 – Drift along the y-axis
-					 ``driftAxis`` = 3 – Drift along the z-axis
+                                         ``driftAxis`` = 1 - Drift along the x-axis
+					 ``driftAxis`` = 2 - Drift along the y-axis
+					 ``driftAxis`` = 3 - Drift along the z-axis
 
    ``Kelas`` |float|                     floating point value to define the shear stiffness (Kelastic) of the shear spring prior to shear failure
 
-                                         ``Kelas`` = -4 – Shear stiffness calculated assuming double curvature and shear springs at both column element ends
+                                         ``Kelas`` = -4 - Shear stiffness calculated assuming double curvature and shear springs at both column element ends
 
-					 ``Kelas`` = -3 – Shear stiffness calculated assuming double curvature and a shear spring at one column element end
+					 ``Kelas`` = -3 - Shear stiffness calculated assuming double curvature and a shear spring at one column element end
 
-					 ``Kelas`` = -2 – Shear stiffness calculated assuming single curvature and shear springs at both column element ends
+					 ``Kelas`` = -2 - Shear stiffness calculated assuming single curvature and shear springs at both column element ends
 
-					 ``Kelas`` = -1 – Shear stiffness calculated assuming single curvature and a shear spring at one column element end
+					 ``Kelas`` = -1 - Shear stiffness calculated assuming single curvature and a shear spring at one column element end
 
-					 ``Kelas`` > 0 – Shear stiffness is the input value
+					 ``Kelas`` > 0 - Shear stiffness is the input value
 
 					 Note: integer inputs allow the model to know whether column height equals the shear span (cantelever) or twice the shear span (double curvature). For columns in frames, input the value for the case that best approximates column end conditions or manually input shear stiffness (typically double curvature better estimates framed column behavior)
    ``crvTag`` |int|                      integer tag for the unique limit curve object associated with this material
