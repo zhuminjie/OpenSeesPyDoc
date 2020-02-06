@@ -7,7 +7,7 @@
 .. function:: sdfResponse(m, zeta, k, Fy, alpha, dtF, filename, dt[, uresidual, umaxprev])
    :noindex:
 
-   It is a command that computes bilinear single degree of freedom response in C++, and is much quicker than using the OpenSees model builder.  The command implements Newmark’s method with an inner Newton loop.
+   It is a command that computes bilinear single degree of freedom response in C++, and is much quicker than using the OpenSees model builder.  The command implements Newmark's method with an inner Newton loop.
       
    ========================   =============================================================
    ``m`` |float|              mass

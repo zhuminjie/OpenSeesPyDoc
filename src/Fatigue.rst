@@ -7,7 +7,7 @@ Fatigue Material
 .. function:: uniaxialMaterial('Fatigue', matTag, otherTag, '-E0', E0=0.191, '-m', m=-0.458, '-min', min=-1e16, '-max', max=1e16)
    :noindex:
 
-   The fatigue material uses a modified rainflow cycle counting algorithm to accumulate damage in a material using Miner’s Rule. Element stress/strain relationships become zero when fatigue life is exhausted.
+   The fatigue material uses a modified rainflow cycle counting algorithm to accumulate damage in a material using Miner's Rule. Element stress/strain relationships become zero when fatigue life is exhausted.
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material

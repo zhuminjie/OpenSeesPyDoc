@@ -34,10 +34,10 @@
    ``epscu_val`` |float|                Value for the definition of the concrete ultimate strain
    ``nu`` |str or list|                  Definition for Poisson's Ratio.
                                          * ``*['-nu', <value of Poisson's ratio>]``
-                                         * ``'-varub'`` Poisson’s ratio is defined as a function of axial
+                                         * ``'-varub'`` Poisson's ratio is defined as a function of axial
                                          strain by means of the expression proposed by Braga et al. (2006) with the
                                          upper bound equal to 0.5
-                                         *``'-varnoub'`` Poisson’s ratio is defined as a function of axial
+                                         *``'-varnoub'`` Poisson's ratio is defined as a function of axial
                                          strain by means of the expression proposed by Braga
                                          et al. (2006) without any upper bound.
    ``L1`` |float|                        length/diameter of square/circular core section

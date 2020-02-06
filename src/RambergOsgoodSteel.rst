@@ -7,7 +7,7 @@
 .. function:: uniaxialMaterial('RambergOsgoodSteel', matTag, fy, E0, a, n)
    :noindex:
 
-   This command is used to construct a Ramberg–Osgood steel material object.
+   This command is used to construct a Ramberg-Osgood steel material object.
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material

@@ -13,12 +13,12 @@ CFSSSWP Steel-Sheathed Cold-formed Steel Shear Wall Panel
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``height`` |float|                    SWP’s height (mm)
-   ``width`` |float|                     SWP’s width (mm)
+   ``height`` |float|                    SWP's height (mm)
+   ``width`` |float|                     SWP's width (mm)
    ``fuf`` |float|                       Tensile strength of framing members (MPa)
    ``fyf`` |float|                       Yield strength of framing members (MPa)
    ``tf`` |float|                        Framing thickness (mm)
-   ``Af`` |float|                        Framing cross section area (mm²)
+   ``Af`` |float|                        Framing cross section area (mm2)
    ``fus`` |float|                       Tensile strength of steel sheet sheathing (MPa)
    ``fys`` |float|                       Yield strength of steel sheet sheathing (MPa)
    ``ts`` |float|                        Sheathing thickness (mm)
@@ -26,8 +26,8 @@ CFSSSWP Steel-Sheathed Cold-formed Steel Shear Wall Panel
    ``ds`` |float|                        Screws diameter (mm)
    ``Vs`` |float|                        Screws shear strength (N)
    ``sc`` |float|                        Screw spacing on the SWP perimeter (mm)
-   ``dt`` |float|                        Anchor bolt’s diameter (mm)
-   ``openingArea`` |float|               Total area of openings (mm²)
+   ``dt`` |float|                        Anchor bolt's diameter (mm)
+   ``openingArea`` |float|               Total area of openings (mm2)
    ``openingLength`` |float|             Cumulative length of openings (mm)
    ===================================   ===========================================================================
 
