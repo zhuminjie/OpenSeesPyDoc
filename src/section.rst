@@ -48,6 +48,7 @@ The following contain information about available ``secType``:
 
    elasticSection
    fibersection
+   fiberThermalsection
    ndfiber
    wfsection2d
    rcsection2d
