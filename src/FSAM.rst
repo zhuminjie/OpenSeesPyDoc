@@ -32,8 +32,8 @@ References:
 
 1) Kolozvari K., Orakcal K., and Wallace J. W. (2015). "Shear-Flexure Interaction Modeling of reinforced Concrete Structural Walls and Columns under Reversed Cyclic Loading", Pacific Earthquake Engineering Research Center, University of California, Berkeley, PEER Report No. 2015/12
 
-2) Kolozvari K. (2013). “Analytical Modeling of Cyclic Shear-Flexure Interaction in Reinforced Concrete Structural Walls”, PhD Dissertation, University of California, Los Angeles.
+2) Kolozvari K. (2013). "Analytical Modeling of Cyclic Shear-Flexure Interaction in Reinforced Concrete Structural Walls", PhD Dissertation, University of California, Los Angeles.
 
-3) Orakcal K., Massone L.M., and Ulugtekin D. (2012). “Constitutive Modeling of Reinforced Concrete Panel Behavior under Cyclic Loading”, Proceedings, 15th World Conference on Earthquake Engineering, Lisbon, Portugal.
+3) Orakcal K., Massone L.M., and Ulugtekin D. (2012). "Constitutive Modeling of Reinforced Concrete Panel Behavior under Cyclic Loading", Proceedings, 15th World Conference on Earthquake Engineering, Lisbon, Portugal.
 
-4) Ulugtekin D. (2010). “Analytical Modeling of Reinforced Concrete Panel Elements under Reversed Cyclic Loadings”, M.S. Thesis, Bogazici University, Istanbul, Turkey.
+4) Ulugtekin D. (2010). "Analytical Modeling of Reinforced Concrete Panel Elements under Reversed Cyclic Loadings", M.S. Thesis, Bogazici University, Istanbul, Turkey.

@@ -13,7 +13,7 @@
    ``matTag`` |int|                      integer tag identifying material
    ``fy`` |float|                        Yield strength
    ``E0`` |float|                        initial elastic tangent
-   ``a`` |float|                         “yield offset” and the Commonly used value for a is 0.002
+   ``a`` |float|                         "yield offset" and the Commonly used value for a is 0.002
    ``n`` |float|                         Parameters to control the transition from elastic
                                          to plastic branches. And controls the hardening
 					 of the material by increasing the "n" hardening ratio will be decreased.
