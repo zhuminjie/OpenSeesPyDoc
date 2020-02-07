@@ -29,9 +29,9 @@ zeroLengthImpact3D
 
 .. note::
 
-   #. This element has been developed on top of the “zeroLengthContact3D”. All the notes available in “zeroLengthContact3D” wiki page would apply to this element as well. It includes the definition of master and slave nodes, the number of degrees of freedom in the domain, etc.
+   #. This element has been developed on top of the "zeroLengthContact3D". All the notes available in "zeroLengthContact3D" wiki page would apply to this element as well. It includes the definition of master and slave nodes, the number of degrees of freedom in the domain, etc.
    #. Regarding the number of degrees of freedom (DOF), the end nodes of this element should be defined in 3DOF domain. For getting information on how to use 3DOF and 6DOF domain together, please refer to OpenSees documentation and forums or see the zip file provided in the EXAMPLES section below.
-   #. This element adds the capabilities of “ImpactMaterial” to “zeroLengthContact3D.”
+   #. This element adds the capabilities of "ImpactMaterial" to "zeroLengthContact3D."
    #. For simulating a surface-to-surface contact, the element can be defined for connecting the nodes on slave surface to the nodes on master surface.
    #. The element was found to be fast-converging and eliminating the need for extra elements and nodes in the modeling process.
 

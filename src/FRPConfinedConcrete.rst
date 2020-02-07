@@ -35,9 +35,9 @@
 .. note::
    #.IMPORTANT: The units of the input parameters should be in MPa, N, mm.
    #.Concrete compressive strengths and the corresponding strain should be input as positive values.
-   #.When rupture of FRP jacket occurs due to dilation of concrete (lateral concrete strain exceeding reduced rupture strain of FRP          jacket), the analysis is not terminated. Only a message “FRP Rupture” is plotted on the screen.
-   #.When $useBuck input parameter is on (equal to 1) and the model's longitudinal steel buckling conditions are fulfilled, a message        “Initiation of Buckling of Long.Bar under Compression” is plotted on the screen.
-   #.When rupture of FRP jacket occurs due to its interaction with buckled longitudinal compressive steel bars, the analysis is not          terminated. Only a message “FRP Rupture due to Buckling of Long.Bar under compression” is plotted on the screen.
+   #.When rupture of FRP jacket occurs due to dilation of concrete (lateral concrete strain exceeding reduced rupture strain of FRP          jacket), the analysis is not terminated. Only a message "FRP Rupture" is plotted on the screen.
+   #.When $useBuck input parameter is on (equal to 1) and the model's longitudinal steel buckling conditions are fulfilled, a message        "Initiation of Buckling of Long.Bar under Compression" is plotted on the screen.
+   #.When rupture of FRP jacket occurs due to its interaction with buckled longitudinal compressive steel bars, the analysis is not          terminated. Only a message "FRP Rupture due to Buckling of Long.Bar under compression" is plotted on the screen.
 
 .. seealso::
 
