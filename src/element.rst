@@ -176,9 +176,7 @@ Quadrilateral Elements
 #. :doc:`quad`
 #. :doc:`ShellMITC4`
 #. :doc:`ShellDKGQ`
-#. :doc:`ShellDKGT`
 #. :doc:`ShellNLDKGQ`
-#. :doc:`ShellNLDKGT`
 #. :doc:`ShellNL`
 #. :doc:`bbarQuad`
 #. :doc:`enhancedQuad`
@@ -191,9 +189,7 @@ Quadrilateral Elements
    quad
    ShellMITC4
    ShellDKGQ
-   ShellDKGT
    ShellNLDKGQ
-   ShellNLDKGT
    ShellNL
    bbarQuad
    enhancedQuad
@@ -204,12 +200,16 @@ Triangular Elements
 -------------------
 
 #. :doc:`tri31`
+#. :doc:`ShellDKGT`
+#. :doc:`ShellNLDKGT`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
    tri31
+   ShellDKGT
+   ShellNLDKGT
 
 
 Brick Elements
