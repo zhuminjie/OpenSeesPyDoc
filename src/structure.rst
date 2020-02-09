@@ -10,7 +10,7 @@
 #. :doc:`RCFrameGravity`
 #. :doc:`RCFramePushOver`
 #. :doc:`ThreeStorySteel`
-
+#. :doc:`ExampleFRP` 
 
 .. toctree::
    :maxdepth: 1
@@ -23,4 +23,5 @@
    RCFrameGravity
    RCFramePushOver
    ThreeStorySteel
+   ExampleFRP
 

@@ -17,7 +17,6 @@
 #. :doc:`portalpavan2`
 #. :doc:`portalpavan3`
 #. :doc:`portalpavan4`
-#. :doc:`ExampleFRP`
 
 
 .. toctree::
@@ -38,4 +37,3 @@
    portalpavan2
    portalpavan3
    portalpavan4
-   ExampleFRP

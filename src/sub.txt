@@ -44,7 +44,7 @@
 
 .. |bi| replace:: (:class:`beamIntegration`)
 
-.. |opspy_version| replace:: 0.5.8
+.. |opspy_version| replace:: 3.1.5.12
 
 .. _print: https://docs.python.org/3/library/functions.html#print
 .. _list: https://docs.python.org/3/library/stdtypes.html#list
@@ -57,7 +57,7 @@
 .. _callable: https://docs.python.org/3/library/functions.html#callable
 
 .. _OpenSeesPy: https://github.com/zhuminjie/OpenSeesPyDoc
-.. _OpenSees: http://opensees.berkeley.edu/
+.. _OpenSees: https://github.com/OpenSees/OpenSees
 .. _OpenSees Wiki: http://opensees.berkeley.edu/wiki/index.php/Main_Page
 .. _Finite Element Analysis: https://en.wikipedia.org/wiki/Finite_element_method
 .. _Python 3: https://docs.python.org/3/

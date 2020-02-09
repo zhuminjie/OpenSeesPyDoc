@@ -9,11 +9,12 @@
 
    Version |opspy_version| is released!
 
-   Mac version is supported!
+   OpenSeesPy is on :doc:`src/pypi`.
 
-   OpenSeesPy has been official in :doc:`src/designsafe`.
+   OpenSeesPy is official in :doc:`src/designsafe`.
 
-   The Linux Version of OpenSeesPy can now run on Windows 10 (see :doc:`src/wsl`).
+   OpenSeesPy can now run on :doc:`src/wsl`.
+
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
@@ -31,6 +32,10 @@
 
    Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
+   Questions about the Mac version please ask `Stevan Gavrilovic <steva44@hotmail.com>`_.
+
+   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+   
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests
@@ -60,35 +65,6 @@ OpenSees `Tcl commands <http://opensees.berkeley.edu/wiki/index.php/Command_Manu
 The conversion from Tcl to Python is easy and straightforward
 as demonstrated with commands below.
 
-
-===============================
-OpenSeesPy Model Visualization
-===============================
-Model visualization is an ongoing development to make OpenSeesPy more user friendly.
-It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot interactive 2D and 3D models.
-See the `example <https://openseespydoc.readthedocs.io/en/latest/src/ModelRendering.html>`_ for a sample script.
-
-Following elements are supported:
-    * 2D and 3D Beam-Column Elements
-    * 2D and 3D Quad Elements
-    * 2D and 3D Tri Elements
-    * 8 Node Brick Elements
-    * Tetrahedron Elements (to be added)
-
-The following two commands are needed to visualize the model, as shown below:
-
-::
-
-   # import OpenSeesPy rendering module
-   from openseespy.postprocessing.Get_Rendering import *
-   
-   # render the model after defining all the nodes and elements
-   plot_model()
-   
-
-.. image:: /_static/ModelVisualization_Intro.png
-
-
 ============
  Developer
 ============
@@ -108,7 +84,6 @@ The following two commands are needed to visualize the model, as shown below:
    src/installation
    src/compile
    src/changelog
-   src/LICENSE
    src/modelcmds
    src/analysiscmds
    src/outputcmds
@@ -117,6 +92,7 @@ The following two commands are needed to visualize the model, as shown below:
    src/senscmds
    src/reliabilitycmds
    src/parallelcmds
+   src/plotcmds
    src/examples
 
 
