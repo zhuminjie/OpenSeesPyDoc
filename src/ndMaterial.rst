@@ -118,12 +118,16 @@ Wrapper material for Initial State Analysis
 -------------------------------------------
 
 #. :doc:`InitialStateAnalysisWrapper`
+#. :doc:`InitStressNDMaterial`
+#. :doc:`InitStrainNDMaterial`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
    InitialStateAnalysisWrapper
+   InitStressNDMaterial
+   InitStrainNDMaterial
 
 UC San Diego soil models
 ------------------------
