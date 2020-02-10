@@ -10,5 +10,3 @@ __pycache__
 *.xml
 .idea
 html
-/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
