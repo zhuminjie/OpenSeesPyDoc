@@ -1,14 +1,14 @@
 .. include:: sub.txt
 
-=============================
- Windows Sybsystem for Linux
-=============================
+=======================================
+ Windows Subsystem for Linux (Windows)
+=======================================
 
-This is a real Linux sybsystem for you
+This is a real Linux subsystem for you
 to run OpenSeesPy Linux version on Windows.
 
 
-Install the Windows Sybsystem for Linux
+Install the Windows Subsystem for Linux
 ---------------------------------------
 
 Follow the instruction on `here <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_
@@ -18,9 +18,8 @@ Once the Linux is installed, it will show as an application in the start menu.
 
 .. image:: /_static/start.png
 
-
-Run OpenSeesPy with Windows Sybsystem for Linux
------------------------------------------------
+Install Anaconda and start Jupyter Notebook
+--------------------------------------------
 
 - Run the subsystem from start menu and a terminal window will show.
 
@@ -45,7 +44,33 @@ Run OpenSeesPy with Windows Sybsystem for Linux
 
      [/home/username/anaconda3] >>> (enter)
 
-- Run Anaconda with follwing command,
+
+- Start Jupyter Notebook
+
+     ::
+
+          ~$ /home/username/anaconda3/bin/jupyter-notebook
+
+- Copy the address in red box to a web browser
+
+     .. image:: /_static/wsljupyter.png
+
+     .. image:: /_static/wsljupyter2.png
+
+
+In Jupyter Notebook
+---------------------
+
+Start a new notebook and then
+
+.. image:: /_static/wsljupyter3.png
+
+
+
+In the command line (optional)
+-----------------------------------------------
+
+- Run Anaconda with following command,
   where `username` is your username of your computer. Please use
   the `username` shown in last step
 
@@ -83,12 +108,9 @@ Run OpenSeesPy with Windows Sybsystem for Linux
 
 
 
-Run OpenSeesPy scripts
-----------------------
+- run OpenSeesPy scripts
 
-In the terminal,
+     ::
 
-::
-
-   /home/username/anaconda3/bin/python3.7 script.py
+          /home/username/anaconda3/bin/python3.7 script.py
 

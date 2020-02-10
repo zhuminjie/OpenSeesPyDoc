@@ -9,13 +9,12 @@
 
    Version |opspy_version| is released!
 
-   Mac version is supported!
+   OpenSeesPy is on :doc:`src/pypi`.
 
-   OpenSeesPy has been official in :doc:`src/designsafe`.
+   OpenSeesPy is official in :doc:`src/designsafe`.
 
-   The Linux Version of OpenSeesPy can now run on Windows 10 (see :doc:`src/wsl`).
+   OpenSeesPy can now run on :doc:`src/wsl`.
 
-   New plotting commands will be added in the next version (see :doc:`src/plotcmds`).
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
@@ -33,6 +32,10 @@
 
    Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
+   Questions about the Mac version please ask `Stevan Gavrilovic <steva44@hotmail.com>`_.
+
+   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+   
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests

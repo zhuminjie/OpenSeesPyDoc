@@ -1,18 +1,25 @@
 .. include:: sub.txt
 
 
-======
- PyPi
-======
+============================
+ PyPi (Windows, Linux, Mac)
+============================
 
-Install Python
---------------
+Install Anaconda
+-----------------
 
-* Install `Anaconda`_ 
+* Install `Anaconda`_
+* Start Jupyter Notebook (Windows)
 
+   .. image:: /_static/startjupyterwin.png
 
-Install OpenSeesPy
-------------------
+In Jupyter Notebook
+-------------------
+
+.. image:: /_static/jupyter.png
+
+In command line (optional)
+-----------------------------------
 
 * To install
 
@@ -30,10 +37,13 @@ Install OpenSeesPy
 
       python -m pip install --user --upgrade openseespy
 
-   
-Import OpenSeesPy
------------------
+* To import
 
-::
+   ::
 
-   import openseespy.opensees as ops
+      import openseespy.opensees as ops
+
+
+
+
+
