@@ -1,15 +1,13 @@
 .. include:: sub.txt
 
-===================
- Dambreak Analysis
-===================
+=====================================
+ Dambreak Analysis using moving mesh
+=====================================
 
 
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/dambreak.py>`.
 
-#. The folder ``dambreak/`` must exist before running the script.
-
-#. Run the source code in your favorate Python program.
+#. Run the source code in your favorite Python program.
 
 #. The `ParaView`_ is needed to view the results. To view the displaced shape of fluid, use the "Warp By Vector" filter with scale factor = 1.0.
 
