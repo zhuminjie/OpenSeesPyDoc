@@ -4,7 +4,7 @@
 zeroLength Element
 ==================
 
-.. function:: element('zeroLength', eleTag, *eleNodes, '-mat', *matTags, '-dir', *dirArgs, ['-doRayleigh', rFlag=0], ['-orient', *vecx, *vecyp])
+.. function:: element('zeroLength', eleTag, *eleNodes, '-mat', *matTags, '-dir', *dirs, ['-doRayleigh', rFlag=0], ['-orient', *vecx, *vecyp])
    :noindex:
 
    This command is used to construct a zeroLength element object, which is defined by two nodes at the same location. The nodes are connected by multiple UniaxialMaterial objects to represent the force-deformation relationship for the element.
@@ -15,7 +15,7 @@ zeroLength Element
    ``eleTag`` |int|                      unique element object tag
    ``eleNodes`` |listi|                  a list of two element nodes
    ``matTags`` |listi|                   a list of tags associated with previously-defined UniaxialMaterials
-   ``dirArgs`` |listi|                      a list of material directions:
+   ``dirs`` |listi|                      a list of material directions:
 
                                          * 1,2,3 - translation along local x,y,z axes, respectively;
 					                     * 4,5,6 - rotation about local x,y,z axes, respectively
