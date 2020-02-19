@@ -4,7 +4,7 @@
  FRPConfinedConcrete
 =====================
 
-.. function:: uniaxialMaterial('FRPConfinedConcrete', matTag, fpc1, fpc2, epsc0, D, c, Ej, Sj, tj, eju, S, fyl, fyh, dlong, dtrans, Es, vo, k, useBuck)
+.. function:: uniaxialMaterial('FRPConfinedConcrete', matTag, fpc1, fpc2, epsc0, D, c, Ej, Sj, tj, eju, S, fyl, fyh, dlong, dtrans, Es, nu0, k, useBuck)
    :noindex:
 
    This command is used to construct a uniaxial Megalooikonomou-Monti-Santini concrete material object with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and no tensile strength.
@@ -26,7 +26,7 @@
    ``dlong`` |float|                     diameter of the longitudinal bars of the circular section.
    ``dtrans`` |float|                    diameter of the steel spiral/stirrups.
    ``Es`` |float|                        elastic modulus of steel.
-   ``vo`` |float|                        initial Poisson's coefficient for concrete.
+   ``nu0`` |float|                       initial Poisson's coefficient for concrete.
    ``k`` |float|                         reduction factor for the rupture strain of the FRP
                                          jacket, recommended values 0.5-0.8.
    ``useBuck`` |float|                   FRP jacket failure criterion due to buckling of longitudinal compressive steel bars (0 = not                                            include it, 1= to include it).

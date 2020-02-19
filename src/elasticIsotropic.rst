@@ -4,7 +4,7 @@
  ElasticIsotropic
 ==================
 
-.. function:: nDMaterial('ElasticIsotropic', matTag, E, v, rho=0.0)
+.. function:: nDMaterial('ElasticIsotropic', matTag, E, nu, rho=0.0)
    :noindex:
 
    This command is used to construct an ElasticIsotropic material object.
@@ -12,7 +12,7 @@
    ================================   ===========================================================================
    ``matTag`` |int|                   integer tag identifying material
    ``E`` |float|                      elastic modulus
-   ``v`` |float|                      Poisson's ratio
+   ``nu`` |float|                     Poisson's ratio
    ``rho`` |float|                    mass density (optional)
    ================================   ===========================================================================
 
