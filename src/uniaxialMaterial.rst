@@ -71,6 +71,7 @@ Concrete Materials
 #. :doc:`ConfinedConcrete01`
 #. :doc:`ConcreteD`
 #. :doc:`FRPConfinedConcrete`
+#. :doc:`FRPConfinedConcrete02`
 #. :doc:`ConcreteCM`
 #. :doc:`TDConcrete`
 #. :doc:`TDConcreteEXP`
@@ -91,6 +92,7 @@ Concrete Materials
    ConfinedConcrete01
    ConcreteD
    FRPConfinedConcrete
+   FRPConfinedConcrete02
    ConcreteCM
    TDConcrete
    TDConcreteEXP
