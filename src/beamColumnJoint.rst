@@ -8,25 +8,25 @@ This command is used to construct a two-dimensional beam-column-joint element ob
 
 
 
-.. function:: element('beamColumnJoint', eleTag,*eleNodes,Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, [eleHeightFac=1.0, eleWidthFac=1.0])
+.. function:: element('beamColumnJoint', eleTag,*eleNodes,Mat1Tag, Mat2Tag, Mat3Tag, Mat4Tag, Mat5Tag, Mat6Tag, Mat7Tag, Mat8Tag, Mat9Tag, Mat10Tag, Mat11Tag, Mat12Tag, Mat13Tag, [eleHeightFac=1.0, eleWidthFac=1.0])
    :noindex:
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
    ``eleNodes`` |listi|                  a list of four element nodes
-   ``Mat1`` |int|                        uniaxial material tag for left bar-slip spring at node 1
-   ``Mat2`` |int|                        uniaxial material tag for right bar-slip spring at node 1
-   ``Mat3`` |int|                        uniaxial material tag for interface-shear spring at node 1
-   ``Mat4`` |int|                        uniaxial material tag for lower bar-slip spring at node 2
-   ``Mat5`` |int|                        uniaxial material tag for upper bar-slip spring at node 2
-   ``Mat6`` |int|                        uniaxial material tag for interface-shear spring at node 2
-   ``Mat7`` |int|                        uniaxial material tag for left bar-slip spring at node 3
-   ``Mat8`` |int|                        uniaxial material tag for right bar-slip spring at node 3
-   ``Mat9`` |int|                        uniaxial material tag for interface-shear spring at node 3
-   ``Mat10`` |int|                       uniaxial material tag for lower bar-slip spring at node 4
-   ``Mat11`` |int|                       uniaxial material tag for upper bar-slip spring at node 4
-   ``Mat12`` |int|                       uniaxial material tag for interface-shear spring at node 4
-   ``Mat13`` |int|                       uniaxial material tag for shear-panel
+   ``Mat1Tag`` |int|                     uniaxial material tag for left bar-slip spring at node 1
+   ``Mat2Tag`` |int|                     uniaxial material tag for right bar-slip spring at node 1
+   ``Mat3Tag`` |int|                     uniaxial material tag for interface-shear spring at node 1
+   ``Mat4Tag`` |int|                     uniaxial material tag for lower bar-slip spring at node 2
+   ``Mat5Tag`` |int|                     uniaxial material tag for upper bar-slip spring at node 2
+   ``Mat6Tag`` |int|                     uniaxial material tag for interface-shear spring at node 2
+   ``Mat7Tag`` |int|                     uniaxial material tag for left bar-slip spring at node 3
+   ``Mat8Tag`` |int|                     uniaxial material tag for right bar-slip spring at node 3
+   ``Mat9Tag`` |int|                     uniaxial material tag for interface-shear spring at node 3
+   ``Mat10Tag`` |int|                    uniaxial material tag for lower bar-slip spring at node 4
+   ``Mat11Tag`` |int|                    uniaxial material tag for upper bar-slip spring at node 4
+   ``Mat12Tag`` |int|                    uniaxial material tag for interface-shear spring at node 4
+   ``Mat13Tag`` |int|                    uniaxial material tag for shear-panel
    ``eleHeightFac`` |float|              floating point value (as a ratio to the total height of the element) to be considered for determination of the distance in between the tension-compression couples (optional, default: 1.0)
    ``eleWidthFac`` |float|               floating point value (as a ratio to the total width of the element) to be considered for determination of the distance in between the tension-compression couples (optional, default: 1.0)
    ===================================   ===========================================================================

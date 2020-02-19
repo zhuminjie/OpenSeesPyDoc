@@ -4,14 +4,14 @@
  Series Material
 ===================
 
-.. function:: uniaxialMaterial('Series', matTag, *tags)
+.. function:: uniaxialMaterial('Series', matTag, *matTags)
    :noindex:
 
    This command is used to construct a series material object made up of an arbitrary number of previously-constructed UniaxialMaterial objects.
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``tags`` |listi|                      identification tags of materials making up the material model
+   ``matTags`` |listi|                   identification tags of materials making up the material model
    ===================================   ===========================================================================
 
 .. seealso::

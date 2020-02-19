@@ -6,16 +6,14 @@
  PFEMElementBubble
 ===================
 
-.. function:: element('PFEMElementBubble',eleTag,nd1,nd2,nd3[,nd4], rho,mu,b1,b2[,b3],[thickness,kappa])
+.. function:: element('PFEMElementBubble',eleTag,*eleNodes, rho,mu,b1,b2[,b3],[thickness,kappa])
    :noindex:
 
    Create a PFEM Bubble element, which is a fluid element for FSI analysis.
 
    ========================   =============================================================
    ``eleTag`` |int|           tag of the element
-   ``nd1`` |int|              tag of node 1
-   ``nd2`` |int|              tag of node 2
-   ``nd3`` |int|              tag of node 3
+   ``eleNodes`` |listi|         A list of three or four element nodes, four are required for 3D
    ``nd4`` |int|              tag of node 4 (required for 3D)
    ``rho`` |float|            fluid density
    ``mu`` |float|             fluid viscosity
