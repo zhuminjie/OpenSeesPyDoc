@@ -9,7 +9,7 @@ FRPConfinedConcrete02
 | Guan LIN (guanlin@polyu.edu.hk), Hong Kong Polytechnic University, Hong Kong, China.
 
 
-.. function:: uniaxialMaterial('FRPConfinedConcrete02', matTag, fc0, Ec, ec0, <-JacketC tfrp Efrp erup R>, <-Ultimate fcu ecu>, ft, Ets, Unit)
+.. function:: uniaxialMaterial('FRPConfinedConcrete02', matTag, fc0, Ec, ec0, <'-JacketC', tfrp, Efrp, erup, R>, <'-Ultimate', fcu, ecu>, ft, Ets, Unit)
    :noindex:
 
    Figure 1 Hysteretic Stress-Strain Relation
