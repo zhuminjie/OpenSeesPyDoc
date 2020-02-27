@@ -7,7 +7,11 @@
 The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 
 Model visualization is an ongoing development to make OpenSeesPy more user friendly.
-It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot interactive 2D and 3D models.
+It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot 2D and 3D models in a dedicated interactive window. You can use click-and-hold to change the view angle and zoom the plot. The model image can be saved with the desired orientation directly from the interactive plot window.
+
+**Important**: When using Spyder IDE and Jupyter Notebook, the default setting is to produce a static, inline plot which is not
+interactive. To change that, write the command **%matplotlib qt** in the Ipython console and then execute the model plotting commands. This will produce an interactive model viewer window. 
+
 See the example :doc:`ModelRendering` for a sample script.
 
 Following elements are supported:
@@ -22,6 +26,9 @@ The following two commands are needed to visualize the model, as shown below:
 
 ::
 
+   #Change plot backend to Qt. ONLY if you are using Jupyter Notebook or other Ipython console (e.g. Spyder)
+   %matplotlib qt 
+   
    # import OpenSeesPy rendering module
    from openseespy.postprocessing.Get_Rendering import *
    
