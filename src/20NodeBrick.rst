@@ -8,7 +8,7 @@ The element is used to construct a twenty-node three dimensional element object
 
 
 
-.. function:: element('Brick20N', eleTag,*eleNodes,matTag, bf1, bf2, bf3, massDen)
+.. function:: element('20NodeBrick', eleTag,*eleNodes,matTag, bf1, bf2, bf3, massDen)
    :noindex:
 
    ===================================   ===========================================================================
@@ -21,7 +21,7 @@ The element is used to construct a twenty-node three dimensional element object
 
 .. note::
 
-   The valid queries to a Brick20N element when creating an ElementRecorder object are 'force,' 'stiffness,' stress', 'gausspoint' or 'plastic'. The output is given as follows:
+   The valid queries to a 20NodeBrick element when creating an ElementRecorder object are 'force,' 'stiffness,' stress', 'gausspoint' or 'plastic'. The output is given as follows:
 
 
 
