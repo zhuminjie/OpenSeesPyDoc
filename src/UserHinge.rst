@@ -4,20 +4,20 @@
  UserHinge
 ===========
 
-.. function:: beamIntegration('UserHinge',tag,secE,npL,*secsL,*locsL,*wtsL,npR,*secsR,*locsR,*wtsR)
+.. function:: beamIntegration('UserHinge',tag,secETag,npL,*secsLTags,*locsL,*wtsL,npR,*secsRTags,*locsR,*wtsR)
    :noindex:
 
    Create a UserHinge beamIntegration object.
 
    ========================   ============================================================================
    ``tag`` |int|              tag of the beam integration
-   ``secE`` |int|             A previous-defined section objects for non-hinge area.
+   ``secETag`` |int|             A previous-defined section objects for non-hinge area.
    ``npL`` |int|              number of integration points along the left hinge.
-   ``secsL`` |listi|          A list of previous-defined section objects for left hinge area.
+   ``secsLTags`` |listi|          A list of previous-defined section objects for left hinge area.
    ``locsL`` |listf|          A list of locations of integration points for left hinge area.
    ``wtsL`` |listf|           A list of weights of integration points for left hinge area.
    ``npR`` |int|              number of integration points along the right hinge.
-   ``secsR`` |listi|          A list of previous-defined section objects for right hinge area.
+   ``secsRTags`` |listi|          A list of previous-defined section objects for right hinge area.
    ``locsR`` |listf|          A list of locations of integration points for right hinge area.
    ``wtsR`` |listf|           A list of weights of integration points for right hinge area.
    ========================   ============================================================================

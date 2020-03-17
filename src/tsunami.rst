@@ -3,13 +3,11 @@
 ==================
 
 
-#. :doc:`dambreak`
-#. :doc:`elasticobstacle`
+#. :doc:`movingmesh`
 
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
-   dambreak
-   elasticobstacle
+   movingmesh

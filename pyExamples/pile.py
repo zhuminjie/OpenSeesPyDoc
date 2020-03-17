@@ -30,7 +30,7 @@ Created on Thu Jan 10 18:24:47 2019
 #   Constructing Fixed Offshore Platforms. API Recommended Practice 2A(RP-2A), Washington D.C,
 #   17th edition.
 #
-# Brinch Hansen, J. (1961). “The ultimate resistance of rigid piles against transversal forces.”
+# Brinch Hansen, J. (1961). "The ultimate resistance of rigid piles against transversal forces."
 #  Bulletin No. 12, Geoteknisk Institute, Copenhagen, 59.
 #
 #  Boulanger, R. W., Kutter, B. L., Brandenberg, S. J., Singh, P., and Chang, D. (2003). Pile 
@@ -251,7 +251,7 @@ def get_pyParam ( pyDepth, gamma, phiDegree, b, pEleLength, puSwitch, kSwitch, g
 #  Meyerhof G.G. (1976). "Bearing capacity and settlement of pile foundations." 
 #   J. Geotech. Eng. Div., ASCE, 102(3), 195-228.
 #
-#  Vijayvergiya, V.N. (1977). “Load-movement characteristics of piles.”
+#  Vijayvergiya, V.N. (1977). "Load-movement characteristics of piles."
 #   Proc., Ports 77 Conf., ASCE, New York.
 #
 #  Kulhawy, F.H. ad Mayne, P.W. (1990). Manual on Estimating Soil Properties for 
@@ -323,8 +323,8 @@ def get_qzParam (phiDegree, b, sigV, G):
 def get_tzParam ( phi, b, sigV, pEleLength):
 
 # references
-#  Mosher, R.L. (1984). “Load transfer criteria for numerical analysis of
-#   axial loaded piles in sand.” U.S. Army Engineering and Waterways
+#  Mosher, R.L. (1984). "Load transfer criteria for numerical analysis of
+#   axial loaded piles in sand." U.S. Army Engineering and Waterways
 #   Experimental Station, Automatic Data Processing Center, Vicksburg, Miss.
 #
 #  Kulhawy, F.H. (1991). "Drilled shaft foundations." Foundation engineering

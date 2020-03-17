@@ -13,10 +13,10 @@ BoucWen Material
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``alpha`` |float|                     ratio of post-yield stiffness to the initial elastic stiffenss (0< α <1)
+   ``alpha`` |float|                     ratio of post-yield stiffness to the initial elastic stiffenss (0< alpha <1)
    ``ko`` |float|                        initial elastic stiffness
    ``n`` |float|                         parameter that controls transition from linear to nonlinear range (as n increases the transition becomes sharper; n is usually grater or equal to 1)
-   ``gamma``    ``beta`` |float|         parameters that control shape of hysteresis loop; depending on the values of γ and β softening, hardening or quasi-linearity can be simulated (look at the NOTES)
+   ``gamma``    ``beta`` |float|         parameters that control shape of hysteresis loop; depending on the values of gamma and beta softening, hardening or quasi-linearity can be simulated (look at the NOTES)
    ``Ao``    ``deltaA`` |float|          parameters that control tangent stiffness
    ``deltaNu``    ``deltaEta`` |float|   parameters that control material degradation
    ===================================   ===========================================================================

@@ -24,6 +24,8 @@ For example,
    nDMaterial(matType, matTag, *matArgs)
 
 
+Standard Models
+---------------
 
 The following contain information about available ``matType``:
 
@@ -66,7 +68,7 @@ The following contain information about available ``matType``:
 
 
 Tsinghua Sand Models
----------------------
+--------------------
 
 #. :doc:`CycLiqCP`
 #. :doc:`CycLiqCPSP`
@@ -116,12 +118,16 @@ Wrapper material for Initial State Analysis
 -------------------------------------------
 
 #. :doc:`InitialStateAnalysisWrapper`
+#. :doc:`InitStressNDMaterial`
+#. :doc:`InitStrainNDMaterial`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
    InitialStateAnalysisWrapper
+   InitStressNDMaterial
+   InitStrainNDMaterial
 
 UC San Diego soil models
 ------------------------

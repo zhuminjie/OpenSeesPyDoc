@@ -2,7 +2,7 @@
 
 
 ==================================================
- `DesignSafe`_
+ DesignSafe (Web-based)
 ==================================================
 
 OpenSeesPy has been offical in `DesignSafe`_.

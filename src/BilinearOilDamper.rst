@@ -4,14 +4,14 @@
  BilinearOilDamper Material
 ============================
 
-.. function:: uniaxialMaterial('BilinearOilDamper', matTag, K, Cd, Fr=1.0, p=1.0, LGap=0.0,  NM=1, RelTol=1e-6, AbsTol=1e-10, MaxHalf=15)
+.. function:: uniaxialMaterial('BilinearOilDamper', matTag, K_el, Cd, Fr=1.0, p=1.0, LGap=0.0,  NM=1, RelTol=1e-6, AbsTol=1e-10, MaxHalf=15)
    :noindex:
 
    This command is used to construct a BilinearOilDamper material, which simulates the hysteretic response of bilinear oil dampers with relief valve. Two adaptive iterative algorithms have been implemented and validated to solve numerically the constitutive equations within a bilinear oil damper with a high-precision accuracy.
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``K`` |float|                         Elastic stiffness of linear spring to model the axial flexibility of a
+   ``K_el`` |float|                      Elastic stiffness of linear spring to model the axial flexibility of a
                                          viscous damper (e.g. combined stiffness of the supporting brace and
 					 internal damper portion)
    ``Cd`` |float|                        Damping coefficient

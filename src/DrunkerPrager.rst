@@ -1,10 +1,10 @@
 .. include:: sub.txt
 
 ==================
- DrukerPrager
+ DruckerPrager
 ==================
 
-.. function:: nDMaterial('DrukerPrager', matTag, K, G, sigmaY, rho, rhoBar, Kinf, Ko, delta1, delta2, H, theta, density, atmPressure=101e3)
+.. function:: nDMaterial('DruckerPrager', matTag, K, G, sigmaY, rho, rhoBar, Kinf, Ko, delta1, delta2, H, theta, density, atmPressure=101e3)
    :noindex:
 
    This command is used to construct an multi dimensional material object that has a Drucker-Prager yield criterium.

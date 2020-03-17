@@ -4,7 +4,7 @@
  ReinforcingSteel
 ==================
 
-.. function:: uniaxialMaterial('ReinforcingSteel', matTag, fy, fu, Es, Esh, esh, eult, '-GABuck', lsr, beta, r, gama, '-DMBuck', lsr, alpha=1.0, '-CMFatigue', Cf, alpha, Cd, '-IsoHard', a1=4.3, limit=1.0, '-MPCurveParams',R1=0.333,R2=18.0,R3=4.0)
+.. function:: uniaxialMaterial('ReinforcingSteel', matTag, fy, fu, Es, Esh, eps_sh, eps_ult, '-GABuck', lsr, beta, r, gamma, '-DMBuck', lsr, alpha=1.0, '-CMFatigue', Cf, alpha, Cd, '-IsoHard', a1=4.3, limit=1.0, '-MPCurveParams',R1=0.333,R2=18.0,R3=4.0)
    :noindex:
 
    This command is used to construct a ReinforcingSteel uniaxial material object. This object is intended to be used in a reinforced concrete fiber section as the steel reinforcing material.
@@ -15,8 +15,8 @@
    ``fu`` |float|                        Ultimate stress in tension
    ``Es`` |float|                        Initial elastic tangent
    ``Esh`` |float|                       Tangent at initial strain hardening
-   ``esh`` |float|                       Strain corresponding to initial strain hardening
-   ``eult`` |float|                      Strain at peak stress
+   ``eps_sh`` |float|                       Strain corresponding to initial strain hardening
+   ``eps_ult`` |float|                      Strain at peak stress
    ``'-GABuck'`` |str|                   Buckling Model Based on Gomes and Appleton (1997)
    ``lsr`` |float|                       Slenderness Ratio
    ``beta`` |float|                      Amplification factor for the buckled stress strain curve.
@@ -38,7 +38,7 @@
    ``Cf`` |float|                        Coffin-Manson constant C
    ``alpha`` |float|                     Coffin-Manson constant a
    ``Cd`` |float|                        Cyclic strength reduction constant
-   ``'-IsoHard;`` |str|                  Isotropic Hardening / Diminishing Yield Plateau
+   ``'-IsoHard'`` |str|                  Isotropic Hardening / Diminishing Yield Plateau
    ``a1`` |float|                        Hardening constant (default = 4.3)
    ``limit`` |float|                     Limit for the reduction of the yield plateau.
                                          % of original plateau length to remain (0.01 < limit < 1.0 )

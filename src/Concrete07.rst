@@ -4,7 +4,7 @@
  Concrete07
 ==================
 
-.. function:: uniaxialMaterial('Concrete07', matTag, fc, ec, Ec, ft, et, xp, xn, r)
+.. function:: uniaxialMaterial('Concrete07', matTag, fc, epsc, Ec, ft, et, xp, xn, r)
    :noindex:
 
    Concrete07 is an implementation of Chang & Mander's 1994 concrete model with simplified unloading and reloading curves. Additionally the tension envelope shift with respect to the origin proposed by Chang and Mander has been removed. The model requires eight input parameters to define the monotonic envelope of confined and unconfined concrete in the following form:
@@ -12,7 +12,7 @@
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
    ``fc`` |float|                        concrete compressive strength (compression is negative)
-   ``ec`` |float|                        concrete strain at maximum compressive strength
+   ``epsc`` |float|                        concrete strain at maximum compressive strength
    ``Ec`` |float|                        Initial Elastic modulus of the concrete
    ``ft`` |float|                        tensile strength of concrete (tension is positive)
    ``et`` |float|                        tensile strain at max tensile strength of concrete

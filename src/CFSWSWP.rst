@@ -13,9 +13,9 @@ CFSWSWP Wood-Sheathed Cold-Formed Steel Shear Wall Panel
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``height`` |float|                    SWP’s height (mm)
-   ``width`` |float|                     SWP’s width (mm)
-   ``fuf`` |float|                       Tensile strength of framing members (MPa)
+   ``height`` |float|                    SWP's height (mm)
+   ``width`` |float|                     SWP's width (mm)
+   ``fut`` |float|                       Tensile strength of framing members (MPa)
    ``tf`` |float|                        Framing thickness (mm)
    ``Ife`` |float|                       Moment of inertia of the double end-stud (mm4)
    ``Ifi`` |float|                       Moment of inertia of the intermediate stud (mm4)
@@ -26,7 +26,7 @@ CFSWSWP Wood-Sheathed Cold-Formed Steel Shear Wall Panel
    ``sc`` |float|                        Screw spacing on the SWP perimeter (mm)
    ``nc`` |float|                        Total number of screws located on the SWP perimeter
    ``type`` |int|                        Integer identifier used to define wood sheathing type (DFP=1, OSB=2, CSP=3)
-   ``openingArea`` |float|               Total area of openings (mm²)
+   ``openingArea`` |float|               Total area of openings (mm2)
    ``openingLength`` |float|             Cumulative length of openings (mm)
    ===================================   ===========================================================================
 

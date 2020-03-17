@@ -71,7 +71,12 @@ Concrete Materials
 #. :doc:`ConfinedConcrete01`
 #. :doc:`ConcreteD`
 #. :doc:`FRPConfinedConcrete`
+#. :doc:`FRPConfinedConcrete02`
 #. :doc:`ConcreteCM`
+#. :doc:`TDConcrete`
+#. :doc:`TDConcreteEXP`
+#. :doc:`TDConcreteMC10`
+#. :doc:`TDConcreteMC10NL`
 
       
 .. toctree::
@@ -87,7 +92,12 @@ Concrete Materials
    ConfinedConcrete01
    ConcreteD
    FRPConfinedConcrete
+   FRPConfinedConcrete02
    ConcreteCM
+   TDConcrete
+   TDConcreteEXP
+   TDConcreteMC10
+   TDConcreteMC10NL
 
 
 Standard Uniaxial Materials

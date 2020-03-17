@@ -22,4 +22,4 @@
 
 REFERENCE:
 
-Constantinou, M.C., Tsopelas, P., Kasalanati, A., and Wolff, E.D. (1999). “Property modification factors for seismic isolation bearings”. Report MCEER-99-0012, Multidisciplinary Center for Earthquake Engineering Research, State University of New York.
+Constantinou, M.C., Tsopelas, P., Kasalanati, A., and Wolff, E.D. (1999). "Property modification factors for seismic isolation bearings". Report MCEER-99-0012, Multidisciplinary Center for Earthquake Engineering Research, State University of New York.

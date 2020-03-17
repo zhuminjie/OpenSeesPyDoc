@@ -15,7 +15,7 @@ Engineered Cementitious Composites Material
    ``epst0`` |float|                     strain at tensile cracking stress
    ``sigt1`` |float|                     peak tensile stress
    ``epst1`` |float|                     strain at peak tensile stress
-   ``sigt2`` |float|                     ultimate tensile strain
+   ``epst2`` |float|                     ultimate tensile strain
    ``sigc0`` |float|                     compressive strength (see NOTES)
    ``epsc0`` |float|                     strain at compressive strength (see NOTES)
    ``epsc1`` |float|                     ultimate compressive strain (see NOTES)

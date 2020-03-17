@@ -37,7 +37,6 @@ These commands are used to monitor and change the state of the model.
 #. :doc:`setNumThread`
 #. :doc:`getNumThreads`
 
-
 .. toctree::
    :maxdepth: 1
    :hidden:
@@ -70,5 +69,4 @@ These commands are used to monitor and change the state of the model.
    wipeAnalysis
    setNumThread
    getNumThreads
-
 

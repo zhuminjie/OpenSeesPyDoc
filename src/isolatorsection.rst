@@ -4,7 +4,7 @@
  Isolator2spring Section
 =========================
 
-.. function:: section('Iso2spring',matTag,tol,k1,Fyo,k2o,kvo,hb,PE,Po=0.0)
+.. function:: section('Isolator2spring',matTag,tol,k1,Fyo,k2o,kvo,hb,PE,Po=0.0)
    :noindex:
 
    This command is used to construct an Isolator2spring section object, which represents the buckling behavior of an elastomeric bearing for two-dimensional analysis in the lateral and vertical plane. An Isolator2spring section represents the resultant force-deformation behavior of the bearing, and should be used with a zeroLengthSection element. The bearing should be constrained against rotation.

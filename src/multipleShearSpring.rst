@@ -7,7 +7,7 @@ MultipleShearSpring Element
 This command is used to construct a multipleShearSpring (MSS) element object, which is defined by two nodes. This element consists of a series of identical shear springs arranged radially to represent the isotropic behavior in the local y-z plane.
 
 
-.. function:: element('multipleShearSpring', eleTag,*eleNodes,nSpring,'-mat', matTag,['-lim', dsp],['-orient',[x1, x2, x3], yp1, yp2, yp3],['-mass', m])
+.. function:: element('multipleShearSpring', eleTag,*eleNodes,nSpring,'-mat', matTag,['-lim', lim],['-orient',[x1, x2, x3], yp1, yp2, yp3],['-mass', mass])
    :noindex:
 
    ===================================   ===========================================================================
@@ -15,10 +15,10 @@ This command is used to construct a multipleShearSpring (MSS) element object, wh
    ``eleNodes`` |listi|                  a list of two element nodes
    ``nSpring`` |int|                     number of springs
    ``matTag`` |int|                      tag associated with previously-defined UniaxialMaterial object
-   ``dsp`` |float|                       minimum deformation to calculate equivalent coefficient (see note 1)
+   ``lim`` |float|                       minimum deformation to calculate equivalent coefficient (see note 1)
    ``x1``  ``x2``  ``x3`` |float|        vector components in global coordinates defining local x-axis
    ``yp1``  ``yp2``  ``yp3`` |float|     vector components in global coordinates defining vector yp which lies in the local x-y plane for the element
-   ``m`` |float|                         element mass
+   ``mass`` |float|                         element mass
    ===================================   ===========================================================================
 
 .. note::

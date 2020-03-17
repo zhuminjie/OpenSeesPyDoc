@@ -4,7 +4,7 @@
 zeroLength Element
 ==================
 
-.. function:: element('zeroLength', eleTag,*eleNodes, '-mat', *matTags, '-dir', *dirs, ['-doRayleigh', rFlag=0], ['-orient', *vecx, *vecyp])
+.. function:: element('zeroLength', eleTag, *eleNodes, '-mat', *matTags, '-dir', *dirs, ['-doRayleigh', rFlag=0], ['-orient', *vecx, *vecyp])
    :noindex:
 
    This command is used to construct a zeroLength element object, which is defined by two nodes at the same location. The nodes are connected by multiple UniaxialMaterial objects to represent the force-deformation relationship for the element.
@@ -18,12 +18,12 @@ zeroLength Element
    ``dirs`` |listi|                      a list of material directions:
 
                                          * 1,2,3 - translation along local x,y,z axes, respectively;
-					 * 4,5,6 - rotation about local x,y,z axes, respectively
+					                     * 4,5,6 - rotation about local x,y,z axes, respectively
+   ``rFlag`` |float|                     optional, default = 0
+                                         * ``rFlag`` = 0 NO RAYLEIGH DAMPING (default)
    ``vecx`` |listf|                      a list of vector components in global coordinates defining local x-axis (optional)
    ``vecyp`` |listf|                     a list of vector components in global coordinates defining vector yp which lies in the local x-y plane for the element. (optional)
-   ``rFlag`` |float|                     optional, default = 0
 
-                                         * ``rFlag`` = 0 NO RAYLEIGH DAMPING (default)
 					 * ``rFlag`` = 1 include rayleigh damping
    ===================================   ===========================================================================
 

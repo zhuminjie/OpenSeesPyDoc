@@ -4,12 +4,12 @@
  Parallel Section
 ==================
 
-.. function:: section('Parallel',secTag,*tags)
+.. function:: section('Parallel',secTag,*SecTags)
    :noindex:
 
    Connect sections in parallel.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
-   ``tags`` |listi|                   tags of of predefined sections.
+   ``SecTags`` |listi|                tags of of predefined sections.
    ================================   ===========================================================================

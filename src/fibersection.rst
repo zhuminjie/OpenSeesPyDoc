@@ -4,25 +4,29 @@
  Fiber Section
 ===============
 
-.. function:: section('Fiber', secTag, '-GJ', GJ=0.0)
+.. function:: section('Fiber', secTag, '-GJ', GJ)
    :noindex:
 
-   This commnand allows the user to construct a FiberSection object. Each FiberSection object is composed of Fibers, with each fiber containing a UniaxialMaterial, an area and a location (y,z). The dofs for 2D section are ``[P, Mz]``,
+   This command allows the user to construct a FiberSection object. Each FiberSection object is composed of Fibers, with each fiber containing a UniaxialMaterial, an area and a location (y,z). The dofs for 2D section are ``[P, Mz]``,
    for 3D are ``[P,Mz,My,T]``.
 
    ================================   ===========================================================================
    ``secTag`` |int|                   unique section tag
    ``GJ`` |float|                     linear-elastic torsional stiffness assigned
-                                      to the section (optional)
+                                      to the section
    ================================   ===========================================================================
 
-.. function:: section('FiberThermal', secTag, '-GJ', GJ=0.0)
+.. function:: section('Fiber', secTag, '-torsion', torsionMatTag)
    :noindex:
 
-   This command create a FiberSectionThermal object.
-   The dofs for 2D section are ``[P, Mz]``,
-   for 3D are ``[P,Mz,My]``.
+   This command allows the user to construct a FiberSection object. Each FiberSection object is composed of Fibers, with each fiber containing a UniaxialMaterial, an area and a location (y,z). The dofs for 2D section are ``[P, Mz]``,
+   for 3D are ``[P,Mz,My,T]``.
 
+   ================================   ===========================================================================
+   ``secTag`` |int|                   unique section tag
+   ``torsionMatTag`` |int|            uniaxialMaterial tag assigned to the section
+                                      for torsional response (can be nonlinear)
+   ================================   ===========================================================================
 
 .. note::
 

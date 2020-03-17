@@ -33,31 +33,16 @@ Follow steps below to run OpenSeesPy in `DesignSafe`_.
 
    .. image:: /_static/jupyterhome.png
 
-
 .. tip::
-   * In ``mydata`` folder, select ``New`` and then ``Terminal``
-
-   .. image:: /_static/terminal.png
-
-
-.. tip::
-   * The version on DesignSafe is not the latest.
-   * To update to the latest:
-
-     * Type ``pip install --user --upgrade openseespy`` in the terminal
-     * Check the installation by running ``ipython`` and ``import openseespy.opensees as ops``
-     * Everytime you start a new session, you have to update openseespy (this is
-       not ideal, but it works for now.
-   * Now you may close the terminal by closing the brower tab.
-
-   .. image:: /_static/upgrade.png
-
-
-.. tip::
-   * Back to ``mydata`` folder, select ``New`` and then ``Python 3``
+   * In the ``mydata`` folder, select ``New`` and then ``Python 3``
 
    .. image:: /_static/notebook.png
 
+.. tip::
+   * The OpenSeesPy version on DesignSafe is not the latest.
+   * To update to the latest and import:
+
+   .. image:: /_static/jupyter-designsafe.png
 
 .. tip::
    * Now you can write OpenSeesPy script in ``Jupyter`` Notebook,
