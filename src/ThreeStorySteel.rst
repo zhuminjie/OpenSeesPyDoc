@@ -6,7 +6,7 @@
 
 #. The source code is developed by `Anurag Upadhyay <https://github.com/anurag-upadhay>`_ from University of Utah.
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/SteelFrame2D.py>`.
-#. Run the source code in your favorate Python program and should see following plot.
+#. Run the source code in your favorite Python program and should see following plot.
 
 .. image:: /_static/ThreeStory.png
 
