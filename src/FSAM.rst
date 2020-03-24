@@ -12,9 +12,9 @@
    ================================   ===========================================================================
    ``matTag`` |int|                   integer tag identifying material
    ``rho`` |float|                    Material density
-   ``sXTag`` |int|                       Tag of uniaxialMaterial simulating horizontal (x) reinforcement
-   ``sYTag`` |int|                       Tag of uniaxialMaterial simulating vertical (y) reinforcement
-   ``concTag`` |int|                     Tag of uniaxialMaterial simulating concrete,
+   ``sXTag`` |int|                    Tag of uniaxialMaterial simulating horizontal (x) reinforcement
+   ``sYTag`` |int|                    Tag of uniaxialMaterial simulating vertical (y) reinforcement
+   ``concTag`` |int|                  Tag of uniaxialMaterial simulating concrete,
                                       shall be used with uniaxialMaterial ConcreteCM
    ``rouX`` |float|                   Reinforcing ratio in horizontal (x) direction
                                       (:math:`rouX = _{s,x}/A_{gross,x}`)

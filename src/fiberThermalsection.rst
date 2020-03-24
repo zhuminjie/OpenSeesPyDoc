@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===============
+=======================
  Fiber Thermal Section
-===============
+=======================
 
 .. function:: section('FiberThermal', secTag, '-GJ', GJ=0.0)
    :noindex:
@@ -18,11 +18,8 @@
    #. The commands below should be called after the section command to generate all the fibers in the section.
    #. The patch and layer commands can be used to generate multiple fibers in a single command.
 
+Commands to generate all fibers:
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Commands to generate all fibers
-
-   fiber
-   patch
-   layer
+#. :doc:`fiber`
+#. :doc:`patch`
+#. :doc:`layer`

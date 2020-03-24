@@ -26,14 +26,22 @@ This command is used to construct an elastomericBearing element object, which is
    ``alpha1`` |float|                    post yield stiffness ratio of linear hardening component
    ``alpha2`` |float|                    post yield stiffness ratio of non-linear hardening component
    ``mu`` |float|                        exponent of non-linear hardening component
-   ``PMatTag`` |int|            tag associated with previously-defined UniaxialMaterial in axial direction
-   ``TMatTag`` |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
-   ``MyMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y-axis
-   ``MzMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
-   ``x1``  ``x2``  ``x3`` |float|        vector components in global coordinates defining local x-axis (optional)
-   ``y1``  ``y2``  ``y3`` |float|        vector components in global coordinates defining local y-axis (optional)
-   ``sDratio`` |float|                   shear distance from iNode as a fraction of the element length (optional, default = 0.5)
-   ``'-doRayleigh'`` |str|               to include Rayleigh damping from the bearing (optional, default = no Rayleigh damping contribution)
+   ``PMatTag`` |int|                     tag associated with previously-defined UniaxialMaterial
+                                         in axial direction
+   ``TMatTag`` |int|                     tag associated with previously-defined UniaxialMaterial
+                                         in torsional direction
+   ``MyMatTag`` |int|                    tag associated with previously-defined UniaxialMaterial
+                                         in moment direction around local y-axis
+   ``MzMatTag`` |int|                    tag associated with previously-defined UniaxialMaterial
+                                         in moment direction around local z-axis
+   ``x1``  ``x2``  ``x3`` |float|        vector components in global coordinates defining local
+                                         x-axis (optional)
+   ``y1``  ``y2``  ``y3`` |float|        vector components in global coordinates defining local
+                                         y-axis (optional)
+   ``sDratio`` |float|                   shear distance from iNode as a fraction of the element
+                                         length (optional, default = 0.5)
+   ``'-doRayleigh'`` |str|               to include Rayleigh damping from the bearing (optional,
+                                         default = no Rayleigh damping contribution)
    ``m`` |float|                         element mass (optional, default = 0.0)
    ===================================   ===========================================================================
 

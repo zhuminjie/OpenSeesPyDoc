@@ -217,7 +217,7 @@ Brick Elements
 
 #. :doc:`stdBrick`
 #. :doc:`bbarBrick`
-#. :doc:`Brick20N`
+#. :doc:`20NodeBrick`
 #. :doc:`SSPbrick`
 
 
@@ -227,7 +227,7 @@ Brick Elements
 
    stdBrick
    bbarBrick
-   Brick20N
+   20NodeBrick
    SSPbrick
 
 

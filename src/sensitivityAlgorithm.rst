@@ -10,11 +10,11 @@
 
    ========================   =============================================================
    ``type`` |str|             the type of the sensitivity algorithm,
-
+   
                               * ``'-computeAtEachStep'``  automatically compute
-				      at the end of each step
-			            * ``'-compuateByCommand'``  compute by
-				      calling ``computeGradients``.
+				at the end of each step
+			      * ``'-compuateByCommand'``  compute by
+				calling ``computeGradients``.
    ========================   =============================================================
 
 
