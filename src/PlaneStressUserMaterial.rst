@@ -4,7 +4,7 @@
  PlaneStressUserMaterial
 =========================
 
-.. function:: nDMaterial('PlaneStressUserMaterial', matTag, fc, ft, fcu, epsc0, epscu, epstu, stc)
+.. function:: nDMaterial('PlaneStressUserMaterial', matTag, 40, 7, fc, ft, fcu, epsc0, epscu, epstu, stc)
    :noindex:
 
    This command is used to create the multi-dimensional concrete material model that is based on the damage mechanism and smeared crack model.
