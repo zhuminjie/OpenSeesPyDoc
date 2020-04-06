@@ -8,7 +8,7 @@ This command is used to construct a BeamContact2D element object.
 
 
 
-.. function:: element('BeamContact2D', eleTag, iNode, jNode, sNode, lNode, matTag, width, gTol, fTol,[cFlag])
+.. function:: element('BeamContact2D', eleTag, iNode, jNode, sNode, lNode, matTag, width, gTol, fTol, <cFlag>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -8,7 +8,7 @@ This command is used to construct a dispBeamColumnInt element object, which is a
 
 
 
-.. function:: element('dispBeamColumnInt', eleTag,*eleNodes,numIntgrPts, secTag, transfTag, cRot, ['-mass', massDens])
+.. function:: element('dispBeamColumnInt', eleTag,*eleNodes,numIntgrPts, secTag, transfTag, cRot, <'-mass', massDens>)
    :noindex:
 
    ===================================   ===========================================================================

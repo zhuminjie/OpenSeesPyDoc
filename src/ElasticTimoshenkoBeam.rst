@@ -6,12 +6,12 @@ Elastic Timoshenko Beam Column Element
 
 This command is used to construct an ElasticTimoshenkoBeam element object. A Timoshenko beam is a frame member that accounts for shear deformations. The arguments for the construction of an elastic Timoshenko beam element depend on the dimension of the problem, ndm:
 
-.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E_mod, G_mod, Area, Iz, Avy, transfTag,['-mass', massDens],['-cMass'])
+.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E_mod, G_mod, Area, Iz, Avy, transfTag,<'-mass', massDens>,<'-cMass'>)
    :noindex:
 
    For a two-dimensional problem:
 
-.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E_mod, G_mod, Area, Iz, Jxx, Iy, Iz, Avy, Avz, transfTag,['-mass', massDens],['-cMass'])
+.. function:: element('ElasticTimoshenkoBeam', eleTag,*eleNodes,E_mod, G_mod, Area, Iz, Jxx, Iy, Iz, Avy, Avz, transfTag,<'-mass', massDens>,<'-cMass'>)
    :noindex:
 
    For a three-dimensional problem:

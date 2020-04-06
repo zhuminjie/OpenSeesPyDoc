@@ -8,7 +8,7 @@ This element is used to construct an eight-node brick element object, which uses
 
 
 
-.. function:: element('stdBrick', eleTag,*eleNodes,matTag,[b1, b2, b3])
+.. function:: element('stdBrick', eleTag,*eleNodes,matTag,<b1, b2, b3>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -4,7 +4,7 @@
 zeroLengthND Element
 ====================
 
-.. function:: element('zeroLengthND', eleTag,*eleNodes,matTag, [uniTag], ['-orient', *vecx, vecyp])
+.. function:: element('zeroLengthND', eleTag,*eleNodes,matTag, <uniTag>, <'-orient', *vecx, vecyp>)
    :noindex:
 
    This command is used to construct a zeroLengthND element object, which is defined by two nodes at the same location. The nodes are connected by a single NDMaterial object to represent the force-deformation relationship for the element.

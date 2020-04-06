@@ -8,7 +8,7 @@ This command is used to construct an HDR bearing element object in three-dimensi
 
 
 
-.. function:: element('HDR', eleTag,*eleNodes,Gr, Kbulk, D1, D2, ts, tr, n, a1, a2, a3, b1, b2, b3, c1, c2, c3, c4,[[x1, x2, x3], y1, y2, y3],[kc],[PhiM],[ac],[sDratio],[m],[tc])
+.. function:: element('HDR', eleTag,*eleNodes,Gr, Kbulk, D1, D2, ts, tr, n, a1, a2, a3, b1, b2, b3, c1, c2, c3, c4, <<x1, x2, x3>, y1, y2, y3>,<kc>,<PhiM>,<ac>,<sDratio>,<m>,<tc>)
    :noindex:
 
    For 3D problem

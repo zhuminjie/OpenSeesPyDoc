@@ -7,7 +7,7 @@ BeamEndContact3D
 This command is used to construct a BeamEndContact3D element object.
 
 
-.. function:: element('BeamEndContact3D', eleTag,iNode, jNode, sNode, lNode, radius, gTol, fTol,[cFlag])
+.. function:: element('BeamEndContact3D', eleTag,iNode, jNode, sNode, lNode, radius, gTol, fTol, <cFlag>)
    :noindex:
 
    ===================================   ===========================================================================

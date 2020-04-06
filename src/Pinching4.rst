@@ -4,7 +4,7 @@
 Pinching4 Material
 =============================
 
-.. function:: uniaxialMaterial('Pinching4', matTag,ePf1, ePd1, ePf2, ePd2, ePf3, ePd3, ePf4, ePd4, [eNf1, eNd1, eNf2, eNd2, eNf3, eNd3, eNf4, eNd4], rDispP, rForceP, uForceP, [rDispN, rForceN, uForceN], gK1, gK2, gK3, gK4, gKLim, gD1, gD2, gD3, gD4, gDLim, gF1, gF2, gF3, gF4, gFLim, gE, dmgType)
+.. function:: uniaxialMaterial('Pinching4', matTag,ePf1, ePd1, ePf2, ePd2, ePf3, ePd3, ePf4, ePd4, <eNf1, eNd1, eNf2, eNd2, eNf3, eNd3, eNf4, eNd4>, rDispP, rForceP, uForceP, <rDispN, rForceN, uForceN>, gK1, gK2, gK3, gK4, gKLim, gD1, gD2, gD3, gD4, gDLim, gF1, gF2, gF3, gF4, gFLim, gE, dmgType)
    :noindex:
 
    This command is used to construct a uniaxial material that represents a 'pinched' load-deformation response and exhibits degradation under cyclic loading. Cyclic degradation of strength and stiffness occurs in three ways: unloading stiffness degradation, reloading stiffness degradation, strength degradation.

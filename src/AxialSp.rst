@@ -4,7 +4,7 @@
 AxialSp Material
 ================
 
-.. function:: uniaxialMaterial('AxialSp', matTag,sce, fty, fcy, [bte, bty, bcy, fcr])
+.. function:: uniaxialMaterial('AxialSp', matTag,sce, fty, fcy, <bte, bty, bcy, fcr>)
    :noindex:
 
    This command is used to construct a uniaxial AxialSp material object. This material model produces axial stress-strain curve of elastomeric bearings.

@@ -10,13 +10,13 @@ This command is used to construct an elasticBeamColumn element object. The argum
 
 
 
-.. function:: element('elasticBeamColumn', eleTag,*eleNodes,Area, E_mod, Iz, transfTag, ['-mass', mass],['-cMass'])
+.. function:: element('elasticBeamColumn', eleTag,*eleNodes,Area, E_mod, Iz, transfTag, <'-mass', mass>,<'-cMass'>)
    :noindex:
 
    For a two-dimensional problem
 
 
-.. function:: element('elasticBeamColumn', eleTag,*eleNodes,Area, E_mod, G_mod, Jxx, Iy, Iz, transfTag, ['-mass', mass],['-cMass'])
+.. function:: element('elasticBeamColumn', eleTag,*eleNodes,Area, E_mod, G_mod, Jxx, Iy, Iz, transfTag, <'-mass', mass>,<'-cMass'>)
    :noindex:
 
    For a three-dimensional problem

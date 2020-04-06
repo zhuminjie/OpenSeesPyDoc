@@ -4,7 +4,7 @@
  PFEMElementCompressible
 =========================
 
-.. function:: element('PFEMElementCompressible',eleTag,*eleNodes,rho,mu,b1,b2,[thickness,kappa])
+.. function:: element('PFEMElementCompressible',eleTag,*eleNodes,rho,mu,b1,b2, <thickness,kappa>)
    :noindex:
 
    Create a PFEM compressible element, which is a fluid element for FSI analysis.

@@ -9,7 +9,7 @@ This command is used to construct a BeamContact3D element object.
 
 
 
-.. function:: element('BeamContact3D', eleTag,iNode, jNode, sNode, lNode, radius, crdTransf, matTag, gTol, fTol,[cFlag])
+.. function:: element('BeamContact3D', eleTag,iNode, jNode, sNode, lNode, radius, crdTransf, matTag, gTol, fTol, <cFlag>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -4,7 +4,7 @@
 AxialSpHD Material
 ==================
 
-.. function:: uniaxialMaterial('AxialSpHD', matTag,sce, fty, fcy, [bte, bty, bth, bcy, fcr, ath])
+.. function:: uniaxialMaterial('AxialSpHD', matTag,sce, fty, fcy, <bte, bty, bth, bcy, fcr, ath>)
    :noindex:
 
    This command is used to construct a uniaxial AxialSpHD material object. This material model produces axial stress-strain curve of elastomeric bearings including hardening behavior.

@@ -8,13 +8,13 @@ This command is used to construct a RJWatsonEqsBearing element object, which is 
 
 
 
-.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Mz', matTag,['-orient', x1, x2, x3, y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Mz', matTag, <'-orient', x1, x2, x3, y1, y2, y3>, <'-shearDist', sDratio>, <'-doRayleigh'>, <'-mass', m>, <'-iter', maxIter, tol>)
    :noindex:
 
    For a two-dimensional problem
 
 
-.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Vz', matTag,'-T', matTag,'-My', matTag,'-Mz', matTag,['-orient', [x1, x2, x3], y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Vz', matTag,'-T', matTag,'-My', matTag,'-Mz', matTag,<'-orient', <x1, x2, x3>, y1, y2, y3>,<'-shearDist', sDratio>,<'-doRayleigh'>,<'-mass', m>,<'-iter', maxIter, tol>)
    :noindex:
 
    For a three-dimensional problem

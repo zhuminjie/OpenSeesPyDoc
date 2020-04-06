@@ -4,7 +4,7 @@
 zeroLength Element
 ==================
 
-.. function:: element('zeroLength', eleTag, *eleNodes, '-mat', *matTags, '-dir', *dirs, ['-doRayleigh', rFlag=0], ['-orient', *vecx, *vecyp])
+.. function:: element('zeroLength', eleTag, *eleNodes, '-mat', *matTags, '-dir', *dirs, <'-doRayleigh', rFlag=0>, <'-orient', *vecx, *vecyp>)
    :noindex:
 
    This command is used to construct a zeroLength element object, which is defined by two nodes at the same location. The nodes are connected by multiple UniaxialMaterial objects to represent the force-deformation relationship for the element.

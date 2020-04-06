@@ -8,7 +8,7 @@ This command is used to construct a standard four-node tetrahedron element objec
 
 
 
-.. function:: element('FourNodeTetrahedron', eleTag,*eleNodes,matTag,[b1,b2,b3])
+.. function:: element('FourNodeTetrahedron', eleTag,*eleNodes,matTag, <b1,b2,b3>)
    :noindex:
 
    ===================================   ===========================================================================
