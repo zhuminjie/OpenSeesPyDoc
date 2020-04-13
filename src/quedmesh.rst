@@ -1,15 +1,16 @@
 .. include:: sub.txt
 
-.. _TriMesh:
+.. _QuadMesh:
    
-=================
- triangular mesh
-=================
+===========
+ Quad mesh
+===========
 
-.. function:: mesh('tri',tag,numlines,*ltags,id,ndf,meshsize,eleType='',*eleArgs=[])
+.. function:: mesh('quad',tag,numlines,*ltags,id,ndf,meshsize,eleType='',*eleArgs=[])
    :noindex:
 
-   Create a triangular mesh object.
+   Create a quad mesh object. The number of lines must be 4. These lines are continuous
+   to form a loop.
 
 
    ========================   ===========================================================================
@@ -32,10 +33,13 @@
 			      * :doc:`elasticBeamColumn`
 			      * :doc:`forceBeamColumn-Element`
 			      * :doc:`dispBeamColumn-Element`
+			      * :doc:`ShellMITC4`
 
 			      if no type is given, only nodes are created.
-			      if beam elements are given, beams are created
-			      instead of triangular elements.
+			      If beam elements are given, beams are created
+			      instead of quad elements.
+			      If triangular elements are given, they are created
+			      by dividing one quad to two triangles.
 			      
    ``eleArgs`` |list|         a list of element arguments. The arguments
                               are same as in the element commands, but without

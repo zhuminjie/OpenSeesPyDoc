@@ -1,21 +1,21 @@
 .. include:: sub.txt
 
-.. _TriMesh:
+.. _TetMesh:
    
-=================
- triangular mesh
-=================
+==================
+ Tetrahedron mesh
+==================
 
-.. function:: mesh('tri',tag,numlines,*ltags,id,ndf,meshsize,eleType='',*eleArgs=[])
+.. function:: mesh('tet',tag,nummesh,*mtags,id,ndf,meshsize,eleType='',*eleArgs=[])
    :noindex:
 
-   Create a triangular mesh object.
+   Create a 3D tetrahedron mesh object.
 
 
    ========================   ===========================================================================
    ``tag`` |int|              mesh tag.
-   ``numlines`` |int|         number of lines (:ref:`LineMesh`) for defining a polygon.
-   ``ltags`` |listi|          the :ref:`LineMesh` tags
+   ``nummesh`` |int|          number of 2D mesh for defining a 3D body.
+   ``mtags`` |listi|          the mesh tags
    ``id`` |int|               mesh id. Meshes with same id are considered as same structure
                               of fluid identity.
 
@@ -26,23 +26,14 @@
    ``meshsize`` |float|       mesh size.
    ``eleType`` |str|          the element type, (optional)
 
-                              * :doc:`PFEMElementBubble`
-			      * :doc:`PFEMElementCompressible`
-			      * :doc:`tri31`
-			      * :doc:`elasticBeamColumn`
-			      * :doc:`forceBeamColumn-Element`
-			      * :doc:`dispBeamColumn-Element`
+                              * :doc:`FourNodeTetrahedron`
 
 			      if no type is given, only nodes are created.
-			      if beam elements are given, beams are created
-			      instead of triangular elements.
+
 			      
    ``eleArgs`` |list|         a list of element arguments. The arguments
                               are same as in the element commands, but without
 			      element tag, and node tags. (optional)
 
-			      For example,
-
-			      ``eleArgs = ['PFEMElementBubble', rho, mu, b1, b2, thickness, kappa]``
    ========================   ===========================================================================
 
