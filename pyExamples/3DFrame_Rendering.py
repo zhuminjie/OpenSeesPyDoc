@@ -112,5 +112,23 @@ eigenValues = eigen(numEigen)
 PI = 2 * asin(1.0)
 
 #
+# Display Model
+plot_model()
+# Display specific mode shape
 plot_modeshape(5)
-# plot_model()
+
+# Define Static Analysis
+timeSeries('Linear', 1)
+pattern('Plain', 1, 1)
+load(72, 1, 0, 0, 0, 0, 0)
+analysis('Static')
+
+# Save a recorder for node displacements before running the analysis
+fname = 'nodeDisp.txt'
+recordNodeDisp(fname)
+
+# Run Analysis
+analyze(10)
+
+# Plot the deformed shape using the recorded displacements at time step # 10.
+plot_deformedshape(fname, tstep = 10, scale = 200)
