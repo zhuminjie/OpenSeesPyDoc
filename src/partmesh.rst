@@ -7,13 +7,15 @@
 .. function:: mesh('part',tag,type,*pArgs,eleType='',*eleArgs=[], '-vel', *vel0, '-pressure', p0)
    :noindex:
 
-   Create a particle mesh which is used for background mesh.
+   Create a group of particles which will be used for background mesh.
 
 
    ========================   ===========================================================================
    ``tag`` |int|              mesh tag.
    ``type`` |str|             type of the mesh
    ``pArgs`` |listf|          coordinates of points defining the mesh region
+     			      ``nx``, ``ny``, ``nz`` are number of particles in x, y, and z directions
+
 
                               * ``'quad'`` : [x1, y1, x2, y2, x3, y3, x4, y4, nx, ny]
 			      
@@ -30,11 +32,29 @@
                               * ``'line'`` : [x1, y1, x2, y2, nx]
 			      
 				Coordinates of two ends in counter-clock wise order
-                              * ``'point'`` : [x1, y1]
+                              * ``'pointlist'`` : [x1n, y1n, <z1n>, x1, y1, <z1>, vx1, vy1, <vz1>,
+				                   ax1, ay1, <az1>, p1,
+						   x2n, y2n, <z2n>, x2, y2, <z2>, vx2, vy2, <vz2>,
+				                   ax2, ay2, <az2>, p2,
+						   ..]
 			      
-				Coordinates of the point in counter-clock wise order
+				input particles' data in a list, in the order of coordinates
+				of last time step, current coordinates, velocity, acceleration,
+				and pressure.
 
-			      ``nx``, ``ny``, ``nz`` are number of particles in x, y, and z directions
+			      * ``'pointlist'`` without list
+
+				a list of current particles' data in this mesh
+
+				[tag1, x1n, y1n, <z1n>, x1, y1, <z1>, vx1, vy1, <vz1>,
+				 ax1, ay1, <az1>, p1,
+				 tag1, x2n, y2n, <z2n>, x2, y2, <z2>, vx2, vy2, <vz2>,
+				 ax2, ay2, <az2>, p2,
+				 ..]
+
+				 The format is similar to the input list, but with an
+				 additional tag for each particle.
+
 			      
    ``eleType`` |str|          the element type, (optional)
 
