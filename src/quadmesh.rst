@@ -3,7 +3,7 @@
 .. _QuadMesh:
    
 ===========
- Quad mesh
+ quad mesh
 ===========
 
 .. function:: mesh('quad',tag,numlines,*ltags,id,ndf,meshsize,eleType='',*eleArgs=[])

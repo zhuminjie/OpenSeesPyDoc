@@ -3,7 +3,7 @@
 .. _TetMesh:
    
 ==================
- Tetrahedron mesh
+ tetrahedron mesh
 ==================
 
 .. function:: mesh('tet',tag,nummesh,*mtags,id,ndf,meshsize,eleType='',*eleArgs=[])
