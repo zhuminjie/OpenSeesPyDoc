@@ -4,7 +4,7 @@
  plot_modeshape command
 =========================
 
-.. function:: plot_modeshape(mode_number)
+.. function:: postprocessing.Get_Rendering.plot_modeshape(mode_number)
 
    Any modeshape can be visualized using this command after an Eigen analysis is performed. 
    Matplotlib and Numpy are required.

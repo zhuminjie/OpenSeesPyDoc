@@ -36,10 +36,13 @@ The following two commands are needed to visualize the model, as shown below:
    %matplotlib notebook
    
    # import OpenSeesPy rendering module
-   from openseespy.postprocessing.Get_Rendering import *
+   import openseespy.postprocessing.Get_Rendering as opsplt
    
    # render the model after defining all the nodes and elements
-   plot_model()
+   opsplt.plot_model()
+
+   # plot mode shape
+   opsplt.plot_modeshape(3)
    
 
 .. image:: /_static/ModelVisualization_Intro.png

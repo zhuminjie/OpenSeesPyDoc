@@ -15,27 +15,17 @@
 
    OpenSeesPy can now run on :doc:`src/wsl`.
 
+   New :doc:`src/plotcmds` are added.
+
+   The Mac version is maintained at  `<pypi.org/project/openseespymac>`_.
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
-   
-..
-   .. note::
-
-      If you use OpenSeesPy, I would like very much to hear from you. A short email to
-      `zhum@oregonstate.edu <zhum@oregonstate.edu>`_
-      describing who you are and how you use OpenSeesPy will mean a lot to me.
-      I can justify spending time on improvements that I hope will benefit you.
-
 
 .. note::
 
    Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
-   Questions about the Mac version please ask `Stevan Gavrilovic <steva44@hotmail.com>`_.
-
-   New :doc:`src/plotcmds` are developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
-   
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests
@@ -53,11 +43,17 @@ A minimum script is shown below:
    # import OpenSeesPy
    import openseespy.opensees as ops
 
+   # import OpenSeesPy plotting commands
+   import openseespy.postprocessing.Get_Rendering as opsplt
+
    # wipe model
    ops.wipe()
 
    # create model
    ops.model('basic', '-ndm', 2, '-ndf', 3)
+
+   # plot model
+   opsplt.plot_model()
    
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
@@ -69,9 +65,9 @@ as demonstrated with commands below.
  Developer
 ============
 
-*Minjie Zhu* <`zhum@oregonstate.edu <zhum@oregonstate.edu>`_>
+*Minjie Zhu* <`email <openseespymj@outlook.com>`_>
 
-| Research Associate Post Doc
+| Research Associate 
 | Civil and Construction Engineering
 | Oregon State University
 
