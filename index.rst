@@ -54,6 +54,12 @@ A minimum script is shown below:
 
    # plot model
    opsplt.plot_model()
+
+To run a test of the pip installation:
+
+::
+
+   pytest --pyargs openseespy.test
    
 
 Most of `OpenSeesPy`_ commands have the same syntax and arguments as the
@@ -88,6 +94,7 @@ as demonstrated with commands below.
    src/senscmds
    src/reliabilitycmds
    src/parallelcmds
+   src/preprocessing
    src/plotcmds
    src/examples
 

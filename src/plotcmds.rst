@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-=======================
- Plotting Commands
-=======================
+=========================
+ Postprocessing Commands
+=========================
 
 The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 
