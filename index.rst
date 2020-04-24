@@ -24,7 +24,12 @@
 
 .. note::
 
-   Please send any questions to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
+   Please send questions related to this document 
+   to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
+
+   Any modeling issues and bugs in `OpenSees`_
+   should be reported on
+   the `OpenSees`_.
 
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
