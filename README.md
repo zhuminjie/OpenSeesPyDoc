@@ -1,6 +1,6 @@
 # OpenSeesPy
 
-[OpenSeesPy](https://openseespydoc.readthedocs.io/en/latest/) is 
+[OpenSeesPy](https://openseespydoc.readthedocs.io/en/latest/) is
 a [Python 3](https://www.python.org/) interpreter
 of [OpenSees](https://github.com/OpenSees/OpenSees).
 
