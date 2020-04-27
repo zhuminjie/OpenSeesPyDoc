@@ -6,7 +6,7 @@
 
 .. function:: preprocessing.DiscretizeMember.DiscretizeMember(ndI, ndJ, numEle, eleType, integrTag, transfTag, nodeTag, eleTag)
 
-   Create a OpenSees node.
+   Discretize beam elements between two nodes.
 
    ========================   ===========================================================================
    ``ndI`` |int|              node tag at I end

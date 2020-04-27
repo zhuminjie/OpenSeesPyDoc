@@ -8,6 +8,7 @@ The :doc:`mesh` and :doc:`remesh` should be
 called as
 
 ::
+
     import openseespy.opensees as ops
     ops.mesh()
     ops.remesh()
