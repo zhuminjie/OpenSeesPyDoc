@@ -4,7 +4,7 @@
  RelativeTotalNormDispIncr
 ===========================
 
-.. function:: test('relativeTotalNormDispIncr',tol,iter,pFlag=0,nType=2)
+.. function:: test('RelativeTotalNormDispIncr',tol,iter,pFlag=0,nType=2)
    :noindex:
 
    Create a RelativeTotalNormDispIncr test, which uses the ratio of the current norm to the total norm (the sum of all the norms since last convergence) of the solution vector.
