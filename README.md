@@ -8,6 +8,5 @@ The documentation records all `Python` commands and some
 examples for how to use `OpenSeesPy`.
 
 Any modeling issues and bugs in
-[OpenSees](https://github.com/OpenSees/OpenSees)
 should be reported on
-the [OpenSees GitHub Page](https://github.com/OpenSees/OpenSees).
+the [OpenSeesPy Forum](https://opensees.berkeley.edu/community/viewforum.php?f=12).
