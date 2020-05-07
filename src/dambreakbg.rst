@@ -5,7 +5,7 @@
 =========================================
 
 
-#. The source code is shown below, which can be downloaded :download:`here </pyExamples/dambreakbg.py>`.
+#. The source code is shown below, which can be downloaded :download:`here </pyExamples/dambreak-bg.py>`.
 
 #. Run the source code in your favorite Python program.
 
@@ -15,5 +15,5 @@
 
    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MaPYrHDKfJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-.. literalinclude:: /pyExamples/dambreakbg.py
+.. literalinclude:: /pyExamples/dambreak-bg.py
    :linenos:

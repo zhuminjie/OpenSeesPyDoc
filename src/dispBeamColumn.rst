@@ -1,7 +1,5 @@
 .. include:: sub.txt
 
-.. _dispBeamColumn-Element:
-   
 =================
  dispBeamColumn
 =================

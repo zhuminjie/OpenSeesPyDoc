@@ -26,8 +26,8 @@ The :doc:`DiscretizeMember` should be called as
 #. :doc:`DiscretizeMember`
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+    :maxdepth: 1
+    :hidden:
 
     DiscretizeMember
 

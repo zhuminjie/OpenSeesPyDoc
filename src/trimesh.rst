@@ -30,8 +30,8 @@
 			      * :doc:`PFEMElementCompressible`
 			      * :doc:`tri31`
 			      * :doc:`elasticBeamColumn`
-			      * :doc:`forceBeamColumn-Element`
-			      * :doc:`dispBeamColumn-Element`
+			      * :doc:`ForceBeamColumn`
+			      * :doc:`dispBeamColumn`
 
 			      if no type is given, only nodes are created.
 			      if beam elements are given, beams are created

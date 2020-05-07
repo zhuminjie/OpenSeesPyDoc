@@ -31,8 +31,8 @@
 			      * :doc:`PFEMElementCompressible`
 			      * :doc:`tri31`
 			      * :doc:`elasticBeamColumn`
-			      * :doc:`forceBeamColumn-Element`
-			      * :doc:`dispBeamColumn-Element`
+			      * :doc:`ForceBeamColumn`
+			      * :doc:`dispBeamColumn`
 			      * :doc:`ShellMITC4`
 
 			      if no type is given, only nodes are created.
