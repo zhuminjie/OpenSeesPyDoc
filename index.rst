@@ -24,16 +24,16 @@
 
 .. note::
 
-   Please send only questions related to this document 
-   to `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
-
-   Any other questions including modeling issues in `OpenSees`_,
+   Questions including modeling issues and the use of `OpenSeesPy`_,
    please post on `OpenSeesPy Forum <https://opensees.berkeley.edu/community/viewforum.php?f=12>`_.
 
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
    by sending pull requests
    through `github pulls <https://github.com/zhuminjie/OpenSeesPyDoc/pulls>`_.
+
+   For errors in this document, submit on 
+   `github issues <https://github.com/zhuminjie/OpenSeesPyDoc/issues>`_.
 
 
 ========================
