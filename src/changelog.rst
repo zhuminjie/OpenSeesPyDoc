@@ -4,7 +4,7 @@
   Change Log
 ==============
 
-* **Version 3.2.1** (5/8/2020)
+* **Version 3.2.2** (5/8/2020)
 
   * Fix Get_Renderiing tab problem
   * Ship with dependent libraries for more Linux systems
