@@ -4,6 +4,11 @@
   Change Log
 ==============
 
+* **Version 3.2.1** (5/8/2020)
+
+  * Fix Get_Renderiing tab problem
+  * Ship with dependent libraries for more Linux systems
+
 * **Version 3.2.0** (4.17.2020)
 
   * Add background mesh command

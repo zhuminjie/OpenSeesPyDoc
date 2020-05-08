@@ -15,10 +15,6 @@
 
    OpenSeesPy can now run on :doc:`src/wsl`.
 
-   New :doc:`src/plotcmds` are added.
-
-   The Mac version is maintained at  `<pypi.org/project/openseespymac>`_.
-
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
 
