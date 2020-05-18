@@ -4,6 +4,10 @@
   Change Log
 ==============
 
+* **Version 3.2.2.1** (5/18/2020)
+
+  * add gimmeMCK integrator
+
 * **Version 3.2.2** (5/8/2020)
 
   * Fix Get_Renderiing tab problem
