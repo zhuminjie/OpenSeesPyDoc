@@ -6,7 +6,7 @@ Visualization Development Guide
 ===============================
 
 You are welcome to contribute to the plotting/post-processing commands. This documentation is to explain what is going on inside 
-the plotting library "Get+Rendering" and how you can enhance the functons. As of now, Get_Rendering has functions
+the plotting library "Get_Rendering" and how you can enhance the functons. As of now, Get_Rendering has functions
 to plot a structure, mode shapes and shape of a displaced structure and works for 2D (beam-column elements, 
 tri, and quad) and 3D (beam-column, tri, 4-node shell, and 8-node brick) elements. 
 
@@ -36,7 +36,7 @@ node coordinates are calculated.
 
 ``_plotQuad3D()`` : A procedure to render a 3D, four node shell (Quad, ShellDKGQ etc.) element using iNode, jNode, kNode, lNode in counter-clockwise and some internal variables as input.
 
-``_plotCubeSurf()`` : This procedure is called by the ``plotCubeVol()` command to render each surface in a cube using four corner nodes. 
+``_plotCubeSurf()`` : This procedure is called by the ``plotCubeVol()`` command to render each surface in a cube using four corner nodes. 
 
 ``_plotCubeVol()`` : A procedure to render a 8-node brick element using a list of eight element nodes in bottom and top faces and in counter-clockwise order, and internal variables as input.
 
@@ -94,7 +94,7 @@ This function uses the following inputs:
 The names of classes, variables, and functions should be self-explanatory. Look for names that give useful information about the meaning of the variable or function.
 All the internal functions should start with "``_``" and be in camelCase (for example ``_plotCubeSurf``) to distinguish them from the user functions. There are two type of 
 user functions, 1) recorder functions and 2) plot functions. All the "recorder" functions should start with "record" and use camelCase (example: ``recordNodeDisp``) and
-the plotting functions should start with "``plot_``" use snake_case (example: ``plot_deformedshape``). Try to keep the internal variables (see 3. Example) consistant. New internal variable should be 
+the plotting functions should start with "``plot_``" and use snake_case (example: ``plot_deformedshape``). Try to keep the internal variables (see 3. Example) consistant. New internal variable should be 
 defined only if necessary. 
 
 
