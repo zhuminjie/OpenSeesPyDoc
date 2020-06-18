@@ -13,7 +13,7 @@ zeroLengthImpact3D
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``eleNodes`` |listi|                  a list of a slave and a master nodes
+   ``eleNodes`` |listi|                  a list of a constrained and a retained nodes
    ``direction`` |int|
                                          * ``1`` if out-normal vector of master plane points to +X direction
 					 * ``2`` if out-normal vector of master plane points to +Y direction

@@ -13,7 +13,7 @@ zeroLengthContact Element
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``eleNodes`` |listi|                  a list of a slave and a master nodes
+   ``eleNodes`` |listi|                  a list of a constrained and a retained nodes
    ``Kn`` |float|                        Penalty in normal direction
    ``Kt`` |float|                        Penalty in tangential direction
    ``mu`` |float|                        friction coefficient
@@ -29,7 +29,7 @@ zeroLengthContact Element
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``eleNodes`` |listi|                  a list of a slave and a master nodes
+   ``eleNodes`` |listi|                  a list of a constrained and a retained nodes
    ``Kn`` |float|                        Penalty in normal direction
    ``Kt`` |float|                        Penalty in tangential direction
    ``mu`` |float|                        friction coefficient

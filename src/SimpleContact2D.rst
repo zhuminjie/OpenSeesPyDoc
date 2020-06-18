@@ -8,13 +8,13 @@ This command is used to construct a SimpleContact2D element object.
 
 
 
-.. function:: element('SimpleContact2D', eleTag,iNode, jNode, sNode, lNode, matTag, gTol, fTol)
+.. function:: element('SimpleContact2D', eleTag,iNode, jNode, cNode, lNode, matTag, gTol, fTol)
    :noindex:
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``iNode``  ``jNode`` |int|            master nodes (-ndm 2 -ndf 2)
-   ``sNode`` |int|                       slave node (-ndm 2 -ndf 2)
+   ``iNode``  ``jNode`` |int|            retained nodes (-ndm 2 -ndf 2)
+   ``cNode`` |int|                       constrained node (-ndm 2 -ndf 2)
    ``lNode`` |int|                       Lagrange multiplier node (-ndm 2 -ndf 2)
    ``matTag`` |int|                      unique integer tag associated with previously-defined nDMaterial object
    ``gTol`` |float|                      gap tolerance
