@@ -1,7 +1,5 @@
 .. include:: sub.txt
 
-.. _dispBeamColumn-Element:
-   
 =================
  dispBeamColumn
 =================
@@ -9,7 +7,7 @@
 .. function:: element('dispBeamColumn',eleTag,*eleNodes,transfTag,integrationTag,'-cMass','-mass',mass=0.0)
    :noindex:
 
-   Create a ForceBeamColumn element.
+   Create a dispBeamColumn element.
 
    ========================   =============================================================
    ``eleTag`` |int|           tag of the element

@@ -24,8 +24,7 @@
    ``psicr1`` |float|                    fitting parameter of the creep time evolution function as per ACI 209R-92
    ``psicr2`` |float|                    fitting parameter of the creep time evolution function as per ACI 209R-92
    ``tcast`` |float|                     analysis time corresponding to concrete casting (in days; minimum value 2.0)
-
-   ===================================   ======================================================================================================
+   ===================================   =====================================================================================================
 
 .. note::
 

@@ -13,9 +13,8 @@ ElasticMultiLinear Material
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
    ``eta`` |float|                       damping tangent (optional, default=0.0)
-   ``strain`` |listf|              list of strain points along stress-strain curve
-   ``stress`` |listf|              list of stress points along stress-strain curve
-
+   ``strain`` |listf|                    list of strain points along stress-strain curve
+   ``stress`` |listf|                    list of stress points along stress-strain curve
    ===================================   ===========================================================================
 
 .. seealso::

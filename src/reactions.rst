@@ -4,7 +4,7 @@
  reactions command
 ============================
 
-.. function:: reactions('-dynamic','-rayleight')
+.. function:: reactions('-dynamic','-rayleigh')
 
    Calculate the reactions. Call this command before the :func:`nodeReaction`.
 

@@ -11,7 +11,7 @@
 
    ================================   ===========================================================================
    ``matTag`` |int|                   integer tag identifying material
-   ``mat3DTag`` |int|                tag of perviously defined 3d ndMaterial material
+   ``mat3DTag`` |int|                 tag of perviously defined 3d ndMaterial material
    ================================   ===========================================================================
 
 The material formulations for the PlaneStress object are:

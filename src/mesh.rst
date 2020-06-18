@@ -15,5 +15,7 @@
 
    linemesh
    trimesh
+   quadmesh
+   tetmesh
    partmesh
    bgmesh

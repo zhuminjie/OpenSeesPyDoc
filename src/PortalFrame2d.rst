@@ -6,7 +6,7 @@
 
 
 #. The source code is shown below, which can be downloaded :download:`here </pyExamples/PortalFrame2d.py>`.
-#. Run the source code in your favorate Python program and should see results below
+#. Run the source code in your favorite Python program and should see results below
 
 ::
 

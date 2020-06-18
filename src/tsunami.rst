@@ -4,6 +4,7 @@
 
 
 #. :doc:`movingmesh`
+#. :doc:`backgroundmeshexamples`
 
 
 .. toctree::
@@ -11,3 +12,4 @@
    :hidden:
 
    movingmesh
+   backgroundmeshexamples

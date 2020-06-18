@@ -15,12 +15,12 @@ The MVLEM element command is used to generate a two-dimensional Multiple-Vertica
    ``eleNodes`` |listi|                  a list of two element nodes
    ``m`` |int|                           Number of element macro-fibers
    ``c`` |float|                         Location of center of rotation from the iNode, ``c`` = 0.4 (recommended)
-   ``thick`` |listf|               a list of ``m`` macro-fiber thicknesses
+   ``thick`` |listf|                     a list of ``m`` macro-fiber thicknesses
    ``widths`` |listf|                    a list of ``m`` macro-fiber widths
-   ``rho`` |listf|        a list of m reinforcing ratios corresponding to macro-fibers; for each fiber: :math:`rho_i = A_{s,i}/A_{gross,i} (1 < i < m)`
-   ``matConcreteTags`` |listi|            a list of ``m`` uniaxialMaterial tags for concrete
-   ``matSteelTags`` |listi|                a list of ``m`` uniaxialMaterial tags for steel
-   ``matShearTag`` |int|                   Tag of uniaxialMaterial for shear material
+   ``rho`` |listf|                       a list of m reinforcing ratios corresponding to macro-fibers; for each fiber: :math:`rho_i = A_{s,i}/A_{gross,i} (1 < i < m)`
+   ``matConcreteTags`` |listi|           a list of ``m`` uniaxialMaterial tags for concrete
+   ``matSteelTags`` |listi|              a list of ``m`` uniaxialMaterial tags for steel
+   ``matShearTag`` |int|                 Tag of uniaxialMaterial for shear material
    ===================================   ===========================================================================
 
 .. seealso::

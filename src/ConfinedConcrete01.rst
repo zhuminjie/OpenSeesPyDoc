@@ -24,8 +24,8 @@
    ``fpc`` |float|                       unconfined cylindrical strength of concrete specimen.
    ``Ec`` |float|                        initial elastic modulus of unconfined concrete.
    ``epscu_type`` |str|                  Method to define confined concrete ultimate strain
-                                        * ``-epscu`` then value is confined concrete ultimate strain,
-                                        * ``-gamma`` then value is the ratio of the strength corresponding to ultimate
+                                         * ``-epscu`` then value is confined concrete ultimate strain,
+                                         * ``-gamma`` then value is the ratio of the strength corresponding to ultimate
                                          strain to the peak strength of the confined concrete
                                         stress-strain curve. If ``gamma`` cannot be achieved
                                         in the range [0, epscuLimit] then epscuLimit
@@ -52,7 +52,7 @@
    ``haRatio`` |float|                   hardening ratio of the hoop steel.
    ``mu`` |float|                        ductility factor of the hoop steel.
    ``phiLon`` |float|                    diameter of longitudinal bars.
-   ``internalArgs`` |listf|                   ``internalArgs= [phisi, Si, fyhi, Es0i, haRatioi, mui]``
+   ``internalArgs`` |listf|              ``internalArgs= [phisi, Si, fyhi, Es0i, haRatioi, mui]``
                                          optional parameters for defining the internal
 					 transverse reinforcement. If they are not specified
 					 they will be assumed equal to the external ones

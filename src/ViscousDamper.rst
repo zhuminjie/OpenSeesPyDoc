@@ -11,14 +11,17 @@
 
    ===================================   ===========================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``K_el`` |float|                         Elastic stiffness of linear spring to model the axial flexibility of a
-                                         viscous damper (e.g. combined stiffness of the supporting brace and
+   ``K_el`` |float|                      Elastic stiffness of linear spring to model the axial
+                                         flexibility of a
+                                         viscous damper (e.g. combined stiffness of the
+					 supporting brace and
 					 internal damper portion)
    ``Cd`` |float|                        Damping coefficient
    ``alpha`` |float|                     Velocity exponent
-   ``LGap`` |float|                      Gap length to simulate the gap length due to the pin tolerance
-   ``NM`` |int|                          Employed adaptive numerical algorithm (default value NM = 1;
-
+   ``LGap`` |float|                      Gap length to simulate the gap length due to the
+                                         pin tolerance
+   ``NM`` |int|                          Employed adaptive numerical algorithm (default
+                                         value NM = 1;
                                          * ``1`` = Dormand-Prince54,
 					 * ``2`` = 6th order Adams-Bashforth-Moulton,
 					 * ``3`` = modified Rosenbrock Triple)

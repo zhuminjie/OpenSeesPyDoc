@@ -27,7 +27,7 @@
    ``accelSeriesTag`` |int|   tag of the TimeSeries series defining the acceleration
                               history. (optional)
    ``vel0`` |float|           the initial velocity (optional, default=0.0)
-   ``fact`` |float|         constant factor (optional, default=1.0)
+   ``fact`` |float|           constant factor (optional, default=1.0)
    ========================   =============================================================
 
 

@@ -6,11 +6,10 @@
  background mesh
 =================
 
-.. function:: mesh('bg',basicsize,*lower,*upper,'-tol',tol,'-meshtol',meshtol,'-wave',wavefilename,numl,*locations,'-numsub',numsub,'-wall',*wlower,*wupper,'-structure',numsnodes,*sNodes)
+.. function:: mesh('bg',basicsize,*lower,*upper,'-tol',tol,'-meshtol',meshtol,'-wave',wavefilename,numl,*locations,'-numsub',numsub,'-structure',id,numnodes,*snodes,'-largeSize',level,*llower,*lupper)
    :noindex:
 
-   Create a background mesh. Structural mesh must be created before
-   the background mesh in order to be included.
+   Create a background mesh. 
 
 
    ========================   ===========================================================================
@@ -22,8 +21,13 @@
    ``wavefilename`` |str|     a filename to record wave heights and velocities (optional)
    ``numl`` |int|             number of locations to record wave (optional)
    ``locations`` |listf|      coordinates of the locations (optional)
-   ``wlower`` |listf|         a list of coordinates of the lower point of the wall (optional)
-   ``wupper`` |listf|         a list of coordinates of the upper point of the wall (optional)
+   ``id`` |int|               structural id > 0, same meaning as :doc:`trimesh` (optional)
    ``numsnodes`` |int|        number of structural nodes (optional)
    ``sNodes`` |listi|         a list of structural nodes (optional)
+   ``level`` |int|            some regions can have larger mesh size with larger ``level``.
+                              ``level = 1`` means same as basic mesh size.
+   ``llower`` |listf|         a list of coordinates of the lower point of the region with
+                              larger mesh size (optional)
+   ``lupper`` |listf|         a list of coordinates of the upper point of the region with
+                              larger mesh size(optional)
    ========================   ===========================================================================

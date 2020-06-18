@@ -18,7 +18,7 @@
    ``Eh`` |float|                        floating point value defining the hardening modulus of the reinforcing steel
    ``ld`` |float|                        floating point value defining the development length of the reinforcing steel
    ``db`` |float|                        point value defining the diameter of reinforcing steel
-   ``nb`` |int|                        an integer defining the number of anchored bars
+   ``nb`` |int|                          an integer defining the number of anchored bars
    ``depth`` |float|                     floating point value defining the dimension of the member (beam or column) perpendicular to the dimension of the plane of the paper
    ``height`` |float|                    floating point value defining the height of the flexural member, perpendicular to direction in which the reinforcing steel is placed, but in the plane of the paper
    ``ancLratio`` |float|                 floating point value defining the ratio of anchorage length used for the reinforcing bar to the dimension of the joint in the direction of the reinforcing bar (optional, default: 1.0)

@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===============
+=======================
  Fiber Thermal Section
-===============
+=======================
 
 .. function:: section('FiberThermal', secTag, '-GJ', GJ=0.0)
    :noindex:

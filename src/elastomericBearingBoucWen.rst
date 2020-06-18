@@ -27,15 +27,24 @@ This command is used to construct an elastomericBearing element object, which is
    ``eta`` |float|                       yielding exponent (sharpness of hysteresis loop corners) (default = 1.0)
    ``beta`` |float|                      first hysteretic shape parameter (default = 0.5)
    ``gamma`` |float|                     second hysteretic shape parameter (default = 0.5)
-   ``PMatTag``  |int|            tag associated with previously-defined UniaxialMaterial in axial direction
-   ``TMatTag``  |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
-   ``MyMatTag``  |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y-axis
-   ``MzMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
-   ``orientVals`` |listi|        vector components in global coordinates defining local x-axis (optional),
-               vector components in global coordinates defining local y-axis (optional)
-   ``shearDist`` |float|                   shear distance from iNode as a fraction of the element length (optional, default = 0.5)
-   ``'-doRayleigh'`` |str|               to include Rayleigh damping from the bearing (optional, default = no Rayleigh damping contribution)
-   ``mass`` |float|                         element mass (optional, default = 0.0)
+   ``PMatTag``  |int|                    tag associated with previously-defined
+                                         UniaxialMaterial in axial direction
+   ``TMatTag``  |int|                    tag associated with previously-defined
+                                         UniaxialMaterial in torsional direction
+   ``MyMatTag``  |int|                   tag associated with previously-defined
+                                         UniaxialMaterial in moment direction around local y-axis
+   ``MzMatTag`` |int|                    tag associated with previously-defined UniaxialMaterial
+                                         in moment direction around local z-axis
+   ``orientVals`` |listi|                vector components in global coordinates
+                                         defining local x-axis (optional),
+                                         vector components in global coordinates defining
+					 local y-axis (optional)
+   ``shearDist`` |float|                 shear distance from iNode as a fraction
+                                         of the element length (optional, default = 0.5)
+   ``'-doRayleigh'`` |str|               to include Rayleigh damping from the
+                                         bearing (optional, default = no Rayleigh damping
+					 contribution)
+   ``mass`` |float|                      element mass (optional, default = 0.0)
    ===================================   ===========================================================================
 
 .. seealso::

@@ -13,12 +13,11 @@
    ``matTag`` |int|                   integer tag identifying material
    ``nd`` |float|                     Number of dimensions, 2 for plane-strain, and 3 for 3D analysis.
    ``soilMatTag`` |int|               The material number for the solid phase material (previously defined).
-   ``combinedBulkModul`` |float|        Combined undrained bulk modulus :math:`B_c`
+   ``combinedBulkModul`` |float|      Combined undrained bulk modulus :math:`B_c`
                                       relating changes in pore pressure and volumetric
 				      strain, may be approximated by:
 
 				      :math:`B_c \approx B_f /n`
-
 
 				      where :math:`B_f` is the bulk modulus of fluid
 				      phase (2.2x106 kPa (or 3.191x105 psi) for water),
