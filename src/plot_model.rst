@@ -4,7 +4,7 @@
  plot_model command
 =========================
 
-.. function:: postprocessing.Get_Rendering.plot_model("nodes", "elements")
+.. function:: postprocessing.Get_Rendering.plot_model(<"nodes">, <"elements">)
 
    Once the model is built, it can be visualized using this command. By default Node and element tags are not displayed.
    Matplotlib and Numpy are required. No analysis is required in order to visualize the model. 
