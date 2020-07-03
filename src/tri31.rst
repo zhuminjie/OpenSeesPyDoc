@@ -8,7 +8,7 @@ This command is used to construct a constant strain triangular element (Tri31) w
 
 
 
-.. function:: element('Tri31', eleTag,*eleNodes,thick, type, matTag,[pressure, rho, b1, b2])
+.. function:: element('Tri31', eleTag,*eleNodes,thick, type, matTag, <pressure, rho, b1, b2>)
    :noindex:
 
    ===================================   ===========================================================================

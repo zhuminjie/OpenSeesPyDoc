@@ -8,7 +8,7 @@ This command is used to construct an eight-node mixed volume/pressure brick elem
 
 
 
-.. function:: element('bbarBrick', eleTag,*eleNodes,matTag,[b1,b2,b3])
+.. function:: element('bbarBrick', eleTag,*eleNodes,matTag,<b1,b2,b3>)
    :noindex:
 
    ===================================   ===========================================================================

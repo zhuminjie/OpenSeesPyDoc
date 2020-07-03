@@ -4,7 +4,7 @@
  setParameter command
 ======================
 
-.. function:: setParameter('-val', newValue, ['-ele', *eleTags], ['-eleRange', start, end], [*args])
+.. function:: setParameter('-val', newValue, <'-ele', *eleTags>, <'-eleRange', start, end>, <*args>)
 
    set value for an element parameter
 

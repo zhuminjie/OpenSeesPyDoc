@@ -6,7 +6,7 @@ Two Node Link Element
 
 This command is used to construct a twoNodeLink element object, which is defined by two nodes. The element can have zero or non-zero length. This element can have 1 to 6 degrees of freedom, where only the transverse and rotational degrees of freedom are coupled as long as the element has non-zero length. In addition, if the element length is larger than zero, the user can optionally specify how the P-Delta moments around the local x- and y-axis are distributed among a moment at node i, a moment at node j, and a shear couple. The sum of these three ratios is always equal to 1. In addition the shear center can be specified as a fraction of the element length from the iNode. The element does not contribute to the Rayleigh damping by default. If the element has non-zero length, the local x-axis is determined from the nodal geometry unless the optional x-axis vector is specified in which case the nodal geometry is ignored and the user-defined orientation is utilized. It is important to recognize that if this element has zero length, it does not consider the geometry as given by the nodal coordinates, but utilizes the user-defined orientation vectors to determine the directions of the springs.
 
-.. function:: element('twoNodeLink', eleTag,*eleNodes,'-mat', *matTags, '-dir', *dir, ['-orient', *vecx, *vecyp],['-pDelta', *pDeltaVals], ['-shearDist', *shearDist], ['-doRayleigh'], ['-mass', m])
+.. function:: element('twoNodeLink', eleTag,*eleNodes,'-mat', *matTags, '-dir', *dir, <'-orient', *vecx, *vecyp>,<'-pDelta', *pDeltaVals>, <'-shearDist', *shearDist>, <'-doRayleigh'>, <'-mass', m>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -6,7 +6,7 @@ Four Node Quad u-p Element
 
 FourNodeQuadUP is a four-node plane-strain element using bilinear isoparametric formulation. This element is implemented for simulating dynamic response of solid-fluid fully coupled material, based on Biot's theory of porous medium. Each element node has 3 degrees-of-freedom (DOF): DOF 1 and 2 for solid displacement (u) and DOF 3 for fluid pressure (p).
 
-.. function:: element('quadUP', eleTag,*eleNodes,thick, matTag, bulk, fmass, hPerm, vPerm,[b1=0, b2=0, t=0])
+.. function:: element('quadUP', eleTag,*eleNodes,thick, matTag, bulk, fmass, hPerm, vPerm,<b1=0, b2=0, t=0>)
    :noindex:
 
    ===================================   ===========================================================================

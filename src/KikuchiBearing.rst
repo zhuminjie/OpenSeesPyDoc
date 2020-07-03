@@ -8,7 +8,7 @@ This command is used to construct a KikuchiBearing element object, which is defi
 
 
 
-.. function:: element('KikuchiBearing', eleTag,*eleNodes,'-shape', shape,'-size', size, totalRubber,['-totalHeight', totalHeight],'-nMSS', nMSS,'-matMSS', matMSSTag,['-limDisp', limDisp],'-nMNS', nMNS,'-matMNS', matMNSTag,['-lambda', lambda],['-orient',[x1, x2, x3], yp1, yp2, yp3],['-mass', m],['-noPDInput'],['-noTilt'],['-adjustPDOutput', ci, cj],['-doBalance', limFo, limFi, nIter])
+.. function:: element('KikuchiBearing', eleTag,*eleNodes,'-shape', shape,'-size', size, totalRubber, <'-totalHeight', totalHeight>,'-nMSS', nMSS,'-matMSS', matMSSTag, <'-limDisp', limDisp>,'-nMNS', nMNS,'-matMNS', matMNSTag, <'-lambda', lambda>, <'-orient',<x1, x2, x3>, yp1, yp2, yp3>, <'-mass', m>, <'-noPDInput'>, <'-noTilt'>, <'-adjustPDOutput', ci, cj>, <'-doBalance', limFo, limFi, nIter>)
    :noindex:
 
    ===========================================   ===========================================================================

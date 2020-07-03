@@ -4,7 +4,7 @@
  Steel4
 =========
 
-.. function:: uniaxialMaterial('Steel4', matTag, Fy, E0, '-asym', '-kin', b_k, R_0, r_1, r_2, b_kc, R_0c, r_1c, r_2c, '-iso', b_i, rho_i, b_l, R_i, l_yp, b_ic, rho_ic, b_lc, R_ic, '-ult', f_u, R_u, f_uc, R_uc, '-init', sig_init, '-mem', cycNum)
+.. function:: uniaxialMaterial('Steel4', matTag, Fy, E0, '-asym', '-kin', b_k, *params, b_kc, R_0c, r_1c, r_2c, '-iso', b_i, rho_i, b_l, R_i, l_yp, b_ic, rho_ic, b_lc, R_ic, '-ult', f_u, R_u, f_uc, R_uc, '-init', sig_init, '-mem', cycNum)
    :noindex:
 
 
@@ -16,9 +16,9 @@
    ``E0`` |float|                        initial elastic tangent
    ``'-kin'`` |str|                      apply kinematic hardening
    ``b_k`` |float|                       hardening ratio (E_k/E_0)
-   ``R_0``, ``r_1``, ``r_2`` |float|     control the exponential transition from linear
-                                         elastic to hardening asymptote
-				         recommended values: ``R_0 = 20, r_1 = 0.90, r_2 = 0.15``
+   ``params`` |listf|                    control the exponential transition from linear elastic to hardening asymptote
+                                         ``params=[R_0,r_1,r_2]``.
+                                         Recommended values: ``R_0 = 20, r_1 = 0.90, r_2 = 0.15``
    ``'-iso'`` |str|                      apply isotropic hardening
    ``b_i`` |float|                       initial hardening ratio (E_i/E_0)
    ``b_l`` |float|                       saturated hardening ratio (E_is/E_0)

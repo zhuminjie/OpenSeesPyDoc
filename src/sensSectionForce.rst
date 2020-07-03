@@ -4,7 +4,7 @@
  sensSectionForce command
 ==========================
 
-.. function:: sensSectionForce(eleTag, [secNum,] dof, paramTag)
+.. function:: sensSectionForce(eleTag, <secNum>, dof, paramTag)
 
    Returns the current section force sensitivity to a parameter at a specified element and section.
 

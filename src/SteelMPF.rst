@@ -4,7 +4,7 @@
  SteelMPF
 ==================
 
-.. function:: uniaxialMaterial('SteelMPF', matTag, fyp, fyn, E0, bp, bn, R0, cR1, cR2, a1=0.0, a2=1.0, a3=0.0, a4=1.0)
+.. function:: uniaxialMaterial('SteelMPF', matTag, fyp, fyn, E0, bp, bn, *params, a1=0.0, a2=1.0, a3=0.0, a4=1.0)
    :noindex:
 
    This command is used to construct a uniaxialMaterial SteelMPF (Kolozvari et al., 2015), which represents the well-known uniaxial constitutive nonlinear hysteretic material model for steel proposed by Menegotto and Pinto (1973), and extended by Filippou et al. (1983) to include isotropic strain hardening effects.
@@ -16,9 +16,9 @@
    ``E0`` |float|                        Initial tangent modulus
    ``bp`` |float|                        Strain hardening ratio in tension (positive loading direction)
    ``bn`` |float|                        Strain hardening ratio in compression (negative loading direction)
-   ``R0`` |float|                        Initial value of the curvature parameter R (R0 = 20 recommended)
-   ``cR1`` |float|                       Curvature degradation parameter (a1 = 0.925 recommended)
-   ``cR2`` |float|                       Curvature degradation parameter (a2 = 0.15 or 0.0015 recommended)
+   ``params`` |listf|                    parameters to control the transition from elastic to plastic branches.
+                                         ``params=[R0,cR1,cR2]``.
+                                         Recommended values: ``R0=20``, ``cR1=0.925``, ``cR2=0.15`` or ``cR2=0.0015``
    ``a1`` |float|                        Isotropic hardening in compression parameter (optional, default = 0.0). Shifts compression
                                          yield envelope by a proportion of compressive yield strength after a maximum plastic tensile
 					 strain of a2(fyp/E0)

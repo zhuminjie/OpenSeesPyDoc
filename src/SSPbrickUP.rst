@@ -6,7 +6,7 @@ SSPbrickUP Element
 
 This command is used to construct a SSPbrickUP element object.
 
-.. function:: element('SSPbrickUP', eleTag,*eleNodes,matTag, fBulk, fDen, k1, k2, k3, void, alpha,[b1, b2, b3])
+.. function:: element('SSPbrickUP', eleTag,*eleNodes,matTag, fBulk, fDen, k1, k2, k3, void, alpha,<b1, b2, b3>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -6,12 +6,12 @@ Single Friction Pendulum Bearing Element
 
 This command is used to construct a singleFPBearing element object, which is defined by two nodes. The iNode represents the concave sliding surface and the jNode represents the articulated slider. The element can have zero length or the appropriate bearing height. The bearing has unidirectional (2D) or coupled (3D) friction properties (with post-yield stiffening due to the concave sliding surface) for the shear deformations, and force-deformation behaviors defined by UniaxialMaterials in the remaining two (2D) or four (3D) directions. To capture the uplift behavior of the bearing, the user-specified UniaxialMaterial in the axial direction is modified for no-tension behavior. By default (sDratio = 0.0) P-Delta moments are entirely transferred to the concave sliding surface (iNode). It is important to note that rotations of the concave sliding surface (rotations at the iNode) affect the shear behavior of the bearing. To avoid the introduction of artificial viscous damping in the isolation system (sometimes referred to as "damping leakage in the isolation system"), the bearing element does not contribute to the Rayleigh damping by default. If the element has non-zero length, the local x-axis is determined from the nodal geometry unless the optional x-axis vector is specified in which case the nodal geometry is ignored and the user-defined orientation is utilized.
 
-.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', PMatTag,'-Mz', MzMatTag,['-orient', x1, x2, x3, y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', PMatTag,'-Mz', MzMatTag,<'-orient', x1, x2, x3, y1, y2, y3>,<'-shearDist', sDratio>,<'-doRayleigh'>,<'-mass', m>,<'-iter', maxIter, tol>)
    :noindex:
 
    For a two-dimensional problem
 
-.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', PMatTag,'-T', TMatTag,'-My', MyMatTag,'-Mz', MzMatTag,['-orient',[x1, x2, x3], y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('singleFPBearing', eleTag,*eleNodes,frnMdlTag, Reff, kInit,'-P', PMatTag,'-T', TMatTag,'-My', MyMatTag,'-Mz', MzMatTag,<'-orient',<x1, x2, x3>, y1, y2, y3>,<'-shearDist', sDratio>,<'-doRayleigh'>,<'-mass', m>,<'-iter', maxIter, tol>)
    :noindex:
 
    For a three-dimensional problem

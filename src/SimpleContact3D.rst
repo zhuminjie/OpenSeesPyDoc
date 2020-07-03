@@ -8,14 +8,14 @@ This command is used to construct a SimpleContact3D element object.
 
 
 
-.. function:: element('SimpleContact3D', eleTag,iNode, jNode, kNode, lNode, sNode, lagr_node, matTag, gTol, fTol)
+.. function:: element('SimpleContact3D', eleTag,iNode, jNode, kNode, lNode, cNode, lagr_node, matTag, gTol, fTol)
    :noindex:
 
    ====================================================   ===========================================================================
    ``eleTag`` |int|                                       unique element object tag
    ``iNode``  ``jNode``  ``kNode``  ``lNode`` |int|       master nodes (-ndm 3 -ndf 3)
-   ``sNode`` |int|                                        slave node (-ndm 3 -ndf 3)
-   ``lagr_node`` |int|                                        Lagrange multiplier node (-ndm 3 -ndf 3)
+   ``cNode`` |int|                                        constrained node (-ndm 3 -ndf 3)
+   ``lagr_node`` |int|                                    Lagrange multiplier node (-ndm 3 -ndf 3)
    ``matTag`` |int|                                       unique integer tag associated with previously-defined nDMaterial object
    ``gTol`` |float|                                       gap tolerance
    ``fTol`` |float|                                       force tolerance

@@ -8,7 +8,7 @@ This command is used to construct a SSPquad element object.
 
 
 
-.. function:: element('SSPquad', eleTag,*eleNodes,matTag, type, thick,[b1, b2])
+.. function:: element('SSPquad', eleTag,*eleNodes,matTag, type, thick,<b1, b2>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -7,7 +7,7 @@ SSPquadUP Element
 This command is used to construct a SSPquadUP element object.
 
 
-.. function:: element('SSPquadUP', eleTag,*eleNodes,matTag, thick, fBulk, fDen, k1, k2, void, alpha,[b1=0.0, b2=0.0])
+.. function:: element('SSPquadUP', eleTag,*eleNodes,matTag, thick, fBulk, fDen, k1, k2, void, alpha,<b1=0.0, b2=0.0>)
    :noindex:
 
    ===================================   ===========================================================================

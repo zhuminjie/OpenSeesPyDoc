@@ -8,7 +8,7 @@ bbarBrickUP is a 8-node mixed volume/pressure element, which uses a tri-linear i
 
 Each node has 4 degrees-of-freedom (DOF): DOFs 1 to 3 for solid displacement (u) and DOF 4 for fluid pressure (p). This element is implemented for simulating dynamic response of solid-fluid fully coupled material, based on Biot's theory of porous medium.
 
-.. function:: element('bbarBrickUP', eleTag,*eleNodes,matTag, bulk, fmass, permX, permY, permZ,[bX=0, bY=0, bZ=0])
+.. function:: element('bbarBrickUP', eleTag,*eleNodes,matTag, bulk, fmass, permX, permY, permZ,<bX=0, bY=0, bZ=0>)
    :noindex:
 
    ==========================================   ===========================================================================
