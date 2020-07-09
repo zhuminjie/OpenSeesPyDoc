@@ -8,13 +8,13 @@ This command is used to construct a RJWatsonEqsBearing element object, which is 
 
 
 
-.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Mz', matTag,['-orient', x1, x2, x3, y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', PMatTag,'-Vy', VyMatTag,'-Mz', MzMatTag, <'-orient', x1, x2, x3, y1, y2, y3>, <'-shearDist', sDratio>, <'-doRayleigh'>, <'-mass', m>, <'-iter', maxIter, tol>)
    :noindex:
 
    For a two-dimensional problem
 
 
-.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', matTag,'-Vy', matTag,'-Vz', matTag,'-T', matTag,'-My', matTag,'-Mz', matTag,['-orient', [x1, x2, x3], y1, y2, y3],['-shearDist', sDratio],['-doRayleigh'],['-mass', m],['-iter', maxIter, tol])
+.. function:: element('RJWatsonEqsBearing', eleTag,*eleNodes,frnMdlTag, kInit,'-P', PMatTag,'-Vy', VyMatTag,'-Vz', VzMatTag,'-T', TMatTag,'-My', MyMatTag,'-Mz', MzMatTag,<'-orient', <x1, x2, x3>, y1, y2, y3>,<'-shearDist', sDratio>,<'-doRayleigh'>,<'-mass', m>,<'-iter', maxIter, tol>)
    :noindex:
 
    For a three-dimensional problem
@@ -25,12 +25,12 @@ This command is used to construct a RJWatsonEqsBearing element object, which is 
    ``eleNodes`` |listi|                  a list of two element nodes
    ``frnMdlTag`` |float|                 tag associated with previously-defined FrictionModel
    ``kInit`` |float|                     initial stiffness of sliding friction component in local shear direction
-   ``'-P'``  ``matTag`` |int|            tag associated with previously-defined UniaxialMaterial in axial direction
-   ``'-Vy'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in shear direction along local y-axis (MER spring behavior not including friction)
-   ``'-Vz'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in shear direction along local z-axis (MER spring behavior not including friction)
-   ``'-T'``  ``matTag`` |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
-   ``'-My'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y-axis
-   ``'-Mz'``  ``matTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
+   ``'-P'``  ``PMatTag`` |int|            tag associated with previously-defined UniaxialMaterial in axial direction
+   ``'-Vy'``  ``VyMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in shear direction along local y-axis (MER spring behavior not including friction)
+   ``'-Vz'``  ``VzMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in shear direction along local z-axis (MER spring behavior not including friction)
+   ``'-T'``  ``TMatTag`` |int|            tag associated with previously-defined UniaxialMaterial in torsional direction
+   ``'-My'``  ``MyMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local y-axis
+   ``'-Mz'``  ``MzMatTag`` |int|           tag associated with previously-defined UniaxialMaterial in moment direction around local z-axis
    ``x1``  ``x2``  ``x3`` |float|        vector components in global coordinates defining local x-axis (optional)
    ``y1``  ``y2``  ``y3`` |float|        vector components in global coordinates defining local y-axis (optional)
    ``sDratio`` |float|                   shear distance from iNode as a fraction of the element length (optional, default = 0.0)

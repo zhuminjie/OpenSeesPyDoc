@@ -6,7 +6,7 @@
  PFEMElementBubble
 ===================
 
-.. function:: element('PFEMElementBubble',eleTag,*eleNodes, rho,mu,b1,b2[,b3],[thickness,kappa])
+.. function:: element('PFEMElementBubble',eleTag,*eleNodes, rho,mu,b1,b2,<b3>,<thickness,kappa>)
    :noindex:
 
    Create a PFEM Bubble element, which is a fluid element for FSI analysis.

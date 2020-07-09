@@ -27,24 +27,19 @@
                                          * ``-epscu`` then value is confined concrete ultimate strain,
                                          * ``-gamma`` then value is the ratio of the strength corresponding to ultimate
                                          strain to the peak strength of the confined concrete
-                                         stress-strain curve. If ``gamma`` cannot be achieved
-                                         in the range [0, epscuLimit] then epscuLimit
-					 (optional, default: 0.05) will be assumed as
-					 ultimate strain.
-   ``epscu_val`` |float|                 Value for the definition of the concrete ultimate strain
-   ``nu`` |str| or |list|                Definition for Poisson's Ratio.
-   
+                                        stress-strain curve. If ``gamma`` cannot be achieved
+                                        in the range [0, epscuLimit] then epscuLimit
+					                    (optional, default: 0.05) will be assumed as
+					                    ultimate strain.
+   ``epscu_val`` |float|                Value for the definition of the concrete ultimate strain
+   ``nu`` |str or list|                  Definition for Poisson's Ratio.
                                          * ``*['-nu', <value of Poisson's ratio>]``
-                                         * ``'-varub'`` Poisson's ratio is defined as a
-					   function of axial
-					   strain by means of the expression proposed by
-					   Braga et al. (2006) with the
-					   upper bound equal to 0.5
-                                         * ``'-varnoub'`` Poisson's ratio is defined as
-					   a function of axial
-					   strain by means of the expression proposed by Braga
-					   et al. (2006) without any upper bound.
-					   
+                                         * ``'-varub'`` Poisson's ratio is defined as a function of axial
+                                         strain by means of the expression proposed by Braga et al. (2006) with the
+                                         upper bound equal to 0.5
+                                         *``'-varnoub'`` Poisson's ratio is defined as a function of axial
+                                         strain by means of the expression proposed by Braga
+                                         et al. (2006) without any upper bound.
    ``L1`` |float|                        length/diameter of square/circular core section
                                          measured respect to the hoop center line.
    ``L2`` |float|                        additional dimensions when multiple hoops are being used.
@@ -77,7 +72,7 @@
    ``tol``       |float|                 Unknown
    ``maxNumIter`` |int|                  Unknown
    ``epscuLimit`` |float|                Unknown
-   ``stRatio``                           Unknown
+   ``stRatio``   |unk|                   Unknown
    ===================================   ===========================================================================
 
 .. image:: /_static/545px-SectionTypes.png

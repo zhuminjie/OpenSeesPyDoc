@@ -4,6 +4,22 @@
   Change Log
 ==============
 
+* **Version 3.2.2.1** (5/18/2020)
+
+  * add gimmeMCK integrator
+
+* **Version 3.2.2** (5/8/2020)
+
+  * Fix Get_Renderiing tab problem
+  * Ship with dependent libraries for more Linux systems
+
+* **Version 3.2.0** (4.17.2020)
+
+  * Add background mesh command
+  * Add partition command
+  * Add OpenSeesPy test
+  * Many bug fixes
+
 * **Version 3.1.5.11** (1.10.2020)
 
   * Change versioning method. First two digits match the current `OpenSees`_ framework version. The last two digits are the versions for OpenSeesPy.

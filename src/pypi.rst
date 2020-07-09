@@ -2,7 +2,7 @@
 
 
 ============================
- PyPi (Windows, Linux, Mac)
+ PyPi (Windows, Linux)
 ============================
 
 Install Anaconda

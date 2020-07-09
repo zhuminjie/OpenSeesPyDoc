@@ -4,7 +4,7 @@
 KikuchiAikenHDR Material
 =============================
 
-.. function:: uniaxialMaterial('KikuchiAikenHDR', matTag, tp, ar, hr, ['-coGHU', cg, ch, cu], ['-coMSS', rs, rf])
+.. function:: uniaxialMaterial('KikuchiAikenHDR', matTag, tp, ar, hr, <'-coGHU', cg, ch, cu>, <'-coMSS', rs, rf>)
    :noindex:
 
    This command is used to construct a uniaxial KikuchiAikenHDR material object. This material model produces nonlinear hysteretic curves of high damping rubber bearings (HDRs).

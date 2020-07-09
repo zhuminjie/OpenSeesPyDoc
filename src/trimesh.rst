@@ -29,8 +29,13 @@
                               * :doc:`PFEMElementBubble`
 			      * :doc:`PFEMElementCompressible`
 			      * :doc:`tri31`
+			      * :doc:`elasticBeamColumn`
+			      * :doc:`ForceBeamColumn`
+			      * :doc:`dispBeamColumn`
 
-			      if no type is given, only nodes are created
+			      if no type is given, only nodes are created.
+			      if beam elements are given, beams are created
+			      instead of triangular elements.
 			      
    ``eleArgs`` |list|         a list of element arguments. The arguments
                               are same as in the element commands, but without

@@ -1,10 +1,12 @@
-.. include:: sub.txt
+.. include:: src/sub.txt
 
-=======================
- Plotting Commands
-=======================
+=========================
+ Postprocessing Commands
+=========================
 
 The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+
+**For Developers** : If you are interested in developing visualization functions and contributing to ``Get_Rendering`` library, please go through :doc:`Plotting_Development_Guide` to understand the existing code. This will be helpful in reducing changes while merging the new codes.
 
 Model visualization is an ongoing development to make OpenSeesPy more user friendly.
 It utilizes `Matplotlib 3.0 <https://matplotlib.org>`_ library to plot 2D and 3D models in a dedicated interactive window. You can use click-and-hold to change the view angle and zoom the plot. The model image can be saved with the desired orientation directly from the interactive plot window. If you did not install matplotlib using Anaconda, you will have to install PyQt or PySide to enable an interactive window (`Matplotlib Dependencies <https://matplotlib.org/users/installing.html>`_).  
@@ -36,18 +38,22 @@ The following two commands are needed to visualize the model, as shown below:
    %matplotlib notebook
    
    # import OpenSeesPy rendering module
-   from openseespy.postprocessing.Get_Rendering import *
+   import openseespy.postprocessing.Get_Rendering as opsplt
    
    # render the model after defining all the nodes and elements
-   plot_model()
+   opsplt.plot_model()
+
+   # plot mode shape
+   opsplt.plot_modeshape(3)
    
 
 .. image:: /_static/ModelVisualization_Intro.png
 
-Following are commands related to model visualization:
+Following are commands and development guide related to model visualization:
 
 #. :doc:`plot_model`
 #. :doc:`plot_modeshape`
+#. :doc:`Plotting_Development_Guide`
 
 .. toctree::
    :maxdepth: 1
@@ -55,7 +61,7 @@ Following are commands related to model visualization:
 
    plot_model
    plot_modeshape
-
+   Plotting_Development_Guide
 
 
 

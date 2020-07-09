@@ -51,6 +51,7 @@ Following are commands related to parallel computing:
 #. :doc:`ParallelRCMNumberer`
 #. :doc:`Mumps`
 #. :doc:`ParallelDisplacementControl`
+#. :doc:`partition`
 
 
 
@@ -66,6 +67,7 @@ Following are commands related to parallel computing:
    Bcast
    setStartNodeTag
    domainChange
+   partition
 
 
 

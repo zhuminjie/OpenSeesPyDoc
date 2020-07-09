@@ -8,7 +8,7 @@ This command is used to construct a two-dimensional beam-column-joint element ob
 
 
 
-.. function:: element('beamColumnJoint', eleTag,*eleNodes,Mat1Tag, Mat2Tag, Mat3Tag, Mat4Tag, Mat5Tag, Mat6Tag, Mat7Tag, Mat8Tag, Mat9Tag, Mat10Tag, Mat11Tag, Mat12Tag, Mat13Tag, [eleHeightFac=1.0, eleWidthFac=1.0])
+.. function:: element('beamColumnJoint', eleTag,*eleNodes,Mat1Tag, Mat2Tag, Mat3Tag, Mat4Tag, Mat5Tag, Mat6Tag, Mat7Tag, Mat8Tag, Mat9Tag, Mat10Tag, Mat11Tag, Mat12Tag, Mat13Tag, <eleHeightFac=1.0, eleWidthFac=1.0>)
    :noindex:
 
    ===================================   ===========================================================================

@@ -8,7 +8,7 @@ This command is used to construct a LeadRubberX bearing element object in three-
 
 
 
-.. function:: element('LeadRubberX', eleTag,*eleNodes,Fy, alpha, Gr, Kbulk, D1, D2, ts, tr, n,[[x1, x2, x3], y1, y2, y3],[kc],[PhiM],[ac],[sDratio],[m],[cd],[tc],[qL],[cL],[kS],[aS],[tag1],[tag2],[tag3],[tag4],[tag5])
+.. function:: element('LeadRubberX', eleTag,*eleNodes,Fy, alpha, Gr, Kbulk, D1, D2, ts, tr, n, <<x1, x2, x3>, y1, y2, y3>,<kc>,<PhiM>,<ac>,<sDratio>,<m>,<cd>,<tc>,<qL>,<cL>,<kS>,<aS>,<tag1>,<tag2>,<tag3>,<tag4>,<tag5>)
    :noindex:
 
    ===================================   ===========================================================================

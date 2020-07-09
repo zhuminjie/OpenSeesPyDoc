@@ -5,7 +5,6 @@
 =====================
 
 .. function:: integrator('ExplicitDifference')
-   :noindex:
 
    Create a ExplicitDifference integrator.
 

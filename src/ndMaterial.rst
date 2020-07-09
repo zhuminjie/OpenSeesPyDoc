@@ -89,6 +89,7 @@ Materials for Modeling Concrete Walls
 #. :doc:`PlaneStressUserMaterial`
 #. :doc:`PlateFromPlaneStress`
 #. :doc:`PlateRebar`
+#. :doc:`PlasticDamageConcretePlaneStress`
 
 
 .. toctree::
@@ -98,6 +99,7 @@ Materials for Modeling Concrete Walls
    PlaneStressUserMaterial
    PlateFromPlaneStress
    PlateRebar
+   PlasticDamageConcretePlaneStress
 
 Contact Materials for 2D and 3D
 -------------------------------
@@ -136,6 +138,7 @@ UC San Diego soil models
 #. :doc:`PressureIndependMultiYield`
 #. :doc:`PressureDependMultiYield`
 #. :doc:`PressureDependMultiYield02`
+#. :doc:`PressureDependMultiYield03`
 
 
 .. toctree::
@@ -145,6 +148,7 @@ UC San Diego soil models
    PressureIndependMultiYield
    PressureDependMultiYield
    PressureDependMultiYield02
+   PressureDependMultiYield03
 
 
 UC San Diego Saturated Undrained soil
