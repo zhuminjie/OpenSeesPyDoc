@@ -4,7 +4,7 @@
  Parallel Material
 ===================
 
-.. function:: uniaxialMaterial('Parallel', matTag, *MatTags, '-factor', *factorArgs)
+.. function:: uniaxialMaterial('Parallel', matTag, *MatTags, '-factors', *factorArgs)
    :noindex:
 
    This command is used to construct a parallel material object made up of an arbitrary number of previously-constructed UniaxialMaterial objects.

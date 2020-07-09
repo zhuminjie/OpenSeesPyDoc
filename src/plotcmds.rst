@@ -49,10 +49,11 @@ The following two commands are needed to visualize the model, as shown below:
 
 .. image:: /_static/ModelVisualization_Intro.png
 
-Following are commands related to model visualization:
+Following are commands and development guide related to model visualization:
 
 #. :doc:`plot_model`
 #. :doc:`plot_modeshape`
+#. :doc:`Plotting_Development_Guide`
 
 .. toctree::
    :maxdepth: 1
@@ -60,7 +61,7 @@ Following are commands related to model visualization:
 
    plot_model
    plot_modeshape
-
+   Plotting_Development_Guide
 
 
 

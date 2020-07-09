@@ -8,7 +8,7 @@ bbarQuadUP is a four-node plane-strain mixed volume/pressure element, which uses
 
 
 
-.. function:: element('bbarQuadUP', eleTag,*eleNodes,thick, matTag, bulk, fmass, hPerm, vPerm,[b1=0, b2=0, t=0])
+.. function:: element('bbarQuadUP', eleTag,*eleNodes,thick, matTag, bulk, fmass, hPerm, vPerm,<b1=0, b2=0, t=0>)
    :noindex:
 
    ===================================   ===========================================================================

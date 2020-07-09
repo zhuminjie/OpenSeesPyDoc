@@ -4,7 +4,7 @@
 KikuchiAikenLRB Material
 ========================
 
-.. function:: uniaxialMaterial('KikuchiAikenLRB', matTag, type, ar, hr, gr, ap, tp, alph, beta, ['-T', temp], ['-coKQ', rk, rq], ['-coMSS', rs, rf])
+.. function:: uniaxialMaterial('KikuchiAikenLRB', matTag, type, ar, hr, gr, ap, tp, alph, beta, <'-T', temp>, <'-coKQ', rk, rq>, <'-coMSS', rs, rf>)
    :noindex:
 
    This command is used to construct a uniaxial KikuchiAikenLRB material object. This material model produces nonlinear hysteretic curves of lead-rubber bearings.

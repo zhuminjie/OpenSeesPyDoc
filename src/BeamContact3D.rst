@@ -9,13 +9,13 @@ This command is used to construct a BeamContact3D element object.
 
 
 
-.. function:: element('BeamContact3D', eleTag,iNode, jNode, sNode, lNode, radius, crdTransf, matTag, gTol, fTol,[cFlag])
+.. function:: element('BeamContact3D', eleTag,iNode, jNode, cNode, lNode, radius, crdTransf, matTag, gTol, fTol, <cFlag>)
    :noindex:
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
    ``iNode``  ``jNode`` |int|            master nodes (-ndm 3 -ndf 6)
-   ``sNode`` |int|                       slave node (-ndm 3 -ndf 3)
+   ``cNode`` |int|                       constrained node (-ndm 3 -ndf 3)
    ``lNode`` |int|                       Lagrange multiplier node (-ndm 3 -ndf 3)
    ``radius`` |float|                    constant radius of circular beam associated with beam element
    ``crdTransf`` |int|                   unique integer tag associated with previously-defined geometricTransf object

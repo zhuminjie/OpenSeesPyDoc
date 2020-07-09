@@ -8,7 +8,7 @@ YamamotoBiaxialHDR Element
 This command is used to construct a YamamotoBiaxialHDR element object, which is defined by two nodes. This element can be used to represent the isotropic behavior of high-damping rubber bearing in the local y-z plane.
 
 
-.. function:: element('YamamotoBiaxialHDR', eleTag,*eleNodes,Tp, DDo, DDi, Hr,['-coRS`, cr, cs],['-orient`, *vecx, *vecyp],['-mass`, m])
+.. function:: element('YamamotoBiaxialHDR', eleTag,*eleNodes,Tp, DDo, DDi, Hr,<'-coRS`, cr, cs>,<'-orient`, *vecx, *vecyp>,<'-mass`, m>)
    :noindex:
 
    ===================================   ===========================================================================

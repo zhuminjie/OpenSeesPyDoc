@@ -4,7 +4,7 @@
 zeroLengthSection Element
 =========================
 
-.. function:: element('zeroLengthSection', eleTag,*eleNodes,secTag,['-orient', *vecx,*vecyp], ['-doRayleigh', rFlag])
+.. function:: element('zeroLengthSection', eleTag,*eleNodes,secTag, <'-orient', *vecx,*vecyp>, <'-doRayleigh', rFlag>)
    :noindex:
 
    This command is used to construct a zero length element object, which is defined by two nodes at the same location. The nodes are connected by a single section object to represent the force-deformation relationship for the element.

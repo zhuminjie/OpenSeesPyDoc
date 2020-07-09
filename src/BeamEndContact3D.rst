@@ -7,14 +7,14 @@ BeamEndContact3D
 This command is used to construct a BeamEndContact3D element object.
 
 
-.. function:: element('BeamEndContact3D', eleTag,iNode, jNode, sNode, lNode, radius, gTol, fTol,[cFlag])
+.. function:: element('BeamEndContact3D', eleTag,iNode, jNode, cNode, lNode, radius, gTol, fTol, <cFlag>)
    :noindex:
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
    ``iNode`` |int|                       master node from the beam (-ndm 3 -ndf 6)
    ``jNode`` |int|                       the remaining node on the beam element with ``iNode`` (-ndm 3 -ndf 6)
-   ``sNode`` |int|                       slave node (-ndm 3 -ndf 3)
+   ``cNode`` |int|                       constrained node (-ndm 3 -ndf 3)
    ``lNode`` |int|                       Lagrange multiplier node (-ndm 3 -ndf 3)
    ``radius`` |float|                    radius of circular beam associated with beam element
    ``gTol`` |float|                      gap tolerance

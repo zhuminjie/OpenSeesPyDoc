@@ -4,7 +4,7 @@
 SelfCentering Material
 =============================
 
-.. function:: uniaxialMaterial('SelfCentering', matTag, k1, k2, sigAct, beta, epsSlip=0, epsBear=0, rBear=k1])
+.. function:: uniaxialMaterial('SelfCentering', matTag, k1, k2, sigAct, beta, epsSlip=0, epsBear=0, rBear=k1)
    :noindex:
 
    This command is used to construct a uniaxial self-centering (flag-shaped) material object with optional non-recoverable slip behaviour and an optional stiffness increase at high strains (bearing behaviour).

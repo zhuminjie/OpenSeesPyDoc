@@ -4,7 +4,7 @@
  PressureDependMultiYield03
 ============================
 
-.. function:: nDMaterial('PressureDependMultiYield03', matTag, nd, rho, refShearModul, refBulkModul, frictionAng, peakShearStra, refPress, pressDependCoe, PTAng, ca, cb, cc, cd, ce, da, db, dc, noYieldSurf=20.0, *yieldSurf=[],<r1, Gs1, ...>, liquefac1=1, liquefac2=0., pa=101, s0=1.73)
+.. function:: nDMaterial('PressureDependMultiYield03', matTag, nd, rho, refShearModul, refBulkModul, frictionAng, peakShearStra, refPress, pressDependCoe, PTAng, ca, cb, cc, cd, ce, da, db, dc, noYieldSurf=20.0, *yieldSurf=[], liquefac1=1, liquefac2=0., pa=101, s0=1.73)
    :noindex:
 
    The reference for PressureDependMultiYield03 material: Khosravifar, A., Elgamal, A., Lu, J., and Li, J. [2018]. "A 3D model for earthquake-induced liquefaction triggering and post-liquefaction response." Soil Dynamics and Earthquake Engineering, 110, 43-52)

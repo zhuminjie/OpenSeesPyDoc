@@ -8,7 +8,7 @@ This command is used to construct a SSPbrick element object.
 
 
 
-.. function:: element('SSPbrick', eleTag,*eleNodes,matTag,[b1, b2, b3])
+.. function:: element('SSPbrick', eleTag,*eleNodes,matTag,<b1, b2, b3>)
    :noindex:
 
    ===================================   ===========================================================================

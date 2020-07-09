@@ -6,7 +6,7 @@ Elastic Beam Column Element with Stiffness Modifiers
 
 This command is used to construct a ModElasticBeam2d element object. The arguments for the construction of an elastic beam-column element with stiffness modifiers is applicable for 2-D problems. This element should be used for modelling of a structural element with an equivalent combination of one elastic element with stiffness-proportional damping, and two springs at its two ends with no stiffness proportional damping to represent a prismatic section. The modelling technique is based on a number of analytical studies discussed in Zareian and Medina (2010) and Zareian and Krawinkler (2009) and is utilized in order to solve problems related to numerical damping in dynamic analysis of frame structures with concentrated plasticity springs.
 
-.. function:: element('ModElasticBeam2d', eleTag,*eleNodes,Area, E_mod, Iz, K11, K33, K44, transfTag,['-mass',massDens],['-cMass'])
+.. function:: element('ModElasticBeam2d', eleTag,*eleNodes,Area, E_mod, Iz, K11, K33, K44, transfTag,<'-mass',massDens>,<'-cMass'>)
    :noindex:
 
    ===================================   ===========================================================================

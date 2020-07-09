@@ -8,7 +8,7 @@ This command is used to construct an ElastomericX bearing element object in thre
 
 
 
-.. function:: element('ElastomericX', eleTag,*eleNodes,Fy, alpha, Gr, Kbulk, D1, D2, ts, tr, n, [[x1, x2, x3], y1, y2, y3],[kc],[PhiM],[ac],[sDratio],[m],[cd],[tc],[tag1],[tag2],[tag3],[tag4])
+.. function:: element('ElastomericX', eleTag,*eleNodes,Fy, alpha, Gr, Kbulk, D1, D2, ts, tr, n, <<x1, x2, x3>, y1, y2, y3>,<kc>,<PhiM>,<ac>,<sDratio>,<m>,<cd>,<tc>,<tag1>,<tag2>,<tag3>,<tag4>)
    :noindex:
 
    For 3D problem
