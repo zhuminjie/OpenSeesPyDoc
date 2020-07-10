@@ -13,7 +13,7 @@ This command is used to construct an eight-node zero-thickness 3D brick acoustic
 
    ===================================   ===========================================================================
    ``eleTag`` |int|                      unique element object tag
-   ``*eleNodes``` |listi|                four nodes defining structure domain of element boundaries
+   ``*eleNodes1`` |listi|                four nodes defining structure domain of element boundaries
    ``*eleNodes2`` |listi|                four nodes defining acoustic domain of element boundaries
    ===================================   ===========================================================================
 
