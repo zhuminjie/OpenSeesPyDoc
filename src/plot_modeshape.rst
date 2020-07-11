@@ -11,7 +11,7 @@
 
    ======================   ====================================================================
    ``mode_number`` |int|     Mode number to visualize. For example: plot_modeshape(3).
-   ``scale`` |int|           Scale factor for to display mode shape. (optiona, default is 200)
+   ``scale`` |int|           Scale factor for to display mode shape. (optional, default is 200)
    ``ModelName``  |str|      Displays the model saved in a database named "ModelName_ODB". (optional)
    ======================   ====================================================================
 

@@ -13,9 +13,9 @@
    Model="ModelName" should be used. The command will read the model data from folder **ModelName_ODB**. 
     
    ========================= =============================================================
-   ``"nodes"``    |str|       Displays the node tags on the model.
-   ``"elements"`` |str|       Displays the element tags on the model.
-   ``ModelName``  |str|       Displays the model saved in a database named "ModelName_ODB"
+   ``"nodes"``    |str|       Displays the node tags on the model. (optional)
+   ``"elements"`` |str|       Displays the element tags on the model. (optional)
+   ``ModelName``  |str|       Displays the model saved in a database named "ModelName_ODB" (optional)
    ========================= =============================================================
 
  
