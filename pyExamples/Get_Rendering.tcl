@@ -120,7 +120,7 @@ proc createODB {modelName loadCaseName numModes} {
 		
 		for {set mode 1} {$mode <=$numModes} {incr mode} { 
 			set wwa  [lindex $wa [expr $mode-1]]
-			set Ta  [expr 2*$pi/sqrt($wwa)];
+			set Ta  [expr 2*3.1415926535/sqrt($wwa)];
 			puts $fieldperiodFile "$Ta" 
 		}
 		close $fieldperiodFile
