@@ -8,7 +8,7 @@
                                   LocalAxis='y', InputType='stress', skipStart=0, skipEnd=0, rFactor=1, 
 								   outputFrames=0, fps=24, Xbound=[], Ybound=[])
 
-   Animates fibre stress or strain distribution along the Z or Y-axis of a 2D fiber section.
+   Animates fibre stress or strain distribution along the local Z or Y-axis of a 2D fiber section.
    The local axis appears on the x axis, while the fiber response appears on the y axis.
    The animation object should be stored as an variable in order for the animation to run. 
 
