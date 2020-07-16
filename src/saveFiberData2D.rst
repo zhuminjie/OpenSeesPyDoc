@@ -25,6 +25,7 @@ Here is a simple example:
    saveFiberData2D("TwoSpan_Bridge", "Pushover", 101, 2)
 
 The above command will create,
+
 * a folder named **TwoSpan_Bridge_ODB** and a sub-folder named **LoadCaseName** if they are not already there.
 * save fiber response of the section with a tag 2 of element with a tag 101 in the LoadCaseName folder.   
 

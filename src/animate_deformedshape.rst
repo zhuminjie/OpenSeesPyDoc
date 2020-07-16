@@ -6,7 +6,7 @@
 
 .. function:: postprocessing.Get_Rendering.animate_deformedshape(Model='ModelName', LoadCase='LoadCaseName', 
                           dt = dT, <tStart = 0>, <tEnd = 0>, <scale = 10>, fps = 24, FrameInterval = 0, 
-						  skipFrame =1, timeScale = 1, Movie='none')
+						  timeScale = 1, Movie='none')
 
 
    Displays an animation of the deformed structure by reading data from a saved output database. 
@@ -16,6 +16,7 @@
    
    For many larger models, the runtime of the code for each frame likely be larger than the frame interval, this will result in the animation running slower than the target fps.
    **ffmpeg** codecs are required to save the animation as a movie (.mp4).
+
 
 
    ========================  =============================================================================================
