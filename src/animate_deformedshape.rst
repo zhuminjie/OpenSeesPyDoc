@@ -9,8 +9,8 @@
 						  timeScale = 1, Movie='none')
 
 
-   Displays an animation of the deformed structure by reading data from a saved output database. **ffmpeg** codecs are required to
-   save the animation as a movie (.mp4).
+   Displays an animation of the deformed structure by reading data from a saved output database. For large models, the process of creating animation 
+   can take upto a few minutes. **ffmpeg** codecs are required to save the animation as a movie (.mp4).
 
 
    ========================  =============================================================================================
