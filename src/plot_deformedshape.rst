@@ -24,8 +24,8 @@ Examples:
                  Displays the deformedshape of structure by reading data from `TwoSpan_Bridge_ODB` with a sub-folder `Dynamic_GM1` at the last analysis step (default) with a default scale factor of 10.
 
 
-   ``plot_deformedshape(Model="TwoSpan_Bridge", LoadCase="Dynamic_GM1", tstep=20.5, scale=50, overlap="yes")``
-                 Displays the deformedshape of structure by reading data from `TwoSpan_Bridge_ODB` with a sub-folder `Dynamic_GM1` at the analysis time closest to 20.5 sec with a scale factor of 50, overlapped with the original structure shape.
+   ``plot_deformedshape(Model="TwoSpan_Bridge", LoadCase="Dynamic_GM1", tstep=24.0, scale=50, overlap="yes")``
+                 Displays the deformedshape of structure by reading data from `TwoSpan_Bridge_ODB` with a sub-folder `Dynamic_GM1` at the analysis time closest to 24.0 sec with a scale factor of 50, overlapped with the original structure shape.
 
 
 .. image:: /_static/plot_deformedshape_output.png
