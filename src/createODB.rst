@@ -7,6 +7,7 @@
 .. function:: postprocessing.Get_Rendering.createODB(ModelName, <LoadCaseName>, <Nmodes=0>, <deltaT=0.0>, <recorders=[]>)
 
    This command creates an Output Database for the active model with an option to save a specific load case output.
+   The command **must** be called while the model is built, but before the main analysis is run.
    An output database with name ModelName_ODB is created in the current directory with node and element information
    in it. See the example below.
    
