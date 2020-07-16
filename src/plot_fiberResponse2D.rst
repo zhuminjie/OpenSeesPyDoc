@@ -6,7 +6,8 @@
 
 .. function:: postprocessing.Get_Rendering.plot_fiberResponse2D(ModelName, LoadCaseName, element, section, LocalAxis = 'y', InputType = 'stress', tstep = -1)
 
-   Plots fiber output distribution along the Y-axis of the fiber section.
+   Plots the fibre stress or strain distribution along the local Z or Y-axis of a 2D fiber section.
+   The local axis appears on the x axis, while the fiber response appears on the y axis.
 
    ========================  ===============================================================================================================================================================================
    ``ModelName``    |str|     Name of the model to read data from output database, created with `createODB()` command.
