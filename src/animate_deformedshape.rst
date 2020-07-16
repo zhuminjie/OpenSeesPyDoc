@@ -6,7 +6,7 @@
 
 .. function:: postprocessing.Get_Rendering.animate_deformedshape(Model='ModelName', LoadCase='LoadCaseName', 
                           dt = dT, <tStart = 0>, <tEnd = 0>, <scale = 10>, fps = 24, FrameInterval = 0, 
-						  skipFrame =1, timeScale = 1, Movie='none')
+						  timeScale = 1, Movie='none')
 
 
    Displays an animation of the deformed structure by reading data from a saved output database. **ffmpeg** codecs are required to
@@ -22,7 +22,6 @@
    ``scale`` |int|            Scale factor for to display mode shape. (optional, default is 10)
    ``fps`` |int|              The frames per second to be displayed. These values are dubious at best. (optional, The default is 24)
    ``FrameInterval`` |int|    The time interval between frames to be used. The default is 0. (optional)
-   ``skipFrame`` |int|        (optional, default is 1)
    ``timeScale`` |int|        (optional, default is 1)
    ``Movie`` |str|            Name of the movie file in the `LoadCadeName` folder if the user wants to save the animation as .mp4 file. (optional, default is "none")
    ========================  =============================================================================================
