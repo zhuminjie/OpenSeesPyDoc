@@ -4,7 +4,7 @@
  HingeEndpoint
 ===============
 
-.. function:: beamhingeEndpoint(tag,secI,lpI,secJ,lpJ,secE)
+.. function:: beamIntegration('HingeEndpoint',tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
 
    Create a HingeEndpoint beamIntegration object.
