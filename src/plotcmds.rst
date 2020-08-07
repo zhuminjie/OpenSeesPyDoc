@@ -4,7 +4,13 @@
  Postprocessing Commands
 =========================
 
-The source code is maintained by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
+The source code is maintained by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah. A development visualization package `openseespyvis <https://pypi.org/project/openseespyvis/>`_ can be used while waiting for ``openseespy`` to be updated to include the latest visualizationcommands.
+``openseespyvis`` should be used temporarily. OpenSeesPy package should be preferred for stable visualization functions. To install this development package use,
+
+::
+
+  pip install openseespyvis
+
 
 **For Developers** : If you are interested in developing visualization functions and contributing to ``Get_Rendering`` library, please go through :doc:`Plotting_Development_Guide` to understand the existing code. This will be helpful in reducing changes while merging the new codes.
 
@@ -39,6 +45,9 @@ The following two commands are needed to visualize the model, as shown below:
    
    # import OpenSeesPy rendering module
    import openseespy.postprocessing.Get_Rendering as opsplt
+   
+   # if using the development visualization package instead of openseespy
+   import openseespyvis.Get_Rendering as opsplt   
    
    # render the model after defining all the nodes and elements
    opsplt.plot_model()
