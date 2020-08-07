@@ -4,7 +4,7 @@
  Postprocessing Commands
 =========================
 
-The source code is maintained by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah. A development visualization package `openseespyvis <https://pypi.org/project/openseespyvis/>`_ can be used while waiting for ``openseespy`` to be updated to include the latest visualizationcommands.
+The source code is maintained by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah. A development visualization package `openseespyvis <https://pypi.org/project/openseespyvis/>`_ can be used while waiting for ``openseespy`` to be updated to include the latest visualization commands.
 ``openseespyvis`` should be used temporarily. OpenSeesPy package should be preferred for stable visualization functions. To install this development package use,
 
 ::
