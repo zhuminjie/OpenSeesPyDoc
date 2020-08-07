@@ -33,7 +33,7 @@
 * **Version 0.5.4**
 
   * Support Mac
-  * Support Python3.8 on Windows and Linux
+  * Support Python3.7 on Windows and Linux
 
 * **Version 0.5.3**
 

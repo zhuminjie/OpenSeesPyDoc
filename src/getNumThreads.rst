@@ -4,7 +4,7 @@
  getNumthread command
 ======================
 
-.. function:: getNumThread(num)
+.. function:: getNumThreads()
 
    return the total number of threads available
 
