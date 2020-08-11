@@ -38,10 +38,7 @@ The following two commands are needed to visualize the model, as shown below:
    %matplotlib notebook
    
    # import OpenSeesPy rendering module
-   import openseespy.postprocessing.Get_Rendering as opsplt
-   
-   # if using the development visualization package instead of openseespy
-   import openseespyvis.Get_Rendering as opsplt   
+   import openseespy.postprocessing.Get_Rendering as opsplt  
    
    # render the model after defining all the nodes and elements
    opsplt.plot_model()
