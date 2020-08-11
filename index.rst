@@ -20,8 +20,8 @@
 
 .. note::
 
-   Questions including modeling issues and the use of `OpenSeesPy`_,
-   please post on `OpenSeesPy Forum <https://opensees.berkeley.edu/community/viewforum.php?f=12>`_.
+   Questions including modeling issues and the use of OpenSeesPy,
+   please post on `OpenSeesPy Forum <https://opensees.berkeley.edu/community/viewforum.php?f=12>`_ or send issues to `<OpenSeesPy Github <https://github.com/zhuminjie/OpenSeesPy/issues>`_
 
    You are very welcome to contribute to OpenSeesPy with new command
    documents and examples
