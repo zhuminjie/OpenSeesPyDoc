@@ -4,6 +4,16 @@
   Change Log
 ==============
 
+* **Version 3.2.2.3** (8/11/2020)
+
+  * Fix typos in documentation
+  * Add `testNorm` and `testIter` commands
+  * Add Python3.7 and Python 3.8 support
+  * Support latest Anaconda
+  * Improvements of ploting commands
+  * `ShellDKGT` command
+  * Include OpenSees commits upto 380239c on 8/9
+
 * **Version 3.2.2.1** (5/18/2020)
 
   * add gimmeMCK integrator
