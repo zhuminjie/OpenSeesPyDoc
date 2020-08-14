@@ -1,4 +1,4 @@
-.. include:: src/sub.txt
+.. include:: sub.txt
 
 =========================
  Postprocessing Commands
