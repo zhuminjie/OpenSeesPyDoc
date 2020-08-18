@@ -9,3 +9,5 @@
 
 .. autofunction:: plot_extruded_model_rect_section_3d
    :noindex:
+
+See example :ref:`ops_vis_ex2`

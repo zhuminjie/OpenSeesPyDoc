@@ -70,12 +70,22 @@ ops.load(15, 0., -1.)
 ops.analysis('Static')
 ops.analyze(1)
 
+# - plot model
+plt.figure()
+opsv.plot_model()
+plt.axis('equal')
+
+# - plot deformation
+plt.figure()
+opsv.plot_defo()
+# opsv.plot_defo(sfac, unDefoFlag=1, fmtu='g:')
+plt.axis('equal')
+
+# get values at OpenSees nodes
 sig_out = opsv.quad_sig_out_per_node()
 print(f'sig_out:\n{sig_out}')
 
-# ---
-# 2. visu stress map
-# ---
+# - visu stress map
 
 # !!! select from sig_out: e.g. vmises
 # j, jstr = 0, 'sxx'
@@ -89,15 +99,16 @@ j, jstr = 3, 'vmis'
 nds_val = sig_out[:, j]
 # print(f'nds_val:\n{nds_val}')
 
+plt.figure()
 opsv.plot_stress_2d(nds_val)
 
 plt.xlabel('x [m]')
 plt.ylabel('y [m]')
 plt.title(f'{jstr}')
 
-# plt.savefig(f'{kateps}boussinesq_1_{jstr}.png')
+# plt.savefig(f'quads_4x4_{jstr}.png')
 
-# for educational purposes show values at integration points
+# for educational purposes show values at integration points and
 # nodes which can finally be averaged at nodes
 eles_ips_crd, eles_nds_crd, nds_crd, quads_conn = opsv.quad_crds_node_to_ip()
 
@@ -121,7 +132,7 @@ opsv.plot_mesh_with_ips_2d(nds_crd, eles_ips_crd, eles_nds_crd, quads_conn,
 plt.xlabel('x [m]')
 plt.ylabel('y [m]')
 
-# plt.savefig('quad_4x4el_ex1_ips_nds_vals.png')
+# plt.savefig(f'quads_4x4_{jstr}_ips_nds_vals.png')
 
 plt.show()
 

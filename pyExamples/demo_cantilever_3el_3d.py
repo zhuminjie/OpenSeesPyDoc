@@ -1,7 +1,7 @@
-import openseespy.opensees as ops
-import openseespy.postprocessing.ops_vis as opsv
-# import opensees as ops  # local compilation
-# import ops_vis as opsv  # local
+# import openseespy.opensees as ops
+# import openseespy.postprocessing.ops_vis as opsv
+import opensees as ops  # local compilation
+import ops_vis as opsv  # local
 
 import matplotlib.pyplot as plt
 

@@ -3,6 +3,8 @@ import openseespy.postprocessing.ops_vis as opsv
 # import opensees as ops  # local compilation
 # import ops_vis as opsv  # local
 
+import matplotlib.pyplot as plt
+
 ops.wipe()
 ops.model('basic', '-ndm', 2, '-ndf', 3)  # frame 2D
 
@@ -53,7 +55,6 @@ fib_sec_2 = [['section', 'Fiber', 3, '-GJ', 1.0e6],
 
 # opsv.fib_sec_list_to_cmds(fib_sec_2)
 
-# opsv.plot_section('patch_rect', 10, 4, -h/2, -b/2, h/2, b/2)
 matcolor = ['r', 'lightgrey', 'gold', 'w', 'w', 'w']
 opsv.plot_fiber_section(fib_sec_1, matcolor=matcolor)
 plt.axis('equal')
