@@ -90,7 +90,7 @@ To run a test of the pip installation:
    src/reliabilitycmds
    src/parallelcmds
    src/preprocessing
-   src/plotcmds
+   src/postprocessing
    src/examples
 
 
