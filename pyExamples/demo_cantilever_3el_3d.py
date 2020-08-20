@@ -76,13 +76,13 @@ fig_wi_he = 30., 20.
 
 # - 1
 nep = 9
-opsv.plot_defo(sfac, nep, fmtc='b-', az_el=(-68., 39.),
+opsv.plot_defo(sfac, nep, fmt_interp='b-', az_el=(-68., 39.),
                fig_wi_he=fig_wi_he, endDispFlag=0)
 
 plt.title('3d 3-element cantilever beam')
 
 # - 2
-opsv.plot_defo(sfac, 19, fmtc='b-', az_el=(6., 30.),
+opsv.plot_defo(sfac, 19, fmt_interp='b-', az_el=(6., 30.),
                fig_wi_he=fig_wi_he)
 
 plt.title('3d 3-element cantilever beam')
@@ -94,7 +94,7 @@ eigValues = ops.eigen(nfreq)
 modeNo = 6
 
 sfac = 2.0e1
-opsv.plot_mode_shape(modeNo, sfac, 19, fmtc='b-', az_el=(106., 46.),
+opsv.plot_mode_shape(modeNo, sfac, 19, fmt_interp='b-', az_el=(106., 46.),
                      fig_wi_he=fig_wi_he)
 plt.title(f'Mode {modeNo}')
 

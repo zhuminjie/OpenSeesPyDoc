@@ -78,7 +78,7 @@ plt.axis('equal')
 # - plot deformation
 plt.figure()
 opsv.plot_defo()
-# opsv.plot_defo(sfac, unDefoFlag=1, fmtu='g:')
+# opsv.plot_defo(sfac, unDefoFlag=1, fmt_undefo='g:')
 plt.axis('equal')
 
 # get values at OpenSees nodes

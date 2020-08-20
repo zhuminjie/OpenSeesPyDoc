@@ -76,10 +76,10 @@ sfac = 80.
 
 plt.figure()
 # opsv.plot_defo(sfac)
-opsv.plot_defo(sfac, fmtc='b.-')
-opsv.plot_defo(sfac, 5, interpFlag=0, fmte='bo-')
-opsv.plot_defo(sfac, 3, endDispFlag=0, fmtc='r.--')
-opsv.plot_defo(sfac, 2, fmtc='g.-')
+opsv.plot_defo(sfac, fmt_interp='b.-')
+opsv.plot_defo(sfac, 5, interpFlag=0, fmt_nodes='bo-')
+opsv.plot_defo(sfac, 3, endDispFlag=0, fmt_interp='r.--')
+opsv.plot_defo(sfac, 2, fmt_interp='g.-')
 
 # 3. plot N, V, M forces diagrams
 
