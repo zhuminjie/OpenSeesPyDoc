@@ -1,7 +1,7 @@
-.. include:: src/sub.txt
+.. include:: sub.txt
 
 =========================
- Postprocessing Commands
+ Get_Rendering Commands
 =========================
 
 The source code is maintained by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah. 
