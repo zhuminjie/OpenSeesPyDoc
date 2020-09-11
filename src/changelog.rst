@@ -4,6 +4,15 @@
   Change Log
 ==============
 
+* **Version 3.2.2.4** (9/10/2020)
+
+  * Bug fixes in Truss and ForceBeamColumn2d
+  * Adding `ops.__version__` variable
+  * Bug fixes in 3D elastic beam
+  * Bug fixes in Tri31
+  * Adding `ops_vis` module for plotting
+  * OpenSees commit b0f6b06
+
 * **Version 3.2.2.3** (8/11/2020)
 
   * Fix typos in documentation
