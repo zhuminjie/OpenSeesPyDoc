@@ -22,7 +22,7 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import os
 import sys
-sys.path.insert(0, os.path.abspath('./src/ops_vis/.'))
+sys.path.insert(0, os.path.abspath('./src/ops_vis'))
 
 import sphinx_rtd_theme
 
