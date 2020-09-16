@@ -4,6 +4,10 @@
   Change Log
 ==============
 
+* **Version 3.2.2.5** (9/16/2020)
+
+  * Fix a Windows issue for virtual environment
+
 * **Version 3.2.2.4** (9/10/2020)
 
   * Bug fixes in Truss and ForceBeamColumn2d
