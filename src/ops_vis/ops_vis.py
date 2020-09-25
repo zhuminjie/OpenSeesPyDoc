@@ -1,10 +1,14 @@
 # OpenSeesPy visualization module
 
-# Author: Seweryn Kokot
+# Copyright (C) 2020 Seweryn Kokot
 # Faculty of Civil Engineering and Architecture
 # Opole University of Technology, Poland
-# ver. 0.94, 2020 August
-# License: MIT
+# ver. 0.95, 2020 September
+# License: GNU GPL version 3
+
+# plot_fiber_section is inspired by plotSection matlab function
+# written by D. Vamvatsikos available at
+# http://users.ntua.gr/divamva/software.html (plotSection.zip)
 
 # Notes:
 
@@ -58,7 +62,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
 
     nen = np.shape(ops.eleNodes(ele_tags[0]))[0]
 
-    # truss and beam/frame elements
+    # truss and beam/frame elements plot_model
     if nen == 2:
 
         for node_tag in node_tags:
@@ -119,7 +123,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
 
         # plt.axis('equal')
 
-    # 2d triangular (tri31) elements
+    # 2d triangular (tri31) elements plot_model
     elif nen == 3:
 
         for node_tag in node_tags:
@@ -172,7 +176,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
                          ops.nodeCoord(node_tag)[1]+offset_nd_label_y,
                          f'{node_tag}', va=va, ha=ha, color='blue')
 
-    # 2d quadrilateral (quad) elements
+    # 2d quadrilateral (quad) elements plot_model
     elif nen == 4:
 
         for node_tag in node_tags:
@@ -206,6 +210,205 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
 
             # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
             plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'b-', lw=0.4)
+
+            if element_labels:
+                va = 'center'
+                ha = 'center'
+                plt.text(xt, yt, f'{ele_tag}', va=va, ha=ha, color='red')
+
+        if node_labels:
+            for node_tag in node_tags:
+                if not offset_nd_label == 'above':
+                    offset_nd_label_x, offset_nd_label_y = _offnl, _offnl
+                    va = 'bottom'
+                    # va = 'center'
+                    ha = 'left'
+                else:
+                    offset_nd_label_x, offset_nd_label_y = 0.0, _offnl
+                    va = 'bottom'
+                    ha = 'center'
+
+                plt.text(ops.nodeCoord(node_tag)[0]+offset_nd_label_x,
+                         ops.nodeCoord(node_tag)[1]+offset_nd_label_y,
+                         f'{node_tag}', va=va, ha=ha, color='blue')
+
+        plt.axis('equal')
+
+    # 2d quadrilateral (quad8n) elements plot_model
+    elif nen == 8:
+
+        for node_tag in node_tags:
+            x_crd = ops.nodeCoord(node_tag)[0]
+            y_crd = ops.nodeCoord(node_tag)[1]
+            if x_crd > max_x_crd:
+                max_x_crd = x_crd
+            if y_crd > max_y_crd:
+                max_y_crd = y_crd
+
+        max_crd = np.amax([max_x_crd, max_y_crd])
+        _offset = 0.005 * max_crd
+        _offnl = 0.003 * max_crd
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0],
+                           ops.nodeCoord(nd7)[0],
+                           ops.nodeCoord(nd8)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1],
+                           ops.nodeCoord(nd7)[1],
+                           ops.nodeCoord(nd8)[1]])
+
+            # location of label
+            xt = sum(ex)/nen
+            yt = sum(ey)/nen
+
+            # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
+            plt.plot(np.append(ex[:4], ex[0]), np.append(ey[:4], ey[0]), 'b-',
+                     lw=0.4)
+
+            if element_labels:
+                va = 'center'
+                ha = 'center'
+                plt.text(xt, yt, f'{ele_tag}', va=va, ha=ha, color='red')
+
+        if node_labels:
+            for node_tag in node_tags:
+                if not offset_nd_label == 'above':
+                    offset_nd_label_x, offset_nd_label_y = _offnl, _offnl
+                    va = 'bottom'
+                    # va = 'center'
+                    ha = 'left'
+                else:
+                    offset_nd_label_x, offset_nd_label_y = 0.0, _offnl
+                    va = 'bottom'
+                    ha = 'center'
+
+                plt.text(ops.nodeCoord(node_tag)[0]+offset_nd_label_x,
+                         ops.nodeCoord(node_tag)[1]+offset_nd_label_y,
+                         f'{node_tag}', va=va, ha=ha, color='blue')
+
+        plt.axis('equal')
+
+    # 2d quadrilateral (quad9n) elements plot_model
+    elif nen == 9:
+
+        for node_tag in node_tags:
+            x_crd = ops.nodeCoord(node_tag)[0]
+            y_crd = ops.nodeCoord(node_tag)[1]
+            if x_crd > max_x_crd:
+                max_x_crd = x_crd
+            if y_crd > max_y_crd:
+                max_y_crd = y_crd
+
+        max_crd = np.amax([max_x_crd, max_y_crd])
+        _offset = 0.005 * max_crd
+        _offnl = 0.003 * max_crd
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0],
+                           ops.nodeCoord(nd7)[0],
+                           ops.nodeCoord(nd8)[0],
+                           ops.nodeCoord(nd9)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1],
+                           ops.nodeCoord(nd7)[1],
+                           ops.nodeCoord(nd8)[1],
+                           ops.nodeCoord(nd9)[1]])
+
+            # location of label
+            xt = sum(ex)/nen
+            yt = sum(ey)/nen
+
+            # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
+            plt.plot(np.append(ex[:4], ex[0]), np.append(ey[:4], ey[0]), 'b-',
+                     lw=0.4)
+
+            if element_labels:
+                va = 'center'
+                ha = 'center'
+                plt.text(xt, yt, f'{ele_tag}', va=va, ha=ha, color='red')
+
+        if node_labels:
+            for node_tag in node_tags:
+                if not offset_nd_label == 'above':
+                    offset_nd_label_x, offset_nd_label_y = _offnl, _offnl
+                    va = 'bottom'
+                    # va = 'center'
+                    ha = 'left'
+                else:
+                    offset_nd_label_x, offset_nd_label_y = 0.0, _offnl
+                    va = 'bottom'
+                    ha = 'center'
+
+                plt.text(ops.nodeCoord(node_tag)[0]+offset_nd_label_x,
+                         ops.nodeCoord(node_tag)[1]+offset_nd_label_y,
+                         f'{node_tag}', va=va, ha=ha, color='blue')
+
+        plt.axis('equal')
+
+    # 2d triangle (tri6n) elements plot_model
+    elif nen == 6:
+
+        for node_tag in node_tags:
+            x_crd = ops.nodeCoord(node_tag)[0]
+            y_crd = ops.nodeCoord(node_tag)[1]
+            if x_crd > max_x_crd:
+                max_x_crd = x_crd
+            if y_crd > max_y_crd:
+                max_y_crd = y_crd
+
+        max_crd = np.amax([max_x_crd, max_y_crd])
+        _offset = 0.005 * max_crd
+        _offnl = 0.003 * max_crd
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1]])
+
+            # location of label
+            xt = sum(ex)/nen
+            yt = sum(ey)/nen
+
+            # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
+            plt.plot(np.append(ex[:3], ex[0]), np.append(ey[:3], ey[0]), 'b-',
+                     lw=0.4)
 
             if element_labels:
                 va = 'center'
@@ -530,7 +733,8 @@ def plot_model(node_labels=1, element_labels=1, offset_nd_label=False,
 
         axis_off (int): 0 - turn off axes, 1 - display axes; (default: 0)
 
-        az_el (tuple): contains azimuth and elevation for 3d plots
+        az_el (tuple): contains azimuth and elevation for 3d plots. For 2d
+            plots this parameter is neglected.
 
         fig_wi_he (tuple): contains width and height of the figure
 
@@ -538,17 +742,13 @@ def plot_model(node_labels=1, element_labels=1, offset_nd_label=False,
 
     Usage:
 
-    ``plot_()`` - plot deformed shape with default parameters and
-        automatically calcutated scale factor.
+    ``plot_model()`` - plot model with node and element labels.
 
-    ``plot_defo(interpFlag=0)`` - plot displaced nodes without shape
-        function interpolation
+    ``plot_model(node_labels=0, element_labels=0)`` - plot model without node
+    element labels
 
-    ``plot_defo(sfac=1.5)`` - plot with specified scale factor
-
-    ``plot_defo(unDefoFlag=0, endDispFlag=0)`` - plot without showing
-        undeformed (original) mesh and without showing markers at the
-        element ends.
+    ``plot_model(fig_wi_he=(20., 14.))`` - plot model in a window 20 cm long,
+    and 14 cm high.
     """
 
     # az_el - azimut, elevation used for 3d plots only
@@ -585,7 +785,7 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
 
         ndf = np.shape(ops.nodeDOFs(ops.eleNodes(ele_tags[0])[0]))[0]
 
-        # truss element
+        # truss element plot_defo
         if ndf == 2:
 
             for ele_tag in ele_tags:
@@ -617,7 +817,7 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
 
                 plt.plot(edx, edy, fmt_interp)
 
-        # beam/frame element
+        # beam/frame element plot_defo
         elif ndf == 3:
 
             for ele_tag in ele_tags:
@@ -660,7 +860,7 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
         plt.axis('equal')
         # plt.show()  # call this from main py file for more control
 
-    # 2d triangular (tri31) elements
+    # 2d triangular (tri31) elements plot_defo
     elif nen == 3:
         for ele_tag in ele_tags:
             nd1, nd2, nd3 = ops.eleNodes(ele_tag)
@@ -710,7 +910,7 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
 
         plt.axis('equal')
 
-    # 2d quadrilateral (quad) elements
+    # 2d quadrilateral (quad) elements plot_defo
     elif nen == 4:
         for ele_tag in ele_tags:
             nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
@@ -759,6 +959,246 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
             x = ex+sfac*ed[[0, 2, 4, 6]]
             y = ey+sfac*ed[[1, 3, 5, 7]]
             plt.plot(np.append(x, x[0]), np.append(y, y[0]), 'b.-')
+
+        plt.axis('equal')
+
+    # 2d quadrilateral (quad8n) elements plot_defo
+    elif nen == 8:
+        for ele_tag in ele_tags:
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0],
+                           ops.nodeCoord(nd7)[0],
+                           ops.nodeCoord(nd8)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1],
+                           ops.nodeCoord(nd7)[1],
+                           ops.nodeCoord(nd8)[1]])
+
+            if modeNo:
+                ed = np.array([ops.nodeEigenvector(nd1, modeNo)[0],
+                               ops.nodeEigenvector(nd1, modeNo)[1],
+                               ops.nodeEigenvector(nd2, modeNo)[0],
+                               ops.nodeEigenvector(nd2, modeNo)[1],
+                               ops.nodeEigenvector(nd3, modeNo)[0],
+                               ops.nodeEigenvector(nd3, modeNo)[1],
+                               ops.nodeEigenvector(nd4, modeNo)[0],
+                               ops.nodeEigenvector(nd4, modeNo)[1],
+                               ops.nodeEigenvector(nd5, modeNo)[0],
+                               ops.nodeEigenvector(nd5, modeNo)[1],
+                               ops.nodeEigenvector(nd6, modeNo)[0],
+                               ops.nodeEigenvector(nd6, modeNo)[1],
+                               ops.nodeEigenvector(nd7, modeNo)[0],
+                               ops.nodeEigenvector(nd7, modeNo)[1],
+                               ops.nodeEigenvector(nd8, modeNo)[0],
+                               ops.nodeEigenvector(nd8, modeNo)[1]])
+            else:
+                ed = np.array([ops.nodeDisp(nd1)[0],
+                               ops.nodeDisp(nd1)[1],
+                               ops.nodeDisp(nd2)[0],
+                               ops.nodeDisp(nd2)[1],
+                               ops.nodeDisp(nd3)[0],
+                               ops.nodeDisp(nd3)[1],
+                               ops.nodeDisp(nd4)[0],
+                               ops.nodeDisp(nd4)[1],
+                               ops.nodeDisp(nd5)[0],
+                               ops.nodeDisp(nd5)[1],
+                               ops.nodeDisp(nd6)[0],
+                               ops.nodeDisp(nd6)[1],
+                               ops.nodeDisp(nd7)[0],
+                               ops.nodeDisp(nd7)[1],
+                               ops.nodeDisp(nd8)[0],
+                               ops.nodeDisp(nd8)[1]])
+
+            if unDefoFlag:
+                plt.plot(np.array([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
+                                   ex[3], ex[7], ex[0]]),
+                         np.array([ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
+                                   ey[3], ey[7], ey[0]]),
+                         fmt_undefo)
+
+            # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
+            # xdi, ydi = beam_disp_ends(ex, ey, ed, sfac)
+            # # interpolated displacement field
+            # plt.plot(xcdi, ycdi, 'b.-')
+            # # translations of ends only
+            # plt.plot(xdi, ydi, 'ro')
+
+            # test it with one element
+            x = ex+sfac*ed[[0, 2, 4, 6, 8, 10, 12, 14]]
+            y = ey+sfac*ed[[1, 3, 5, 7, 9, 11, 13, 15]]
+            plt.plot(np.array([x[0], x[4], x[1], x[5], x[2], x[6],
+                               x[3], x[7], x[0]]),
+                     np.array([y[0], y[4], y[1], y[5], y[2], y[6],
+                               y[3], y[7], y[0]]), 'b.-')
+
+        plt.axis('equal')
+
+    # 2d quadrilateral (quad9n) elements plot_defo
+    elif nen == 9:
+        for ele_tag in ele_tags:
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0],
+                           ops.nodeCoord(nd7)[0],
+                           ops.nodeCoord(nd8)[0],
+                           ops.nodeCoord(nd9)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1],
+                           ops.nodeCoord(nd7)[1],
+                           ops.nodeCoord(nd8)[1],
+                           ops.nodeCoord(nd9)[1]])
+
+            if modeNo:
+                ed = np.array([ops.nodeEigenvector(nd1, modeNo)[0],
+                               ops.nodeEigenvector(nd1, modeNo)[1],
+                               ops.nodeEigenvector(nd2, modeNo)[0],
+                               ops.nodeEigenvector(nd2, modeNo)[1],
+                               ops.nodeEigenvector(nd3, modeNo)[0],
+                               ops.nodeEigenvector(nd3, modeNo)[1],
+                               ops.nodeEigenvector(nd4, modeNo)[0],
+                               ops.nodeEigenvector(nd4, modeNo)[1],
+                               ops.nodeEigenvector(nd5, modeNo)[0],
+                               ops.nodeEigenvector(nd5, modeNo)[1],
+                               ops.nodeEigenvector(nd6, modeNo)[0],
+                               ops.nodeEigenvector(nd6, modeNo)[1],
+                               ops.nodeEigenvector(nd7, modeNo)[0],
+                               ops.nodeEigenvector(nd7, modeNo)[1],
+                               ops.nodeEigenvector(nd8, modeNo)[0],
+                               ops.nodeEigenvector(nd8, modeNo)[1],
+                               ops.nodeEigenvector(nd9, modeNo)[0],
+                               ops.nodeEigenvector(nd9, modeNo)[1]])
+            else:
+                ed = np.array([ops.nodeDisp(nd1)[0],
+                               ops.nodeDisp(nd1)[1],
+                               ops.nodeDisp(nd2)[0],
+                               ops.nodeDisp(nd2)[1],
+                               ops.nodeDisp(nd3)[0],
+                               ops.nodeDisp(nd3)[1],
+                               ops.nodeDisp(nd4)[0],
+                               ops.nodeDisp(nd4)[1],
+                               ops.nodeDisp(nd5)[0],
+                               ops.nodeDisp(nd5)[1],
+                               ops.nodeDisp(nd6)[0],
+                               ops.nodeDisp(nd6)[1],
+                               ops.nodeDisp(nd7)[0],
+                               ops.nodeDisp(nd7)[1],
+                               ops.nodeDisp(nd8)[0],
+                               ops.nodeDisp(nd8)[1],
+                               ops.nodeDisp(nd9)[0],
+                               ops.nodeDisp(nd9)[1]])
+
+            if unDefoFlag:
+                plt.plot(np.array([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
+                                   ex[3], ex[7], ex[0]]),
+                         np.array([ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
+                                   ey[3], ey[7], ey[0]]),
+                         fmt_undefo)
+
+            # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
+            # xdi, ydi = beam_disp_ends(ex, ey, ed, sfac)
+            # # interpolated displacement field
+            # plt.plot(xcdi, ycdi, 'b.-')
+            # # translations of ends only
+            # plt.plot(xdi, ydi, 'ro')
+
+            # test it with one element
+            x = ex+sfac*ed[[0, 2, 4, 6, 8, 10, 12, 14, 16]]
+            y = ey+sfac*ed[[1, 3, 5, 7, 9, 11, 13, 15, 17]]
+            plt.plot(np.array([x[0], x[4], x[1], x[5], x[2], x[6],
+                               x[3], x[7], x[0]]),
+                     np.array([y[0], y[4], y[1], y[5], y[2], y[6],
+                               y[3], y[7], y[0]]), 'b.-')
+
+        plt.axis('equal')
+
+    # 2d triangle (tri6n) elements plot_defo
+    elif nen == 6:
+        for ele_tag in ele_tags:
+            nd1, nd2, nd3, nd4, nd5, nd6 = ops.eleNodes(ele_tag)
+
+            # element x, y coordinates
+            ex = np.array([ops.nodeCoord(nd1)[0],
+                           ops.nodeCoord(nd2)[0],
+                           ops.nodeCoord(nd3)[0],
+                           ops.nodeCoord(nd4)[0],
+                           ops.nodeCoord(nd5)[0],
+                           ops.nodeCoord(nd6)[0]])
+            ey = np.array([ops.nodeCoord(nd1)[1],
+                           ops.nodeCoord(nd2)[1],
+                           ops.nodeCoord(nd3)[1],
+                           ops.nodeCoord(nd4)[1],
+                           ops.nodeCoord(nd5)[1],
+                           ops.nodeCoord(nd6)[1]])
+
+            if modeNo:
+                ed = np.array([ops.nodeEigenvector(nd1, modeNo)[0],
+                               ops.nodeEigenvector(nd1, modeNo)[1],
+                               ops.nodeEigenvector(nd2, modeNo)[0],
+                               ops.nodeEigenvector(nd2, modeNo)[1],
+                               ops.nodeEigenvector(nd3, modeNo)[0],
+                               ops.nodeEigenvector(nd3, modeNo)[1],
+                               ops.nodeEigenvector(nd4, modeNo)[0],
+                               ops.nodeEigenvector(nd4, modeNo)[1],
+                               ops.nodeEigenvector(nd5, modeNo)[0],
+                               ops.nodeEigenvector(nd5, modeNo)[1],
+                               ops.nodeEigenvector(nd6, modeNo)[0],
+                               ops.nodeEigenvector(nd6, modeNo)[1]])
+            else:
+                ed = np.array([ops.nodeDisp(nd1)[0],
+                               ops.nodeDisp(nd1)[1],
+                               ops.nodeDisp(nd2)[0],
+                               ops.nodeDisp(nd2)[1],
+                               ops.nodeDisp(nd3)[0],
+                               ops.nodeDisp(nd3)[1],
+                               ops.nodeDisp(nd4)[0],
+                               ops.nodeDisp(nd4)[1],
+                               ops.nodeDisp(nd5)[0],
+                               ops.nodeDisp(nd5)[1],
+                               ops.nodeDisp(nd6)[0],
+                               ops.nodeDisp(nd6)[1]])
+
+            if unDefoFlag:
+                plt.plot(np.array([ex[0], ex[3], ex[1], ex[4], ex[2], ex[5],
+                                   ex[0]]),
+                         np.array([ey[0], ey[3], ey[1], ey[4], ey[2], ey[5],
+                                   ey[0]]),
+                         fmt_undefo)
+
+            # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
+            # xdi, ydi = beam_disp_ends(ex, ey, ed, sfac)
+            # # interpolated displacement field
+            # plt.plot(xcdi, ycdi, 'b.-')
+            # # translations of ends only
+            # plt.plot(xdi, ydi, 'ro')
+
+            # test it with one element
+            x = ex+sfac*ed[[0, 2, 4, 6, 8, 10]]
+            y = ey+sfac*ed[[1, 3, 5, 7, 9, 11]]
+            plt.plot(np.array([x[0], x[3], x[1], x[4], x[2], x[5],
+                               x[0]]),
+                     np.array([y[0], y[3], y[1], y[4], y[2], y[5],
+                               y[0]]), 'b.-')
 
         plt.axis('equal')
 
@@ -1781,9 +2221,6 @@ def beam_disp_ends3d(ex, ey, ez, d, sfac):
     return exd, eyd, ezd
 
 
-# plot_fiber_section is inspired by Matlab ``plotSection.zip``
-# written by D. Vamvatsikos available at
-# http://users.ntua.gr/divamva/software.html
 def plot_fiber_section(fib_sec_list, fillflag=1,
                        matcolor=['y', 'b', 'r', 'g', 'm', 'k']):
     """Plot fiber cross-section.
@@ -1810,7 +2247,7 @@ def plot_fiber_section(fib_sec_list, fillflag=1,
             matcolor = ['r', 'lightgrey', 'gold', 'w', 'w', 'w']
             opsv.plot_fiber_section(fib_sec_1, matcolor=matcolor)
             plt.axis('equal')
-            # plt.savefig(f'{kateps}fibsec_rc.png')
+            # plt.savefig('fibsec_rc.png')
             plt.show()
 
     Notes:
@@ -2587,8 +3024,13 @@ def section_force_diagram_3d(sf_type, Ew, sfac=1., nep=17,
     return minVal, maxVal
 
 
-def quad_sig_out_per_node():
+def sig_out_per_node_quad():
     """Return a 2d numpy array of stress components per OpenSees node.
+
+    Three first stress components (sxx, syy, sxy) are calculated and
+    extracted from OpenSees, while the rest svm (Huber-Mieses-Hencky),
+    two principal stresses (s1, s2) and directional angle are calculated
+    as postprocessed quantities.
 
     Returns:
         sig_out (ndarray): a 2d array of stress components per node with
@@ -2596,7 +3038,7 @@ def quad_sig_out_per_node():
             Size (n_nodes x 7).
 
     Examples:
-        sig_out = opsv.quad_sig_out_per_node()
+        sig_out = opsv.sig_out_per_node_quad()
 
     Notes:
        s1, s2: principal stresses
@@ -2626,7 +3068,7 @@ def quad_sig_out_per_node():
                               sig_ip_el[3:6],
                               sig_ip_el[6:9],
                               sig_ip_el[9:12]]))
-        sigM_nd = quad_extrapolate_ip_to_node(sigM_ip)
+        sigM_nd = extrapolate_ip_to_node_quad(sigM_ip)
         # sxx
         sig_out[ind1, 0] += sigM_nd[0, 0]
         sig_out[ind2, 0] += sigM_nd[1, 0]
@@ -2664,7 +3106,243 @@ def quad_sig_out_per_node():
     return sig_out
 
 
-def quad_extrapolate_ip_to_node(yip):
+def sig_out_per_node_quad9n():
+    """Return a 2d numpy array of stress components per OpenSees node.
+
+    Three first stress components (sxx, syy, sxy) are calculated and
+    extracted from OpenSees, while the rest svm (Huber-Mieses-Hencky),
+    two principal stresses (s1, s2) and directional angle are calculated
+    as postprocessed quantities.
+
+    Returns:
+        sig_out (ndarray): a 2d array of stress components per node with
+            the following components: sxx, syy, sxy, svm, s1, s2, angle.
+            Size (n_nodes x 7).
+
+    Examples:
+        sig_out = opsv.sig_out_per_node_quad()
+
+    Notes:
+       s1, s2: principal stresses
+       angle: angle of the principal stress s1
+    """
+    ele_tags = ops.getEleTags()
+    node_tags = ops.getNodeTags()
+    n_nodes = len(node_tags)
+
+    # initialize helper arrays
+    sig_out = np.zeros((n_nodes, 7))
+
+    nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
+    nodes_tag_count[:, 0] = node_tags
+
+    for i, ele_tag in enumerate(ele_tags):
+        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
+
+        ind1 = node_tags.index(nd1)
+        ind2 = node_tags.index(nd2)
+        ind3 = node_tags.index(nd3)
+        ind4 = node_tags.index(nd4)
+        ind5 = node_tags.index(nd5)
+        ind6 = node_tags.index(nd6)
+        ind7 = node_tags.index(nd7)
+        ind8 = node_tags.index(nd8)
+        ind9 = node_tags.index(nd9)
+        nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8, ind9],
+                        1] += 1
+
+        sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+        sigM_ip = np.vstack(([sig_ip_el[0:3],
+                              sig_ip_el[3:6],
+                              sig_ip_el[6:9],
+                              sig_ip_el[9:12],
+                              sig_ip_el[12:15],
+                              sig_ip_el[15:18],
+                              sig_ip_el[18:21],
+                              sig_ip_el[21:24],
+                              sig_ip_el[24:27]]))
+        sigM_nd = extrapolate_ip_to_node_quad9n(sigM_ip)
+        # sxx
+        sig_out[ind1, 0] += sigM_nd[0, 0]
+        sig_out[ind2, 0] += sigM_nd[1, 0]
+        sig_out[ind3, 0] += sigM_nd[2, 0]
+        sig_out[ind4, 0] += sigM_nd[3, 0]
+        sig_out[ind5, 0] += sigM_nd[4, 0]
+        sig_out[ind6, 0] += sigM_nd[5, 0]
+        sig_out[ind7, 0] += sigM_nd[6, 0]
+        sig_out[ind8, 0] += sigM_nd[7, 0]
+        sig_out[ind9, 0] += sigM_nd[8, 0]
+        # syy
+        sig_out[ind1, 1] += sigM_nd[0, 1]
+        sig_out[ind2, 1] += sigM_nd[1, 1]
+        sig_out[ind3, 1] += sigM_nd[2, 1]
+        sig_out[ind4, 1] += sigM_nd[3, 1]
+        sig_out[ind5, 1] += sigM_nd[4, 1]
+        sig_out[ind6, 1] += sigM_nd[5, 1]
+        sig_out[ind7, 1] += sigM_nd[6, 1]
+        sig_out[ind8, 1] += sigM_nd[7, 1]
+        sig_out[ind9, 1] += sigM_nd[8, 1]
+        # sxy
+        sig_out[ind1, 2] += sigM_nd[0, 2]
+        sig_out[ind2, 2] += sigM_nd[1, 2]
+        sig_out[ind3, 2] += sigM_nd[2, 2]
+        sig_out[ind4, 2] += sigM_nd[3, 2]
+        sig_out[ind5, 2] += sigM_nd[4, 2]
+        sig_out[ind6, 2] += sigM_nd[5, 2]
+        sig_out[ind7, 2] += sigM_nd[6, 2]
+        sig_out[ind8, 2] += sigM_nd[7, 2]
+        sig_out[ind9, 2] += sigM_nd[8, 2]
+
+    indxs, = np.where(nodes_tag_count[:, 1] > 1)
+
+    # n_indxs < n_nodes: e.g. 21<25 (bous), 2<6 (2el) etc.
+    n_indxs = np.shape(indxs)[0]
+
+    # divide summed stresses by the number of common nodes
+    sig_out[indxs, :] = \
+        sig_out[indxs, :]/nodes_tag_count[indxs, 1].reshape(n_indxs, 1)
+
+    # warning reshape from (pts,ncomp) to (ncomp,pts)
+    vm_out = vm_stress(np.transpose(sig_out[:, :3]))
+
+    sig_out[:, 3] = vm_out
+
+    princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
+
+    sig_out[:, 4:7] = np.transpose(princ_sig_out)
+
+    return sig_out
+
+
+def sig_out_per_node_quad8n():
+    """Return a 2d numpy array of stress components per OpenSees node.
+
+    Three first stress components (sxx, syy, sxy) are calculated and
+    extracted from OpenSees, while the rest svm (Huber-Mieses-Hencky),
+    two principal stresses (s1, s2) and directional angle are calculated
+    as postprocessed quantities.
+
+    Returns:
+        sig_out (ndarray): a 2d array of stress components per node with
+            the following components: sxx, syy, sxy, svm, s1, s2, angle.
+            Size (n_nodes x 7).
+
+    Examples:
+        sig_out = opsv.sig_out_per_node_quad()
+
+    Notes:
+       s1, s2: principal stresses
+       angle: angle of the principal stress s1
+    """
+    ele_tags = ops.getEleTags()
+    node_tags = ops.getNodeTags()
+    n_nodes = len(node_tags)
+
+    # initialize helper arrays
+    sig_out = np.zeros((n_nodes, 7))
+
+    nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
+    nodes_tag_count[:, 0] = node_tags
+
+    for i, ele_tag in enumerate(ele_tags):
+        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+
+        ind1 = node_tags.index(nd1)
+        ind2 = node_tags.index(nd2)
+        ind3 = node_tags.index(nd3)
+        ind4 = node_tags.index(nd4)
+        ind5 = node_tags.index(nd5)
+        ind6 = node_tags.index(nd6)
+        ind7 = node_tags.index(nd7)
+        ind8 = node_tags.index(nd8)
+        nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8],
+                        1] += 1
+
+        sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+        sigM_ip = np.vstack(([sig_ip_el[0:3],
+                              sig_ip_el[3:6],
+                              sig_ip_el[6:9],
+                              sig_ip_el[9:12],
+                              sig_ip_el[12:15],
+                              sig_ip_el[15:18],
+                              sig_ip_el[18:21],
+                              sig_ip_el[21:24],
+                              sig_ip_el[24:27]]))
+        sigM_nd = extrapolate_ip_to_node_quad8n(sigM_ip)
+        # sxx
+        sig_out[ind1, 0] += sigM_nd[0, 0]
+        sig_out[ind2, 0] += sigM_nd[1, 0]
+        sig_out[ind3, 0] += sigM_nd[2, 0]
+        sig_out[ind4, 0] += sigM_nd[3, 0]
+        sig_out[ind5, 0] += sigM_nd[4, 0]
+        sig_out[ind6, 0] += sigM_nd[5, 0]
+        sig_out[ind7, 0] += sigM_nd[6, 0]
+        sig_out[ind8, 0] += sigM_nd[7, 0]
+        # syy
+        sig_out[ind1, 1] += sigM_nd[0, 1]
+        sig_out[ind2, 1] += sigM_nd[1, 1]
+        sig_out[ind3, 1] += sigM_nd[2, 1]
+        sig_out[ind4, 1] += sigM_nd[3, 1]
+        sig_out[ind5, 1] += sigM_nd[4, 1]
+        sig_out[ind6, 1] += sigM_nd[5, 1]
+        sig_out[ind7, 1] += sigM_nd[6, 1]
+        sig_out[ind8, 1] += sigM_nd[7, 1]
+        # sxy
+        sig_out[ind1, 2] += sigM_nd[0, 2]
+        sig_out[ind2, 2] += sigM_nd[1, 2]
+        sig_out[ind3, 2] += sigM_nd[2, 2]
+        sig_out[ind4, 2] += sigM_nd[3, 2]
+        sig_out[ind5, 2] += sigM_nd[4, 2]
+        sig_out[ind6, 2] += sigM_nd[5, 2]
+        sig_out[ind7, 2] += sigM_nd[6, 2]
+        sig_out[ind8, 2] += sigM_nd[7, 2]
+
+    indxs, = np.where(nodes_tag_count[:, 1] > 1)
+
+    # n_indxs < n_nodes: e.g. 21<25 (bous), 2<6 (2el) etc.
+    n_indxs = np.shape(indxs)[0]
+
+    # divide summed stresses by the number of common nodes
+    sig_out[indxs, :] = \
+        sig_out[indxs, :]/nodes_tag_count[indxs, 1].reshape(n_indxs, 1)
+
+    # warning reshape from (pts,ncomp) to (ncomp,pts)
+    vm_out = vm_stress(np.transpose(sig_out[:, :3]))
+
+    sig_out[:, 3] = vm_out
+
+    princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
+
+    sig_out[:, 4:7] = np.transpose(princ_sig_out)
+
+    return sig_out
+
+
+def extrapolate_ip_to_node_tri6n(yip):
+    """Exprapolate from 3 integration points to 6 nodes of a tri6n element.
+
+    The integration points are at (2/3, 1/6), (1/6, 2/3), (1/6, 1/6).
+    Other possible 3 Gauss points are (1/2, 1/2), (1/2, 0), (0, 1/2).
+
+    Integration points of Gauss quadrature.
+    Usefull for : stress components (sxx, syy, sxy)
+
+    yip - either a single vector (6,) or array (6,3) /sxx syy sxy/
+          or array (6, n)
+    """
+
+    W = np.array([[1.6666666666666667, -0.3333333333333333, -0.3333333333333333],  # noqa: E501
+                  [-0.3333333333333333,  1.6666666666666667, -0.3333333333333333],  # noqa: E501
+                  [-0.3333333333333333, -0.3333333333333333,  1.6666666666666667],  # noqa: E501
+                  [0.6666666666666667,  0.6666666666666667, -0.3333333333333333],  # noqa: E501
+                  [-0.3333333333333333,  0.6666666666666667,  0.6666666666666667],  # noqa: E501
+                  [0.6666666666666667, -0.3333333333333333,  0.6666666666666667]])  # noqa: E501
+    ynp = W @ yip
+
+    return ynp
+
+
+def extrapolate_ip_to_node_quad(yip):
     """
     Exprapolate values at 4 integration points to 4 nodes of a quad element.
 
@@ -2676,16 +3354,16 @@ def quad_extrapolate_ip_to_node(yip):
     """
 
     xep = np.sqrt(3.)/2
-    X = np.array([[1.+xep, -1/2., 1.-xep, -1/2.],
+    W = np.array([[1.+xep, -1/2., 1.-xep, -1/2.],
                   [-1/2., 1.+xep, -1/2., 1.-xep],
                   [1.-xep, -1/2., 1.+xep, -1/2.],
                   [-1/2., 1.-xep, -1/2., 1.+xep]])
 
-    ynp = X @ yip
+    ynp = W @ yip
     return ynp
 
 
-def quad_9n_extrapolate_ip_to_node(yip):
+def extrapolate_ip_to_node_quad9n(yip):
     """
     Exprapolate values at 9 integration points to 9 nodes of a quad element.
 
@@ -2696,96 +3374,23 @@ def quad_9n_extrapolate_ip_to_node(yip):
           or array (4, n)
     """
 
-    a = 1./np.sqrt(0.6)
-    a10 = 1 - a*a
-    a9 = a10 * a10
-    a11, a12 = 1 + a, 1 - a
-    a1, a2, a3 = a11 * a11, a11 * a12, a12 * a12
-    a4, a5 = a10 * a11, a10 * a12
+    W = np.array([[2.1869398183909485, 0.2777777777777778, 0.0352824038312731, 0.2777777777777778, -0.9858870384674904, -0.1252240726436203, -0.1252240726436203, -0.9858870384674904, 0.4444444444444444],  # noqa: E501
+                  [0.2777777777777778, 2.1869398183909485, 0.2777777777777778, 0.0352824038312731, -0.9858870384674904, -0.9858870384674904, -0.1252240726436203, -0.1252240726436203, 0.4444444444444444],  # noqa: E501
+                  [0.0352824038312731, 0.2777777777777778, 2.1869398183909485, 0.2777777777777778, -0.1252240726436203, -0.9858870384674904, -0.9858870384674904, -0.1252240726436203, 0.4444444444444444],  # noqa: E501
+                  [0.2777777777777778, 0.0352824038312731, 0.2777777777777778, 2.1869398183909485, -0.1252240726436203, -0.1252240726436203, -0.9858870384674904, -0.9858870384674904, 0.4444444444444444],  # noqa: E501
+                  [0., 0., 0., 0., 1.4788305577012359, 0., 0.1878361089654305, 0., -0.6666666666666667],  # noqa: E501
+                  [0., 0., 0., 0., 0., 1.4788305577012359, 0., 0.1878361089654305, -0.6666666666666667],  # noqa: E501
+                  [0., 0., 0., 0., 0.1878361089654305, 0., 1.4788305577012359, 0., -0.6666666666666667],  # noqa: E501
+                  [0., 0., 0., 0., 0., 0.1878361089654305, 0., 1.4788305577012359, -0.6666666666666667],  # noqa: E501
+                  [0., 0., 0., 0., 0., 0., 0., 0., 1.]])
 
-    # 1
-    n5, n6, n7, n8 = a4/2-a9/2, a5/2-a9/2, a5/2-a9/2, a4/2-a9/2
-    n1 = a1/4 - (n8 + n5)/2 - a9/4
-    n2 = a2/4 - (n5 + n6)/2 - a9/4
-    n3 = a3/4 - (n6 + n7)/2 - a9/4
-    n4 = a2/4 - (n7 + n8)/2 - a9/4
-
-    r1 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a9])
-
-    # 2
-    n5, n6, n7, n8 = a4/2-a9/2, a4/2-a9/2, a5/2-a9/2, a5/2-a9/2
-    n1 = a2/4 - (n8 + n5)/2 - a9/4
-    n2 = a1/4 - (n5 + n6)/2 - a9/4
-    n3 = a2/4 - (n6 + n7)/2 - a9/4
-    n4 = a3/4 - (n7 + n8)/2 - a9/4
-
-    r2 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a9])
-
-    # 3
-    n5, n6, n7, n8 = a5/2-a9/2, a4/2-a9/2, a4/2-a9/2, a5/2-a9/2
-    n1 = a3/4 - (n8 + n5)/2 - a9/4
-    n2 = a2/4 - (n5 + n6)/2 - a9/4
-    n3 = a1/4 - (n6 + n7)/2 - a9/4
-    n4 = a2/4 - (n7 + n8)/2 - a9/4
-
-    r3 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a9])
-
-    # 4
-    n5, n6, n7, n8 = a5/2-a9/2, a5/2-a9/2, a4/2-a9/2, a4/2-a9/2
-    n1 = a2/4 - (n8 + n5)/2 - a9/4
-    n2 = a3/4 - (n5 + n6)/2 - a9/4
-    n3 = a2/4 - (n6 + n7)/2 - a9/4
-    n4 = a1/4 - (n7 + n8)/2 - a9/4
-
-    r4 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a9])
-
-    # 5
-    n5, n6, n7, n8 = a11/2-a10/2, a10/2-a10/2, a12/2-a10/2, a10/2-a10/2
-    n1 = a11/4 - (n8 + n5)/2 - a10/4
-    n2 = a11/4 - (n5 + n6)/2 - a10/4
-    n3 = a12/4 - (n6 + n7)/2 - a10/4
-    n4 = a12/4 - (n7 + n8)/2 - a10/4
-
-    r5 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a10])
-
-    # 6
-    n5, n6, n7, n8 = a10/2-a10/2, a11/2-a10/2, a10/2-a10/2, a12/2-a10/2
-    n1 = a12/4 - (n8 + n5)/2 - a10/4
-    n2 = a11/4 - (n5 + n6)/2 - a10/4
-    n3 = a11/4 - (n6 + n7)/2 - a10/4
-    n4 = a12/4 - (n7 + n8)/2 - a10/4
-
-    r6 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a10])
-
-    # 7
-    n5, n6, n7, n8 = a12/2-a10/2, a10/2-a10/2, a11/2-a10/2, a10/2-a10/2
-    n1 = a12/4 - (n8 + n5)/2 - a10/4
-    n2 = a12/4 - (n5 + n6)/2 - a10/4
-    n3 = a11/4 - (n6 + n7)/2 - a10/4
-    n4 = a11/4 - (n7 + n8)/2 - a10/4
-
-    r7 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a10])
-
-    # 8
-    n5, n6, n7, n8 = a10/2-a10/2, a12/2-a10/2, a10/2-a10/2, a11/2-a10/2
-    n1 = a11/4 - (n8 + n5)/2 - a10/4
-    n2 = a12/4 - (n5 + n6)/2 - a10/4
-    n3 = a12/4 - (n6 + n7)/2 - a10/4
-    n4 = a11/4 - (n7 + n8)/2 - a10/4
-
-    r8 = np.array([n1, n2, n3, n4, n5, n6, n7, n8, a10])
-
-    r9 = np.array([0., 0., 0., 0., 0., 0., 0., 0., 1.])
-
-    X = np.vstack((r1, r2, r3, r4, r5, r6, r7, r8, r9))
-
-    ynp = X @ yip
+    ynp = W @ yip
     # ynp = 1.0
 
     return ynp
 
 
-def quad_8n_extrapolate_ip_to_node(yip):
+def extrapolate_ip_to_node_quad8n(yip):
     """
     Exprapolate values at 8 integration points to 8 nodes of a quad element.
 
@@ -2796,23 +3401,16 @@ def quad_8n_extrapolate_ip_to_node(yip):
           or array (4, n)
     """
 
-    a = 1./np.sqrt(0.6)
-    a0 = 1 - a**2
-    a4, a5 = -(1-a)**2*(1+2*a)/4, -(1+a)**2*(1-2*a)/4
-    a7 = -a0/4
-    a11, a12 = a0*(1+a)/2, a0*(1-a)/2
-    a1, a2, a3 = (1+a)/2, (1-a)/2, (1-a**2)/2
+    W = np.array([[2.0758287072798374, 0.1666666666666666, -0.075828707279838,  0.1666666666666666, -0.7636648162452683, 0.0969981495786018, 0.0969981495786018, -0.7636648162452683, 0.],  # noqa: E501
+                  [0.1666666666666666, 2.0758287072798374, 0.1666666666666666, -0.075828707279838, -0.7636648162452683, -0.7636648162452683, 0.0969981495786018, 0.0969981495786018, 0.],  # noqa: E501
+                  [-0.075828707279838,  0.1666666666666666, 2.0758287072798374, 0.1666666666666666, 0.0969981495786018, -0.7636648162452683, -0.7636648162452683, 0.0969981495786018, 0.],  # noqa: E501
+                  [0.1666666666666666, -0.075828707279838,  0.1666666666666666, 2.0758287072798374, 0.0969981495786018, 0.0969981495786018, -0.7636648162452683, -0.7636648162452683, 0.],  # noqa: E501
+                  [0.1666666666666666, 0.1666666666666666, 0.1666666666666666, 0.1666666666666666, 1.1454972243679027, -0.3333333333333333, -0.1454972243679028, -0.3333333333333333, 0.],  # noqa: E501
+                  [0.1666666666666666, 0.1666666666666666, 0.1666666666666666, 0.1666666666666666, -0.3333333333333333, 1.1454972243679027, -0.3333333333333333, -0.1454972243679028, 0.],  # noqa: E501
+                  [0.1666666666666666, 0.1666666666666666, 0.1666666666666666, 0.1666666666666666, -0.1454972243679028, -0.3333333333333333, 1.1454972243679027, -0.3333333333333333, 0.],  # noqa: E501
+                  [0.1666666666666666, 0.1666666666666666, 0.1666666666666666, 0.1666666666666666, -0.3333333333333333, -0.1454972243679028, -0.3333333333333333, 1.1454972243679027, 0.]])  # noqa: E501
 
-    X = np.array([[a5, a7, a4, a7, a11, a12, a12, a11],
-                  [a7, a5, a7, a4, a11, a11, a12, a12],
-                  [a4, a7, a5, a7, a12, a11, a11, a12],
-                  [a7, a4, a7, a5, a12, a12, a11, a11],
-                  [a7, a7, a7, a7, a1, a3, a2, a3],
-                  [a7, a7, a7, a7, a3, a1, a3, a2],
-                  [a7, a7, a7, a7, a2, a3, a1, a3],
-                  [a7, a7, a7, a7, a3, a2, a3, a1]])
-
-    ynp = X @ yip
+    ynp = W @ yip
     # ynp = 1.0
 
     return ynp
@@ -2831,12 +3429,12 @@ def quad_interpolate_node_to_ip(ynp):
     jsz = 1./6.
     jtr = 1./3.
     p2 = jsz * np.sqrt(3.)
-    X = np.array([[jtr+p2, jsz, jtr-p2, jsz],
+    W = np.array([[jtr+p2, jsz, jtr-p2, jsz],
                   [jsz, jtr+p2, jsz, jtr-p2],
                   [jtr-p2, jsz, jtr+p2, jsz],
                   [jsz, jtr-p2, jsz, jtr+p2]])
 
-    yip = X @ ynp
+    yip = W @ ynp
     return yip
 
 
@@ -2960,7 +3558,7 @@ def quad_sig_out_per_ele():
                               sig_ip_el[3:6],
                               sig_ip_el[6:9],
                               sig_ip_el[9:12]]))
-        sigM_nd = quad_extrapolate_ip_to_node(sigM_ip)
+        sigM_nd = extrapolate_ip_to_node_quad(sigM_ip)
         eles_ips_sig_out[i, :, :3] = sigM_ip
         eles_nds_sig_out[i, :, :3] = sigM_nd
 
@@ -3032,23 +3630,51 @@ def plot_mesh_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
         plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
 
 
-def plot_stress_2d(nds_val, mesh_outline=1, cmap='jet'):
+def plot_mesh_9n_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
+    """
+    Plot 2d mesh (quads or triangles) outline.
+    """
+    for ele_conn in eles_conn:
+        x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
+                     ele_conn[0]], 0]
+        y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
+                     ele_conn[0]], 1]
+        plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+
+
+def plot_mesh_8n_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
+    """
+    Plot 2d mesh (quads or triangles) outline.
+    """
+    for ele_conn in eles_conn:
+        x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
+                     ele_conn[0]], 0]
+        y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
+                     ele_conn[0]], 1]
+        plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+
+
+def plot_stress_2d(nds_val, mesh_outline=1, cmap='viridis', levels=50):
     """
     Plot stress distribution of a 2d elements of a 2d model.
 
     Args:
         nds_val (ndarray): the values of a stress component, which can
-            be extracted from sig_out array (see quad_sig_out_per_node
+            be extracted from sig_out array (see sig_out_per_node_quad
             function)
 
         mesh_outline (int): 1 - mesh is plotted, 0 - no mesh plotted.
 
-        cmap (str): Matplotlib color map (default is 'jet')
+        cmap (str): Matplotlib color map (default is 'viridis')
 
     Usage:
         ::
 
-            sig_out = opsv.quad_sig_out_per_node()
+            sig_out = opsv.sig_out_per_node_quad()
             j, jstr = 3, 'vmis'
             nds_val = sig_out[:, j]
             opsv.plot_stress_2d(nds_val)
@@ -3059,7 +3685,7 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='jet'):
 
     See also:
 
-    :ref:`ops_vis_quad_sig_out_per_node`
+    :ref:`ops_vis_sig_out_per_node_quad`
     """
 
     node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
@@ -3071,7 +3697,7 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='jet'):
     for i, node_tag in enumerate(node_tags):
         nds_crd[i] = ops.nodeCoord(node_tag)
 
-    # from utils / quad_sig_out_per_node
+    # from utils / sig_out_per_node_quad
     # fixme: if this can be simplified
     # index (starts from 0) to node_tag correspondence
     # (a) data in np.array of integers
@@ -3102,7 +3728,7 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='jet'):
                                       nds_crd_all[:, 1],
                                       tris_conn)
 
-    plt.tricontourf(triangulation, nds_val_all, 50, cmap=cmap)
+    plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
 
     # 2. plot original mesh (quad) without subdivision into triangles
     if mesh_outline:
@@ -3112,7 +3738,7 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='jet'):
     plt.axis('equal')
 
 
-def plot_stress_9n_2d(nds_val, cmap='jet'):
+def plot_stress_9n_2d(nds_val, cmap='viridis', levels=50):
 
     node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
     n_nodes, n_eles = len(node_tags), len(ele_tags)
@@ -3123,7 +3749,7 @@ def plot_stress_9n_2d(nds_val, cmap='jet'):
     for i, node_tag in enumerate(node_tags):
         nds_crd[i] = ops.nodeCoord(node_tag)
 
-    # from utils / quad_sig_out_per_node
+    # from utils / sig_out_per_node_quad
     # fixme: if this can be simplified
     # index (starts from 0) to node_tag correspondence
     # (a) data in np.array of integers
@@ -3132,18 +3758,76 @@ def plot_stress_9n_2d(nds_val, cmap='jet'):
     #
     # correspondence indx and node_tag is in node_tags.index
     # after testing remove the above
-    quads_conn = np.zeros((n_eles, 4), dtype=int)
+    quads_conn = np.zeros((n_eles, 9), dtype=int)
 
     for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
+        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
         ind1 = node_tags.index(nd1)
         ind2 = node_tags.index(nd2)
         ind3 = node_tags.index(nd3)
         ind4 = node_tags.index(nd4)
-        quads_conn[i] = np.array([ind1, ind2, ind3, ind4])
+        ind5 = node_tags.index(nd5)
+        ind6 = node_tags.index(nd6)
+        ind7 = node_tags.index(nd7)
+        ind8 = node_tags.index(nd8)
+        ind9 = node_tags.index(nd9)
+        quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
+                                  ind8, ind9])
 
-    tris_conn, nds_c_crd, nds_c_val = \
-        quads_to_4tris(quads_conn, nds_crd, nds_val)
+    tris_conn = quads_to_8tris_9n(quads_conn)
+
+    # 1. plot contour maps
+    triangulation = tri.Triangulation(nds_crd[:, 0],
+                                      nds_crd[:, 1],
+                                      tris_conn)
+
+    plt.tricontourf(triangulation, nds_val, levels=levels, cmap=cmap)
+
+    # 2. plot original mesh (quad) without subdivision into triangles
+    plot_mesh_9n_2d(nds_crd, quads_conn)
+
+    # plt.colorbar()
+    plt.axis('equal')
+
+
+def plot_stress_8n_2d(nds_val, cmap='viridis', levels=50):
+
+    node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
+    n_nodes, n_eles = len(node_tags), len(ele_tags)
+
+    # idiom coordinates as ordered in node_tags
+    # use node_tags.index(tag) for correspondence
+    nds_crd = np.zeros((n_nodes, 2))
+    for i, node_tag in enumerate(node_tags):
+        nds_crd[i] = ops.nodeCoord(node_tag)
+
+    # from utils / sig_out_per_node_quad
+    # fixme: if this can be simplified
+    # index (starts from 0) to node_tag correspondence
+    # (a) data in np.array of integers
+    # nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
+    # nodes_tag_count[:, 0] = node_tags
+    #
+    # correspondence indx and node_tag is in node_tags.index
+    # after testing remove the above
+    quads_conn = np.zeros((n_eles, 8), dtype=int)
+
+    for i, ele_tag in enumerate(ele_tags):
+        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+        ind1 = node_tags.index(nd1)
+        ind2 = node_tags.index(nd2)
+        ind3 = node_tags.index(nd3)
+        ind4 = node_tags.index(nd4)
+        ind5 = node_tags.index(nd5)
+        ind6 = node_tags.index(nd6)
+        ind7 = node_tags.index(nd7)
+        ind8 = node_tags.index(nd8)
+        quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
+                                  ind8])
+
+    # tris_conn = quads_to_8tris_8n(quads_conn)
+    tris_conn, nds_c_crd, nds_c_val = quads_to_8tris_8n(quads_conn, nds_crd,
+                                                        nds_val)
 
     nds_crd_all = np.vstack((nds_crd, nds_c_crd))
     # nds_val_all = np.concatenate((nds_val, nds_c_val))
@@ -3154,27 +3838,33 @@ def plot_stress_9n_2d(nds_val, cmap='jet'):
                                       nds_crd_all[:, 1],
                                       tris_conn)
 
-    plt.tricontourf(triangulation, nds_val_all, 50, cmap=cmap)
+    plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
 
     # 2. plot original mesh (quad) without subdivision into triangles
-    plot_mesh_2d(nds_crd, quads_conn)
+    plot_mesh_8n_2d(nds_crd, quads_conn)
 
     # plt.colorbar()
     plt.axis('equal')
 
 
-def plot_extruded_model_rect_section_3d(b, h, az_el=az_el,
-                                        fig_wi_he=fig_wi_he,
-                                        fig_lbrt=fig_lbrt):
+def plot_extruded_shapes_3d(ele_shapes, az_el=az_el,
+                            fig_wi_he=fig_wi_he,
+                            fig_lbrt=fig_lbrt):
     """Plot an extruded 3d model based on cross-section dimenions.
 
     Three arrows present local section axes: green - local x-axis,
     red - local z-axis, blue - local y-axis.
 
     Args:
-        b (float): section width
-
-        h (float): section height
+        ele_shapes (dict): keys are ele_tags and values are lists of:
+            shape_type (str): 'rect' - rectangular shape, 'I' - double T shape
+            and shape_args (list): list of floats, which necessary section
+            dimensions.
+            For 'rect' the list is [b d]; width and depth,
+            for 'I' shape - [bf d tw tf]; flange width, section depth, web
+            and flange thicknesses
+            Example: ele_shapes = {1: ['rect', [b, d]],
+            2: ['I', [bf, d, tw, tf]]}
 
         az_el (tuple): azimuth and elevation
 
@@ -3185,14 +3875,19 @@ def plot_extruded_model_rect_section_3d(b, h, az_el=az_el,
     Usage:
         ::
 
-            plot_extruded_model_rect_section_3d(0.3, 0.4)
+            ele_shapes = {1: ['circ', [b]],
+                          2: ['rect', [b, h]],
+                          3: ['I', [b, h, b/10., h/6.]]}
+            opsv.plot_extruded_shapes_3d(ele_shapes)
 
     Notes:
 
-    - For now only rectangular cross-section is supported.
-    """
+    - For now only rectangular, circular and double T sections are supported.
 
-    b2, h2 = b/2, h/2
+    - This function can be a source of inconsistency because OpenSees lacks
+      functions to return section dimensions. A workaround is to have own
+      Python helper functions to reuse data specified once
+    """
 
     ele_tags = ops.getEleTags()
 
@@ -3204,7 +3899,7 @@ def plot_extruded_model_rect_section_3d(b, h, az_el=az_el,
     fig.subplots_adjust(left=.08, bottom=.08, right=.985, top=.94)
 
     ax = fig.add_subplot(111, projection=Axes3D.name)
-    # ax.axis('equal')
+    # ax.axis('equal')  # bug in matplotlib - does not work for 3d
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -3224,60 +3919,44 @@ def plot_extruded_model_rect_section_3d(b, h, az_el=az_el,
         ez = np.array([ops.nodeCoord(nd1)[2],
                        ops.nodeCoord(nd2)[2]])
 
+        # mesh outline
+        ax.plot(ex, ey, ez, 'k--', solid_capstyle='round',
+                solid_joinstyle='round', dash_capstyle='butt',
+                dash_joinstyle='round')
+
         # eo = Eo[i, :]
         xloc = ops.eleResponse(ele_tag, 'xlocal')
         yloc = ops.eleResponse(ele_tag, 'ylocal')
         zloc = ops.eleResponse(ele_tag, 'zlocal')
         g = np.vstack((xloc, yloc, zloc))
 
-        # G, L = rot_transf_3d(ex, ey, ez, eo)
         G, L = rot_transf_3d(ex, ey, ez, g)
-        # g = G[:3, :3]
 
-        Xi, Yi, Zi = ex[0], ey[0], ez[0]
-        Xj, Yj, Zj = ex[1], ey[1], ez[1]
+        # by default empty
+        shape_type, shape_args = ['circ', [0.]]
+        if ele_tag in ele_shapes:
+            shape_type, shape_args = ele_shapes[ele_tag]
 
-        g10, g11, g12 = g[1, 0]*h2, g[1, 1]*h2, g[1, 2]*h2
-        g20, g21, g22 = g[2, 0]*b2, g[2, 1]*b2, g[2, 2]*b2
+        if shape_type == 'rect' or shape_type == 'I':
+            if shape_type == 'rect':
+                verts = _plot_extruded_shapes_3d_rect(ex, ey, ez, g,
+                                                      shape_args)
 
-        # beg node cross-section vertices
-        Xi1, Yi1, Zi1 = Xi - g10 - g20, Yi - g11 - g21, Zi - g12 - g22
-        Xi2, Yi2, Zi2 = Xi + g10 - g20, Yi + g11 - g21, Zi + g12 - g22
-        Xi3, Yi3, Zi3 = Xi + g10 + g20, Yi + g11 + g21, Zi + g12 + g22
-        Xi4, Yi4, Zi4 = Xi - g10 + g20, Yi - g11 + g21, Zi - g12 + g22
-        # end node cross-section vertices
-        Xj1, Yj1, Zj1 = Xj - g10 - g20, Yj - g11 - g21, Zj - g12 - g22
-        Xj2, Yj2, Zj2 = Xj + g10 - g20, Yj + g11 - g21, Zj + g12 - g22
-        Xj3, Yj3, Zj3 = Xj + g10 + g20, Yj + g11 + g21, Zj + g12 + g22
-        Xj4, Yj4, Zj4 = Xj - g10 + g20, Yj - g11 + g21, Zj - g12 + g22
+            elif shape_type == 'I':
+                verts = _plot_extruded_shapes_3d_double_T(ex, ey, ez, g,
+                                                          shape_args)
 
-        # mesh outline
-        ax.plot(ex, ey, ez, 'k--', solid_capstyle='round',
-                solid_joinstyle='round', dash_capstyle='butt',
-                dash_joinstyle='round')
+            # plot 3d sides
+            ax.add_collection3d(Poly3DCollection(verts, linewidths=0.6,
+                                                 edgecolors='k', alpha=.25))
 
-        # collected i-beg, j-end node coordinates, counter-clockwise order
-        pts = [[Xi1, Yi1, Zi1],
-               [Xi2, Yi2, Zi2],
-               [Xi3, Yi3, Zi3],
-               [Xi4, Yi4, Zi4],
-               [Xj1, Yj1, Zj1],
-               [Xj2, Yj2, Zj2],
-               [Xj3, Yj3, Zj3],
-               [Xj4, Yj4, Zj4]]
+        elif shape_type == 'circ':
+            X, Y, Z = _plot_extruded_shapes_3d_circ(ex, ey, ez, g,
+                                                    shape_args)
+            ax.plot_surface(X, Y, Z, linewidths=0.4, edgecolors='k',
+                            alpha=.25)
 
-        # list of 4-node sides
-        verts = [[pts[0], pts[1], pts[2], pts[3]],  # beg
-                 [pts[4], pts[5], pts[6], pts[7]],  # end
-                 [pts[0], pts[4], pts[5], pts[1]],  # bottom
-                 [pts[3], pts[7], pts[6], pts[2]],  # top
-                 [pts[0], pts[4], pts[7], pts[3]],  # front
-                 [pts[1], pts[5], pts[6], pts[2]]]  # back
-
-        # plot 3d element composed with sides
-        ax.add_collection3d(Poly3DCollection(verts, linewidths=1,
-                                             edgecolors='k', alpha=.25))
-
+        # common for all members
         Xm, Ym, Zm = sum(ex)/2, sum(ey)/2, sum(ez)/2
 
         alen = 0.1*L
@@ -3291,11 +3970,130 @@ def plot_extruded_model_rect_section_3d(b, h, az_el=az_el,
                    lw=2, length=alen, alpha=.8, normalize=True)
 
 
+def _plot_extruded_shapes_3d_double_T(ex, ey, ez, g, shape_args):
+    bf, d, tw, tf = shape_args
+
+    za, zb = tw/2, bf/2
+    ya, yb = d/2 - tf, d/2
+
+    g10a, g11a, g12a = g[1, 0]*ya, g[1, 1]*ya, g[1, 2]*ya
+    g10b, g11b, g12b = g[1, 0]*yb, g[1, 1]*yb, g[1, 2]*yb
+
+    g20a, g21a, g22a = g[2, 0]*za, g[2, 1]*za, g[2, 2]*za
+    g20b, g21b, g22b = g[2, 0]*zb, g[2, 1]*zb, g[2, 2]*zb
+
+    pts = np.zeros((24, 3))
+    # beg node (I) cross-section vertices crds, counter-clockwise order
+    pts[0] = [ex[0] - g10b - g20b, ey[0] - g11b - g21b, ez[0] - g12b - g22b]
+    pts[1] = [ex[0] - g10a - g20b, ey[0] - g11a - g21b, ez[0] - g12a - g22b]
+    pts[2] = [ex[0] - g10a - g20a, ey[0] - g11a - g21a, ez[0] - g12a - g22a]
+
+    pts[3] = [ex[0] + g10a - g20a, ey[0] + g11a - g21a, ez[0] + g12a - g22a]
+    pts[4] = [ex[0] + g10a - g20b, ey[0] + g11a - g21b, ez[0] + g12a - g22b]
+    pts[5] = [ex[0] + g10b - g20b, ey[0] + g11b - g21b, ez[0] + g12b - g22b]
+
+    pts[6] = [ex[0] + g10b + g20b, ey[0] + g11b + g21b, ez[0] + g12b + g22b]
+    pts[7] = [ex[0] + g10a + g20b, ey[0] + g11a + g21b, ez[0] + g12a + g22b]
+    pts[8] = [ex[0] + g10a + g20a, ey[0] + g11a + g21a, ez[0] + g12a + g22a]
+
+    pts[9] = [ex[0] - g10a + g20a, ey[0] - g11a + g21a, ez[0] - g12a + g22a]
+    pts[10] = [ex[0] - g10a + g20b, ey[0] - g11a + g21b, ez[0] - g12a + g22b]
+    pts[11] = [ex[0] - g10b + g20b, ey[0] - g11b + g21b, ez[0] - g12b + g22b]
+
+    # end node (J) cross-section vertices
+    pts[12] = [ex[1] - g10b - g20b, ey[1] - g11b - g21b, ez[1] - g12b - g22b]
+    pts[13] = [ex[1] - g10a - g20b, ey[1] - g11a - g21b, ez[1] - g12a - g22b]
+    pts[14] = [ex[1] - g10a - g20a, ey[1] - g11a - g21a, ez[1] - g12a - g22a]
+
+    pts[15] = [ex[1] + g10a - g20a, ey[1] + g11a - g21a, ez[1] + g12a - g22a]
+    pts[16] = [ex[1] + g10a - g20b, ey[1] + g11a - g21b, ez[1] + g12a - g22b]
+    pts[17] = [ex[1] + g10b - g20b, ey[1] + g11b - g21b, ez[1] + g12b - g22b]
+
+    pts[18] = [ex[1] + g10b + g20b, ey[1] + g11b + g21b, ez[1] + g12b + g22b]
+    pts[19] = [ex[1] + g10a + g20b, ey[1] + g11a + g21b, ez[1] + g12a + g22b]
+    pts[20] = [ex[1] + g10a + g20a, ey[1] + g11a + g21a, ez[1] + g12a + g22a]
+
+    pts[21] = [ex[1] - g10a + g20a, ey[1] - g11a + g21a, ez[1] - g12a + g22a]
+    pts[22] = [ex[1] - g10a + g20b, ey[1] - g11a + g21b, ez[1] - g12a + g22b]
+    pts[23] = [ex[1] - g10b + g20b, ey[1] - g11b + g21b, ez[1] - g12b + g22b]
+
+    # list of sides
+    verts = [[pts[0], pts[1], pts[2], pts[3], pts[4], pts[5], pts[6],
+              pts[7], pts[8], pts[9], pts[10], pts[11]],  # beg
+             [pts[12], pts[13], pts[14], pts[15], pts[16], pts[17],
+              pts[18], pts[19], pts[20], pts[21], pts[22], pts[23]],  # end
+             [pts[0], pts[12], pts[23], pts[11]],  # bot 1
+             [pts[5], pts[17], pts[18], pts[6]],  # top 2
+             [pts[9], pts[8], pts[20], pts[21]],  # 3
+             [pts[2], pts[3], pts[15], pts[14]],  # 4
+             [pts[11], pts[10], pts[22], pts[23]],  # 5
+             [pts[0], pts[1], pts[13], pts[12]],  # 6
+             [pts[7], pts[6], pts[18], pts[19]],  # 7
+             [pts[4], pts[5], pts[17], pts[16]],  # 8
+             [pts[10], pts[9], pts[21], pts[22]],  # 9
+             [pts[2], pts[1], pts[13], pts[14]],  # 10
+             [pts[7], pts[8], pts[20], pts[19]],  # 11
+             [pts[3], pts[4], pts[16], pts[15]]]  # 12
+
+    return verts
+
+
+def _plot_extruded_shapes_3d_rect(ex, ey, ez, g, shape_args):
+    b, d = shape_args
+    b2, d2 = b/2, d/2
+
+    g10, g11, g12 = g[1, 0]*d2, g[1, 1]*d2, g[1, 2]*d2
+    g20, g21, g22 = g[2, 0]*b2, g[2, 1]*b2, g[2, 2]*b2
+
+    pts = np.zeros((8, 3))
+    # beg node cross-section vertices
+    # collected i-beg, j-end node coordinates, counter-clockwise order
+    pts[0] = [ex[0] - g10 - g20, ey[0] - g11 - g21, ez[0] - g12 - g22]
+    pts[1] = [ex[0] + g10 - g20, ey[0] + g11 - g21, ez[0] + g12 - g22]
+    pts[2] = [ex[0] + g10 + g20, ey[0] + g11 + g21, ez[0] + g12 + g22]
+    pts[3] = [ex[0] - g10 + g20, ey[0] - g11 + g21, ez[0] - g12 + g22]
+    # end node cross-section vertices
+    pts[4] = [ex[1] - g10 - g20, ey[1] - g11 - g21, ez[1] - g12 - g22]
+    pts[5] = [ex[1] + g10 - g20, ey[1] + g11 - g21, ez[1] + g12 - g22]
+    pts[6] = [ex[1] + g10 + g20, ey[1] + g11 + g21, ez[1] + g12 + g22]
+    pts[7] = [ex[1] - g10 + g20, ey[1] - g11 + g21, ez[1] - g12 + g22]
+
+    # list of 4-node sides
+    verts = [[pts[0], pts[1], pts[2], pts[3]],  # beg
+             [pts[4], pts[5], pts[6], pts[7]],  # end
+             [pts[0], pts[4], pts[5], pts[1]],  # bottom
+             [pts[3], pts[7], pts[6], pts[2]],  # top
+             [pts[0], pts[4], pts[7], pts[3]],  # front
+             [pts[1], pts[5], pts[6], pts[2]]]  # back
+
+    return verts
+
+
+def _plot_extruded_shapes_3d_circ(ex, ey, ez, g, shape_args):
+    d = shape_args[0]
+    r = d/2
+
+    Lxyz = np.array([ex[1]-ex[0], ey[1]-ey[0], ez[1]-ez[0]])
+    L = np.sqrt(Lxyz @ Lxyz)
+
+    xl = np.linspace(0, L, 3)  # subdivde member length
+    alpha = np.linspace(0, 2 * np.pi, 10)  # subdivide circle
+
+    xl, alpha = np.meshgrid(xl, alpha)
+    X = (ex[0] + g[0, 0] * xl + r * np.sin(alpha) * g[1, 0]
+         + r * np.cos(alpha) * g[2, 0])
+    Y = (ey[0] + g[0, 1] * xl + r * np.sin(alpha) * g[1, 1]
+         + r * np.cos(alpha) * g[2, 1])
+    Z = (ez[0] + g[0, 2] * xl + r * np.sin(alpha) * g[1, 2]
+         + r * np.cos(alpha) * g[2, 2])
+
+    return X, Y, Z
+
+
 def plot_mesh_with_ips_2d(nds_crd, eles_ips_crd, eles_nds_crd, quads_conn,
                           eles_ips_sig_out, eles_nds_sig_out, sig_out_indx):
     """
-    Plot 2d element mesh with the values at gauss and nodal points.
-
+    Plot 2d element mesh with the values at integration points and nodes.
 
     Args:
         nds_crd (ndarray): nodes coordinates (n_nodes x 2)
@@ -3308,10 +4106,10 @@ def plot_mesh_with_ips_2d(nds_crd, eles_ips_crd, eles_nds_crd, quads_conn,
         quads_conn (ndarray): connectivity array (n_eles x 4)
 
         eles_ips_sig_out (ndarray): stress component values at integration
-            points (n_eles x 4 x 5)
+            points (n_eles x 4 x 4)
 
         eles_nds_sig_out (ndarray): stress component values at element nodes
-            (n_eles x 4 x 5)
+            (n_eles x 4 x 4)
 
         sig_out_indx (int): which sig_out component
 
@@ -3403,9 +4201,9 @@ def quads_to_8tris_8n(quads_conn, nds_crd, nds_val):
         # nds_c_crd[i] = np.array([np.sum(nds_crd[[n0, n1, n2, n3], 0])/4.,
         #                          np.sum(nds_crd[[n0, n1, n2, n3], 1])/4.])
         # nds_c_val[i] = np.sum(nds_val[[n0, n1, n2, n3]])/4.
-        nds_c_crd[i] = quad_8n_val_at_center(nds_crd[[n0, n1, n2, n3,
+        nds_c_crd[i] = quad8n_val_at_center(nds_crd[[n0, n1, n2, n3,
                                                       n4, n5, n6, n7]])
-        nds_c_val[i] = quad_8n_val_at_center(nds_val[[n0, n1, n2, n3,
+        nds_c_val[i] = quad8n_val_at_center(nds_val[[n0, n1, n2, n3,
                                                       n4, n5, n6, n7]])
 
         # triangles connectivity
@@ -3470,7 +4268,7 @@ def quads_to_8tris_9n(quads_conn):
     return tris_conn
 
 
-def quad_8n_val_at_center(vals):
+def quad8n_val_at_center(vals):
     """
     Calculate values at the center of 8-node quad element.
 

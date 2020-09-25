@@ -12,6 +12,4 @@
 .. autofunction:: quad_sig_out_per_node
    :noindex:
 
-Full example :download:`here </pyExamples/demo_quads_4x4.py>`:
-
-.. literalinclude:: /pyExamples/demo_quads_4x4.py
+See example :ref:`ops_vis_ex3`
