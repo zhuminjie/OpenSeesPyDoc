@@ -8,6 +8,7 @@
 
   * OpenSeesPy is available now on Mac, just type `import openseespy.opensees as ops` on the MacOS. Python3.8 is required and HomeBrew Python is strongly recommended.
   * SixNodeTri element by Seweryn
+  * PostProcessing package ops_vis by Seweryn
   
 
 * **Version 3.2.2.5** (9/16/2020)
