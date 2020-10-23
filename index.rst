@@ -11,9 +11,11 @@
 
    OpenSeesPy is on :doc:`src/pypi`.
 
-   OpenSeesPy is official in :doc:`src/designsafe`.
+   OpenSeesPy runs on :doc:`src/designsafe`.
 
-   OpenSeesPy can now run on :doc:`src/wsl`.
+   OpenSeesPy runs on :doc:`src/wsl`.
+
+   OpenSeesPy runs on Mac now!
 
    The latest version of this document can be found at
    `<https://openseespydoc.readthedocs.io/en/latest/>`_.
