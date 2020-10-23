@@ -4,7 +4,7 @@
  Concrete02
 ==================
 
-.. function:: uniaxialMaterial('Concrete02', matTag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+.. function:: uniaxialMaterial('Concrete02', matTag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets, ec0)
    :noindex:
 
    This command is used to construct a uniaxial Kent-Scott-Park concrete material object with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and no tensile strength. (REF: Fedeas).
@@ -18,13 +18,14 @@
    ``lambda`` |float|                    ratio between unloading slope at $epscu and initial slope
    ``ft`` |float|                        tensile strength
    ``Ets`` |float|                       tension softening stiffness (absolute value) (slope of the linear tension softening branch)
+   ``ec0`` |float|                       Initial slope (optional)
 
    ===================================   ===========================================================================
 
 .. note::
 
    #. Compressive concrete parameters should be input as negative values (if input as positive, they will be converted to negative internally).
-   #. The initial slope for this model is (2*fpc/epsc0)
+   #. The initial slope for this model is (2*fpc/epsc0) following the Hognestad parabola. However, Popovics equation is used to define the pre-peak envelope in compression if ec0 is defined by the user.
 
 
 .. seealso::
