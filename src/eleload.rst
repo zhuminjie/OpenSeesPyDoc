@@ -4,7 +4,7 @@
  eleLoad command
 ===================
 
-.. function:: eleLoad('-ele', *eleTags, '-range', eleTag1, eleTag2, '-type', '-beamUniform', Wy, <Wz>, Wx=0.0, '-beamPoint',Py,Pz=0.0,xL,Px=0.0,'-beamThermal',*tempPts)
+.. function:: eleLoad('-ele', *eleTags, '-range', eleTag1, eleTag2, '-type', '-beamUniform', Wy, <Wz>, Wx=0.0, '-beamPoint',Py,<Pz>,xL,Px=0.0,'-beamThermal',*tempPts)
 
    The eleLoad command is used to construct an ElementalLoad object and add it to the enclosing LoadPattern.
 
@@ -17,12 +17,12 @@
    ``Wy`` |float|             mag of uniformily distributed ref load acting in local y
 	                      direction of element
    ``Wz`` |float|             mag of uniformily distributed ref load acting in local z
-	                      direction of element. (only for 3D, but required for 3D)
+	                      direction of element. (required only for 3D)
    ``Px`` |float|             mag of ref point load acting in direction along member
 	                      length. (optional)
    ``Py`` |float|             mag of ref point load acting in local y direction of element
    ``Pz`` |float|             mag of ref point load acting in local z direction of
-	                      element. (only for 3D, but required for 3D)
+	                      element. (required only for 3D)
    ``xL`` |float|             location of point load relative to node I,
 	                      prescribed as fraction of element length
    ``tempPts`` |listf|        temperature points:
