@@ -1,15 +1,15 @@
 .. include:: sub.txt
 
-.. _ops_vis_quad_sig_out_per_node:
+.. _ops_vis_sig_out_per_node:
 
 ================================
- quad_sig_out_per_node (ops_vis)
+ sig_out_per_node (ops_vis)
 ================================
 
 .. automodule:: ops_vis
    :noindex:
 
-.. autofunction:: quad_sig_out_per_node
+.. autofunction:: sig_out_per_node
    :noindex:
 
 See example :ref:`ops_vis_ex3`
