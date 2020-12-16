@@ -153,7 +153,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
             xt = sum(ex)/nen
             yt = sum(ey)/nen
 
-            plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
+            plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-', ms=2)
 
             if element_labels:
                 va = 'center'
@@ -209,7 +209,8 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
             yt = sum(ey)/nen
 
             # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
-            plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'b-', lw=0.4)
+            plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'b-', lw=0.4,
+                     ms=2)
 
             if element_labels:
                 va = 'center'
@@ -276,7 +277,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
 
             # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
             plt.plot(np.append(ex[:4], ex[0]), np.append(ey[:4], ey[0]), 'b-',
-                     lw=0.4)
+                     lw=0.4, ms=2)
 
             if element_labels:
                 va = 'center'
@@ -343,9 +344,12 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
             xt = sum(ex)/nen
             yt = sum(ey)/nen
 
-            # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
-            plt.plot(np.append(ex[:4], ex[0]), np.append(ey[:4], ey[0]), 'b-',
-                     lw=0.4)
+            plt.plot([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
+                      ex[3], ex[7], ex[0]],
+                     [ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
+                      ey[3], ey[7], ey[0]], 'b.-',
+                     lw=0.4, ms=2, mfc='g', mec='g')
+            plt.scatter([ex[8]], [ey[8]], s=2, color='g')
 
             if element_labels:
                 va = 'center'
@@ -408,7 +412,7 @@ def _plot_model_2d(node_labels, element_labels, offset_nd_label, axis_off):
 
             # plt.plot(np.append(ex, ex[0]), np.append(ey, ey[0]), 'bo-')
             plt.plot(np.append(ex[:3], ex[0]), np.append(ey[:3], ey[0]), 'b-',
-                     lw=0.4)
+                     lw=0.4, ms=2)
 
             if element_labels:
                 va = 'center'
@@ -544,9 +548,7 @@ def _plot_model_3d(node_labels, element_labels, offset_nd_label, axis_off,
             if z_crd > max_z_crd:
                 max_z_crd = z_crd
 
-            # ax.plot(np.array([x_crd]),
-            #         np.array([y_crd]),
-            #         np.array([z_crd]), 'ro')
+            # ax.plot([x_crd], [y_crd], [z_crd], 'ro')
 
         max_crd = np.amax([max_x_crd, max_y_crd, max_z_crd])
         _offset = 0.002 * max_crd
@@ -619,9 +621,7 @@ def _plot_model_3d(node_labels, element_labels, offset_nd_label, axis_off,
             if z_crd > max_z_crd:
                 max_z_crd = z_crd
 
-            # ax.plot(np.array([x_crd]),
-            #         np.array([y_crd]),
-            #         np.array([z_crd]), 'ro')
+            # ax.plot([x_crd], [y_crd], [z_crd], 'ro')
 
         max_crd = np.amax([max_x_crd, max_y_crd, max_z_crd])
         _offset = 0.005 * max_crd
@@ -673,18 +673,10 @@ def _plot_model_3d(node_labels, element_labels, offset_nd_label, axis_off,
             ax.plot(np.append(ex[4:8], ex[4]),
                     np.append(ey[4:8], ey[4]),
                     np.append(ez[4:8], ez[4]), 'bo-')
-            ax.plot(np.array([ex[0], ex[4]]),
-                    np.array([ey[0], ey[4]]),
-                    np.array([ez[0], ez[4]]), 'bo-')
-            ax.plot(np.array([ex[1], ex[5]]),
-                    np.array([ey[1], ey[5]]),
-                    np.array([ez[1], ez[5]]), 'bo-')
-            ax.plot(np.array([ex[2], ex[6]]),
-                    np.array([ey[2], ey[6]]),
-                    np.array([ez[2], ez[6]]), 'bo-')
-            ax.plot(np.array([ex[3], ex[7]]),
-                    np.array([ey[3], ey[7]]),
-                    np.array([ez[3], ez[7]]), 'bo-')
+            ax.plot([ex[0], ex[4]], [ey[0], ey[4]], [ez[0], ez[4]], 'bo-')
+            ax.plot([ex[1], ex[5]], [ey[1], ey[5]], [ez[1], ez[5]], 'bo-')
+            ax.plot([ex[2], ex[6]], [ey[2], ey[6]], [ez[2], ez[6]], 'bo-')
+            ax.plot([ex[3], ex[7]], [ey[3], ey[7]], [ez[3], ez[7]], 'bo-')
 
             # fixme: placement of node_tag labels
             if element_labels:
@@ -1021,10 +1013,10 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                                ops.nodeDisp(nd8)[1]])
 
             if unDefoFlag:
-                plt.plot(np.array([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
-                                   ex[3], ex[7], ex[0]]),
-                         np.array([ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
-                                   ey[3], ey[7], ey[0]]),
+                plt.plot([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
+                          ex[3], ex[7], ex[0]],
+                         [ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
+                          ey[3], ey[7], ey[0]],
                          fmt_undefo)
 
             # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
@@ -1037,10 +1029,9 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
             # test it with one element
             x = ex+sfac*ed[[0, 2, 4, 6, 8, 10, 12, 14]]
             y = ey+sfac*ed[[1, 3, 5, 7, 9, 11, 13, 15]]
-            plt.plot(np.array([x[0], x[4], x[1], x[5], x[2], x[6],
-                               x[3], x[7], x[0]]),
-                     np.array([y[0], y[4], y[1], y[5], y[2], y[6],
-                               y[3], y[7], y[0]]), 'b.-')
+            plt.plot([x[0], x[4], x[1], x[5], x[2], x[6], x[3], x[7], x[0]],
+                     [y[0], y[4], y[1], y[5], y[2], y[6], y[3], y[7], y[0]],
+                     'b.-')
 
         plt.axis('equal')
 
@@ -1109,10 +1100,10 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                                ops.nodeDisp(nd9)[1]])
 
             if unDefoFlag:
-                plt.plot(np.array([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
-                                   ex[3], ex[7], ex[0]]),
-                         np.array([ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
-                                   ey[3], ey[7], ey[0]]),
+                plt.plot([ex[0], ex[4], ex[1], ex[5], ex[2], ex[6],
+                          ex[3], ex[7], ex[0]],
+                         [ey[0], ey[4], ey[1], ey[5], ey[2], ey[6],
+                          ey[3], ey[7], ey[0]],
                          fmt_undefo)
 
             # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
@@ -1125,10 +1116,11 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
             # test it with one element
             x = ex+sfac*ed[[0, 2, 4, 6, 8, 10, 12, 14, 16]]
             y = ey+sfac*ed[[1, 3, 5, 7, 9, 11, 13, 15, 17]]
-            plt.plot(np.array([x[0], x[4], x[1], x[5], x[2], x[6],
-                               x[3], x[7], x[0]]),
-                     np.array([y[0], y[4], y[1], y[5], y[2], y[6],
-                               y[3], y[7], y[0]]), 'b.-')
+            plt.plot([x[0], x[4], x[1], x[5], x[2], x[6],
+                      x[3], x[7], x[0]],
+                     [y[0], y[4], y[1], y[5], y[2], y[6],
+                      y[3], y[7], y[0]], 'b.-')
+            plt.plot([x[8]], [y[8]], 'b.-')
 
         plt.axis('equal')
 
@@ -1179,10 +1171,10 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                                ops.nodeDisp(nd6)[1]])
 
             if unDefoFlag:
-                plt.plot(np.array([ex[0], ex[3], ex[1], ex[4], ex[2], ex[5],
-                                   ex[0]]),
-                         np.array([ey[0], ey[3], ey[1], ey[4], ey[2], ey[5],
-                                   ey[0]]),
+                plt.plot([ex[0], ex[3], ex[1], ex[4], ex[2], ex[5],
+                          ex[0]],
+                         [ey[0], ey[3], ey[1], ey[4], ey[2], ey[5],
+                          ey[0]],
                          fmt_undefo)
 
             # xcdi, ycdi = beam_defo_interp_2d(ex, ey, ed, sfac, nep)
@@ -1195,10 +1187,8 @@ def _plot_defo_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
             # test it with one element
             x = ex+sfac*ed[[0, 2, 4, 6, 8, 10]]
             y = ey+sfac*ed[[1, 3, 5, 7, 9, 11]]
-            plt.plot(np.array([x[0], x[3], x[1], x[4], x[2], x[5],
-                               x[0]]),
-                     np.array([y[0], y[3], y[1], y[4], y[2], y[5],
-                               y[0]]), 'b.-')
+            plt.plot([x[0], x[3], x[1], x[4], x[2], x[5], x[0]],
+                     [y[0], y[3], y[1], y[4], y[2], y[5], y[0]], 'b.-')
 
         plt.axis('equal')
 
@@ -1495,18 +1485,18 @@ def _plot_defo_mode_3d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                 ax.plot(np.append(ex[4:8], ex[4]),
                         np.append(ey[4:8], ey[4]),
                         np.append(ez[4:8], ez[4]), fmt_undefo)
-                ax.plot(np.array([ex[0], ex[4]]),
-                        np.array([ey[0], ey[4]]),
-                        np.array([ez[0], ez[4]]), fmt_undefo)
-                ax.plot(np.array([ex[1], ex[5]]),
-                        np.array([ey[1], ey[5]]),
-                        np.array([ez[1], ez[5]]), fmt_undefo)
-                ax.plot(np.array([ex[2], ex[6]]),
-                        np.array([ey[2], ey[6]]),
-                        np.array([ez[2], ez[6]]), fmt_undefo)
-                ax.plot(np.array([ex[3], ex[7]]),
-                        np.array([ey[3], ey[7]]),
-                        np.array([ez[3], ez[7]]), fmt_undefo)
+                ax.plot([ex[0], ex[4]],
+                        [ey[0], ey[4]],
+                        [ez[0], ez[4]], fmt_undefo)
+                ax.plot([ex[1], ex[5]],
+                        [ey[1], ey[5]],
+                        [ez[1], ez[5]], fmt_undefo)
+                ax.plot([ex[2], ex[6]],
+                        [ey[2], ey[6]],
+                        [ez[2], ez[6]], fmt_undefo)
+                ax.plot([ex[3], ex[7]],
+                        [ey[3], ey[7]],
+                        [ez[3], ez[7]], fmt_undefo)
 
             x = ex+sfac*ed[[0, 3, 6, 9, 12, 15, 18, 21]]
             y = ey+sfac*ed[[1, 4, 7, 10, 13, 16, 19, 22]]
@@ -1519,18 +1509,18 @@ def _plot_defo_mode_3d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                     np.append(y[4:8], y[4]),
                     np.append(z[4:8], z[4]),
                     'b.-')
-            ax.plot(np.array([x[0], x[4]]),
-                    np.array([y[0], y[4]]),
-                    np.array([z[0], z[4]]), 'b.-')
-            ax.plot(np.array([x[1], x[5]]),
-                    np.array([y[1], y[5]]),
-                    np.array([z[1], z[5]]), 'b.-')
-            ax.plot(np.array([x[2], x[6]]),
-                    np.array([y[2], y[6]]),
-                    np.array([z[2], z[6]]), 'b.-')
-            ax.plot(np.array([x[3], x[7]]),
-                    np.array([y[3], y[7]]),
-                    np.array([z[3], z[7]]), 'b.-')
+            ax.plot([x[0], x[4]],
+                    [y[0], y[4]],
+                    [z[0], z[4]], 'b.-')
+            ax.plot([x[1], x[5]],
+                    [y[1], y[5]],
+                    [z[1], z[5]], 'b.-')
+            ax.plot([x[2], x[6]],
+                    [y[2], y[6]],
+                    [z[2], z[6]], 'b.-')
+            ax.plot([x[3], x[7]],
+                    [y[3], y[7]],
+                    [z[3], z[7]], 'b.-')
             # ax.axis('equal')
 
         # work-around fix because of aspect equal bug
@@ -1551,7 +1541,7 @@ def _plot_defo_mode_3d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
 
 
 def plot_defo(sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
-              interpFlag=1, endDispFlag=1, fmt_interp=fmt_interp,
+              interpFlag=1, endDispFlag=0, fmt_interp=fmt_interp,
               fmt_nodes=fmt_nodes, Eo=0, az_el=az_el, fig_wi_he=fig_wi_he,
               fig_lbrt=fig_lbrt):
     """Plot deformed shape of the structure.
@@ -1570,9 +1560,13 @@ def plot_defo(sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
         nep (int): number of evaluation points for shape function interpolation
             (default: 17)
 
+    Returns:
+        sfac (float): the automatically calculated scale factor can be
+            returned.
+
     Usage:
 
-    ``plot_defo()`` - plot deformed shape with default parameters and
+    ``sfac = plot_defo()`` - plot deformed shape with default parameters and
     automatically calcutated scale factor.
 
     ``plot_defo(interpFlag=0)`` - plot simplified deformation by
@@ -1620,8 +1614,9 @@ def plot_defo(sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
 sfac value yourself.
 This usually happens when translational DOFs are too small\n\n""")
 
-        _plot_defo_mode_2d(0, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
-                           endDispFlag, fmt_interp, fmt_nodes)
+        _plot_defo_mode_2d(0, sfac, nep, unDefoFlag, fmt_undefo,
+                           interpFlag, endDispFlag, fmt_interp,
+                           fmt_nodes)
 
     elif ndim == 3:
         if not sfac:
@@ -1650,12 +1645,14 @@ This usually happens when translational DOFs are too small\n\n""")
             edmax = max(max_ux, max_uy, max_uz)
             sfac = ratio * dlmax/edmax
 
-        _plot_defo_mode_3d(0, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
-                           endDispFlag, fmt_interp, fmt_nodes, az_el,
-                           fig_wi_he, fig_lbrt)
+        _plot_defo_mode_3d(0, sfac, nep, unDefoFlag, fmt_undefo,
+                           interpFlag, endDispFlag, fmt_interp,
+                           fmt_nodes, az_el, fig_wi_he, fig_lbrt)
 
     else:
         print(f'\nWarning! ndim: {ndim} not supported yet.')
+
+    return sfac
 
 
 def _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
@@ -1717,8 +1714,9 @@ def _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
             Ey = np.zeros((nel, 2))
             Ed = np.zeros((nel, 6))
             # time vector for one cycle (period)
-            n_frames = 32 + 1
-            t = np.linspace(0., 2*np.pi, n_frames)
+            n_cycles = 10
+            n_frames = n_cycles * 32 + 1
+            t = np.linspace(0., n_cycles*2*np.pi, n_frames)
             lines = []
 
             for i, ele_tag in enumerate(ele_tags):
@@ -1751,7 +1749,7 @@ def _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
                         xcdi, ycdi = beam_defo_interp_2d(Ex[j, :],
                                                          Ey[j, :],
                                                          Ed[j, :],
-                                                         sfac*np.cos(t[i]),
+                                                         sfac*np.sin(t[i]),
                                                          nep)
                         lines[j].set_data(xcdi, ycdi)
                     else:
@@ -1763,8 +1761,9 @@ def _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
 
                 return lines
 
-            FuncAnimation(fig, animate, init_func=init,
-                          frames=n_frames, interval=50, blit=True)
+            anim = FuncAnimation(fig, animate, init_func=init,
+                                 frames=n_frames, interval=50, blit=True,
+                                 repeat=False)
 
         # plt.axis('equal')
         # plt.show()  # call this from main py file for more control
@@ -1842,6 +1841,8 @@ def _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
     else:
         print(f'\nWarning! Elements not supported yet. nen: {nen}; must be: 2, 3, 4, 8.')  # noqa: E501
 
+    return anim
+
 
 def anim_mode(modeNo, sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
               interpFlag=1, endDispFlag=1, fmt_interp=fmt_interp,
@@ -1852,8 +1853,9 @@ def anim_mode(modeNo, sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
     Args:
         modeNo (int): indicates which mode shape to animate.
 
-        Eds (ndarray): An array (n_eles x n_dof_per_element) containing
-            displacements per element.
+        Eds (ndarray): A 3d array (n_steps x n_eles x n_dof_per_element)
+            containing the collected displacements per element for all
+            time steps.
 
         timeV (1darray): vector of discretized time values
 
@@ -1883,10 +1885,33 @@ def anim_mode(modeNo, sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
         fig_wi_he (tuple): contains width and height of the figure
 
     Examples:
+        sfac_a = 100.
+        Eds = np.zeros((n_steps, nel, 6))
+        timeV = np.zeros(n_steps)
+
+        for step in range(n_steps):
+            ops.analyze(1, dt)
+            timeV[step] = ops.getTime()
+            # collect disp for element nodes
+            for el_i, ele_tag in enumerate(el_tags):
+                nd1, nd2 = ops.eleNodes(ele_tag)
+                # uAll[step, inode, 0] = ops.nodeDisp()
+                Eds[step, el_i, :] = np.array([ops.nodeDisp(nd1)[0],
+                                               ops.nodeDisp(nd1)[1],
+                                               ops.nodeDisp(nd1)[2],
+                                               ops.nodeDisp(nd2)[0],
+                                               ops.nodeDisp(nd2)[1],
+                                               ops.nodeDisp(nd2)[2]])
+        fw = 20.
+        fh = 1.2 * 4./6. * fw
+
+        anim = opsv.anim_defo(Eds, timeV, sfac_a, interpFlag=1, xlim=[-1, 7],
+                              ylim=[-1, 5], fig_wi_he=(fw, fh))
 
     Notes:
 
     See also:
+        anim_mode()
     """
 
     node_tags = ops.getNodeTags()
@@ -1923,9 +1948,9 @@ def anim_mode(modeNo, sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
             edmax = max(max_ux, max_uy)
             sfac = ratio * dlmax/edmax
 
-        _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo, interpFlag,
-                      endDispFlag, fmt_interp, fmt_nodes, fig_wi_he, xlim,
-                      ylim, lw)
+        anim = _anim_mode_2d(modeNo, sfac, nep, unDefoFlag, fmt_undefo,
+                             interpFlag, endDispFlag, fmt_interp, fmt_nodes,
+                             fig_wi_he, xlim, ylim, lw)
 
     # elif ndim == 3:
     #     if not sfac:
@@ -1960,6 +1985,8 @@ def anim_mode(modeNo, sfac=False, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
 
     else:
         print(f'\nWarning! ndim: {ndim} not supported yet.')
+
+    return anim
 
 
 def plot_mode_shape(modeNo, sfac=False, nep=17, unDefoFlag=1,
@@ -2484,8 +2511,8 @@ time: {timeV[i]:.3f} s')
 
                 return tuple(lines) + (time_text,)
 
-            FuncAnimation(fig, animate, init_func=init, frames=n_frames,
-                          interval=50, blit=True, repeat=False)
+            anim = FuncAnimation(fig, animate, init_func=init, frames=n_frames,
+                                 interval=50, blit=True, repeat=False)
 
         # plt.axis('equal')
         # plt.show()  # call this from main py file for more control
@@ -2563,6 +2590,8 @@ time: {timeV[i]:.3f} s')
     else:
         print(f'\nWarning! Elements not supported yet. nen: {nen}; must be: 2, 3, 4, 8.')  # noqa: E501
 
+    return anim
+
 
 def anim_defo(Eds, timeV, sfac, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
               interpFlag=1, endDispFlag=1, fmt_interp=fmt_interp,
@@ -2613,12 +2642,14 @@ def anim_defo(Eds, timeV, sfac, nep=17, unDefoFlag=1, fmt_undefo=fmt_undefo,
     ndim = np.shape(ops.nodeCoord(node_tags[0]))[0]
 
     if ndim == 2:
-        _anim_defo_2d(Eds, timeV, sfac, nep, unDefoFlag, fmt_undefo,
-                      interpFlag, endDispFlag, fmt_interp, fmt_nodes,
-                      fig_wi_he, xlim, ylim)
+        anim = _anim_defo_2d(Eds, timeV, sfac, nep, unDefoFlag, fmt_undefo,
+                             interpFlag, endDispFlag, fmt_interp, fmt_nodes,
+                             fig_wi_he, xlim, ylim)
 
     else:
         print(f'\nWarning! ndim: {ndim} not supported yet.')
+
+    return anim
 
 
 def section_force_distribution_2d(ex, ey, pl, nep=2,
@@ -3024,7 +3055,7 @@ def section_force_diagram_3d(sf_type, Ew, sfac=1., nep=17,
     return minVal, maxVal
 
 
-def sig_out_per_node_quad():
+def sig_out_per_node(how_many='all'):
     """Return a 2d numpy array of stress components per OpenSees node.
 
     Three first stress components (sxx, syy, sxy) are calculated and
@@ -3032,13 +3063,17 @@ def sig_out_per_node_quad():
     two principal stresses (s1, s2) and directional angle are calculated
     as postprocessed quantities.
 
+    Args:
+        how_many (str): supported options are: 'all' - all components,
+            'sxx', 'syy', 'sxy', 'svm' (or 'vmis'), 's1', 's2', 'angle'.
+
     Returns:
         sig_out (ndarray): a 2d array of stress components per node with
             the following components: sxx, syy, sxy, svm, s1, s2, angle.
             Size (n_nodes x 7).
 
     Examples:
-        sig_out = opsv.sig_out_per_node_quad()
+        sig_out = opsv.sig_out_per_node()
 
     Notes:
        s1, s2: principal stresses
@@ -3054,37 +3089,156 @@ def sig_out_per_node_quad():
     nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
     nodes_tag_count[:, 0] = node_tags
 
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
+    nen = np.shape(ops.eleNodes(ele_tags[0]))[0]
 
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        nodes_tag_count[[ind1, ind2, ind3, ind4], 1] += 1
+    if nen == 3:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3 = ops.eleNodes(ele_tag)
 
-        sig_ip_el = ops.eleResponse(ele_tag, 'stress')
-        sigM_ip = np.vstack(([sig_ip_el[0:3],
-                              sig_ip_el[3:6],
-                              sig_ip_el[6:9],
-                              sig_ip_el[9:12]]))
-        sigM_nd = extrapolate_ip_to_node_quad(sigM_ip)
-        # sxx
-        sig_out[ind1, 0] += sigM_nd[0, 0]
-        sig_out[ind2, 0] += sigM_nd[1, 0]
-        sig_out[ind3, 0] += sigM_nd[2, 0]
-        sig_out[ind4, 0] += sigM_nd[3, 0]
-        # syy
-        sig_out[ind1, 1] += sigM_nd[0, 1]
-        sig_out[ind2, 1] += sigM_nd[1, 1]
-        sig_out[ind3, 1] += sigM_nd[2, 1]
-        sig_out[ind4, 1] += sigM_nd[3, 1]
-        # sxy
-        sig_out[ind1, 2] += sigM_nd[0, 2]
-        sig_out[ind2, 2] += sigM_nd[1, 2]
-        sig_out[ind3, 2] += sigM_nd[2, 2]
-        sig_out[ind4, 2] += sigM_nd[3, 2]
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            nodes_tag_count[[ind1, ind2, ind3], 1] += 1
 
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9]]))
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            # # assign the same value to all nodes
+            # sigM_nd = np.vstack((sig_ip_el, sig_ip_el, sig_ip_el))
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+
+    elif nen == 4:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            nodes_tag_count[[ind1, ind2, ind3, ind4], 1] += 1
+
+            sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            nip = len(sig_ip_el)
+            # 4 gauss point quad
+            if nip == 12:
+                sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+                sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                      sig_nd_el[3:6],
+                                      sig_nd_el[6:9],
+                                      sig_nd_el[9:12]]))
+                # sigM_ip = np.vstack(([sig_ip_el[0:3],
+                #                       sig_ip_el[3:6],
+                #                       sig_ip_el[6:9],
+                #                       sig_ip_el[9:12]]))
+                # sigM_nd = extrapolate_ip_to_node_quad(sigM_ip)
+
+            # SSPquad - stabilized single point quad
+            elif nip == 3:
+                # assign the same value to all nodes
+                sigM_nd = np.vstack((sig_ip_el, sig_ip_el,
+                                     sig_ip_el, sig_ip_el))
+
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            sig_out[ind4, 0] += sigM_nd[3, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            sig_out[ind4, 1] += sigM_nd[3, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+            sig_out[ind4, 2] += sigM_nd[3, 2]
+
+    elif nen == 6:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6], 1] += 1
+
+            # FIXME: wait until stressAtNodes is available in OpenSees upstream
+            # locally it works
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9],
+                                  sig_nd_el[9:12],
+                                  sig_nd_el[12:15],
+                                  sig_nd_el[15:18]]))
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            # sigM_ip = np.vstack(([sig_ip_el[0:3],
+            #                       sig_ip_el[3:6],
+            #                       sig_ip_el[6:9]]))
+            # sigM_nd = extrapolate_ip_to_node_tri6n(sigM_ip)
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            sig_out[ind4, 0] += sigM_nd[3, 0]
+            sig_out[ind5, 0] += sigM_nd[4, 0]
+            sig_out[ind6, 0] += sigM_nd[5, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            sig_out[ind4, 1] += sigM_nd[3, 1]
+            sig_out[ind5, 1] += sigM_nd[4, 1]
+            sig_out[ind6, 1] += sigM_nd[5, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+            sig_out[ind4, 2] += sigM_nd[3, 2]
+            sig_out[ind5, 2] += sigM_nd[4, 2]
+            sig_out[ind6, 2] += sigM_nd[5, 2]
+
+    elif nen == 8:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            ind7 = node_tags.index(nd7)
+            ind8 = node_tags.index(nd8)
+            nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8],
+                            1] += 1
+
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9],
+                                  sig_nd_el[9:12],
+                                  sig_nd_el[12:15],
+                                  sig_nd_el[15:18],
+                                  sig_nd_el[18:21],
+                                  sig_nd_el[21:24]]))
+            # sig_nd_el[21:24],
+            # sig_ip_el[24:27]]))
     indxs, = np.where(nodes_tag_count[:, 1] > 1)
 
     # n_indxs < n_nodes: e.g. 21<25 (bous), 2<6 (2el) etc.
@@ -3094,19 +3248,22 @@ def sig_out_per_node_quad():
     sig_out[indxs, :] = \
         sig_out[indxs, :]/nodes_tag_count[indxs, 1].reshape(n_indxs, 1)
 
-    # warning reshape from (pts,ncomp) to (ncomp,pts)
-    vm_out = vm_stress(np.transpose(sig_out[:, :3]))
+    if how_many == 'all' or how_many == 'svm' or how_many == 'vmis':
+        # warning reshape from (pts,ncomp) to (ncomp,pts)
+        vm_out = vm_stress(np.transpose(sig_out[:, :3]))
+        sig_out[:, 3] = vm_out
 
-    sig_out[:, 3] = vm_out
+    if (how_many == 'all' or how_many == 's1' or how_many == 's2' or how_many == 'angle'):  # noqa: E501
+        princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
 
-    princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
+        sig_out[:, 4:7] = np.transpose(princ_sig_out)
 
-    sig_out[:, 4:7] = np.transpose(princ_sig_out)
+    print('-- WARNING!!! full sig_out matrix calculated here --')
 
     return sig_out
 
 
-def sig_out_per_node_quad9n():
+def sig_component_per_node(stress_str):
     """Return a 2d numpy array of stress components per OpenSees node.
 
     Three first stress components (sxx, syy, sxy) are calculated and
@@ -3114,13 +3271,17 @@ def sig_out_per_node_quad9n():
     two principal stresses (s1, s2) and directional angle are calculated
     as postprocessed quantities.
 
+    Args:
+        how_many (str): supported options are: 'all' - all components,
+            'sxx', 'syy', 'sxy', 'svm' (or 'vmis'), 's1', 's2', 'angle'.
+
     Returns:
         sig_out (ndarray): a 2d array of stress components per node with
             the following components: sxx, syy, sxy, svm, s1, s2, angle.
             Size (n_nodes x 7).
 
     Examples:
-        sig_out = opsv.sig_out_per_node_quad()
+        sig_out = opsv.sig_out_per_node()
 
     Notes:
        s1, s2: principal stresses
@@ -3131,68 +3292,161 @@ def sig_out_per_node_quad9n():
     n_nodes = len(node_tags)
 
     # initialize helper arrays
-    sig_out = np.zeros((n_nodes, 7))
+    sig_out = np.zeros((n_nodes, 4))
 
     nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
     nodes_tag_count[:, 0] = node_tags
 
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
+    nen = np.shape(ops.eleNodes(ele_tags[0]))[0]
 
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        ind5 = node_tags.index(nd5)
-        ind6 = node_tags.index(nd6)
-        ind7 = node_tags.index(nd7)
-        ind8 = node_tags.index(nd8)
-        ind9 = node_tags.index(nd9)
-        nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8, ind9],
-                        1] += 1
+    if nen == 3:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3 = ops.eleNodes(ele_tag)
 
-        sig_ip_el = ops.eleResponse(ele_tag, 'stress')
-        sigM_ip = np.vstack(([sig_ip_el[0:3],
-                              sig_ip_el[3:6],
-                              sig_ip_el[6:9],
-                              sig_ip_el[9:12],
-                              sig_ip_el[12:15],
-                              sig_ip_el[15:18],
-                              sig_ip_el[18:21],
-                              sig_ip_el[21:24],
-                              sig_ip_el[24:27]]))
-        sigM_nd = extrapolate_ip_to_node_quad9n(sigM_ip)
-        # sxx
-        sig_out[ind1, 0] += sigM_nd[0, 0]
-        sig_out[ind2, 0] += sigM_nd[1, 0]
-        sig_out[ind3, 0] += sigM_nd[2, 0]
-        sig_out[ind4, 0] += sigM_nd[3, 0]
-        sig_out[ind5, 0] += sigM_nd[4, 0]
-        sig_out[ind6, 0] += sigM_nd[5, 0]
-        sig_out[ind7, 0] += sigM_nd[6, 0]
-        sig_out[ind8, 0] += sigM_nd[7, 0]
-        sig_out[ind9, 0] += sigM_nd[8, 0]
-        # syy
-        sig_out[ind1, 1] += sigM_nd[0, 1]
-        sig_out[ind2, 1] += sigM_nd[1, 1]
-        sig_out[ind3, 1] += sigM_nd[2, 1]
-        sig_out[ind4, 1] += sigM_nd[3, 1]
-        sig_out[ind5, 1] += sigM_nd[4, 1]
-        sig_out[ind6, 1] += sigM_nd[5, 1]
-        sig_out[ind7, 1] += sigM_nd[6, 1]
-        sig_out[ind8, 1] += sigM_nd[7, 1]
-        sig_out[ind9, 1] += sigM_nd[8, 1]
-        # sxy
-        sig_out[ind1, 2] += sigM_nd[0, 2]
-        sig_out[ind2, 2] += sigM_nd[1, 2]
-        sig_out[ind3, 2] += sigM_nd[2, 2]
-        sig_out[ind4, 2] += sigM_nd[3, 2]
-        sig_out[ind5, 2] += sigM_nd[4, 2]
-        sig_out[ind6, 2] += sigM_nd[5, 2]
-        sig_out[ind7, 2] += sigM_nd[6, 2]
-        sig_out[ind8, 2] += sigM_nd[7, 2]
-        sig_out[ind9, 2] += sigM_nd[8, 2]
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            nodes_tag_count[[ind1, ind2, ind3], 1] += 1
 
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9]]))
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            # # assign the same value to all nodes
+            # sigM_nd = np.vstack((sig_ip_el, sig_ip_el, sig_ip_el))
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+
+    elif nen == 4:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            nodes_tag_count[[ind1, ind2, ind3, ind4], 1] += 1
+
+            sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            nip = len(sig_ip_el)
+            # 4 gauss point quad
+            if nip == 12:
+                sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+                sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                      sig_nd_el[3:6],
+                                      sig_nd_el[6:9],
+                                      sig_nd_el[9:12]]))
+                # sigM_ip = np.vstack(([sig_ip_el[0:3],
+                #                       sig_ip_el[3:6],
+                #                       sig_ip_el[6:9],
+                #                       sig_ip_el[9:12]]))
+                # sigM_nd = extrapolate_ip_to_node_quad(sigM_ip)
+
+            # SSPquad - stabilized single point quad
+            elif nip == 3:
+                # assign the same value to all nodes
+                sigM_nd = np.vstack((sig_ip_el, sig_ip_el,
+                                     sig_ip_el, sig_ip_el))
+
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            sig_out[ind4, 0] += sigM_nd[3, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            sig_out[ind4, 1] += sigM_nd[3, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+            sig_out[ind4, 2] += sigM_nd[3, 2]
+
+    elif nen == 6:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6], 1] += 1
+
+            # FIXME: wait until stressAtNodes is available in OpenSees upstream
+            # locally it works
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9],
+                                  sig_nd_el[9:12],
+                                  sig_nd_el[12:15],
+                                  sig_nd_el[15:18]]))
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            # sigM_ip = np.vstack(([sig_ip_el[0:3],
+            #                       sig_ip_el[3:6],
+            #                       sig_ip_el[6:9]]))
+            # sigM_nd = extrapolate_ip_to_node_tri6n(sigM_ip)
+            # sxx
+            sig_out[ind1, 0] += sigM_nd[0, 0]
+            sig_out[ind2, 0] += sigM_nd[1, 0]
+            sig_out[ind3, 0] += sigM_nd[2, 0]
+            sig_out[ind4, 0] += sigM_nd[3, 0]
+            sig_out[ind5, 0] += sigM_nd[4, 0]
+            sig_out[ind6, 0] += sigM_nd[5, 0]
+            # syy
+            sig_out[ind1, 1] += sigM_nd[0, 1]
+            sig_out[ind2, 1] += sigM_nd[1, 1]
+            sig_out[ind3, 1] += sigM_nd[2, 1]
+            sig_out[ind4, 1] += sigM_nd[3, 1]
+            sig_out[ind5, 1] += sigM_nd[4, 1]
+            sig_out[ind6, 1] += sigM_nd[5, 1]
+            # sxy
+            sig_out[ind1, 2] += sigM_nd[0, 2]
+            sig_out[ind2, 2] += sigM_nd[1, 2]
+            sig_out[ind3, 2] += sigM_nd[2, 2]
+            sig_out[ind4, 2] += sigM_nd[3, 2]
+            sig_out[ind5, 2] += sigM_nd[4, 2]
+            sig_out[ind6, 2] += sigM_nd[5, 2]
+
+    elif nen == 8:
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            ind7 = node_tags.index(nd7)
+            ind8 = node_tags.index(nd8)
+            nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8],
+                            1] += 1
+
+            # sig_ip_el = ops.eleResponse(ele_tag, 'stress')
+            sig_nd_el = ops.eleResponse(ele_tag, 'stressAtNodes')
+            sigM_nd = np.vstack(([sig_nd_el[0:3],
+                                  sig_nd_el[3:6],
+                                  sig_nd_el[6:9],
+                                  sig_nd_el[9:12],
+                                  sig_nd_el[12:15],
+                                  sig_nd_el[15:18],
+                                  sig_nd_el[18:21],
+                                  sig_nd_el[21:24]]))
+            # sig_nd_el[21:24],
+            # sig_ip_el[24:27]]))
     indxs, = np.where(nodes_tag_count[:, 1] > 1)
 
     # n_indxs < n_nodes: e.g. 21<25 (bous), 2<6 (2el) etc.
@@ -3202,120 +3456,26 @@ def sig_out_per_node_quad9n():
     sig_out[indxs, :] = \
         sig_out[indxs, :]/nodes_tag_count[indxs, 1].reshape(n_indxs, 1)
 
-    # warning reshape from (pts,ncomp) to (ncomp,pts)
-    vm_out = vm_stress(np.transpose(sig_out[:, :3]))
+    if stress_str == 'sxx':
+        sig_out_vec = sig_out[:, 0]
+    elif stress_str == 'syy':
+        sig_out_vec = sig_out[:, 1]
+    elif stress_str == 'sxy':
+        sig_out_vec = sig_out[:, 2]
+    elif stress_str == 'svm' or stress_str == 'vmis':
+        # warning reshape from (pts,ncomp) to (ncomp,pts)
+        sig_out_vec = vm_stress(np.transpose(sig_out[:, :3]))
+    elif (stress_str == 's1' or stress_str == 's2' or stress_str == 'angle'):
+        princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
+        if stress_str == 's1':
+            # sig_out_vec = np.transpose(princ_sig_out)[:, 0]
+            sig_out_vec = princ_sig_out[0, :]
+        elif stress_str == 's2':
+            sig_out_vec = princ_sig_out[1, :]
+        elif stress_str == 'angle':
+            sig_out_vec = princ_sig_out[2, :]
 
-    sig_out[:, 3] = vm_out
-
-    princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
-
-    sig_out[:, 4:7] = np.transpose(princ_sig_out)
-
-    return sig_out
-
-
-def sig_out_per_node_quad8n():
-    """Return a 2d numpy array of stress components per OpenSees node.
-
-    Three first stress components (sxx, syy, sxy) are calculated and
-    extracted from OpenSees, while the rest svm (Huber-Mieses-Hencky),
-    two principal stresses (s1, s2) and directional angle are calculated
-    as postprocessed quantities.
-
-    Returns:
-        sig_out (ndarray): a 2d array of stress components per node with
-            the following components: sxx, syy, sxy, svm, s1, s2, angle.
-            Size (n_nodes x 7).
-
-    Examples:
-        sig_out = opsv.sig_out_per_node_quad()
-
-    Notes:
-       s1, s2: principal stresses
-       angle: angle of the principal stress s1
-    """
-    ele_tags = ops.getEleTags()
-    node_tags = ops.getNodeTags()
-    n_nodes = len(node_tags)
-
-    # initialize helper arrays
-    sig_out = np.zeros((n_nodes, 7))
-
-    nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
-    nodes_tag_count[:, 0] = node_tags
-
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
-
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        ind5 = node_tags.index(nd5)
-        ind6 = node_tags.index(nd6)
-        ind7 = node_tags.index(nd7)
-        ind8 = node_tags.index(nd8)
-        nodes_tag_count[[ind1, ind2, ind3, ind4, ind5, ind6, ind7, ind8],
-                        1] += 1
-
-        sig_ip_el = ops.eleResponse(ele_tag, 'stress')
-        sigM_ip = np.vstack(([sig_ip_el[0:3],
-                              sig_ip_el[3:6],
-                              sig_ip_el[6:9],
-                              sig_ip_el[9:12],
-                              sig_ip_el[12:15],
-                              sig_ip_el[15:18],
-                              sig_ip_el[18:21],
-                              sig_ip_el[21:24],
-                              sig_ip_el[24:27]]))
-        sigM_nd = extrapolate_ip_to_node_quad8n(sigM_ip)
-        # sxx
-        sig_out[ind1, 0] += sigM_nd[0, 0]
-        sig_out[ind2, 0] += sigM_nd[1, 0]
-        sig_out[ind3, 0] += sigM_nd[2, 0]
-        sig_out[ind4, 0] += sigM_nd[3, 0]
-        sig_out[ind5, 0] += sigM_nd[4, 0]
-        sig_out[ind6, 0] += sigM_nd[5, 0]
-        sig_out[ind7, 0] += sigM_nd[6, 0]
-        sig_out[ind8, 0] += sigM_nd[7, 0]
-        # syy
-        sig_out[ind1, 1] += sigM_nd[0, 1]
-        sig_out[ind2, 1] += sigM_nd[1, 1]
-        sig_out[ind3, 1] += sigM_nd[2, 1]
-        sig_out[ind4, 1] += sigM_nd[3, 1]
-        sig_out[ind5, 1] += sigM_nd[4, 1]
-        sig_out[ind6, 1] += sigM_nd[5, 1]
-        sig_out[ind7, 1] += sigM_nd[6, 1]
-        sig_out[ind8, 1] += sigM_nd[7, 1]
-        # sxy
-        sig_out[ind1, 2] += sigM_nd[0, 2]
-        sig_out[ind2, 2] += sigM_nd[1, 2]
-        sig_out[ind3, 2] += sigM_nd[2, 2]
-        sig_out[ind4, 2] += sigM_nd[3, 2]
-        sig_out[ind5, 2] += sigM_nd[4, 2]
-        sig_out[ind6, 2] += sigM_nd[5, 2]
-        sig_out[ind7, 2] += sigM_nd[6, 2]
-        sig_out[ind8, 2] += sigM_nd[7, 2]
-
-    indxs, = np.where(nodes_tag_count[:, 1] > 1)
-
-    # n_indxs < n_nodes: e.g. 21<25 (bous), 2<6 (2el) etc.
-    n_indxs = np.shape(indxs)[0]
-
-    # divide summed stresses by the number of common nodes
-    sig_out[indxs, :] = \
-        sig_out[indxs, :]/nodes_tag_count[indxs, 1].reshape(n_indxs, 1)
-
-    # warning reshape from (pts,ncomp) to (ncomp,pts)
-    vm_out = vm_stress(np.transpose(sig_out[:, :3]))
-
-    sig_out[:, 3] = vm_out
-
-    princ_sig_out = princ_stress(np.transpose(sig_out[:, :3]))
-
-    sig_out[:, 4:7] = np.transpose(princ_sig_out)
-
-    return sig_out
+    return sig_out_vec
 
 
 def extrapolate_ip_to_node_tri6n(yip):
@@ -3515,7 +3675,7 @@ def quad_crds_node_to_ip():
     return eles_ips_crd, eles_nds_crd, nds_crd, quads_conn
 
 
-def quad_sig_out_per_ele():
+def sig_out_per_ele_quad():
     """
     Extract stress components for all elements from OpenSees analysis.
 
@@ -3525,7 +3685,7 @@ def quad_sig_out_per_ele():
             (n_eles x 4 x 4)
             eles_nds_sig_out - values at nodes of elements (n_eles x 4 x 4)
     Examples:
-        eles_ips_sig_out, eles_nds_sig_out = opsv.quad_sig_out_per_ele()
+        eles_ips_sig_out, eles_nds_sig_out = opsv.sig_out_per_ele_quad()
 
     Notes:
         Stress components in array columns are: Sxx, Syy, Sxy, Svmis, empty
@@ -3620,61 +3780,92 @@ def quads_to_4tris(quads_conn, nds_crd, nds_val):
     return tris_conn, nds_c_crd, nds_c_val
 
 
+def tris6n_to_4tris(tris_conn):
+    """Get triangles connectivity.
+
+    Six-node triangle is subdivided into four triangles
+
+    Args:
+        tris_conn (ndarray):
+
+    Returns:
+        tris_conn_subdiv (ndarray):
+    """
+    n_tris, _ = tris_conn.shape
+    # n_nds, _ = nds_crd.shape
+
+    tris_conn_subdiv = np.zeros((4*n_tris, 3), dtype=int)
+
+    for i, tri_conn in enumerate(tris_conn):
+        j = 4*i
+        n0, n1, n2, n3, n4, n5 = tri_conn
+
+        # triangles connectivity
+        tris_conn_subdiv[j] = np.array([n0, n3, n5])
+        tris_conn_subdiv[j+1] = np.array([n3, n1, n4])
+        tris_conn_subdiv[j+2] = np.array([n3, n4, n5])
+        tris_conn_subdiv[j+3] = np.array([n5, n4, n2])
+
+    return tris_conn_subdiv
+
+
 def plot_mesh_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
     """
     Plot 2d mesh (quads or triangles) outline.
     """
-    for ele_conn in eles_conn:
-        x = nds_crd[ele_conn, 0]
-        y = nds_crd[ele_conn, 1]
-        plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+    nen = np.shape(eles_conn)[1]
+    if nen == 3 or nen == 4:
+        for ele_conn in eles_conn:
+            x = nds_crd[ele_conn, 0]
+            y = nds_crd[ele_conn, 1]
+            plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+
+    elif nen == 6:
+        for ele_conn in eles_conn:
+            x = nds_crd[[ele_conn[0], ele_conn[3], ele_conn[1], ele_conn[4],
+                         ele_conn[2], ele_conn[5]], 0]
+            y = nds_crd[[ele_conn[0], ele_conn[3], ele_conn[1], ele_conn[4],
+                         ele_conn[2], ele_conn[5]], 1]
+            plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+
+    elif nen == 9:
+        for ele_conn in eles_conn:
+            x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                         ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7]],
+                        0]
+            y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                         ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7]],
+                        1]
+            plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
+
+    elif nen == 8:
+        for ele_conn in eles_conn:
+            x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                         ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7]],
+                        0]
+            y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
+                         ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7]],
+                        1]
+            plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
 
 
-def plot_mesh_9n_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
-    """
-    Plot 2d mesh (quads or triangles) outline.
-    """
-    for ele_conn in eles_conn:
-        x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
-                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
-                     ele_conn[0]], 0]
-        y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
-                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
-                     ele_conn[0]], 1]
-        plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
-
-
-def plot_mesh_8n_2d(nds_crd, eles_conn, lw=0.4, ec='k'):
-    """
-    Plot 2d mesh (quads or triangles) outline.
-    """
-    for ele_conn in eles_conn:
-        x = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
-                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
-                     ele_conn[0]], 0]
-        y = nds_crd[[ele_conn[0], ele_conn[4], ele_conn[1], ele_conn[5],
-                     ele_conn[2], ele_conn[6], ele_conn[3], ele_conn[7],
-                     ele_conn[0]], 1]
-        plt.fill(x, y, edgecolor=ec, lw=lw, fill=False)
-
-
-def plot_stress_2d(nds_val, mesh_outline=1, cmap='viridis', levels=50):
+def plot_stress_2d(nds_val, mesh_outline=1, cmap='turbo', levels=50):
     """
     Plot stress distribution of a 2d elements of a 2d model.
 
     Args:
         nds_val (ndarray): the values of a stress component, which can
-            be extracted from sig_out array (see sig_out_per_node_quad
+            be extracted from sig_out array (see sig_out_per_node
             function)
 
         mesh_outline (int): 1 - mesh is plotted, 0 - no mesh plotted.
 
-        cmap (str): Matplotlib color map (default is 'viridis')
+        cmap (str): Matplotlib color map (default is 'turbo')
 
     Usage:
         ::
 
-            sig_out = opsv.sig_out_per_node_quad()
+            sig_out = opsv.sig_out_per_node()
             j, jstr = 3, 'vmis'
             nds_val = sig_out[:, j]
             opsv.plot_stress_2d(nds_val)
@@ -3685,19 +3876,21 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='viridis', levels=50):
 
     See also:
 
-    :ref:`ops_vis_sig_out_per_node_quad`
+    :ref:`ops_vis_sig_out_per_node`
     """
 
     node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
     n_nodes, n_eles = len(node_tags), len(ele_tags)
 
+    nen = np.shape(ops.eleNodes(ele_tags[0]))[0]
+
     # idiom coordinates as ordered in node_tags
     # use node_tags.index(tag) for correspondence
     nds_crd = np.zeros((n_nodes, 2))
     for i, node_tag in enumerate(node_tags):
         nds_crd[i] = ops.nodeCoord(node_tag)
 
-    # from utils / sig_out_per_node_quad
+    # from utils / sig_out_per_node
     # fixme: if this can be simplified
     # index (starts from 0) to node_tag correspondence
     # (a) data in np.array of integers
@@ -3706,144 +3899,150 @@ def plot_stress_2d(nds_val, mesh_outline=1, cmap='viridis', levels=50):
     #
     # correspondence indx and node_tag is in node_tags.index
     # after testing remove the above
-    quads_conn = np.zeros((n_eles, 4), dtype=int)
 
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        quads_conn[i] = np.array([ind1, ind2, ind3, ind4])
+    if nen == 3:
+        tris_conn = np.zeros((n_eles, 3), dtype=int)
 
-    tris_conn, nds_c_crd, nds_c_val = \
-        quads_to_4tris(quads_conn, nds_crd, nds_val)
+        nds_crd = np.zeros((n_nodes, 2))
+        for i, node_tag in enumerate(node_tags):
+            nds_crd[i] = ops.nodeCoord(node_tag)
 
-    nds_crd_all = np.vstack((nds_crd, nds_c_crd))
-    # nds_val_all = np.concatenate((nds_val, nds_c_val))
-    nds_val_all = np.hstack((nds_val, nds_c_val))
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            tris_conn[i] = np.array([ind1, ind2, ind3])
 
-    # 1. plot contour maps
-    triangulation = tri.Triangulation(nds_crd_all[:, 0],
-                                      nds_crd_all[:, 1],
-                                      tris_conn)
+        # 1. plot contour maps
+        triangulation = tri.Triangulation(nds_crd[:, 0],
+                                          nds_crd[:, 1],
+                                          tris_conn)
 
-    plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
+        plt.tricontourf(triangulation, nds_val, levels=levels, cmap=cmap)
 
-    # 2. plot original mesh (quad) without subdivision into triangles
-    if mesh_outline:
+        # 2. plot original mesh (quad) without subdivision into triangles
+        if mesh_outline:
+            plot_mesh_2d(nds_crd, tris_conn)
+
+    elif nen == 4:
+        quads_conn = np.zeros((n_eles, 4), dtype=int)
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            quads_conn[i] = np.array([ind1, ind2, ind3, ind4])
+
+        tris_conn, nds_c_crd, nds_c_val = \
+            quads_to_4tris(quads_conn, nds_crd, nds_val)
+
+        nds_crd_all = np.vstack((nds_crd, nds_c_crd))
+        # nds_val_all = np.concatenate((nds_val, nds_c_val))
+        nds_val_all = np.hstack((nds_val, nds_c_val))
+
+        # 1. plot contour maps
+        triangulation = tri.Triangulation(nds_crd_all[:, 0],
+                                          nds_crd_all[:, 1],
+                                          tris_conn)
+
+        plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
+
+        # 2. plot original mesh (quad) without subdivision into triangles
+        if mesh_outline:
+            plot_mesh_2d(nds_crd, quads_conn)
+
+    elif nen == 6:
+        tris_conn = np.zeros((n_eles, 6), dtype=int)
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            tris_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6])
+
+        tris_conn_subdiv = tris6n_to_4tris(tris_conn)
+
+        # 1. plot contour maps
+        triangulation = tri.Triangulation(nds_crd[:, 0],
+                                          nds_crd[:, 1],
+                                          tris_conn_subdiv)
+
+        plt.tricontourf(triangulation, nds_val, levels=levels, cmap=cmap)
+
+        # 2. plot original mesh (tri) without subdivision into triangles
+        plot_mesh_2d(nds_crd, tris_conn)
+
+    elif nen == 8:
+        quads_conn = np.zeros((n_eles, 8), dtype=int)
+
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            ind7 = node_tags.index(nd7)
+            ind8 = node_tags.index(nd8)
+            quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
+                                      ind8])
+
+        # tris_conn = quads_to_8tris_8n(quads_conn)
+        tris_conn, nds_c_crd, nds_c_val = quads_to_8tris_8n(quads_conn,
+                                                            nds_crd, nds_val)
+
+        nds_crd_all = np.vstack((nds_crd, nds_c_crd))
+        # nds_val_all = np.concatenate((nds_val, nds_c_val))
+        nds_val_all = np.hstack((nds_val, nds_c_val))
+
+        # 1. plot contour maps
+        triangulation = tri.Triangulation(nds_crd_all[:, 0],
+                                          nds_crd_all[:, 1],
+                                          tris_conn)
+
+        plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
+
+        # 2. plot original mesh (quad) without subdivision into triangles
         plot_mesh_2d(nds_crd, quads_conn)
 
-    # plt.colorbar()
-    plt.axis('equal')
+    elif nen == 9:
+        quads_conn = np.zeros((n_eles, 9), dtype=int)
 
+        for i, ele_tag in enumerate(ele_tags):
+            nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
+            ind1 = node_tags.index(nd1)
+            ind2 = node_tags.index(nd2)
+            ind3 = node_tags.index(nd3)
+            ind4 = node_tags.index(nd4)
+            ind5 = node_tags.index(nd5)
+            ind6 = node_tags.index(nd6)
+            ind7 = node_tags.index(nd7)
+            ind8 = node_tags.index(nd8)
+            ind9 = node_tags.index(nd9)
+            quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
+                                      ind8, ind9])
 
-def plot_stress_9n_2d(nds_val, cmap='viridis', levels=50):
+        tris_conn = quads_to_8tris_9n(quads_conn)
 
-    node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
-    n_nodes, n_eles = len(node_tags), len(ele_tags)
+        # 1. plot contour maps
+        triangulation = tri.Triangulation(nds_crd[:, 0],
+                                          nds_crd[:, 1],
+                                          tris_conn)
 
-    # idiom coordinates as ordered in node_tags
-    # use node_tags.index(tag) for correspondence
-    nds_crd = np.zeros((n_nodes, 2))
-    for i, node_tag in enumerate(node_tags):
-        nds_crd[i] = ops.nodeCoord(node_tag)
+        plt.tricontourf(triangulation, nds_val, levels=levels, cmap=cmap)
 
-    # from utils / sig_out_per_node_quad
-    # fixme: if this can be simplified
-    # index (starts from 0) to node_tag correspondence
-    # (a) data in np.array of integers
-    # nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
-    # nodes_tag_count[:, 0] = node_tags
-    #
-    # correspondence indx and node_tag is in node_tags.index
-    # after testing remove the above
-    quads_conn = np.zeros((n_eles, 9), dtype=int)
+        # 2. plot original mesh (quad) without subdivision into triangles
+        plot_mesh_2d(nds_crd, quads_conn)
 
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8, nd9 = ops.eleNodes(ele_tag)
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        ind5 = node_tags.index(nd5)
-        ind6 = node_tags.index(nd6)
-        ind7 = node_tags.index(nd7)
-        ind8 = node_tags.index(nd8)
-        ind9 = node_tags.index(nd9)
-        quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
-                                  ind8, ind9])
-
-    tris_conn = quads_to_8tris_9n(quads_conn)
-
-    # 1. plot contour maps
-    triangulation = tri.Triangulation(nds_crd[:, 0],
-                                      nds_crd[:, 1],
-                                      tris_conn)
-
-    plt.tricontourf(triangulation, nds_val, levels=levels, cmap=cmap)
-
-    # 2. plot original mesh (quad) without subdivision into triangles
-    plot_mesh_9n_2d(nds_crd, quads_conn)
-
-    # plt.colorbar()
-    plt.axis('equal')
-
-
-def plot_stress_8n_2d(nds_val, cmap='viridis', levels=50):
-
-    node_tags, ele_tags = ops.getNodeTags(), ops.getEleTags()
-    n_nodes, n_eles = len(node_tags), len(ele_tags)
-
-    # idiom coordinates as ordered in node_tags
-    # use node_tags.index(tag) for correspondence
-    nds_crd = np.zeros((n_nodes, 2))
-    for i, node_tag in enumerate(node_tags):
-        nds_crd[i] = ops.nodeCoord(node_tag)
-
-    # from utils / sig_out_per_node_quad
-    # fixme: if this can be simplified
-    # index (starts from 0) to node_tag correspondence
-    # (a) data in np.array of integers
-    # nodes_tag_count = np.zeros((n_nodes, 2), dtype=int)
-    # nodes_tag_count[:, 0] = node_tags
-    #
-    # correspondence indx and node_tag is in node_tags.index
-    # after testing remove the above
-    quads_conn = np.zeros((n_eles, 8), dtype=int)
-
-    for i, ele_tag in enumerate(ele_tags):
-        nd1, nd2, nd3, nd4, nd5, nd6, nd7, nd8 = ops.eleNodes(ele_tag)
-        ind1 = node_tags.index(nd1)
-        ind2 = node_tags.index(nd2)
-        ind3 = node_tags.index(nd3)
-        ind4 = node_tags.index(nd4)
-        ind5 = node_tags.index(nd5)
-        ind6 = node_tags.index(nd6)
-        ind7 = node_tags.index(nd7)
-        ind8 = node_tags.index(nd8)
-        quads_conn[i] = np.array([ind1, ind2, ind3, ind4, ind5, ind6, ind7,
-                                  ind8])
-
-    # tris_conn = quads_to_8tris_8n(quads_conn)
-    tris_conn, nds_c_crd, nds_c_val = quads_to_8tris_8n(quads_conn, nds_crd,
-                                                        nds_val)
-
-    nds_crd_all = np.vstack((nds_crd, nds_c_crd))
-    # nds_val_all = np.concatenate((nds_val, nds_c_val))
-    nds_val_all = np.hstack((nds_val, nds_c_val))
-
-    # 1. plot contour maps
-    triangulation = tri.Triangulation(nds_crd_all[:, 0],
-                                      nds_crd_all[:, 1],
-                                      tris_conn)
-
-    plt.tricontourf(triangulation, nds_val_all, levels=levels, cmap=cmap)
-
-    # 2. plot original mesh (quad) without subdivision into triangles
-    plot_mesh_8n_2d(nds_crd, quads_conn)
-
-    # plt.colorbar()
+    plt.colorbar()
     plt.axis('equal')
 
 
@@ -4202,9 +4401,9 @@ def quads_to_8tris_8n(quads_conn, nds_crd, nds_val):
         #                          np.sum(nds_crd[[n0, n1, n2, n3], 1])/4.])
         # nds_c_val[i] = np.sum(nds_val[[n0, n1, n2, n3]])/4.
         nds_c_crd[i] = quad8n_val_at_center(nds_crd[[n0, n1, n2, n3,
-                                                      n4, n5, n6, n7]])
+                                                     n4, n5, n6, n7]])
         nds_c_val[i] = quad8n_val_at_center(nds_val[[n0, n1, n2, n3,
-                                                      n4, n5, n6, n7]])
+                                                     n4, n5, n6, n7]])
 
         # triangles connectivity
         tris_conn[j] = np.array([n0, n4, n_nds+i])
@@ -4277,3 +4476,76 @@ def quad8n_val_at_center(vals):
     val_c1 = -np.mean(vals[[0, 1, 2, 3]], axis=0) + 2*np.mean(vals[[4, 5, 6, 7]], axis=0)  # noqa: E501
 
     return val_c1
+
+
+def plot_stress(stress_str, mesh_outline=1, cmap='turbo', levels=50):
+    """Plot stress distribution of the model.
+
+    Args:
+        stress_str (string): stress component string. Available options are:
+            'sxx', 'syy', 'sxy', 'vmis', 's1', 's2', 'alpha'
+
+        mesh_outline (int): 1 - mesh is plotted, 0 - no mesh plotted.
+
+        cmap (str): Matplotlib color map (default is 'turbo')
+
+        levels (int): number and positions of the contour lines / regions.
+
+    Usage:
+        ::
+
+            opsv.plot_stress('vmis')
+            plt.xlabel('x [m]')
+            plt.ylabel('y [m]')
+            plt.show()
+
+    See also:
+
+    :ref:`ops_vis_sig_out_per_node`
+    """
+
+    # az_el - azimut, elevation used for 3d plots only
+    ndim = np.shape(ops.nodeCoord(ops.getNodeTags()[0]))[0]
+
+    if ndim == 2:
+        _plot_stress_2d(stress_str, mesh_outline, cmap, levels)
+        # if axis_off:
+        #     plt.axis('off')
+
+    # not implemented yet
+    # elif ndim == 3:
+    #     _plot_stress_3d(stress_str, mesh_outline, cmap, levels)
+
+    else:
+        print(f'\nWarning! ndim: {ndim} not implemented yet.')
+
+    # plt.show()  # call this from main py file for more control
+
+
+def _plot_stress_2d(stress_str, mesh_outline, cmap, levels):
+    """See documentation for plot_stress command"""
+
+    # node_tags = ops.getNodeTags()
+    # ele_tags = ops.getEleTags()
+    # n_nodes = len(node_tags)
+
+    # second version - better - possible different types
+    # of elements (mix of quad and tri)
+    # for ele_tag in ele_tags:
+    #     nen = np.shape(ops.eleNodes(ele_tag))[0]
+
+    # avoid calculating and storing all stress components
+    # sig_out = sig_out_per_node(stress_str)
+    # switcher = {'sxx': 0,
+    #             'syy': 1,
+    #             'sxy': 2,
+    #             'svm': 3,
+    #             'vmis': 3,
+    #             's1': 4,
+    #             's2': 5,
+    #             'angle': 6}
+
+    # nds_val = sig_out[:, switcher[stress_str]]
+
+    nds_val = sig_component_per_node(stress_str)
+    plot_stress_2d(nds_val, mesh_outline, cmap, levels)
