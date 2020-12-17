@@ -95,7 +95,7 @@ for step in range(n_steps):
                               ops.nodeDisp(nd2)[1],
                               ops.nodeDisp(nd2)[2]]
 
-# 1. animate the deformated shape
+# 1. animate the deformed shape
 anim = opsv.anim_defo(Eds, timeV, sfac_a, interpFlag=1, xlim=[-1, 7],
                       ylim=[-1, 5], fig_wi_he=(30., 22.))
 
