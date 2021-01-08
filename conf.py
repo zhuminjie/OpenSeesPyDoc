@@ -61,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'OpenSeesPy'
-copyright = '2019, Minjie Zhu'
+copyright = '2019-2021, Minjie Zhu'
 author = 'Minjie Zhu'
 
 # The version info for the project you're documenting, acts as replacement for
