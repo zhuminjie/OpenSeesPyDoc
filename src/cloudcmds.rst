@@ -1,10 +1,10 @@
 .. include:: sub.txt
 
 ==============
-Cloud Commands
+Other Commands
 ==============
 
-These commands are only available in the openseescloud.com
+These commands are not available yet.
 
 
 
