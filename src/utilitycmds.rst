@@ -69,4 +69,4 @@ These commands are used to monitor and change the state of the model.
    wipeAnalysis
    setNumThread
    getNumThreads
-   cloudcmds
+

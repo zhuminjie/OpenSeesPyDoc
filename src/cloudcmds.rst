@@ -1,10 +1,10 @@
 .. include:: sub.txt
 
 ==============
-Other Commands
+Cloud Commands
 ==============
 
-These commands are not available yet.
+These commands are only available on the cloud.
 
 
 
@@ -15,3 +15,4 @@ These commands are not available yet.
    :hidden:
    
    nodeSizeForViewer
+   GenericModel
