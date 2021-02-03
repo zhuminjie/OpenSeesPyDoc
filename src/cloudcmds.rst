@@ -1,14 +1,20 @@
 .. include:: sub.txt
 
-==============
-Cloud Commands
-==============
+===========================
+OpenSeesCloud Documentation
+===========================
 
-These commands are only available on the cloud.
+These commands and functions
+are only available on the cloud.
 
 
 
 #. :doc:`nodeSizeForViewer`
+#. :doc:`GenericModel`
+#. :doc:`TrashCan`
+#. :doc:`OpenSeesCloudModule`
+#. :doc:`keyboard-shortcuts`
+   
 
 .. toctree::
    :maxdepth: 1
@@ -16,3 +22,6 @@ These commands are only available on the cloud.
    
    nodeSizeForViewer
    GenericModel
+   TrashCan
+   OpenSeesCloudModule
+   keyboard-shortcuts
