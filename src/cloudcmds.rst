@@ -15,6 +15,7 @@ are only available on the cloud.
 #. :doc:`TrashCan`
 #. :doc:`OpenSeesCloudModule`
 #. :doc:`keyboard-shortcuts`
+#. :doc:`runAllModel`
    
 
 .. toctree::
@@ -27,3 +28,4 @@ are only available on the cloud.
    OpenSeesCloudModule
    keyboard-shortcuts
    showNodeTagForViewer
+   runAllModel
