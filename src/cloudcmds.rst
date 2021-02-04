@@ -10,6 +10,7 @@ are only available on the cloud.
 
 
 #. :doc:`nodeSizeForViewer`
+#. :doc:`showNodeTagForViewer`
 #. :doc:`GenericModel`
 #. :doc:`TrashCan`
 #. :doc:`OpenSeesCloudModule`
@@ -25,3 +26,4 @@ are only available on the cloud.
    TrashCan
    OpenSeesCloudModule
    keyboard-shortcuts
+   showNodeTagForViewer
