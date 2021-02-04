@@ -1,7 +1,7 @@
 .. include:: sub.txt
 
 =======================
- Runn all model button
+ Run all model button
 =======================
 
 This button is at the top left corner of

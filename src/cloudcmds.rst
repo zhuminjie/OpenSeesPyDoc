@@ -16,6 +16,7 @@ are only available on the cloud.
 #. :doc:`OpenSeesCloudModule`
 #. :doc:`keyboard-shortcuts`
 #. :doc:`runAllModel`
+#. :doc:`resetCamera`
    
 
 .. toctree::
@@ -29,3 +30,4 @@ are only available on the cloud.
    keyboard-shortcuts
    showNodeTagForViewer
    runAllModel
+   resetCamera
