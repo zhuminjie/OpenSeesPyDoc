@@ -5,10 +5,13 @@
 =======================
 
 - This button is at the top of
-  the cloud viewer.
+  the cloud viewer, next to the ``Run all model`` button.
 
 - This button will run the currently focused
   model.
+
+- The name of the currently focused model will be
+  displayed on the button.
 
 - To make a model currently focused, you
   can open the model's module and click
