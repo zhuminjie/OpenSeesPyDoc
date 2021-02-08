@@ -13,7 +13,7 @@
    file or from a list in the script. When the time specified does not match
    any of the input points, linear interpolation is used between points.
    There are many ways to specify the load path, for example,
-   the load factors set with ``values`` or ``filepath``,
+   the load factors set with ``values`` or ``filePath``,
    and the time set with ``dt``, ``time``, or ``fileTime``.
 
    ========================   =============================================================
