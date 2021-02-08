@@ -4,15 +4,18 @@
  Generic Model Module
 ======================
 
-Generic Model is the most flexible module for
-writing Python script to create a model.
+- Generic Model is the most flexible module for
+  writing Python script to create a model.
 
-Add module
-----------
+- The import of OpenSeesPy is optional
 
-To add this model,
+- Every ``OpenSeesPy`` command should be called as::
 
-- open ``Add Module: start by adding a Module``
-- Click ``Generic Model``
+    ops.command
 
-A ``Generic Model`` with its ``id`` will appear below.
+- When a Generic Model is run, the model should be displayed in the viewer.
+
+.. note::
+
+   - The :doc:`runAllModel` will run all models.
+   - The :doc:`runOneModel` will just run the selected model.

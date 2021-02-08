@@ -5,7 +5,7 @@
 =======================
 
 - This button is at the top of
-  the cloud viewer, next to the ``Run all model`` button.
+  the cloud viewer, next to the :doc:`runAllModel`.
 
 - This button will run the currently focused
   model.

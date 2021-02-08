@@ -8,13 +8,15 @@ These commands and functions
 are only available on the cloud.
 
 
-
+#. :doc:`OpenSeesCloudModule`
+#. :doc:`GenericModel`
+#. :doc:`ViewerSetting`
+#. :doc:`AnalysisSetting`
+#. :doc:`OutputModule`
+#. :doc:`TrashCan`
 #. :doc:`nodeSizeForViewer`
 #. :doc:`showNodeTagForViewer`
 #. :doc:`showNodeLoadForViewer`
-#. :doc:`GenericModel`
-#. :doc:`TrashCan`
-#. :doc:`OpenSeesCloudModule`
 #. :doc:`keyboard-shortcuts`
 #. :doc:`runAllModel`
 #. :doc:`runOneModel`
@@ -27,6 +29,9 @@ are only available on the cloud.
    
    nodeSizeForViewer
    GenericModel
+   ViewerSetting
+   AnalysisSetting
+   OutputModule
    TrashCan
    OpenSeesCloudModule
    keyboard-shortcuts
