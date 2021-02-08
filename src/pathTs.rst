@@ -13,7 +13,7 @@
    file or from a list in the script. When the time specified does not match
    any of the input points, linear interpolation is used between points.
    There are many ways to specify the load path, for example,
-   the load factors set with ``values`` or ``filepath``,
+   the load factors set with ``values`` or ``filePath``,
    and the time set with ``dt``, ``time``, or ``fileTime``.
 
    ========================   =============================================================
@@ -21,7 +21,7 @@
    ``dt`` |float|             Time interval between specified points. (optional)
    ``values`` |listf|         Load factor values in a |list|. (optional)
    ``time`` |listf|           Time values in a |list|. (optional)
-   ``filepath`` |str|         File containing the load factors values. (optional)
+   ``filePath`` |str|         File containing the load factors values. (optional)
    ``fileTime`` |str|         File containing the time values for corresponding
 		              load factors. (optional)
    ``factor`` |float|         A factor to multiply load factors by. (optional)
