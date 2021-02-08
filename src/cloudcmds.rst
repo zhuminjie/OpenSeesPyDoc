@@ -9,6 +9,7 @@ are only available on the cloud.
 
 
 #. :doc:`OpenSeesCloudModule`
+#. :doc:`SearchAll`
 #. :doc:`GenericModel`
 #. :doc:`ViewerSetting`
 #. :doc:`AnalysisSetting`
@@ -28,6 +29,7 @@ are only available on the cloud.
    :hidden:
    
    nodeSizeForViewer
+   SearchAll
    GenericModel
    ViewerSetting
    AnalysisSetting
