@@ -11,6 +11,7 @@ are only available on the cloud.
 
 #. :doc:`nodeSizeForViewer`
 #. :doc:`showNodeTagForViewer`
+#. :doc:`showNodeLoadForViewer`
 #. :doc:`GenericModel`
 #. :doc:`TrashCan`
 #. :doc:`OpenSeesCloudModule`
@@ -30,6 +31,7 @@ are only available on the cloud.
    OpenSeesCloudModule
    keyboard-shortcuts
    showNodeTagForViewer
+   showNodeLoadForViewer
    runAllModel
    runOneModel
    resetCamera
