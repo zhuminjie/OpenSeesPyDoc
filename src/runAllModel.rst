@@ -14,7 +14,7 @@ The order of scripts that are run are as follow:
 1. :doc:`ViewerSetting`
 1. :doc:`GenericModel`
 1. :doc:`AnalysisSetting`
-1. :doc:`RunAnalysis`
+1. :doc:`runAnalysisModule`
 1. :doc:`PlotModule`
 
 For the same module type, the modules with lower `id`
