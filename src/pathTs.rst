@@ -4,7 +4,7 @@
  Path TimeSeries
 =================
 
-.. function:: timeSeries('Path',tag,'-dt',dt=0.0,'-values',*values,'-time',*time,'-filepath',filepath='','-fileTime',fileTime='','-factor',factor=1.0,'-startTime',startTime=0.0,'-useLast','-prependZero')
+.. function:: timeSeries('Path',tag,'-dt',dt=0.0,'-values',*values,'-time',*time,'-filePath',filePath='','-fileTime',fileTime='','-factor',factor=1.0,'-startTime',startTime=0.0,'-useLast','-prependZero')
    :noindex:
 
    The relationship between load
