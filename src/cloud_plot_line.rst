@@ -45,7 +45,3 @@
    ``lineTension`` |float|    if ``0.0``, straight lines are drawn, otherwise, Bezier curves are drawn.
    ========================   ===================================================================================
 
-
-.. note::
-
-   This must be the first command to call in :doc:`Plotmodule`.
