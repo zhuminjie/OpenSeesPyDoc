@@ -11,6 +11,7 @@
    ========================   ===================================================================================
    ``x`` |listf|              a list of x values
    ``y`` |listf|              a list of y values
+   ``label`` |str|            the label name for the line in the legend
    ``color`` |str|            the color for the line, the value could be:
 
 	                      - rgb values as ``'rgb(r,g,b)'`` betwen ``[0, 255]``.
