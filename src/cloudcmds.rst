@@ -7,18 +7,40 @@ OpenSeesCloud Documentation
 These commands and functions
 are only available on the cloud.
 
+Modules
+-------
 
 #. :doc:`OpenSeesCloudModule`
-#. :doc:`SearchAll`
-#. :doc:`GenericModel`
 #. :doc:`ViewerSetting`
+#. :doc:`GenericModel`
 #. :doc:`AnalysisSetting`
+#. :doc:`runAnalysisModule`
 #. :doc:`OutputModule`
+#. :doc:`SearchAll`
+#. :doc:`PlotModule`
 #. :doc:`TrashCan`
+
+Viewer Settings
+-------------
+
 #. :doc:`nodeSizeForViewer`
 #. :doc:`showNodeTagForViewer`
 #. :doc:`showNodeLoadForViewer`
+
+Plotting
+--------
+#. :doc:`cloud_reset_plot`
+#. :doc:`cloud_plot_line`
+
+
+Editor
+------
+
 #. :doc:`keyboard-shortcuts`
+
+Buttons
+-------
+
 #. :doc:`runAllModel`
 #. :doc:`runOneModel`
 #. :doc:`resetCamera`
@@ -31,6 +53,8 @@ are only available on the cloud.
    nodeSizeForViewer
    SearchAll
    GenericModel
+   runAnalysisModule
+   PlotModule
    ViewerSetting
    AnalysisSetting
    OutputModule
@@ -42,3 +66,5 @@ are only available on the cloud.
    runAllModel
    runOneModel
    resetCamera
+   cloud_reset_plot
+   cloud_plot_line
