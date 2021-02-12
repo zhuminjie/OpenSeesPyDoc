@@ -26,6 +26,7 @@ Viewer Settings
 #. :doc:`nodeSizeForViewer`
 #. :doc:`showNodeTagForViewer`
 #. :doc:`showNodeLoadForViewer`
+#. :doc:`includeDispForViewer`
 
 Plotting
 --------
@@ -38,12 +39,12 @@ Editor
 
 #. :doc:`keyboard-shortcuts`
 
-Buttons
+Viewer
 -------
 
-#. :doc:`runAllModel`
-#. :doc:`runOneModel`
-#. :doc:`resetCamera`
+#. :doc:`threeDviewer`
+
+   
    
 
 .. toctree::
@@ -63,8 +64,7 @@ Buttons
    keyboard-shortcuts
    showNodeTagForViewer
    showNodeLoadForViewer
-   runAllModel
-   runOneModel
-   resetCamera
+   includeDispForViewer
+   threeDviewer
    cloud_reset_plot
    cloud_plot_line
