@@ -4,6 +4,7 @@
 
 
 #. :doc:`pile`
+#. :doc:`freeFieldEffective`
 
 
 .. toctree::
