@@ -10,6 +10,5 @@
    and shown below, which can be downloaded :download:`here </pyExamples/freeFieldEffective.py>`.
 #. The Input motion (velocity-time) can be downloaded :download:`here </pyExamples/velocityHistory.txt>`.
 
-
 .. literalinclude:: /pyExamples/freeFieldEffective.py
    :linenos:
