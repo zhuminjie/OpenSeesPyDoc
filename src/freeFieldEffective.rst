@@ -8,6 +8,7 @@
 
 #. The Python code is converted by **Harsh Mistry from The University of Manchester, UK** (harsh.mistry@manchester.ac.uk),
    and shown below, which can be downloaded :download:`here </pyExamples/freeFieldEffective.py>`.
+#. The Input motion (velocity-time) can be downloaded :download:`here </pyExamples/velocityHistory.txt>`.
 
 .. literalinclude:: /pyExamples/freeFieldEffective.py
    :linenos:
