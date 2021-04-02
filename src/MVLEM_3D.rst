@@ -45,4 +45,4 @@ This element shall be used in Domain defined with **-ndm 3 -ndf 6**.
 
    More information available `HERE <https://kkolozvari.github.io/MVLEM-3D/>`_ and in the following reference:
    
-   K. Kolozvari, K. Kalbasi, K. Orakcal & J. W. Wallace (2021), "Three-Dimensional Model for Nonlinear Analysis of Slender Flanged Reinforced Concrete Walls", Engineering Structures.
+   K. Kolozvari, K. Kalbasi, K. Orakcal & J. W. Wallace, "Three-Dimensional Model for Nonlinear Analysis of Slender Flanged Reinforced Concrete Walls", Engineering Structures, `Volume 236, 1 June 2021, 112105 <https://www.sciencedirect.com/science/article/pii/S0141029621002558>`_.
