@@ -19,7 +19,7 @@ print(f"\nOpenSees " + ops.version() + " | Python " + sys.version)
 # |                   Units                     |
 # +---------------------------------------------+
 
-m, kg, sec = 1.0, 1.0, 1.0  # meter for length, kilogram for mass, second for time
+m, kN, sec = 1.0, 1.0, 1.0  # meter for length, kilonewton for force, second for time
 
 # Angle
 rad = 1.0
@@ -33,10 +33,11 @@ inch = 0.0254*m
 ft = 0.3048*m
 
 # Force
-N = kg*m/(sec**2)
-kN = N*1E3
+N = kN*1E-3
+g = 9.80665*m/(sec**2)
 
 # Mass
+kg = N*sec**2/m
 ton = kg*1E3
 lbs = 0.45359237*kg
 kip = 453.59237*kg
@@ -46,6 +47,9 @@ Pa, kPa, MPa, GPa = N/m**2, 1E3*N/m**2, 1E6*N/m**2, 1E9*N/m**2
 pcf = lbs/(ft**3)
 ksi = kip/(inch**2)
 psi = ksi/1E3
+
+Inf = 1.0E10  # a really large number
+Null = 1/Inf  # a really small number
 
 LunitTXT = "m"  # (Length) define basic-unit text for output
 FunitTXT = "kN"  # (Force) define basic-unit text for output
