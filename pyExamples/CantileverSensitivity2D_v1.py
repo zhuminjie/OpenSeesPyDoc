@@ -27,8 +27,8 @@ deg = np.pi/180.0*rad
 
 # Length, Area, Volume, Second moment of area
 m2, m3, m4 = m**2, m**3, m**4
-cm, cm2, cm3, cm4 = m*1E-2, m*1E-4, m*1E-6,  m*1E-8
-mm, mm2, mm3, mm4 = m*1E-3, m*1E-6, m*1E-9,  m*1E-12
+cm, cm2, cm3, cm4 = m*1E-2, m*1E-4, m*1E-6, m*1E-8
+mm, mm2, mm3, mm4 = m*1E-3, m*1E-6, m*1E-9, m*1E-12
 inch = 0.0254*m
 ft = 0.3048*m
 
@@ -54,6 +54,9 @@ Null = 1/Inf  # a really small number
 LunitTXT = "m"  # (Length) define basic-unit text for output
 FunitTXT = "kN"  # (Force) define basic-unit text for output
 TunitTXT = "sec"  # (Time) define basic-unit text for output
+
+# Units Check
+# print(f"K/M: {1.0*N/m/kg}")
 
 
 # +---------------------------------------------+
