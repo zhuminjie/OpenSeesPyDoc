@@ -7,7 +7,7 @@
 .. function:: test('NormDispIncr', tol,iter,pFlag=0,nType=2)
    :noindex:
 
-   Create a NormUnbalance test, which uses the norm of the left hand side solution vector of the matrix equation to determine if convergence has been reached.
+   Create a NormDispIncr test, which uses the norm of the left hand side solution vector of the matrix equation to determine if convergence has been reached.
 
    ======================   =============================================================
    ``tol`` |float|          Tolerance criteria used to check for convergence.
