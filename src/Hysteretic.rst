@@ -41,4 +41,4 @@
 .. seealso::
 
 
-   `Steel4 <http://opensees.berkeley.edu/wiki/index.php/Hysteretic_Material>`_
+   `Hysteretic <http://opensees.berkeley.edu/wiki/index.php/Hysteretic_Material>`_
