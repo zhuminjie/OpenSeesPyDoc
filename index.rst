@@ -9,6 +9,8 @@
 
    Version |opspy_version| is released!
 
+   Python |python_version| is required for Windows.
+
    OpenSeesPy is on :doc:`src/pypi`.
 
    The latest version of this document can be found at
