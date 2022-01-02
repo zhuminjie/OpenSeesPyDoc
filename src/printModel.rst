@@ -5,7 +5,7 @@
 printModel command
 ==================
 
-.. function:: printModel('-file',filename,'-JSON','-node','-flag',flag,*nodes=[],*eles=[])
+.. function:: printModel('-JSON','-file',filename,'-node','-flag',flag,*nodes=[],*eles=[])
 
    This command is used to print output to screen or file.
 
