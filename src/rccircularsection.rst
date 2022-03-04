@@ -4,7 +4,7 @@
  RCCircular Section
 ====================
 
-.. function:: section('RCCircularSection',secTag,coreMatTag,coverMatTag,steelMatTag,d,cover_depth,As,NringsCore,NringsCover,Newedges,Nsteel,'-GJ',GJ)
+.. function:: section('RCCircularSection',secTag,coreMatTag,coverMatTag,steelMatTag,d,cover_depth,Ab,NringsCore,NringsCover,Nwedges,Nsteel,'-GJ',GJ <or '-torsion',matTag>)
    :noindex:
 
    This command allows the user to construct an RCCircularSection object, which is an encapsulated fiber representation of a circular reinforced concrete section with core and confined regions of concrete.
@@ -16,14 +16,17 @@
    ``steelMatTag`` |int|              tag of uniaxialMaterial assigned to each reinforcing bar
    ``d`` |float|                      section radius
    ``cover_depth`` |float|            cover depth (assumed uniform around perimeter)
-   ``As`` |float|                     area of reinforcing bars 
-   ``NringsCore`` |int|               number of fibers through the core depth
-   ``NringsCover`` |int|              number of fibers through the cover depth
-   ``Newedges`` |int|                 number of fibers through the edges
-   ``Nsteel`` |int|                   number of fibers through the steels
-   ``GJ`` |float|                     GJ stiffness
+   ``Ab`` |float|                     area of each reinforcing bar
+   ``NringsCore`` |int|               number of fiber rings in the core
+   ``NringsCover`` |int|              number of fiber rings in the cover
+   ``Nwedges`` |int|                  number of fiber wedges for the section
+   ``Nsteel`` |int|                   number of reinforcing bars
+   ``GJ`` |float|                     secton torsional stiffness
+   ``matTag`` |int|                   tag of uniaxialMaterial assigned to section torsion response
    ================================   ===========================================================================
 
 .. note::
 
+   One of the -GJ or the -torsion inputs is required
+   
    For more general reinforced concrete section definitions, use the Fiber Section command.
