@@ -4,6 +4,12 @@
  A Procedure to Render 2D or 3D OpenSees Model and Mode Shapes
 =============================================================================
 
+.. note::
+
+   Note that the ``openseespy.postprocessing.Get_Rendering`` module has been moved to its
+   own respository at `here <https://github.com/u-anurag/vfo>`_. The following code may
+   not work and please direct any questions to `Anurag Upadhyay <https://github.com/u-anurag>`_.
+
 #. The source code is developed by `Anurag Upadhyay <https://github.com/u-anurag>`_ from University of Utah.
 #. The source code can be downloaded :download:`here </pyExamples/3DFrame_Rendering.py>`.
 #. Below is an example showing how to visualize an OpenSeesPy model.
