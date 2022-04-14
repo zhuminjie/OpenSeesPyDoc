@@ -6,7 +6,7 @@
 
 .. function:: nodeResponse(nodeTag, dof, responseID)
 
-   Returns the responses at a specified node. Must call ``responses`` command before
+   Returns the responses at a specified node. To get reactions (id=6), must call the ``reactions`` command before
    this command.
 
    ========================   ===========================================================================
