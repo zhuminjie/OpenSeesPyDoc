@@ -11,5 +11,5 @@
 
    ========================   ===========================================================================
    ``eleTag`` |int|           element tag.
-   ``secNum`` |int|           section number, i.e. the Gauss integratio number
+   ``secNum`` |int|           section number, i.e. the Gauss integration number
    ========================   ===========================================================================
