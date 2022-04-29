@@ -4,13 +4,12 @@
  sectionFlexibility command
 ============================
 
-.. function:: sectionFlexibility(eleTag, secNum, dof)
+.. function:: sectionFlexibility(eleTag, secNum)
 
    Returns the section flexibility matrix for a beam-column element.
    A list of values in the row order will be returned.
 
    ========================   ===========================================================================
    ``eleTag`` |int|           element tag.
-   ``secNum`` |int|           section number, i.e. the Gauss integratio number
-   ``dof`` |int|              the dof of the section
+   ``secNum`` |int|           section number, i.e. the Gauss integration number
    ========================   ===========================================================================
