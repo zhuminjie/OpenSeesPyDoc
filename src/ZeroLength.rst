@@ -19,12 +19,9 @@ zeroLength Element
 
                                          * 1,2,3 - translation along local x,y,z axes, respectively;
 					                     * 4,5,6 - rotation about local x,y,z axes, respectively
-   ``rFlag`` |float|                     optional, default = 0
-                                         * ``rFlag`` = 0 NO RAYLEIGH DAMPING (default)
+   ``rFlag`` |float|                     optional, default = 0 NO RAYLEIGH DAMPING (default), 1 include Rayleigh damping
    ``vecx`` |listf|                      a list of vector components in global coordinates defining local x-axis (optional)
    ``vecyp`` |listf|                     a list of vector components in global coordinates defining vector yp which lies in the local x-y plane for the element. (optional)
-
-					 * ``rFlag`` = 1 include rayleigh damping
    ===================================   ===========================================================================
 
 .. note::
