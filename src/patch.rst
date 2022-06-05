@@ -30,7 +30,7 @@
 .. function:: patch('rect', matTag,numSubdivY,numSubdivZ,*crdsI,*crdsJ)
    :noindex:
 
-   This is the command to generate a rectangular patch. The geometry of the patch is defined by coordinates of vertices: I and J. The first vertex, I, is the bottom-left point and the second vertex, J, is the top-right point, having as a reference the local y-z plane.
+   This is the command to generate a rectangular patch. The geometry of the patch is defined by coordinates of vertices: I and J. To ensure positive fiber areas are created, (zJ-zI)/(yJ-yI) should be positive.
 
    ================================   ===========================================================================
    ``matTag`` |int|                   material tag associated with this fiber (UniaxialMaterial tag for a FiberSection and NDMaterial tag for use in an NDFiberSection).
