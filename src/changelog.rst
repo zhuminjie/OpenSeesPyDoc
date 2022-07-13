@@ -4,6 +4,44 @@
   Change Log
 ==============
 
+* **Version 3.4.0.1** (12/22/2021)
+
+  * Update to OpenSees version `3.4.0 <https://github.com/OpenSees/OpenSees/releases/tag/v3.4.0>`_ at commit `3b28d0c <https://github.com/OpenSees/OpenSees/commit/3b28d0c8d34e5632e62d313585df8e8656277a5a>`_.
+  * Add command for QzSimple2 material
+  * Updates to PFEM
+  * Add masonry elements
+  * Add DBNL3D
+  * Update to MixedBeamColumn
+  * Add SMA material
+  * Update to material test
+  * Update to IMKBilin material
+  * Update to J2CyclicBoundingSurface model
+  * Add InertiaTruss element
+  * Add SteelFractureDI material
+  * Update to SectionIngegration
+  * Update to HystereticMaterial
+  * Add PySimple2 and TzSimple2 materials
+  * Update to MultiLinear material
+  * Add eleType command
+  * Add ExpressNewton command
+  * Add sectionTag command
+  * Update to ASDAbsorbingBoundary3D element
+  * Add TDConcrete elements
+  * Update to forceBeamColumn
+  * Add HSS to section command
+  * Add SteelDRC material
+  * Add SAniSandMS material
+  * Add getNodeLoadTags command
+  * Add getNDF command
+  * Add startPoint command
+  * Add getCrdTransfTags command
+  * Add randomNumberGenerator command
+  * Add commands for step size rule, function evaluator, and root finding
+  * Add gradientEvaluator and performanceFunction commands
+  * Add HarmonicSteadyState integrator
+  * Add DowelType material
+  * Add double membrane plate fiber section
+
 * **Version 3.3.0.0** (6/4/2021)
 
   * Update to `3.3.0.0 <https://github.com/OpenSees/OpenSees/releases/tag/v3.3.0>`_ at commit `5c925e6 <https://github.com/OpenSees/OpenSees/commit/5c925e6a24bf3fbda58e57dde32cde658b3c5d5b>`_.
