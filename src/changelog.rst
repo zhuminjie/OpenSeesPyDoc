@@ -4,6 +4,43 @@
   Change Log
 ==============
 
+* **Version 3.4.0.2** (7/20/2022)
+
+  * Update to commit `abebbee <https://github.com/OpenSees/OpenSees/tree/abebbeeb5006d9f1c623e713972787eb7db49746>_`.
+  * Update sectionForce and sectionDeformation commands.
+  * Update Tcl to Python converter.
+  * Add IGA to OpenSees.
+  * Update reliability commands.
+  * Add DuctileFracture material
+  * Update mass normalization for full gen lapack eigen solver
+  * Add ReeseStiffClayBelowWS, ReeseStiffClayAboveWS, VuggyLimestone, CementedSoil, WeakRock backbone functions
+  * Add 2D version of rigidDiaphragm
+  * Add ShellNLDKGQ to mesh command
+  * Update performanceFunction command
+  * Add PythonEvaluator
+  * Update startPoint, gradientEvaluator, randomNumberGenerator, searchDirection, meritFunctionCheck, stepSizeRule, rootFinding commands
+  * Add runFOSMAnalysis command
+  * Add findDesignPoints command
+  * Add runFORMAnalysis command
+  * Add BoucWenInfill material
+  * Add TDConcrete material
+  * Add MultiplierMaterial
+  * Add TzSimple, PySimple2, SAniSandMS to OpenSeesPy
+  * Add SPSW02 to OpenSeesPy
+  * Add RegularizedHinge to beam integration
+  * Add HystereticAsym and HystereticSmooth materials
+  * Add fixedNodes and fixedDOFs commands
+  * Add fixed/constrained/retained-Nodes/DOFs commands
+  * Add constrainedDOFs and retainedDOFs commands
+  * Add getConstraintMatrix command
+  * Add timoshenkoBeamColumn element
+  * Update NDFiberSection command
+  * Update SFI_MVLEM_3D element
+  * Update NDFiberSectionWarping2d material
+  * Add MaterialBackbone
+  * Update GradientInelasticBeamColumn3d
+  * Update ElasticBeam2d and 3d
+
 * **Version 3.4.0.1** (12/22/2021)
 
   * Update to OpenSees version `3.4.0 <https://github.com/OpenSees/OpenSees/releases/tag/v3.4.0>`_ at commit `3b28d0c <https://github.com/OpenSees/OpenSees/commit/3b28d0c8d34e5632e62d313585df8e8656277a5a>`_.
