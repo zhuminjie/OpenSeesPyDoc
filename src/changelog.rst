@@ -6,7 +6,18 @@
 
 * **Version 3.4.0.2**
 
-  * update to 
+  * update to commit.
+  * Fix ElasticBilin.
+  * Update SimpleFractureMaterial.
+  * Update ASDShellQ4 element.
+  * Update LineMesh so that last element nodes not flipped.
+  * Update BoucWenMaterial with parallel.
+  * Fix ElasticMaterial tangent.
+  * ZeroLength not require yaxis input for 2D and 3D models.
+  * Add a, b parameter in ENTMaterial.
+  * Add material testing command.
+  * Add HystereticSmooth and Hysteretic Asym materials.
+  * 
 
 * **Version 3.4.0.2** (7/20/2022)
 
