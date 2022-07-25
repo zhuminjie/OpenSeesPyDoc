@@ -4,6 +4,10 @@
   Change Log
 ==============
 
+* **Version 3.4.0.2**
+
+  * update to 
+
 * **Version 3.4.0.2** (7/20/2022)
 
   * Update to commit `abebbee <https://github.com/OpenSees/OpenSees/tree/abebbeeb5006d9f1c623e713972787eb7db49746>`_.
