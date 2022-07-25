@@ -16,8 +16,8 @@ Geotechnical Eng Group, L. Chen, P. Arduino - Feb 2018
 Basic Units are m, kN and s unless otherwise specified				
 
 """
-from IPython import get_ipython;   
-get_ipython().magic('reset -sf')
+# from IPython import get_ipython;   
+# get_ipython().run_line_magic('reset', '-sf')
 
 from datetime import datetime
 import openseespy.opensees as op
@@ -44,7 +44,7 @@ perm = 1e-9 #permeability
 #==============================================================================
 
 #primary parameters
-Dr = 0.6
+Dr = 0.5
 G0 = 476.0
 hpo = 0.53 #Contraction rate parameter
 rho = 1.42 #mass density, KN/m3
@@ -196,7 +196,7 @@ print('shear stress is',b[2])
 print('finished update fixties')
 # update Poisson's ratio for analysis
 #setParameter -value 0.3 -ele 1 poissonRatio 1
-op.setParameter('-val', 0.3, '-ele', 1, 'poissonRatio', 1)
+op.setParameter('-val', 0.3, '-ele',1, 'poissonRatio', '1')
 
 
 controlDisp = 1.1 * devDisp
