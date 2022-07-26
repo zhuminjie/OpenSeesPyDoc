@@ -4,7 +4,7 @@
   Change Log
 ==============
 
-* **Version 3.4.0.2**
+* **Version 3.4.0.3**
 
   * update to commit.
   * Fix ElasticBilin.
@@ -17,7 +17,7 @@
   * Add a, b parameter in ENTMaterial.
   * Add material testing command.
   * Add HystereticSmooth and Hysteretic Asym materials.
-  * 
+  * Update ElasticTimoshenkoBeam2D
 
 * **Version 3.4.0.2** (7/20/2022)
 
