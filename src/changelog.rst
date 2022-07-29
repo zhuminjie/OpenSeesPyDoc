@@ -19,7 +19,12 @@
   * Add HystereticSmooth and Hysteretic Asym materials.
   * Update ElasticTimoshenkoBeam2D and ElasticTimoshenkoBeam3D
   * Update PM4Sand and PM4Silt materials.
-  * Add ConcreteMcftNonlinear5 and ConcreteMcftNonlinear7
+  * Add ConcreteMcftNonlinear5 and ConcreteMcftNonlinear7 materials
+  * Add Elastic Isotropic thermal material
+  * Add Plate fiber thermal material
+  * Add J2PlasticityTermal material
+  * Add PlateRebarThermal material
+  * Add PlateFromPlaneStressThermal material
 
 * **Version 3.4.0.2** (7/20/2022)
 
