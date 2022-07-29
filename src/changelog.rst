@@ -17,7 +17,9 @@
   * Add a, b parameter in ENTMaterial.
   * Add material testing command.
   * Add HystereticSmooth and Hysteretic Asym materials.
-  * Update ElasticTimoshenkoBeam2D
+  * Update ElasticTimoshenkoBeam2D and ElasticTimoshenkoBeam3D
+  * Update PM4Sand and PM4Silt materials.
+  * Add ConcreteMcftNonlinear5 and ConcreteMcftNonlinear7
 
 * **Version 3.4.0.2** (7/20/2022)
 
