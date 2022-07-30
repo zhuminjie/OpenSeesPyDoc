@@ -23,7 +23,7 @@ This command is used to construct an elasticBeamColumn element object. The argum
 .. function:: element('elasticBeamColumn', eleTag, *eleNodes, Area, E_mod, G_mod, Jxx, Iy, Iz, transfTag, <'-mass', mass>, <'-cMass'>)
    :noindex:
    
-.. function:: element('elasticBeamColumn', eleTag, *eleNodes, secTag, transfTag, <'-mass', mass>, <'-cMass'>)
+.. function:: element('elasticBeamColumn', eleTag, *eleNodes, secTag, transfTag, <'-mass', mass>, <'-cMass'> <'-releasez', releaseCode>, <'-releasey', releaseCode>)
    :noindex:   
 
    For a three-dimensional problem
@@ -41,7 +41,7 @@ This command is used to construct an elasticBeamColumn element object. The argum
    ``transfTag`` |int|                   identifier for previously-defined coordinate-transformation (CrdTransf) object
    ``mass`` |float|                      element mass per unit length (optional, default = 0.0)
    ``'-cMass'`` |str|                    to form consistent mass matrix (optional, default = lumped mass matrix)
-   ``'releaseCode'`` |int|               moment release (optional, 2d only, 0=no release (default), 1=release at I, 2=release at J, 3=release at I and J)
+   ``'releaseCode'`` |int|               moment release (optional, 0=no release (default), 1=release at I, 2=release at J, 3=release at I and J)
    ===================================   ===========================================================================
 
 .. seealso::
