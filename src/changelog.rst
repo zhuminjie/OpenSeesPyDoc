@@ -25,6 +25,8 @@
   * Add J2PlasticityTermal material
   * Add PlateRebarThermal material
   * Add PlateFromPlaneStressThermal material
+  * Add beamWithHinges element
+  * Update Parallel and Series materials
 
 * **Version 3.4.0.2** (7/20/2022)
 
