@@ -21,7 +21,11 @@
    ``wavefilename`` |str|     a filename to record wave heights and velocities (optional)
    ``numl`` |int|             number of locations to record wave (optional)
    ``locations`` |listf|      coordinates of the locations (optional)
-   ``id`` |int|               structural id > 0, same meaning as :doc:`trimesh` (optional)
+   ``id`` |int|               structural id used to identity FSI and SSI
+                              * ``id`` = 0 : only FSI
+                              * ``id`` > 0 : both FSI and SSI
+                              * ``id`` < 0 : only SSI
+
    ``numsnodes`` |int|        number of structural nodes (optional)
    ``sNodes`` |listi|         a list of structural nodes (optional)
    ``level`` |int|            some regions can have larger mesh size with larger ``level``.
