@@ -21,9 +21,9 @@
    ``wavefilename`` |str|     a filename to record wave heights and velocities (optional)
    ``numl`` |int|             number of locations to record wave (optional)
    ``locations`` |listf|      coordinates of the locations (optional)
-   ``id`` |int|               structural id used to identity FSI and SSI
+   ``id`` |int|               structural id used to identify FSI and SSI (solid-solid-interaction)
    
-                              * ``id`` = 0 : only FSI
+                              * ``id`` = 0 : ignore the structure
                               * ``id`` > 0 : both FSI and SSI
                               * ``id`` < 0 : only SSI
 
