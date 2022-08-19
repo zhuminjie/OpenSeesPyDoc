@@ -27,6 +27,8 @@
   * Add PlateFromPlaneStressThermal material
   * Add beamWithHinges element
   * Update Parallel and Series materials
+  * Update ElasticTubeSection3d 
+  * Add HSSSectionIntegration
 
 * **Version 3.4.0.2** (7/20/2022)
 
