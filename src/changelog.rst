@@ -30,6 +30,7 @@
   * Update ElasticTubeSection3d 
   * Add HSSSectionIntegration
   * Add FRCC material
+  * Add ElasticBDShearSection2d
 
 * **Version 3.4.0.2** (7/20/2022)
 
