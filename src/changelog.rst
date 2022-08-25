@@ -31,6 +31,7 @@
   * Add HSSSectionIntegration
   * Add FRCC material
   * Add ElasticBDShearSection2d
+  * Add ``OpenSeesInfo`` variable
 
 * **Version 3.4.0.2** (7/20/2022)
 
