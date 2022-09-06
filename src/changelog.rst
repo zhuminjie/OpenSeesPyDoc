@@ -32,6 +32,9 @@
   * Add FRCC material
   * Add ElasticBDShearSection2d
   * Add ``OpenSeesInfo`` variable
+  * Allow strings for section codes in SectionAggregator
+  * Add GNG Material
+  * Add Orthotropic material wrapper
 
 * **Version 3.4.0.2** (7/20/2022)
 
