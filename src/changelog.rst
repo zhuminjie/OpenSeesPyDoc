@@ -35,6 +35,8 @@
   * Allow strings for section codes in SectionAggregator
   * Add GNG Material
   * Add Orthotropic material wrapper
+  * Update PFEM with SSI only structure
+  * Add getRVParamTag, getRVValue, gradPerformanceFunction for reliability
 
 * **Version 3.4.0.2** (7/20/2022)
 
