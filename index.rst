@@ -41,24 +41,14 @@ A minimum script is shown below:
    # import OpenSeesPy
    import openseespy.opensees as ops
 
-   # import OpenSeesPy plotting commands
-   import openseespy.postprocessing.Get_Rendering as opsplt
-
    # wipe model
    ops.wipe()
 
    # create model
    ops.model('basic', '-ndm', 2, '-ndf', 3)
 
-   # plot model
-   opsplt.plot_model()
-
-To run a test of the pip installation:
-
-::
-
-   pytest --pyargs openseespy.test
-
+   # print model
+   ops.printModel()
 
 ============
  Developer
