@@ -11,15 +11,15 @@
 
    ========================   ============================================================================
    ``tag`` |int|              tag of the beam integration
-   ``secETag`` |int|             A previous-defined section objects for non-hinge area.
-   ``npL`` |int|              number of integration points along the left hinge.
-   ``secsLTags`` |listi|          A list of previous-defined section objects for left hinge area.
-   ``locsL`` |listf|          A list of locations of integration points for left hinge area.
-   ``wtsL`` |listf|           A list of weights of integration points for left hinge area.
-   ``npR`` |int|              number of integration points along the right hinge.
-   ``secsRTags`` |listi|          A list of previous-defined section objects for right hinge area.
-   ``locsR`` |listf|          A list of locations of integration points for right hinge area.
-   ``wtsR`` |listf|           A list of weights of integration points for right hinge area.
+   ``secE`` |int|             A previous-defined section tags for element interior
+   ``npI`` |int|              number of integration points along the hinge at end I
+   ``secsI`` |listi|          A list of previous-defined section tags for hinge at end I
+   ``locsI`` |listf|          A list of locations of integration points for hinge at end I
+   ``wtsI`` |listf|           A list of weights of integration points for hinge at end I
+   ``npJ`` |int|              number of integration points along the hinge at end J
+   ``secsJ`` |listi|          A list of previous-defined section tags for hinge at end J
+   ``locsJ`` |listf|          A list of locations of integration points for hinge at end J
+   ``wtsJ`` |listf|           A list of weights of integration points for hinge at end J
    ========================   ============================================================================
 
    ::
@@ -27,17 +27,17 @@
       tag = 1
       secE = 5
       
-      npL = 2
-      secsL = [1,2]
-      locsL = [0.1,0.2]
-      wtsL = [0.5,0.5]
+      npI = 2
+      secsI = [1,2]
+      locsI = [0.1,0.2]
+      wtsI = [0.1,0.05]
       
-      npR = 2
-      secsR = [3,4]
-      locsR = [0.8,0.9]
-      wtsR = [0.5,0.5]
+      npJ = 2
+      secsJ = [3,4]
+      locsJ = [0.8,0.9]
+      wtsJ = [0.05,0.1]
 
-      beamIntegration('UserHinge',tag,secE,npL,*secsL,*locsL,*wtsL,npR,*secsR,*locsR,*wtsR)
+      beamIntegration('UserHinge',tag,secE,npI,*secsI,*locsI,*wtsI,npJ,*secsJ,*locsJ,*wtsJ)
 
 
 
