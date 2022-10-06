@@ -20,11 +20,10 @@ TzSimple1 Material
    ===================================   ===========================================================================
 
 .. note::
-   #. The argument tult is the ultimate capacity of the t-z material. Note that "t" or "tult" are shear stresses [force per unit area of pile surface] in common design equations, but are both loads for this uniaxialMaterial [i.e., shear stress times the tributary area of the pile].
-
-   #. Nonzero c values are used to represent radiation damping effects
+   #. The argument ``tult`` is the ultimate capacity of the t-z material. Note that ``t`` or ``tult`` are shear stresses [force per unit area of pile surface] in common design equations, but are both loads for this uniaxialMaterial [i.e., shear stress times the tributary area of the pile].
+   #. Nonzero ``c`` values are used to represent radiation damping effects
 
 .. seealso::
 
 
-   `Notes <http://opensees.berkeley.edu/wiki/index.php/TzSimple1_Material>`_
+   `Notes <https://opensees.github.io/OpenSeesDocumentation/user/manual/material/uniaxialMaterials/TzSimple1.html>`_

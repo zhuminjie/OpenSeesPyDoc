@@ -132,7 +132,7 @@ PyTzQz uniaxial materials for p-y, t-z and q-z elements for modeling soil-struct
 #. :doc:`QzSimple1`
 #. :doc:`PyLiq1`
 #. :doc:`TzLiq1`
-
+#. :doc:`QzLiq1`
 
 .. toctree::
    :maxdepth: 2
@@ -143,7 +143,7 @@ PyTzQz uniaxial materials for p-y, t-z and q-z elements for modeling soil-struct
    QzSimple1
    PyLiq1
    TzLiq1
-
+   QzLiq1
 
 Other Uniaxial Materials
 ------------------------
