@@ -68,7 +68,7 @@ timeSeries('Path', 2, '-dt', 0.005, '-filePath', 'A10000.dat', '-factor', G) # d
 pattern('UniformExcitation', 2, 1, '-accel', 2)		         # define where and how (pattern tag, dof) acceleration is applied
 
 # set damping based on first eigen mode
-freq = eigen('-fullGenLapack', 1)**0.5
+freq = eigen('-fullGenLapack', 1)[0]**0.5
 dampRatio = 0.02
 rayleigh(0., 0., 0., 2*dampRatio/freq)
 
