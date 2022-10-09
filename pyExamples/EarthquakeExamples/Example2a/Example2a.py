@@ -45,10 +45,10 @@ op.wipe()
 op.model('basic', '-ndm', 2, '-ndf', 3) 
 
 #to create a directory at specified path with name "Data"
-os.chdir('C:\\Opensees Python\\OpenseesPy examples')
+
 
 #this will create the directory with name 'Data' and will update it when we rerun the analysis, otherwise we have to keep deleting the old 'Data' Folder
-dir = "C:\\Opensees Python\\OpenseesPy examples\\Data-2a"
+dir = "Data-2a"
 if not os.path.exists(dir):
     os.makedirs(dir)
 
@@ -126,7 +126,7 @@ GMfact = 1.0
 
 Lambda = op.eigen('-fullGenLapack', 1) # eigenvalue mode 1
 import math
-Omega = math.pow(Lambda, 0.5)
+Omega = math.pow(Lambda[0], 0.5)
 betaKcomm = 2 * (0.02/Omega)
 
 xDamp = 0.02				# 2% damping ratio
