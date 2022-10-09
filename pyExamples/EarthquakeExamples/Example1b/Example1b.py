@@ -44,10 +44,10 @@ op.wipe()
 op.model('basic', '-ndm', 2, '-ndf', 3) 
 
 #to create a directory at specified path with name "Data"
-os.chdir('C:\\Opensees Python\\OpenseesPy examples')
+#os.chdir('C:\\Opensees Python\\OpenseesPy examples')
 
 #this will create the directory with name 'Data' and will update it when we rerun the analysis, otherwise we have to keep deleting the old 'Data' Folder
-dir = "C:\\Opensees Python\\OpenseesPy examples\\Data-1b"
+dir = "Data-1b"
 if not os.path.exists(dir):
     os.makedirs(dir)
 
@@ -114,7 +114,7 @@ op.pattern('UniformExcitation', 2, 1, '-accel', 2) #how to give accelseriesTag?
 
 eigen = op. eigen('-fullGenLapack', 1)
 import math
-power = math.pow(eigen, 0.5)
+power = math.pow(eigen[0], 0.5)
 betaKcomm = 2 * (0.02/power)
 
 op.rayleigh(0.0, 0.0, 0.0, betaKcomm)
