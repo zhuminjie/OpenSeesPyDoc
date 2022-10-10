@@ -37,6 +37,10 @@
   * Add Orthotropic material wrapper
   * Update PFEM with SSI only structure
   * Add getRVParamTag, getRVValue, gradPerformanceFunction for reliability
+  * Add ``'-ele'`` and ``'-node'`` to ``rayleigh`` command
+  * Add ``ResponseSpectrumAnalysis`` command
+  * Add ``CoulombDamper`` material
+  * Add `damping <https://github.com/OpenSees/OpenSees/pull/359>`_
 
 * **Version 3.4.0.2** (7/20/2022)
 
