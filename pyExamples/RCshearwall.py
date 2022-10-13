@@ -2,7 +2,6 @@
 # Converted to openseespy by: Anurag Upadhyay, University of Utah.
 # Units: N and m to follow the originally published code.
 
-from openseespy.postprocessing.Get_Rendering import * 
 from openseespy.opensees import *
 
 import numpy as np
@@ -215,8 +214,6 @@ element('truss',80,50,55,223.53e-6,7)
 
 # Fix all bottom nodes
 fixY(0.0,1,1,1,1,1,1)
-
-# plot_model()
 
 recorder('Node','-file','ReactionPY.txt','-time','-node',1,2,3,4,5,'-dof',1,'reaction')
 
