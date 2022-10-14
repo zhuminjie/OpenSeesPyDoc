@@ -183,6 +183,7 @@ Other Uniaxial Materials
 #. :doc:`PinchingLimitStateMaterial`
 #. :doc:`CFSWSWP`
 #. :doc:`CFSSSWP`
+#. :doc:`Backbone`
 
 
 .. toctree::
@@ -223,3 +224,4 @@ Other Uniaxial Materials
    PinchingLimitStateMaterial
    CFSWSWP
    CFSSSWP
+   Backbone
