@@ -23,13 +23,16 @@ Hysteretic Backbone
 
 HystereticBackbone represents a backbone curve for hysteretic models.
 
+
 #. :doc:`ArctangentBackbone`
-.. #. :doc:`Cast`
-.. #. :doc:`ViscousDamper`
-.. #. :doc:`BilinearOilDamper`
-.. #. :doc:`Bilin`
-.. #. :doc:`ModIMKPeakOriented`
-.. #. :doc:`ModIMKPinching`
-.. #. :doc:`SAWS`
-.. #. :doc:`BarSlip`
-.. #. :doc:`Bond_SP01`
+#. :doc:`BilinearBackbone`
+#. :doc:`ManderBackbone`
+#. :doc:`MultilinearBackbone`
+#. :doc:`TrilinearBackbone`
+#. :doc:`MaterialBackbone`
+#. :doc:`ReeseStiffClayBelowWS`
+#. :doc:`ReeseStiffClayAboveWS`
+#. :doc:`VuggyLimestone`
+#. :doc:`CementedSoil`
+#. :doc:`WeakRock`
+#. :doc:`LiquefiedSand`

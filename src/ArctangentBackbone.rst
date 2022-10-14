@@ -7,7 +7,7 @@ ArctangentBackbone
 .. function:: hystereticBackbone('Arctangent', backboneTag, K1, gamma, alpha)
    :noindex:
 
-   The backbone function :math:`F` is defined as 
+   The backbone function :math:`F` is developed by Ranzo and Petrangeli (1998) and defined as 
    
    .. math::
 
@@ -17,8 +17,8 @@ ArctangentBackbone
 
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.
-   ``K1`` |int|                          parameter :math:`K_1`.
-   ``gamma`` |int|                       parameter :math:`\gamma`.
-   ``alpha`` |int|                       parameter :math:`\alpha`.
+   ``K1`` |float|                        parameter :math:`K_1`.
+   ``gamma`` |float|                     parameter :math:`\gamma`.
+   ``alpha`` |float|                     parameter :math:`\alpha`.
    ===================================   ===========================================================================
 
