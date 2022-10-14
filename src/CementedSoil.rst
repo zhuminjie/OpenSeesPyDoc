@@ -13,8 +13,14 @@ CementedSoil
 
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.
-   ``b`` |float|                         pile diameter
-   ``su`` |float|                        shear strength of the rock
+   ``pM`` |float|                        soil resistance at point M in figure below
+   ``pU`` |float|                        Evans and Duncan (1982) proposed a procedure for 
+                                         developing p-y curves and deciding pU, the ultimate 
+                                         soil resistance, in silty soils, which also defines the point U
+   ``Kpy`` |float|                       The initial modulus of subgrade reaction defines
+                                         the initial straight line between O and K in figure below
+   ``z`` |float|                         the depth below ground surface to p-y curve.
+   ``b`` |float|                         diameter (width) of the pile.
    ===================================   ===========================================================================
 
 
