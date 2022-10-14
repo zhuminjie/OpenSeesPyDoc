@@ -23,7 +23,7 @@ Hysteretic Backbone
 
 HystereticBackbone represents a backbone curve for hysteretic models.
 
-.. #. :doc:`Hardening`
+#. :doc:`ArctangentBackbone`
 .. #. :doc:`Cast`
 .. #. :doc:`ViscousDamper`
 .. #. :doc:`BilinearOilDamper`
