@@ -7,7 +7,7 @@ VuggyLimestone
 .. function:: hystereticBackbone('VuggyLimestone', backboneTag, b, su)
    :noindex:
 
-   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml`_ in page 348
+   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml>`_ in page 348
 
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.
@@ -16,5 +16,5 @@ VuggyLimestone
    ===================================   ===========================================================================
 
 
-.. image:: _static/VuggyLimestone.png
+.. image:: ../_static/VuggyLimestone.png
 
