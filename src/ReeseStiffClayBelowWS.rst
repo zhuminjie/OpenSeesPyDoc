@@ -33,13 +33,11 @@ The average shear strength should be computed from the shear strength of the soi
 It should be defined as half the total maximum principal stress difference in an unconsolidated undrained triaxial
 test.
 
-===========================================  =====  =======  ======
-Average Undrained Shear Strength (ton/ft^2)          
-===========================================  =====  =======  ======
-                                             0.5-1   1-2     2-4
-===========================================  =====  =======  ======
-:math:`k_s`` (Static) :math:`lb/in^3`        500    1000     2000
-===========================================  =====  =======  ======
+============================================  =====  =======  ======
+Average Undrained Shear Strength (ton/ft^2)   0.5-1   1-2     2-4
+============================================  =====  =======  ======
+:math:`k_s`` (Static) :math:`lb/in^3`         500    1000     2000
+============================================  =====  =======  ======
 
 y50
 ----
@@ -52,9 +50,7 @@ from the following table.
 
 
 ===========================================  =====  =======  ======
-Average Undrained Shear Strength (ton/ft^2)          
-===========================================  =====  =======  ======
-                                             0.5-1   1-2     2-4
+Average Undrained Shear Strength (ton/ft^2)  0.5-1   1-2     2-4
 ===========================================  =====  =======  ======
 :math:`\varepsilon_{50}`` :math:`in/in`      0.007  0.005    0.004
 ===========================================  =====  =======  ======

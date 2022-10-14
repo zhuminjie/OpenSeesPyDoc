@@ -9,8 +9,6 @@ CementedSoil
 
    The Evans and Duncan (1982) SILT model can be found `here <http://www.findapile.com/p-y-curves/p-y-curves-models>`_
 
-   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml`_ in page 348
-
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.
    ``pM`` |float|                        soil resistance at point M in figure below
@@ -26,7 +24,7 @@ CementedSoil
 
 There are no available recommendations on developing p-y curves for soil with cohesion and friction angle that are generally accepted. Generally, in design, the soil is classified in only two different types: cohesive or cohesionless. In the practice, this simplification leads to a significantly conservative design in the case of cemented soil or silt, which always neglects the soil resistance from the cohesion component (Juirnarongrit et al. 2005). 
 
-.. image:: _static/CementedSoil.png
+.. image:: ../_static/CementedSoil.png
 
 The initial straight line (EQ. 21) is defined as 
 
