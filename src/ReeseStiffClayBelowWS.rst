@@ -7,7 +7,7 @@ ReeseStiffClayBelowWS
 .. function:: hystereticBackbone('ReeseStiffClayBelowWS', backboneTag, Esi, y50, As, Pc)
    :noindex:
 
-   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml`_ in page 328
+   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml>`_ in page 328
 
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.

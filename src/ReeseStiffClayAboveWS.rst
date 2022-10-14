@@ -7,7 +7,7 @@ ReeseStiffClayAboveWS
 .. function:: hystereticBackbone('ReeseStiffClayAboveWS', backboneTag, pu, y50)
    :noindex:
 
-   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml`_ in page 336
+   The backbone function is defined in this `manual <https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/PB94108305.xhtml>`_ in page 336
 
    ===================================   ===========================================================================
    ``backboneTag`` |int|                 integer tag identifying the backbone function.
@@ -16,7 +16,7 @@ ReeseStiffClayAboveWS
    ===================================   ===========================================================================
 
 
-.. image:: _static/ReeseStiffClayBelowWS.png
+.. image:: ../_static/ReeseStiffClayBelowWS.png
 
 
 pu
@@ -31,17 +31,15 @@ curves are available, use a value from :math:`\varepsilon_{50} of 0.010 or
 0.005 as given in the following table, the larger value being more
 conservative.
 
-.. list-table:: Consistency of Clay
-   :header-rows: 1
-
-   * - Consistency of Clay
-     - :math:`\varepsilon_{50}
-   * - Soft
-     - 0.020
-   * - Medium
-     - 0.010
-   * - Stiff
-     - 0.005
+===========================================  ========================
+Consistency of Clay                          :math:`\varepsilon_{50}
+===========================================  ========================
+Soft                                         0.020
+===========================================  ========================
+Medium                                       0.010
+===========================================  ========================
+Stiff                                        0.005
+===========================================  ========================
 
 Compute the ultimate soil resistance per unit length of shaft, :math:`p_u`, using the smaller of the values given by the following equations
 
