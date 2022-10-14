@@ -18,7 +18,7 @@ ReeseStiffClayBelowWS
    ===================================   ===========================================================================
 
 
-.. image:: _static/ReeseStiffClayBelowWS.png
+.. image:: ../_static/ReeseStiffClayBelowWS.png
 
 
 Esi
@@ -33,18 +33,13 @@ The average shear strength should be computed from the shear strength of the soi
 It should be defined as half the total maximum principal stress difference in an unconsolidated undrained triaxial
 test.
 
-.. list-table:: Average Undrained Shear Strength (ton/ft^2)
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - 
-     - 0.5 - 1
-     - 1 - 2
-     - 2 - 4
-   * - :math:`k_s`` (Static) :math:`lb/in^3`
-     - 500
-     - 1000
-     - 2000
+===========================================  =====  =======  ======
+Average Undrained Shear Strength (ton/ft^2)          
+===========================================  =====  =======  ======
+                                             0.5-1   1-2     2-4
+===========================================  =====  =======  ======
+:math:`k_s`` (Static) :math:`lb/in^3`        500    1000     2000
+===========================================  =====  =======  ======
 
 y50
 ----
@@ -55,18 +50,14 @@ Use an appropriate value of :math:`\varepsilon_{50}` from results of
 laboratory tests or, in the absence of laboratory tests,
 from the following table.
 
-.. list-table:: Average Undrained Shear Strength (ton/ft^2)
-   :widths: 25 25 50
-   :header-rows: 1
 
-   * - 
-     - 0.5 - 1
-     - 1 - 2
-     - 2 - 4
-   * - :math:`\varepsilon_{50}`` (Static) :math:`in/in`
-     - 0.007
-     - 0.005
-     - 0.004
+===========================================  =====  =======  ======
+Average Undrained Shear Strength (ton/ft^2)          
+===========================================  =====  =======  ======
+                                             0.5-1   1-2     2-4
+===========================================  =====  =======  ======
+:math:`\varepsilon_{50}`` :math:`in/in`      0.007  0.005    0.004
+===========================================  =====  =======  ======
 
 
 As
@@ -74,7 +65,7 @@ As
 
 Choose the appropriate value of As from the following figure for the particular nondimensional depth.
 
-.. image:: _static/Figure3.7.png
+.. image:: ../_static/Figure3.7.png
 
 
 Pc
@@ -84,7 +75,7 @@ Compute the ultimate soil resistance per unit length of
 pile, using the smaller of the values given by the
 equations below
 
-..math:
+.. math::
   p_{ct} = 2c_ab+\gamma'bx+2.83c_ax
 
   p_{cd} = 11cb
