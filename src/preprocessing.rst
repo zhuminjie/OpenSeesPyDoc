@@ -29,7 +29,6 @@ The :doc:`DiscretizeMember` should be called as
     :maxdepth: 1
     :hidden:
 
-    mesh
     remesh
     DiscretizeMember
 
