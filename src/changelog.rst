@@ -41,6 +41,7 @@
   * Add ``ResponseSpectrumAnalysis`` command
   * Add ``CoulombDamper`` material
   * Add `damping <https://github.com/OpenSees/OpenSees/pull/359>`_
+  * Add command ``getPatterns``
 
 * **Version 3.4.0.2** (7/20/2022)
 
