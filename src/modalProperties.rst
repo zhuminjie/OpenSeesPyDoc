@@ -18,7 +18,7 @@ modalProperties Command
    *  :math:`MPM\left(\%\right)` : The modal participation masse ratios.
    *  :math:`MPMc\left(\%\right)` : The cumulative modal participation masse ratios.
 
-.. function:: modalProperties('-print', '-file', reportFileName, '-unorm')
+.. function:: modalProperties(<'-print'>, <'-file', reportFileName>, <'-unorm'>)
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"

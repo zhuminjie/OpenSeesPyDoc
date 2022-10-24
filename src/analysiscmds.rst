@@ -26,6 +26,7 @@ Analysis commands
 #. :doc:`eigen`
 #. :doc:`analyze`
 #. :doc:`modalProperties`
+#. :doc:`responseSpectrumAnalysis`
 
 
 .. toctree::
@@ -42,4 +43,5 @@ Analysis commands
    eigen
    analyze
    modalProperties
+   responseSpectrumAnalysis
 
