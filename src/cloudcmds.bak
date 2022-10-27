@@ -21,7 +21,7 @@ Modules
 #. :doc:`TrashCan`
 
 Viewer Settings
--------------
+---------------
 
 #. :doc:`nodeSizeForViewer`
 #. :doc:`showNodeTagForViewer`

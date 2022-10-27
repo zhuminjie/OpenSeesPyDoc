@@ -64,6 +64,7 @@ The following contain information about available ``matType``:
    FSAM
    ManzariDafalias
    PM4Sand
+   PM4Silt
    StressDensityModel
    AcousticMedium
 

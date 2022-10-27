@@ -14,7 +14,8 @@ responseSpectrumAnalysis Command
 |  They can be either stored in a timeSeries ...
 
 .. function:: responseSpectrumAnalysis(tsTag, direction, <'-scale', scale>, <'-mode', mode>)
-
+   :noindex:
+   
 |  ... or in two lists
 
 .. function:: responseSpectrumAnalysis(direction, '-Tn', Tn, '-Sa', Sa, <'-scale ', scale>, <'-mode', mode>)

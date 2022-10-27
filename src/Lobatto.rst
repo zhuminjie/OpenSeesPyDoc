@@ -11,7 +11,7 @@
 
    Create a Gauss-Lobatto beamIntegration object.
    Gauss-Lobatto integration is the most common approach for evaluating the response of
-   :ref:`forceBeamColumn-Element` (`Neuenhofer and Filippou 1997`_) because it places an integration point at each end of the element, where bending moments are largest in the absence of interior element loads.
+   :doc:`ForceBeamColumn` (`Neuenhofer and Filippou 1997`_) because it places an integration point at each end of the element, where bending moments are largest in the absence of interior element loads.
 
    ========================   =============================================================
    ``tag`` |int|              tag of the beam integration.

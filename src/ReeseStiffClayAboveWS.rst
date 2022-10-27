@@ -27,7 +27,7 @@ weight :math:`\gamma`, and pile diameter :math:`b`.
 Also obtain the values
 of :math:`\varepsilon_{50}` from stress-strain curves.
 If no stress-strain
-curves are available, use a value from :math:`\varepsilon_{50} of 0.010 or
+curves are available, use a value from :math:`\varepsilon_{50}` of 0.010 or
 0.005 as given in the following table, the larger value being more
 conservative.
 

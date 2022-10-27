@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-==================
+=====================
 MultilinearBackbone
-==================
+=====================
 
 .. function:: hystereticBackbone('Multilinear', backboneTag, e1, s1, e2, s2, ...)
    :noindex:

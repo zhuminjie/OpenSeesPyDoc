@@ -1,8 +1,8 @@
 .. include:: sub.txt
 
-===========================================================
+=================================================================
 SFI_MVLEM_3D - 3-D Shear-Flexure-Interaction Element for RC Walls 
-===========================================================
+=================================================================
 
 | Developed and implemented by: 
 | `Kristijan Kolozvari <mailto:kkolozvari@fullerton.edu>`_ (CSU Fullerton)

@@ -223,7 +223,7 @@ Theory
 .. math::
    gm = \Phi^T M \Phi
 
-|  If the default solver is used in the :ref:`eigen` (-genBandArpack), and the option **-unorm** is not used, the eigenvectors are mass-normalized and :math:`gm` will be an identity matrix, i.e. a diagonal matrix whose diagonal entries are = 1, and whose size is :math:`n_m \times n_m` (where :math:`n_m` is the number of requested eigenvalues).
+|  If the default solver is used in the :doc:`eigen` (-genBandArpack), and the option **-unorm** is not used, the eigenvectors are mass-normalized and :math:`gm` will be an identity matrix, i.e. a diagonal matrix whose diagonal entries are = 1, and whose size is :math:`n_m \times n_m` (where :math:`n_m` is the number of requested eigenvalues).
 
 
 |  The modal participation factor matrix :math:`MPF` is a :math:`n_m \times ndf` matrix (where ndf = 3 in 2D and 6 in 3D), where each row contains the modal participation factors for each DOF. The modal participation factor for a certain mode :math:`i` and DOF :math:`j` indicates how strongly the motion (or rotation) associated to that DOF is represented in the eigenvector :math:`i`

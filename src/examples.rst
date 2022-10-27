@@ -11,6 +11,7 @@
 #. :doc:`thermal`
 #. :doc:`parallelexs`
 #. :doc:`plotting`
+#. :doc:`sensitivityex`
 
 
 
@@ -25,3 +26,4 @@
    thermal
    parallelexs
    plotting
+   sensitivityex
