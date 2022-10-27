@@ -18,7 +18,7 @@ modalProperties Command
    *  :math:`MPM\left(\%\right)` : The modal participation masse ratios.
    *  :math:`MPMc\left(\%\right)` : The cumulative modal participation masse ratios.
 
-.. function:: modalProperties(<'-print'>, <'-file', reportFileName>, <'-unorm'>)
+.. function:: modalProperties(<'-print'>, <'-file', reportFileName>, <'-unorm'>, <'-return'>)
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -28,6 +28,150 @@ modalProperties Command
    ``'-file'``, |str|, "Optional. If included, a report of the modal properties is printed to the file ``reportFileName``."
    ``reportFileName``, |str|, "Optional, but mandatory if the -file option is included. Indicates the filename for the report. If the file does not exist, it will be created. If the file exists, it will be overwritten."
    ``'-unorm'``, |str|, "Optional. If included, the computation of the modal properties will be carried out using a displacement-normalized version of the eigenvectors."
+   ``'-return'``, |str|, "Optional. If included, a report of the modal properties will be returned as a dict object to Python."
+
+.. admonition:: Return value with ``'-return'``
+
+   .. code:: python
+
+      {
+         # list of one int value
+         "domainSize": [ndm], 
+
+         # list of lambda values for all modes
+         "eigenLambda": [lambdas], 
+
+         # list of omega values for all modes
+         "eigenOmega": [omega], 
+
+         # list of frequency values for all modes
+         "eigenFrequency": [frequency], 
+
+         # list of period values for all modes
+         "eigenPeriod": [period], 
+
+         # list of total mass values, [MX] for 1D, [MX, MY, RMZ] for 2D,  
+         # [MX, MY, MZ, MRX, RMY, RMZ] for 3D
+         "totalMass": [mass], 
+
+         # list of total mass values for free DOFs, [MX] for 1D, 
+         # [MX, MY, RMZ] for 2D,  [MX, MY, MZ, MRX, RMY, RMZ] for 3D
+         "totalFreeMass": [mass], 
+
+         # coordinates of mass center, [X] for 1D, [X, Y] for 2D,  
+         # [X, Y, Z] for 3D
+         "centerOfMass": [center], 
+
+         #
+         # modal participation factors for all modes
+         #
+         
+         # for MX direction for 1D, 2D and 3D
+         "partiFactorMX": [factor], 
+
+         # for MY direction for 2D and 3D
+         "partiFactorMY": [factor], 
+
+         # for MZ direction for 3D
+         "partiFactorMZ": [factor], 
+
+         # for RMX direction for 3D
+         "partiFactorRMX": [factor], 
+
+         # for RMY direction for 3D
+         "partiFactorRMY": [factor], 
+
+         # for RMZ direction for 2D and 3D
+         "partiFactorRMX": [factor], 
+
+         #
+         # modal participation masses for all modes
+         #
+
+         # for MX direction for 1D, 2D and 3D
+         "partiMassMX": [mass], 
+
+         # for MY direction for 2D and 3D
+         "partiMassMY": [mass], 
+
+         # for MZ direction for 3D
+         "partiMassMZ": [mass], 
+
+         # for RMX direction for 3D
+         "partiMassRMX": [mass], 
+
+         # for RMY direction for 3D
+         "partiMassRMY": [mass], 
+
+         # for RMZ direction for 2D and 3D
+         "partiMassRMX": [mass], 
+
+         #
+         # modal participation masses (cumulative) for all modes
+         #
+
+         # for MX direction for 1D, 2D and 3D
+         "partiMassesCumuMX": [mass], 
+
+         # for MY direction for 2D and 3D
+         "partiMassesCumuMY": [mass], 
+
+         # for MZ direction for 3D
+         "partiMassesCumuMZ": [mass], 
+
+         # for RMX direction for 3D
+         "partiMassesCumuRMX": [mass], 
+
+         # for RMY direction for 3D
+         "partiMassesCumuRMY": [mass], 
+
+         # for RMZ direction for 2D and 3D
+         "partiMassesCumuRMZ": [mass], 
+
+         #
+         # modal participation mass ratios (%) for all modes
+         #
+
+         # for MX direction for 1D, 2D and 3D
+         "partiMassRatiosMX": [mass], 
+
+         # for MY direction for 2D and 3D
+         "partiMassRatiosMY": [mass], 
+
+         # for MZ direction for 3D
+         "partiMassRatiosMZ": [mass], 
+
+         # for RMX direction for 3D
+         "partiMassRatiosRMX": [mass], 
+
+         # for RMY direction for 3D
+         "partiMassRatiosRMY": [mass], 
+
+         # for RMZ direction for 2D and 3D
+         "partiMassRatiosRMX": [mass], 
+
+         #
+         # modal participation mass ratios (%) (cumulative) for all modes
+         #
+
+         # for MX direction for 1D, 2D and 3D
+         "partiMassRatiosCumuMX": [mass], 
+
+         # for MY direction for 2D and 3D
+         "partiMassRatiosCumuMY": [mass], 
+
+         # for MZ direction for 3D
+         "partiMassRatiosCumuMZ": [mass], 
+
+         # for RMX direction for 3D
+         "partiMassRatiosCumuRMX": [mass], 
+
+         # for RMY direction for 3D
+         "partiMassRatiosCumuRMY": [mass], 
+
+         # for RMZ direction for 2D and 3D
+         "partiMassRatiosCumuRMX": [mass], 
+      }
 
 .. note::
    *  This command can be used only if a previous call to :doc:`eigen` has been performed.
