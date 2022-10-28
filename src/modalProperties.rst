@@ -30,7 +30,7 @@ modalProperties Command
    ``'-unorm'``, |str|, "Optional. If included, the computation of the modal properties will be carried out using a displacement-normalized version of the eigenvectors."
    ``'-return'``, |str|, "Optional. If included, a report of the modal properties will be returned as a dict object to Python."
 
-.. admonition:: Return value with ``'-return'``
+.. admonition:: Return value with ``'-return'`` (In next version 3.4.0.3 or later)
 
    .. code:: python
 
