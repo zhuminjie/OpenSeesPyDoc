@@ -42,6 +42,7 @@
   * Add ``CoulombDamper`` material
   * Add `damping <https://github.com/OpenSees/OpenSees/pull/359>`_
   * Add command ``getPatterns``
+  * Add PFEM 3D contact element
 
 * **Version 3.4.0.2** (7/20/2022)
 
