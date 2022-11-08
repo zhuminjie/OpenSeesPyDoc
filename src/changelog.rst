@@ -43,6 +43,7 @@
   * Add `damping <https://github.com/OpenSees/OpenSees/pull/359>`_
   * Add command ``getPatterns``
   * Add PFEM 3D contact element
+  * Add ``'-noFlush'`` option to ``analyze``
 
 * **Version 3.4.0.2** (7/20/2022)
 
