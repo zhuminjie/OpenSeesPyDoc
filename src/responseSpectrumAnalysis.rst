@@ -13,12 +13,12 @@ responseSpectrumAnalysis Command
 |  The command can be called in two different ways, depending on how you store the Tn/Sa (response spectrum function) values.
 |  They can be either stored in a timeSeries ...
 
-.. function:: responseSpectrumAnalysis(tsTag, direction, <'-scale', scale>, <'-mode', mode>)
+.. function:: responseSpectrum(tsTag, direction, <'-scale', scale>, <'-mode', mode>)
    :noindex:
    
 |  ... or in two lists
 
-.. function:: responseSpectrumAnalysis(direction, '-Tn', Tn, '-Sa', Sa, <'-scale ', scale>, <'-mode', mode>)
+.. function:: responseSpectrum(direction, '-Tn', Tn, '-Sa', Sa, <'-scale ', scale>, <'-mode', mode>)
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -65,7 +65,7 @@ Theory
 
       tsTag = 1 # use the timeSeries 1 as response spectrum function
       direction = 1 # excited DOF = Ux
-      responseSpectrumAnalysis(tsTag, direction)
+      responseSpectrum(tsTag, direction)
 
    2. **Using lists**
 
@@ -73,7 +73,7 @@ Theory
 
       Tn = [0.0 0.1 0.4 .... ] # the periods
       Sa = [1.9 3.7 4.9 .... ] # the accelerations
-      responseSpectrumAnalysis(direction, '-Tn', *Tn, '-Sa', *Sa)
+      responseSpectrum(direction, '-Tn', *Tn, '-Sa', *Sa)
 
 .. admonition:: Example 2: Iterative call
    
@@ -84,7 +84,7 @@ Theory
       tsTag = 1 # use the timeSeries 1 as response spectrum function
       direction = 1 # excited DOF = Ux
       for i in range(num_modes):
-         responseSpectrumAnalysis(tsTag, direction, '-mode', i+1)
+         responseSpectrum(tsTag, direction, '-mode', i+1)
          # grab your results here for the i-th modal displacements
 
 .. admonition:: Example 3: Complete Structural Example
