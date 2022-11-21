@@ -44,6 +44,7 @@
   * Add command ``getPatterns``
   * Add PFEM 3D contact element
   * Add ``'-noFlush'`` option to ``analyze``
+  * Add ``ConcentratedPlasticity`` and ``ConcentratedCurvature`` beam integrations
 
 * **Version 3.4.0.2** (7/20/2022)
 
