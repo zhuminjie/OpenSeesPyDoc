@@ -4,7 +4,7 @@
   Change Log
 ==============
 
-* **Version 3.5.0** ()
+* **Version 3.4.0.4** (`62b4ca8 <https://github.com/OpenSees/OpenSees/commit/62b4ca8223567f5e0de34aef2323cee82f940265>`_) 11/28/2022
 
   * update to commit.
   * Fix ElasticBilin.
