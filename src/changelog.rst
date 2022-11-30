@@ -4,6 +4,48 @@
   Change Log
 ==============
 
+* **Version `3.4.0.5<https://github.com/zhuminjie/OpenSeesPy/tree/v3.4.0.5>`_** (11/29/2022) 
+
+  * update to commit.
+  * Fix ElasticBilin.
+  * Update SimpleFractureMaterial.
+  * Update ASDShellQ4 element.
+  * Update LineMesh so that last element nodes not flipped.
+  * Update BoucWenMaterial with parallel.
+  * Fix ElasticMaterial tangent.
+  * ZeroLength not require yaxis input for 2D and 3D models.
+  * Add a, b parameter in ENTMaterial.
+  * Add material testing command.
+  * Add HystereticSmooth and Hysteretic Asym materials.
+  * Update ElasticTimoshenkoBeam2D and ElasticTimoshenkoBeam3D
+  * Update PM4Sand and PM4Silt materials.
+  * Add ConcreteMcftNonlinear5 and ConcreteMcftNonlinear7 materials
+  * Add Elastic Isotropic thermal material
+  * Add Plate fiber thermal material
+  * Add J2PlasticityTermal material
+  * Add PlateRebarThermal material
+  * Add PlateFromPlaneStressThermal material
+  * Add beamWithHinges element
+  * Update Parallel and Series materials
+  * Update ElasticTubeSection3d 
+  * Add HSSSectionIntegration
+  * Add FRCC material
+  * Add ElasticBDShearSection2d
+  * Add ``OpenSeesInfo`` variable
+  * Allow strings for section codes in SectionAggregator
+  * Add GNG Material
+  * Add Orthotropic material wrapper
+  * Update PFEM with SSI only structure
+  * Add getRVParamTag, getRVValue, gradPerformanceFunction for reliability
+  * Add ``'-ele'`` and ``'-node'`` to ``rayleigh`` command
+  * Add ``ResponseSpectrumAnalysis`` command
+  * Add ``CoulombDamper`` material
+  * Add `damping <https://github.com/OpenSees/OpenSees/pull/359>`_
+  * Add command ``getPatterns``
+  * Add PFEM 3D contact element
+  * Add ``'-noFlush'`` option to ``analyze``
+  * Add ``ConcentratedPlasticity`` and ``ConcentratedCurvature`` beam integrations
+
 * **Version 3.4.0.2** (7/20/2022)
 
   * Update to commit `abebbee <https://github.com/OpenSees/OpenSees/tree/abebbeeb5006d9f1c623e713972787eb7db49746>`_.
