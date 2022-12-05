@@ -4,6 +4,12 @@
   Change Log
 ==============
 
+* **Version `3.4.0.6 <>`_**
+  * Add ``pyversion`` command
+  * Add new Series3D material wrapper
+  * Add ten-node tetrahedron element
+  * Rename ``getFixedNodes``, ``getFixedDOFs``, ``getConstrainedNodes``, ``getConstrainedDOFs``, ``getRetainedNodes``, ``getRetainedDOFs``.
+
 * **Version `3.4.0.5<https://github.com/zhuminjie/OpenSeesPy/tree/v3.4.0.5>`_** (11/29/2022) 
 
   * update to commit.
