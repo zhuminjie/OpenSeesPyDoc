@@ -4,6 +4,12 @@
   Change Log
 ==============
 
+* **Version ``_**
+
+  * Update modalDamping command.
+  * Making rigid diaphragm work in X-Y plane for 2D models
+  * Making equalDOF use all DOFs if no DOFs are specified
+
 * **Version `3.4.0.5<https://github.com/zhuminjie/OpenSeesPy/tree/v3.4.0.5>`_** (11/29/2022) 
 
   * update to commit.
