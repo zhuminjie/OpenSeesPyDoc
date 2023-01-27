@@ -6,7 +6,7 @@
 
 .. function:: mass(nodeTag, *massValues)
 
-   This command is used to set the mass at a node. The mass setted replace any existing mass at the node. 
+   This command is used to set the mass at a node, replacing any previously defined mass at the node. 
 
 
    ========================   =============================================================
