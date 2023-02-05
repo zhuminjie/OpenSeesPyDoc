@@ -4,7 +4,7 @@
  sp command
 ============
 
-.. function:: sp(nodeTag, dof, *dofValues)
+.. function:: sp(nodeTag, dof, dofValue)
 
    This command is used to construct a single-point constraint object and add it to the enclosing LoadPattern.
 
@@ -12,7 +12,7 @@
    ``nodeTag`` |int|          tag of node to which load is applied.
    ``dof`` |int|              the degree-of-freedom at the node to which constraint
 	                      is applied (1 through ndf)
-   ``dofValues`` |listf|      ndf reference constraint values.
+   ``dofValue`` |float|       reference constraint value.
    ========================   =============================================================
 
 
