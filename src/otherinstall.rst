@@ -1,5 +1,5 @@
 ===================
- Other Instalation
+ Other Installation
 ===================
 
 #. :doc:`designsafe`
