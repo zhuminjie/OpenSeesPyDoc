@@ -1,0 +1,14 @@
+.. include:: sub.txt
+
+============================
+ sectionTag command
+============================
+
+.. function:: sectionTag(eleTag, <secNum>)
+
+   Returns the tags of the sections assigned to the integration points for a beam-column element.
+
+   ========================   ===========================================================================
+   ``eleTag`` |int|           element tag.
+   ``secNum`` |int|           section number, i.e. the Gauss integration number (optional)
+   ========================   ===========================================================================
