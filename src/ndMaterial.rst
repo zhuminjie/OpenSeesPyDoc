@@ -33,7 +33,6 @@ The following contain information about available ``matType``:
 #. :doc:`elasticOrthotropic`
 #. :doc:`J2Plasticity`
 #. :doc:`DrunkerPrager`
-#. :doc:`Damage2p`
 #. :doc:`PlaneStress`
 #. :doc:`PlaneStrain`
 #. :doc:`MultiAxialCyclicPlasticity`
@@ -55,7 +54,6 @@ The following contain information about available ``matType``:
    elasticOrthotropic
    J2Plasticity
    DrunkerPrager
-   Damage2p
    PlaneStress
    PlaneStrain
    MultiAxialCyclicPlasticity
