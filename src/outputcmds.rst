@@ -46,6 +46,7 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
 #. :doc:`sectionFlexibility`
 #. :doc:`sectionLocation`
 #. :doc:`sectionWeight`
+#. :doc:`sectionTag`
 #. :doc:`systemSize`
 #. :doc:`testIter`
 #. :doc:`testNorm`
@@ -96,6 +97,7 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
    sectionFlexibility
    sectionLocation
    sectionWeight
+   sectionTag
    systemSize
    testIter
    testNorm
