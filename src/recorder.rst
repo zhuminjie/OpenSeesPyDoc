@@ -20,8 +20,17 @@ recorder command
 
 The following contain information about available ``recorderType``:
 
+#. :doc:`nodeRecorder`
+#. :doc:`nodeEnRecorder`
+#. :doc:`elementRecorder`
+#. :doc:`elementEnRecorder`
+#. :doc:`pvdRecorder`
+#. :doc:`bgpvdRecorder`
+#. :doc:`CollapseRecorder`
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    nodeRecorder
    nodeEnRecorder
