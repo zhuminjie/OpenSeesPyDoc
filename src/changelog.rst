@@ -4,6 +4,13 @@
   Change Log
 ==============
 
+* **Version `3.4.0.6 <>`_**
+  * Add new ``pyversion`` command
+  * Add new Series3D material wrapper
+  * Add new ten-node tetrahedron element
+  * Rename ``getFixedNodes``, ``getFixedDOFs``, ``getConstrainedNodes``, ``getConstrainedDOFs``, ``getRetainedNodes``, ``getRetainedDOFs``.
+  * Add new ``ASDConcrete3D`` Plastic-Damage model
+
 * **Version `3.4.0.5<https://github.com/zhuminjie/OpenSeesPy/tree/v3.4.0.5>`_** (11/29/2022) 
 
   * update to commit.
