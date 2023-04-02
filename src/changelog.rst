@@ -4,7 +4,14 @@
   Change Log
 ==============
 
-* **Version `3.4.0.6 <>`_**
+* **Version `3.4.0.7`<https://github.com/zhuminjie/OpenSeesPy/commit/169d1228baa23b5ea4f520fa3f6b6428dfb6d44e>_**
+
+  * Update modalDamping command.
+  * Making rigid diaphragm work in X-Y plane for 2D models
+  * Making equalDOF use all DOFs if no DOFs are specified
+  * Reverted ViscousDamper and BilinearOilDamper
+
+* **Version `3.4.0.6`<>_**
   * Add new ``pyversion`` command
   * Add new Series3D material wrapper
   * Add new ten-node tetrahedron element
