@@ -11,7 +11,6 @@
 #. :doc:`RCFramePushOver`
 #. :doc:`ThreeStorySteel`
 #. :doc:`ExampleFRP` 
-#. :doc:`RCshearwall` 
 
 .. toctree::
    :maxdepth: 1
@@ -25,4 +24,3 @@
    RCFramePushOver
    ThreeStorySteel
    ExampleFRP
-   RCshearwall
