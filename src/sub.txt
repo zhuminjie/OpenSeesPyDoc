@@ -44,7 +44,7 @@
 
 .. |bi| replace:: (:class:`beamIntegration`)
 
-.. |opspy_version| replace:: 3.5.1.2
+.. |opspy_version| replace:: 3.5.1.3
 
 .. |python_version| replace:: 3.10
 
