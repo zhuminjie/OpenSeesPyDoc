@@ -17,9 +17,9 @@
 
 .. note::
 
-   `OpenSees Cloud <https://openseescloud.com>` is a SaaS implementation of OpenSees using cloud computing. Analyses run in the cloud on AWS while the front end integrates input, output, documentation, and a model viewer.
+   `OpenSees Cloud <https://openseescloud.com>`_ is a SaaS implementation of OpenSees using cloud computing. Analyses run in the cloud on AWS while the front end integrates input, output, documentation, and a model viewer.
 
-   `OpenSees Amazon Machine Image <https://aws.amazon.com/marketplace/pp/prodview-pfdzfieycxidk>` is a virtual machine that runs OpenSeesPy and OpenSeesMP with no additional compilation or installation required at low cost.
+   `OpenSees Amazon Machine Image <https://aws.amazon.com/marketplace/pp/prodview-pfdzfieycxidk>`_ is a virtual machine that runs OpenSeesPy and OpenSeesMP with no additional compilation or installation required at low cost.
 
 .. note::
 
