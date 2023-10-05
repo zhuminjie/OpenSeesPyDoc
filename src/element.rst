@@ -339,6 +339,7 @@ Misc.
 #. :doc:`AC3D8`
 #. :doc:`ASI3D8`
 #. :doc:`AV3D4`
+#. :doc:`MasonryPanel`
 
 
 .. toctree::
@@ -350,3 +351,4 @@ Misc.
    AC3D8
    ASI3D8
    AV3D4
+   MasonryPanel

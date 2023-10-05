@@ -184,6 +184,7 @@ Other Uniaxial Materials
 #. :doc:`CFSWSWP`
 #. :doc:`CFSSSWP`
 #. :doc:`Backbone`
+#. :doc:`Masonry`
 
 
 .. toctree::
@@ -225,3 +226,4 @@ Other Uniaxial Materials
    CFSWSWP
    CFSSSWP
    Backbone
+   Masonry
