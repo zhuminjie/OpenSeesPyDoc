@@ -71,7 +71,8 @@ def get_inelastic_response(mass, k_spring, f_yield, motion, dt, xi=0.05, r_post=
     op.pattern('UniformExcitation', pattern_tag_dynamic, opc.X, '-accel', load_tag_dynamic)
 
     # set damping based on first eigen mode
-    angular_freq = op.eigen('-fullGenLapack', 1) ** 0.5
+    eigen_1 = op.eigen('-fullGenLapack', 1)
+    angular_freq = eigen_1[0] ** 0.5
     alpha_m = 0.0
     beta_k = 2 * xi / angular_freq
     beta_k_comm = 0.0
@@ -141,7 +142,7 @@ def show_single_comparison(acc_signal):
     resp_u, resp_v, resp_a = eqsig.sdof.response_series(motion=rec, dt=motion_step, periods=periods, xi=xi)
     
     k_spring = 4 * np.pi ** 2 * mass / period ** 2
-    outputs = get_inelastic_response(mass, k_spring, f_yield, rec, motion_step, xi=xi, r_post=r_post)
+    outputs = get_inelastic_response(mass, k_spring, f_yield, motion=rec, dt=motion_step, xi=xi, r_post=r_post)
     outputs_elastic = get_inelastic_response(mass, k_spring, f_yield * 100, rec, 
                                              motion_step, xi=xi, r_post=r_post)
     ux_opensees = outputs["rel_disp"]
@@ -156,7 +157,9 @@ def show_single_comparison(acc_signal):
     acc_opensees_elastic = np.interp(time, outputs_elastic["time"], outputs_elastic["rel_accel"]) - rec
     print("diff", sum(acc_opensees_elastic - resp_a[0]))
     sps[1].plot(time, acc_opensees_elastic, label=f"Opensees fy={(f_yield * 100):.2g}N", ls="--")
+    sps[0].set_xlim(xmin=0, xmax=None)
     sps[0].legend()
+    sps[1].set_xlim(xmin=0, xmax=None)
     sps[1].legend()
     for sp in sps:
         sp.legend()
@@ -171,13 +174,13 @@ if __name__ == '__main__':
     ### Importing Ground Motion #############
     if exists('test_motion_dt0p01.txt'):
         with open('test_motion_dt0p01.txt','r') as filestream:
-            eq_motion = [float(item) for item in filestream.strip().split('\n') if item is not '']
+            eq_motion = [float(item.strip()) for item in filestream if item.strip() != '']
     else:
-        eq_url = r'https://openseespydoc.readthedocs.io/en/latest/_downloads/87b79ea3739169a481252ec730d92241/test_motion_dt0p01.txt'
+        eq_url = r'https://openseespydoc.readthedocs.io/en/latest/_downloads/92ed0c80b09bea0d28bf940a5dc4c3f4/test_motion_dt0p01.txt'
         response = requests.get(eq_url)
         # response.encoding = "utf-8" # utf-8 or iso8859-1
         #eq_motion = response.text.split('\n') 
-        eq_motion = [float(item) for item in response.text.split('\n') if item is not ''] 
+        eq_motion = [float(item.strip()) for item in response.text.split('\n') if item.strip() != ''] 
     
     eq_motion_dt = 0.01
 
