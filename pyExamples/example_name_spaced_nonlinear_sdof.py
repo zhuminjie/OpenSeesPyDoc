@@ -1,10 +1,23 @@
+import requests
 import eqsig
-from eqsig import duhamels
 import matplotlib.pyplot as plt
 import numpy as np
+from os.path import exists
 
 import openseespy.opensees as op
-import opensees_constants as opc  #opensees_constants.py should be close to main file or use sys.path...   to its directory
+
+
+### Generating Constants #############
+class opensees_constants:
+    def __init__(self):
+        self.FREE = 0
+        self.FIXED = 1
+
+        self.X = 1
+        self.Y = 2
+        self.ROTZ = 3
+
+opc = opensees_constants()
 
 
 def get_inelastic_response(mass, k_spring, f_yield, motion, dt, xi=0.05, r_post=0.0):
@@ -106,17 +119,18 @@ def get_inelastic_response(mass, k_spring, f_yield, motion, dt, xi=0.05, r_post=
     return outputs
 
 
-def show_single_comparison():
+def show_single_comparison(acc_signal):
     """
     Create a plot of an elastic analysis, nonlinear analysis and closed form elastic
+
+    :param acc_signal: input acceleration ground motion (as eqsig.AccSignal)
 
     :return:
     """
 
-    record_filename = 'test_motion_dt0p01.txt'
-    motion_step = 0.01
-    rec = np.loadtxt(record_filename)
-    acc_signal = eqsig.AccSignal(rec, motion_step)
+    rec = acc_signal.values
+    motion_step = acc_signal.dt
+
     period = 1.0
     xi = 0.05
     mass = 1.0
@@ -124,27 +138,50 @@ def show_single_comparison():
     r_post = 0.0
 
     periods = np.array([period])
-    resp_u, resp_v, resp_a = duhamels.response_series(motion=rec, dt=motion_step, periods=periods, xi=xi)
-
+    resp_u, resp_v, resp_a = eqsig.sdof.response_series(motion=rec, dt=motion_step, periods=periods, xi=xi)
+    
     k_spring = 4 * np.pi ** 2 * mass / period ** 2
     outputs = get_inelastic_response(mass, k_spring, f_yield, rec, motion_step, xi=xi, r_post=r_post)
-    outputs_elastic = get_inelastic_response(mass, k_spring, f_yield * 100, rec, motion_step, xi=xi, r_post=r_post)
+    outputs_elastic = get_inelastic_response(mass, k_spring, f_yield * 100, rec, 
+                                             motion_step, xi=xi, r_post=r_post)
     ux_opensees = outputs["rel_disp"]
     ux_opensees_elastic = outputs_elastic["rel_disp"]
 
-    bf, sps = plt.subplots(nrows=2)
+    bf, sps = plt.subplots(nrows=2, figsize=(10,7.5))
     sps[0].plot(acc_signal.time, resp_u[0], label="Eqsig")
-    sps[0].plot(outputs["time"], ux_opensees, label="Opensees fy=%.3gN" % f_yield, ls="--")
-    sps[0].plot(outputs["time"], ux_opensees_elastic, label="Opensees fy=%.3gN" % (f_yield * 100), ls="--")
+    sps[0].plot(outputs["time"], ux_opensees, label=f"Opensees fy={f_yield:.3g}N", ls="--")
+    sps[0].plot(outputs["time"], ux_opensees_elastic, label=f"Opensees fy={(f_yield * 100):.3g}N", ls="--")
     sps[1].plot(acc_signal.time, resp_a[0], label="Eqsig")  # Elastic solution
     time = acc_signal.time
     acc_opensees_elastic = np.interp(time, outputs_elastic["time"], outputs_elastic["rel_accel"]) - rec
     print("diff", sum(acc_opensees_elastic - resp_a[0]))
-    sps[1].plot(time, acc_opensees_elastic, label="Opensees fy=%.2gN" % (f_yield * 100), ls="--")
+    sps[1].plot(time, acc_opensees_elastic, label=f"Opensees fy={(f_yield * 100):.2g}N", ls="--")
     sps[0].legend()
     sps[1].legend()
+    for sp in sps:
+        sp.legend()
+        sp.set_xlabel('Time (s)')
+        sp.grid(True)
+    sps[0].set_ylabel('Displacements (m)')
+    sps[1].set_ylabel('Accelerations (m/s^2)')
     plt.show()
 
 
 if __name__ == '__main__':
-    show_single_comparison()
+    ### Importing Ground Motion #############
+    if exists('test_motion_dt0p01.txt'):
+        with open('test_motion_dt0p01.txt','r') as filestream:
+            eq_motion = [float(item) for item in filestream.strip().split('\n') if item is not '']
+    else:
+        eq_url = r'https://openseespydoc.readthedocs.io/en/latest/_downloads/87b79ea3739169a481252ec730d92241/test_motion_dt0p01.txt'
+        response = requests.get(eq_url)
+        # response.encoding = "utf-8" # utf-8 or iso8859-1
+        #eq_motion = response.text.split('\n') 
+        eq_motion = [float(item) for item in response.text.split('\n') if item is not ''] 
+    
+    eq_motion_dt = 0.01
+
+    acc_signal = eqsig.AccSignal(eq_motion, eq_motion_dt)
+
+    ### Running Analysis #############
+    show_single_comparison(acc_signal)
