@@ -34,7 +34,6 @@ Steel & Reinforcing-Steel Materials
 #. :doc:`steel01`
 #. :doc:`steel02`
 #. :doc:`steel4`
-#. :doc:`Hysteretic`
 #. :doc:`ReinforcingSteel`
 #. :doc:`Dodd_Restrepo`
 #. :doc:`RambergOsgoodSteel`
@@ -49,7 +48,6 @@ Steel & Reinforcing-Steel Materials
    steel01
    steel02
    steel4
-   Hysteretic
    ReinforcingSteel
    Dodd_Restrepo
    RambergOsgoodSteel
@@ -108,6 +106,7 @@ Standard Uniaxial Materials
 #. :doc:`ElasticPP`
 #. :doc:`ElasticPPGap`
 #. :doc:`ENT`
+#. :doc:`Hysteretic`
 #. :doc:`ParallelUni`
 #. :doc:`SeriesUni`
 
@@ -120,6 +119,7 @@ Standard Uniaxial Materials
    ElasticPP
    ElasticPPGap
    ENT
+   Hysteretic
    ParallelUni
    SeriesUni
 
