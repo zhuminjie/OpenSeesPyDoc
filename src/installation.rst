@@ -13,6 +13,6 @@
    :hidden:
 
    pypi
-   otherinstall
+   .. otherinstall
 
 
