@@ -5,7 +5,7 @@
 ==============
 
 #. :doc:`pypi`
-#. :doc:`otherinstall`
+.. #. :doc:`otherinstall`
 
 
 .. toctree::
