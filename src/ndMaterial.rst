@@ -86,7 +86,6 @@ Materials for Modeling Concrete Walls
 -------------------------------------
 
 
-#. :doc:`PlaneStressUserMaterial`
 #. :doc:`PlateFromPlaneStress`
 #. :doc:`PlateRebar`
 #. :doc:`PlasticDamageConcretePlaneStress`
@@ -96,7 +95,6 @@ Materials for Modeling Concrete Walls
    :maxdepth: 2
    :hidden:
 
-   PlaneStressUserMaterial
    PlateFromPlaneStress
    PlateRebar
    PlasticDamageConcretePlaneStress
