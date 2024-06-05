@@ -6,7 +6,7 @@
  background mesh
 =================
 
-.. function:: mesh('bg',basicsize,*lower,*upper,'-tol',tol,'-meshtol',meshtol,'-wave',wavefilename,numl,*locations,'-numsub',numsub,'-structure',id,numnodes,*snodes,'-largeSize',level,*llower,*lupper)
+.. function:: mesh('bg',basicsize,*lower,*upper,'-tol',tol,'-meshtol',meshtol,'-wave',wavefilename,numl,*locations,'-numsub',numsub,'-structure',id,numnodes,*snodes)
    :noindex:
 
    Create a background mesh. 
@@ -29,10 +29,4 @@
 
    ``numsnodes`` |int|        number of structural nodes (optional)
    ``sNodes`` |listi|         a list of structural nodes (optional)
-   ``level`` |int|            some regions can have larger mesh size with larger ``level``.
-                              ``level = 1`` means same as basic mesh size.
-   ``llower`` |listf|         a list of coordinates of the lower point of the region with
-                              larger mesh size (optional)
-   ``lupper`` |listf|         a list of coordinates of the upper point of the region with
-                              larger mesh size(optional)
    ========================   ===========================================================================
