@@ -19,6 +19,10 @@
    ``tol`` |float|            tolerance for intri check. (optional, default 1e-10)
    ``meshtol`` |float|        tolerance for cell boundary check. (optional, default 0.1)
    ``wavefilename`` |str|     a filename to record wave heights and velocities (optional)
+   
+                              the recorded data are in the following format for columns:
+
+                              ``time vx vy <vz> xmin xmax ymin ymax <zmin zmax> dt``
    ``numl`` |int|             number of locations to record wave (optional)
    ``locations`` |listf|      coordinates of the locations (optional)
    ``id`` |int|               structural id used to identify FSI and SSI (solid-solid-interaction)
