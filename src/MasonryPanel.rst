@@ -28,4 +28,7 @@ the principal crack is diagonal. The six struts allow the element to carry axial
    ``w1`` |float |                       ratio of central strut width to total strut widht
    ===================================   ===========================================================================
 
+
+.. image:: ../_static/panel.png
+
 .. seealso::
