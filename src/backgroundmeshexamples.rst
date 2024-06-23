@@ -5,7 +5,7 @@
 
 #. :doc:`dambreakbg`
 #. :doc:`elasticobstaclebg`
-
+#. :doc:`dambreak3Dexample`
 
 .. toctree::
    :maxdepth: 1
@@ -13,3 +13,4 @@
 
    dambreakbg
    elasticobstaclebg
+   dambreak3Dexamples

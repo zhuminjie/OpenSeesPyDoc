@@ -5,7 +5,6 @@
 
 #. :doc:`movingmesh`
 #. :doc:`backgroundmeshexamples`
-#. :doc:`dambreak3Dexamples`
 
 
 .. toctree::
@@ -14,4 +13,3 @@
 
    movingmesh
    backgroundmeshexamples
-   dambreak3Dexamples
