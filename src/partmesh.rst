@@ -22,13 +22,11 @@
 					
 				  Coordinates of four corners in counter-clock wise order.
 					
-				* ``'cube'`` : [x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4,
-						z4, x5, y5, z5, x6, y6, z6, x7, y7, z7, x8,
-						y8, z8, nx, ny, nz]
+				* ``'cube'`` : [x1, y1, z1, x2, y2, z2, nx, ny, nz]
 					
-				  Coordinates of four corners at bottom and at top in
-				  counter-clock wise order
-				
+				  Coordinates of two opposite, diagonal corners at bottom and at top 
+                                  of the cube
+				  
 				* ``'tri'`` : [x1, y1, x2, y2, x3, y3, nx, ny]
 					
 				  Coordinates of three corners in counter-clock wise order
