@@ -13,8 +13,7 @@ Pipe Material
 
    ===================================   =================================================================================================================================================================================================================================
    ``matTag`` |int|                      integer tag identifying material
-   ``nt`` |float|                        the number of temperature points for the material. If two or more points
-  are provided, the expected range of average temperatures in the element must be covered.
+   ``nt`` |float|                        the number of temperature points for the material. If two or more points are provided, the expected range of average temperatures in the element must be covered.
    ``T1`` |float|                        the temperature for point 1
    ``E1`` |float|                        the Young's modulus for point 1
    ``xnu1`` |float|                      the Poisson's ratio for point 1
