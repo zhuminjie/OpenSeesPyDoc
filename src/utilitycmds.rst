@@ -27,6 +27,7 @@ These commands are used to monitor and change the state of the model.
 #. :doc:`setNodeAccel`
 #. :doc:`setPrecision`
 #. :doc:`setElementRayleighDampingFactors`
+#. :doc:`setNodeTemperature`
 #. :doc:`start`
 #. :doc:`stop`
 #. :doc:`stripXML`
@@ -60,6 +61,7 @@ These commands are used to monitor and change the state of the model.
    setNodeAccel
    setPrecision
    setElementRayleighDampingFactors
+   setNodeTemperature
    start
    stop
    stripXML

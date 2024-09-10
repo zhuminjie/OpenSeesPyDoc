@@ -62,7 +62,7 @@ A minimum script is shown below:
 
 *Minjie Zhu*
 
-| Research Associate 
+| Instructor
 | Civil and Construction Engineering
 | Oregon State University
 

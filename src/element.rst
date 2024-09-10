@@ -83,6 +83,8 @@ Beam-Column Elements
 #. :doc:`dispBeamColumnInt`
 #. :doc:`MVLEM`
 #. :doc:`SFI_MVLEM`
+#. :doc:`pipe`
+#. :doc:`curvedPipe`
 
       
 .. toctree::
@@ -99,6 +101,8 @@ Beam-Column Elements
    dispBeamColumnInt
    MVLEM
    SFI_MVLEM
+   pipe
+   curvedPipe
 
 
 Joint Elements

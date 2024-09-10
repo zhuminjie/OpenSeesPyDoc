@@ -41,6 +41,7 @@ The following contain information about available ``secType``:
 #. :doc:`bidirectionalSection`
 #. :doc:`isolatorsection`
 #. :doc:`LayeredShell`
+#. :doc:`pipeSection`
 
 .. toctree::
    :maxdepth: 2
@@ -61,3 +62,4 @@ The following contain information about available ``secType``:
    bidirectionalSection
    isolatorsection
    LayeredShell
+   pipeSection
