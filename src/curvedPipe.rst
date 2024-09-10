@@ -12,7 +12,7 @@ The temperature is set through :doc:`setNodeTemperature`.
 .. function:: element('Pipe', eleTag, *eleNodes, pipeMatTag, pipeSecTag,  xC, yC, zC, <'-Ti'>, <'-T0', T0>, <'-p', p>, <'-tolWall'>, <'-noThermalLoad'>, <'-noPressureLoad'>)
    :noindex:
 
-   ===================================   ===========================================================================
+   ===================================   ============================================================================================================================================================================================================================================================================================================
    ``eleTag`` |int|                      unique element object tag
    ``eleNodes`` |listi|                  a list of two element nodes
    ``pipeMatTag`` |int|                  identifier for previously-defined :doc:`pipeMaterial`
@@ -24,7 +24,7 @@ The temperature is set through :doc:`setNodeTemperature`.
    ``'-tolWall'`` |str|                  the tolerance for checking radius and the optional interaction point as a fraction of wall thickness and must follow the option ``'-tolWall'``. Default is ``0.1``.
    ``'-noThermalLoad'`` |str|            Do not include the load due to thermal effects. Default is to include.
    ``'-noPressureLoad'`` |str|           Do not include the load due to internal pressure effects. Default is to include.
-   ===================================   ===========================================================================
+   ===================================   ============================================================================================================================================================================================================================================================================================================
 
 .. note::
 

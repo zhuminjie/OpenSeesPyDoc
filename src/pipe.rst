@@ -15,7 +15,7 @@ The temperature is set through :doc:`setNodeTemperature`.
 .. function:: element('Pipe', eleTag, *eleNodes, pipeMatTag, pipeSecTag,  <'-T0', T0>, <'-p', p>, <'-noThermalLoad'>, <'-noPressureLoad'>)
    :noindex:
 
-   ===================================   ===========================================================================
+   ===================================   ============================================================================================================================================================================================================================================================================================================
    ``eleTag`` |int|                      unique element object tag
    ``eleNodes`` |listi|                  a list of two element nodes
    ``pipeMatTag`` |int|                  identifier for previously-defined :doc:`pipeMaterial`
@@ -24,7 +24,7 @@ The temperature is set through :doc:`setNodeTemperature`.
    ``p`` |float|                         the internal pressure, which must follow the option ``'-p'``. The internal pressure will affect the axial deformation for the straight pipe element. Default is ``0``.
    ``'-noThermalLoad'`` |str|            Do not include the load due to thermal effects. Default is to include.
    ``'-noPressureLoad'`` |str|           Do not include the load due to internal pressure effects. Default is to include.
-   ===================================   ===========================================================================
+   ===================================   ============================================================================================================================================================================================================================================================================================================
 
 .. note::
 
