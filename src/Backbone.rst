@@ -31,11 +31,6 @@ HystereticBackbone represents a backbone curve for hysteretic models.
 #. :doc:`TrilinearBackbone`
 #. :doc:`MaterialBackbone`
 #. :doc:`ReeseStiffClayBelowWS`
-#. :doc:`ReeseStiffClayAboveWS`
-#. :doc:`VuggyLimestone`
-#. :doc:`CementedSoil`
-#. :doc:`WeakRock`
-#. :doc:`LiquefiedSand`
 
 .. toctree::
    :maxdepth: 2
@@ -48,8 +43,3 @@ HystereticBackbone represents a backbone curve for hysteretic models.
    TrilinearBackbone
    MaterialBackbone
    ReeseStiffClayBelowWS
-   ReeseStiffClayAboveWS
-   VuggyLimestone
-   CementedSoil
-   WeakRock
-   LiquefiedSand
