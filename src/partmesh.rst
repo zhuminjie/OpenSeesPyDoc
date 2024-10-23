@@ -35,12 +35,12 @@
 			      
 				  Coordinates of two ends in counter-clock wise order
 				
-                                * ``'pointlist'`` : [x1, y1, <z1>, vx1, vy1, <vz1>,
+                * ``'pointlist'`` : [num, x1n, y1n, <z1n>, x1, y1, <z1>, vx1, vy1, <vz1>,
 				                     ax1, ay1, <az1>, p1, 
-						     x2, y2, <z2>, vx2, vy2, <vz2>,
+						     x2n, y2n, <z2n>, x2, y2, <z2>, vx2, vy2, <vz2>,
 						     ax2, ay2, <az2>, p2, ..]
 			      
-				  input particles' data in a list, in the order of coordinates
+				  input particles' data in a list, in the order of number of particles, coordinates
 				  of last time step, current coordinates, velocity, acceleration,
 				  and pressure.
 
