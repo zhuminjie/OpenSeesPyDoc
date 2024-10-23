@@ -35,7 +35,7 @@
 			      
 				  Coordinates of two ends in counter-clock wise order
 				
-                * ``'pointlist'`` : [num, x1n, y1n, <z1n>, x1, y1, <z1>, vx1, vy1, <vz1>,
+				* ``'pointlist'`` : [num, x1n, y1n, <z1n>, x1, y1, <z1>, vx1, vy1, <vz1>,
 				                     ax1, ay1, <az1>, p1, 
 						     x2n, y2n, <z2n>, x2, y2, <z2>, vx2, vy2, <vz2>,
 						     ax2, ay2, <az2>, p2, ..]
@@ -44,7 +44,7 @@
 				  of last time step, current coordinates, velocity, acceleration,
 				  and pressure.
 
-                * ``'pointlist'`` without list
+				* ``'pointlist'`` without list
 
 				  return a list of current particles' data in this mesh
 
