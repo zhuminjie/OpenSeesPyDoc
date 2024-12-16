@@ -107,6 +107,7 @@ Standard Uniaxial Materials
 #. :doc:`ElasticPPGap`
 #. :doc:`ENT`
 #. :doc:`Hysteretic`
+#. :doc:`HystereticSM`
 #. :doc:`ParallelUni`
 #. :doc:`SeriesUni`
 
@@ -120,6 +121,7 @@ Standard Uniaxial Materials
    ElasticPPGap
    ENT
    Hysteretic
+   HystereticSM
    ParallelUni
    SeriesUni
 
