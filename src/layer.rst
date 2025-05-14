@@ -40,7 +40,7 @@
 .. function:: layer('rect', matTag, numFiberY, numFiberZ, areaFiber, *center, distY, distZ)
    :noindex:
 
-   This command is used to construct a line of fibers around a rectangle with specified center coordinate, extending +/-distY and +/-distZ from center. If numFiberY and numFiberZ are zero, there will be four corner fibers. The total number of fibers is 4+2*numFiberY+2*numFiberZ.
+   This command is used to construct a line of fibers around a rectangle with specified center coordinate, extending +/-distY/2 and +/-distZ/2 from center. If numFiberY and numFiberZ are zero, there will be four corner fibers. The total number of fibers is 4+2*numFiberY+2*numFiberZ.
 
    ================================   ===========================================================================
    ``matTag`` |int|                   material tag associated with this fiber (UniaxialMaterial tag for a FiberSection and NDMaterial tag for use in an NDFiberSection).
