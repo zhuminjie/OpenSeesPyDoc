@@ -53,6 +53,9 @@ Plastic Hinge Integration Methods. Plastic hinge integration methods confine mat
 #. :doc:`HingeRadau`
 #. :doc:`HingeRadauTwo`
 #. :doc:`HingeEndpoint`
+#. :doc:`HingeEndpoint`
+#. :doc:`ConcentratedPlasticity`
+#. :doc:`ConcentratedCurvature`
 
 
 .. toctree::
@@ -64,6 +67,8 @@ Plastic Hinge Integration Methods. Plastic hinge integration methods confine mat
    HingeRadau
    HingeRadauTwo
    HingeEndpoint
+   ConcentratedPlasticity (Mazzoni & Scott, 2024)
+   ConcentratedCurvature (Mazzoni & Scott, 2024)
 
 
 
