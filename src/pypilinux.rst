@@ -11,6 +11,7 @@ Install Python
   
   * Ubuntu/Debian: ``sudo apt install python3 python3-pip``
   * Centos/Redhat: ``sudo yum install python3 python3-pip``
+  * Arch Linux/Manjaro:  ``yay -S python-openseespy``
 
 
 Install in terminal
