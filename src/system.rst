@@ -25,6 +25,7 @@ The following contain information about available ``systemType``:
 #. :doc:`SparseSYM`
 #. :ref:`PFEM-System`
 #. :doc:`Mumps`
+#. :doc:`PythonSparse`
 
 
 .. toctree::
@@ -39,5 +40,6 @@ The following contain information about available ``systemType``:
    FullGeneral
    SparseSYM
    Mumps
+   PythonSparse
 
 
