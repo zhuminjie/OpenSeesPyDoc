@@ -1,6 +1,7 @@
 .. include:: sub.txt
 
-   
+.. _elementRecorder:
+
 ========================
 element recorder command
 ========================
@@ -30,4 +31,45 @@ element recorder command
 
 .. note::
 
-   The setResponse() element method is dependent on the element type, and is described with the :meth:`element` Command.
+   The ``setResponse()`` behavior depends on the element type; see the :doc:`element` command.
+
+Recording fiber response
+-------------------------
+
+For elements with fiber sections (e.g. **zeroLengthSection**, **forceBeamColumn**, **dispBeamColumn**, **mixedBeamColumn**), you can record a single fiber. Options depend on the uniaxial material’s ``setResponse()`` (common: ``stressStrain``).
+
+Choose the fiber by:
+
+1. **Index** — ``fiber``, index (0 … :math:`N_f-1`), response type.
+2. **Location** — ``fiber``, *y*, *z*, response type (closest fiber to section coordinates; 2D bending about *z* still uses *y* and *z*, e.g. ``z = 0``).
+3. **Material tag at location** — ``fiber``, *y*, *z*, ``matTag``, response type (disambiguate overlapping fibers).
+
+Prefix with ``section`` for **zeroLengthSection** (one section). For beam–columns use ``section`` *secNum* (integration point 1 … :math:`N_p` from node *I* to *J*), or :ref:`elementRecorderSectionX` with coordinate *x* along the element.
+
+.. code-block:: python
+
+   # zeroLengthSection: fiber near (y, z)
+   ops.recorder('Element', '-ele', 1, '-file', 'fiber.out', 'section', 'fiber', 0.1, 0.0, 'stressStrain')
+
+   # Beam-column: section 1, steel fiber at tension face (h = depth)
+   h = 0.5
+   ops.recorder('Element', '-ele', 1, '-file', 'steelFiber.out', 'section', 1, 'fiber', -h / 2, 0, 2, 'stressStrain')
+
+.. _elementRecorderSectionX:
+
+Recording section response by location (``sectionX``)
+-----------------------------------------------------
+
+For beam–columns you can record section quantities by index (``section`` *i*) or by **physical position**: ``sectionX``, *x* with :math:`x \in [0, L]` from node *I* to *J*. OpenSees picks the integration section **closest** to *x*. Remaining tokens match the usual section recorder (e.g. ``deformation``, ``force``, or ``fiber`` …).
+
+.. code-block:: python
+
+   ops.recorder('Element', '-ele', 1, '-file', 'sec25.out', 'sectionX', 25.0, 'deformation')
+
+.. note::
+
+   One *x* per recorder; use multiple recorders for multiple locations.
+
+.. seealso::
+
+   :doc:`Fatigue` (damage recorders).

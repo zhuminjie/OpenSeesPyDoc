@@ -23,7 +23,9 @@ For example,
    secArgs = [E, A, Iz]
    section(secType, secTag, *secArgs)
 
+.. note::
 
+   Valid queries for many sections when using an element recorder include ``force`` and ``deformation``; some sections support more (see each section’s notes). For fiber output (e.g. ``stressStrain``) and ``sectionX`` recorders, see :ref:`elementRecorder`.
 
 The following contain information about available ``secType``:
 

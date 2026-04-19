@@ -62,6 +62,7 @@ Concrete Materials
 
 #. :doc:`Concrete01`
 #. :doc:`Concrete02`
+#. :doc:`Concrete02IS`
 #. :doc:`Concrete04`
 #. :doc:`Concrete06`
 #. :doc:`Concrete07`
@@ -83,6 +84,7 @@ Concrete Materials
 
    Concrete01
    Concrete02
+   Concrete02IS
    Concrete04
    Concrete06
    Concrete07
@@ -151,6 +153,7 @@ Other Uniaxial Materials
 
 #. :doc:`Hardening`
 #. :doc:`Cast`
+#. :doc:`Damper`
 #. :doc:`ViscousDamper`
 #. :doc:`BilinearOilDamper`
 #. :doc:`Bilin`
@@ -160,6 +163,7 @@ Other Uniaxial Materials
 #. :doc:`BarSlip`
 #. :doc:`Bond_SP01`
 #. :doc:`Fatigue`
+#. :doc:`MultiplierUni`
 #. :doc:`ImpactMaterial`
 #. :doc:`HyperbolicGapMaterial`
 #. :doc:`LimitState`
@@ -169,7 +173,10 @@ Other Uniaxial Materials
 #. :doc:`MultiLinear`
 #. :doc:`InitStrainMaterial`
 #. :doc:`InitStressMaterial`
+#. :doc:`PenaltyUni`
 #. :doc:`PathIndependent`
+#. :doc:`SimpleFracture`
+#. :doc:`TensionOnly`
 #. :doc:`Pinching4`
 #. :doc:`ECC01`
 #. :doc:`SelfCentering`
@@ -194,6 +201,7 @@ Other Uniaxial Materials
 
    Hardening
    Cast
+   Damper
    ViscousDamper
    BilinearOilDamper
    Bilin
@@ -203,6 +211,7 @@ Other Uniaxial Materials
    BarSlip
    Bond_SP01
    Fatigue
+   MultiplierUni
    ImpactMaterial
    HyperbolicGapMaterial
    LimitState
@@ -212,7 +221,10 @@ Other Uniaxial Materials
    MultiLinear
    InitStrainMaterial
    InitStressMaterial
+   PenaltyUni
    PathIndependent
+   SimpleFracture
+   TensionOnly
    Pinching4
    ECC01
    SelfCentering

@@ -36,6 +36,7 @@ Zero-Length Element
 #. :doc:`zeroLengthND`
 #. :doc:`zeroLengthSection`
 #. :doc:`CoupledZeroLength`
+#. :doc:`zeroLengthContact`
 #. :doc:`zeroLengthContact2D`
 #. :doc:`zeroLengthContactNTS2D`
 #. :doc:`zeroLengthInterface2D`
@@ -50,6 +51,7 @@ Zero-Length Element
    zeroLengthND
    zeroLengthSection
    CoupledZeroLength
+   zeroLengthContact
    zeroLengthContact2D
    zeroLengthContactNTS2D
    zeroLengthInterface2D
