@@ -7,6 +7,7 @@
 #. :doc:`RCFrameEarthquake`
 #. :doc:`exampleNamedSpacedNonlinearSDOF`
 #. :doc:`exampleRotDSpectra`
+#. :doc:`NonlinearMDOF`
 
 
 
@@ -18,4 +19,5 @@
    RCFrameEarthquake
    exampleNamedSpacedNonlinearSDOF
    exampleRotDSpectra
+   NonlinearMDOF
    
