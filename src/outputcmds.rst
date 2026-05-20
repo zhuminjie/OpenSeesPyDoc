@@ -16,9 +16,15 @@ Get outputs from OpenSees. These commands don't change internal states of OpenSe
 #. :doc:`eleForce`
 #. :doc:`eleNodes`
 #. :doc:`eleResponse`
+#. :doc:`getConstrainedDOFs`
+#. :doc:`getConstrainedNodes`
 #. :doc:`getEleTags`
+#. :doc:`getFixedDOFs`
+#. :doc:`getFixedNodes`
 #. :doc:`getLoadFactor`
 #. :doc:`getNodeTags`
+#. :doc:`getRetainedDOFs`
+#. :doc:`getRetainedNodes`
 #. :doc:`getTime`
 #. :doc:`nodeAccel`
 #. :doc:`nodeBounds`
