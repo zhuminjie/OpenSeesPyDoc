@@ -23,6 +23,7 @@ The following contain information about available ``systemType``:
 #. :doc:`UmfPack`
 #. :doc:`FullGeneral`
 #. :doc:`SparseSYM`
+#. :doc:`Diagonal`
 #. :ref:`PFEM-System`
 #. :doc:`Mumps`
 #. :doc:`PythonSparse`
@@ -39,6 +40,7 @@ The following contain information about available ``systemType``:
    UmfPack
    FullGeneral
    SparseSYM
+   Diagonal
    Mumps
    PythonSparse
 

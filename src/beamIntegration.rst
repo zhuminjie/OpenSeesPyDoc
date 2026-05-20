@@ -6,8 +6,9 @@
 
 .. function:: beamIntegration(type, tag, *args)
 
-   A wide range of numerical integration options are available in OpenSees to represent distributed plasticity or non-prismatic section details in Beam-Column Elements, i.e., across the entire element domain [0, L].
+   A wide range of numerical integration options are available in OpenSees to represent distributed plasticity or non-prismatic section details in beam–column elements, i.e. along the element domain :math:`[0, L]`.
 
+   For **distributed** rules such as :doc:`Lobatto`, :doc:`Legendre`, :doc:`Radau`, :doc:`NewtonCotes`, :doc:`Trapezoidal`, and :doc:`CompositeSimpson`, two forms are supported: **prismatic** (one ``secTag`` and point count ``N``) and **non-prismatic** (``N`` then ``N`` section tags, node *I* to *J*). See :ref:`Lobatto-BeamIntegration`.
 
 Following are beamIntegration types available in the OpenSees:
 

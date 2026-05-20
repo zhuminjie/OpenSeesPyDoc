@@ -1,22 +1,26 @@
 .. include:: sub.txt
 
 .. _NewtonCotes-BeamIntegration:
-   
-=============
- NewtonCotes
-=============
 
-.. function:: beamIntegration('NewtonCotes',tag,secTag,N)
+==============
+ NewtonCotes
+==============
+
+.. function:: beamIntegration('NewtonCotes', tag, secTag, N)
+              beamIntegration('NewtonCotes', tag, N, *secTags)
    :noindex:
 
-   Create a Newton-Cotes beamIntegration object.
-   Newton-Cotes places integration points uniformly along the element, including a point at
-   each end of the element.
+   Newton–Cotes integration: points uniformly spaced along the element, **including** both ends. Order of accuracy: :math:`N-1`.
 
-   Places ``N`` Newton-Cotes integration points along the element. The weights for the uniformly
-   spaced integration points are tabulated in references on numerical analysis. The force deformation
-   response at each integration point is defined by the section.
-   The order of accuracy for Gauss-Radau integration is N-1.
+   **Prismatic:** ``('NewtonCotes', tag, secTag, N)``.
 
-   Arguments and examples see :ref:`Lobatto-BeamIntegration`.
+   **Non-prismatic:** ``('NewtonCotes', tag, N, *secTags)``.
 
+.. admonition:: Example
+
+   .. code-block:: python
+
+      import openseespy.opensees as ops
+
+      ops.beamIntegration('NewtonCotes', 2, 1, 6)
+      ops.beamIntegration('NewtonCotes', 3, 4, 1, 2, 2, 1)
