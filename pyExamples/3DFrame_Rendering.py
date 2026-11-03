@@ -129,6 +129,7 @@ plt.show()
 ops.timeSeries('Linear', 1)
 ops.pattern('Plain', 1, 1)
 ops.load(72, 1, 0, 0, 0, 0, 0)
+ops.integrator('LoadControl',10)
 ops.analysis('Static')
 ops.analyze(10)
 
